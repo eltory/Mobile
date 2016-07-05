@@ -97,6 +97,7 @@
     <string name="action_new_feature">Desenhar</string>
     <string name="action_servers">Servidores</string>
     <string name="action_projects">Projetos</string>
+    <string name="action_tilesets">Tilesets</string>
     <string name="action_aoi">Área de interesse</string>
     <string name="action_language">Linguagem</string>
     <string name="layers_button">Camada</string>
@@ -277,4 +278,13 @@
     <string name="must_complete_upload_first">Deve completar o upload primeiro.</string>
     <string name="always_show_location">Sempre mostrar localização atual (consome bateria)</string>
     <string name="geolocation_error_msg">Não foi possível obter sua localização. Por favor, verifique as configurações de dispositivo para certificar-se de que árbitro tem acesso à localização geográfica. Se o problema persistir, tente reiniciar o dispositivo.</string>
+
+    <string name="find_area_title">Digite o endereço do local que você está procurando :</string>
+    <string name="find_area_button">pesquisa</string>
+    <string name="action_shp">ler um arquivo</string>
+    <string name="action_search">Procurar endereço</string>
+    <string name="action_coordinate">Coordena pesquisa</string>
+    <string name="coordinate_text">Digite a latitude e longitude\n</string>
+    <string name="image_overlay">A sobreposição de imagens</string>
+
 </resources>
