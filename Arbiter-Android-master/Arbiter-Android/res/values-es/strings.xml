@@ -96,6 +96,7 @@
     <string name="map_activity_name">Arbiter</string>
     <string name="action_new_feature">Dibujar</string>
     <string name="action_servers">Servidores</string>
+    <string name="action_tilesets">Tilesets</string>
     <string name="action_projects">Proyectos</string>
     <string name="action_aoi">Área de Interés</string>
     <string name="action_language">Idioma</string>
@@ -271,4 +272,12 @@
     <string name="must_complete_upload_first">Tiene que completar carga primero.</string>
     <string name="always_show_location">Siempre mostrar la ubicación actual (batería de drenajes)</string>
     <string name="geolocation_error_msg">No se pudo obtener su ubicación.  Por favor, compruebe la configuración del dispositivo para asegurarse Arbiter tiene acceso a su ubicación.  Si el problema persiste, pruebe a reiniciar el dispositivo.</string>
+    <string name="find_area_title">Introduzca la dirección del lugar que busca :</string>
+    <string name="find_area_button">buscar</string>
+    <string name="action_shp">leer un archivo</string>
+    <string name="action_search">Búsqueda de direcciones</string>
+    <string name="action_coordinate">Coordina la búsqueda</string>
+    <string name="coordinate_text">Introduzca la latitud y longitud\n</string>
+    <string name="image_overlay">superposición de imágenes</string>
+
 </resources>
