@@ -1,24 +1,53 @@
-Arbiter
-===============
+OpenGDS / Mobile (공간자료 편집도구)
+=======
 
-Arbiter is a mobile app that lets you build a map to use for situational awareness and geospatial data collection. Once you download your maps and map layers, Arbiter lets you edit offline (no network or wifi connection).  When you have connectivity through either 3G or 4G cellular network, or wifi, you can sync your map layers with the server and you’ll receive updates made by others as well.  Arbiter lets you edit geometries and attributes for points and attributes for polygons and polylines.  It also lets you associate photos (using your device's camera) to features.
+(내부 : OpenGeoDT / Mobile)
+이 프로젝트는 국토공간정보연구사업 중, [공간정보 SW 활용을 위한 오픈소스 가공기술 개발]과제를 수행하기 위하여 제작되고 있습니다.
+Arbiter 안드로이드 오픈 소스를 사용하였으며, 정식 버전은 차후에 통합된 환경에서 제공될 예정입니다.
+이 프로그램들은 완성되지 않았으며, 최종 완료 전 까지 문제가 발생할 수도 있습니다.
+발생된 문제는 최종 사용자에게 있으며, 완료가 된다면 제시된 라이선스 및 규약을 적용할 예정입니다.
 
-Arbiter es una aplicación móvil que le permite construir un mapa para ser utilizado con el propósito de adquirir conciencia situacional y recolectar datos geo espaciales.  Una vez que usted haya descargado sus mapas y las capas de los mapas, Arbiter le permite utilizarlos sin conexión (sin conexión de red o sin conexión inalámbrica).  Cuando usted tiene conectividad, ya sea a través de una red de celular o inalámbrica de 3G o 4G, usted podrá sincronizar las capas de su mapa con el servidor y también recibirá las actualizaciones realizadas por otros.
+감사합니다.
+공간정보기술(주) 연구소 <link>http://www.git.co.kr/
+OpenGeoDT 팀
 
-##Details
+연구기관
+---
+세부 책임 : 부산대학교 <link>http://www.pusan.ac.kr/
 
-Arbiter has been developed for Android smart phones and tablets. It works best on Android 4.3 and higher
+연구 책임 : 국토연구원 <link>http://www.krihs.re.kr/
 
-Arbiter ha sido desarrollada para los teléfonos inteligentes y las tabletas Android y ha sido probado en dispositivos que funcionan con la Versión 4.3 de Android y superiores.
+사용 라이브러리
+=====
 
-License:  all source code is licensed under the [MIT license](http://opensource.org/licenses/MIT)
+1. diewald_shapeFileReader (GNU General Public License) <link>https://github.com/diwi/diewald_shapeFileReader
 
-##Install and User Guide
 
-[Latest build / Versión reciente ](http://arbiter.geoshape.org/Arbiter.apk)
+OpenGDS / Mobile (Geospatial Information Editor)
+=======
 
-[Last fileservice build ](http://arbiter.geoshape.org/Arbiter-last-fileservice.apk)
+The project of 'Land Geospatial Information Research and Development, Korea', has been designated to carry out the [Development of Open Source Geospatial Software] challenges.
 
-[Arbiter User Doc Download](https://github.com/ROGUE-JCTD/Arbiter-Android/blob/master/How_to_Use_Arbiter.pdf?raw=true)
+This project used Arbiter Android Open Source. The full version will be available in the future, an integrated environment.
+These programs have not been completed, the final version can cause problems to the full.
+The problem is to end-users, if completed, will be applied to the proposed license and conventions.
 
-[Documento de Usuario de Artiber](https://github.com/ROGUE-JCTD/Arbiter-Android/blob/master/How_to_Use_Arbiter-ESPAN%C3%9EOL.pdf?raw=true)
+
+OpenSource Team. R&D dept, Geospatial Information Technology Co.Ltd.
+
+Research Group
+---
+Group Leader : Pusan National University <link>http://www.pusan.ac.kr/
+
+Research Leader : Korea Research Institute for Human Settlements <link>http://www.krihs.re.kr/
+
+Libraries
+=====
+
+1. diewald_shapeFileReader (GNU General Public License) <link>https://github.com/diwi/diewald_shapeFileReader
+
+
+Mail
+====
+Developer : Seungbum, Ryu
+lager000@git.co.kr
