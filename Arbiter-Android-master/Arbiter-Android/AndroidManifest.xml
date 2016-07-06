@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lmn.Arbiter_Android"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.1" >
 
     <uses-sdk
         android:minSdkVersion="11"
-        android:targetSdkVersion="23" />
+        android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -16,7 +16,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     
     <uses-feature android:name="android.hardware.camera" android:required="false" />
-    
+    <library android:name="com.google.android.maps"/>
     <application
         android:allowBackup="true"
         android:largeHeap="true"
@@ -36,6 +36,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.lmn.Arbiter_Android.FileReader.FileBrowser"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/app_name" >
+
+        </activity>
+
+        <activity
+            android:name="com.lmn.Arbiter_Android.Activities.FindAreaActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/app_name" >
+
+        </activity>
+
         <activity
             android:name="com.lmn.Arbiter_Android.Activities.ProjectsActivity"
             android:configChanges="orientation|screenSize"
