@@ -108,6 +108,7 @@
 	
     <!-- PROJECTS ACTIVITY STRINGS -->
     <string name="projects_activity_name">Projects</string>
+    <string name="address">Address</string>
     <string name="delete_project">Delete project</string>
     <string name="action_new_project">New project</string>
     <string name="switch_project_title">Switch Project</string>
@@ -208,6 +209,7 @@
 
     <string name="server_dialog_title">Servers</string>
     <string name="add_server_button">Add Server</string>
+    <string name="find_area_text">Enter the address key.</string>
     <string name="delete_server_alert">This will delete all layers in all projects associated with this server.</string>
 	<string name="update_server_alert">Are you sure you want to update the server?  Invalid changes may result in syncing failures.</string>
 	<string name="deleting_server">Deleting Server</string>
@@ -341,4 +343,11 @@
     <string name="must_complete_upload_first">Must complete upload first.</string>
     <string name="always_show_location">Always show current location (drains battery)</string>
     <string name="geolocation_error_msg">Could not get your location.  Please check the device settings to make sure Arbiter has access to Geolocation.  If the problem persists, try restarting the device.</string>
+    <string name="find_area_title">Enter the address of the location\nyou are looking for : </string>
+    <string name="find_area_button">Search</string>
+    <string name="action_shp">Read a file</string>
+    <string name="action_search">Address search</string>
+    <string name="action_coordinate">Coordinates search</string>
+    <string name="coordinate_text">Enter the latitude and longitude\n</string>
+    <string name="image_overlay">Image overlay</string>
 </resources>
