@@ -6,7 +6,9 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 
+import com.lmn.Arbiter_Android.Dialog.Dialogs.CoordinatesDialog;
 import com.lmn.Arbiter_Android.R;
 import com.lmn.Arbiter_Android.Activities.HasThreadPool;
 import com.lmn.Arbiter_Android.BaseClasses.Layer;
@@ -25,6 +27,8 @@ import com.lmn.Arbiter_Android.Dialog.Dialogs.TilesetsDialog;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.TilesetInfoDialog;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.WelcomeDialog;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.DownloadingTilesetsDialog;
+
+import org.apache.cordova.CordovaWebView;
 
 public class ArbiterDialogs {
 	private Resources resources;
@@ -78,6 +82,7 @@ public class ArbiterDialogs {
 
 		DialogFragment dialog = AddServerDialog.newInstance(title, ok, cancel, layout, server);
 		dialog.show(fragManager, "addServerDialog");
+		Log.d("showAddServerDialog", "server insert");
 	}
 	
 	public void showServersDialog(){
@@ -95,7 +100,7 @@ public class ArbiterDialogs {
 		String done = resources.getString(R.string.done);
 		int layout = R.layout.add_tileset_dialog;
 
-		DialogFragment dialog = AddTilesetDialog.newInstance(title, done, layout, connectivityListener, newProject);;
+		DialogFragment dialog = AddTilesetDialog.newInstance(title, done, layout, connectivityListener, newProject);
 		dialog.show(fragManager, "addTilesetDialog");
 	}
 
@@ -104,7 +109,7 @@ public class ArbiterDialogs {
 		String done = resources.getString(R.string.done);
 		int layout = R.layout.tilesets_dialog;
 
-		DialogFragment dialog = TilesetsDialog.newInstance(title, done, layout, false, null, null);;
+		DialogFragment dialog = TilesetsDialog.newInstance(title, done, layout, false, null, null);
 		dialog.show(fragManager, "tilesetDialog");
 	}
 
@@ -145,7 +150,19 @@ public class ArbiterDialogs {
 		
 		dialog.show(fragManager, "addLayersDialog");
 	}
-	
+
+	public void showCoordinatesDialog(final CordovaWebView webview){
+		String title = resources.getString(R.string.action_coordinate);
+		String ok = resources.getString(android.R.string.ok);
+		String cancel = resources.getString(android.R.string.cancel);
+		int layout = R.layout.coordinates_find_dialog;
+
+		DialogFragment dialog;
+
+		dialog = CoordinatesDialog.newInstance(title, ok, cancel, layout, webview);
+
+		dialog.show(fragManager, "CoordinatesDialog");
+	}
 	public void showGoOfflineDialog(boolean creatingProject){
 		String title = resources.getString(R.string.go_offline_dialog_title);
 		String ok = resources.getString(android.R.string.ok);
