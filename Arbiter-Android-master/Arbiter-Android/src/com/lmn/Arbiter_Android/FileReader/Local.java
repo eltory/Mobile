@@ -2,11 +2,6 @@ package com.lmn.Arbiter_Android.FileReader;
 
 import android.util.Log;
 
-import com.cocoahero.android.geojson.Feature;
-import com.cocoahero.android.geojson.GeoJSON;
-import com.cocoahero.android.geojson.GeoJSONObject;
-import com.cocoahero.android.geojson.Point;
-import com.cocoahero.android.geojson.Polygon;
 import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoading;
 import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoadingJob;
 
