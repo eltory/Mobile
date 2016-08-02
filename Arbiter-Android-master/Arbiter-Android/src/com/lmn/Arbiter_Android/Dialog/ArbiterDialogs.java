@@ -8,7 +8,9 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
 
+import com.lmn.Arbiter_Android.Dialog.Dialogs.BoundaryDialog;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.CoordinatesDialog;
+import com.lmn.Arbiter_Android.Dialog.Dialogs.ImagesDialog;
 import com.lmn.Arbiter_Android.R;
 import com.lmn.Arbiter_Android.Activities.HasThreadPool;
 import com.lmn.Arbiter_Android.BaseClasses.Layer;
@@ -33,26 +35,26 @@ import org.apache.cordova.CordovaWebView;
 public class ArbiterDialogs {
 	private Resources resources;
 	private FragmentManager fragManager;
-	
+
 	public ArbiterDialogs(Context context, Resources resources, FragmentManager fragManager){
 		this.setResources(resources);
 		this.setFragManager(fragManager);
 	}
-	
+
 	public void setFragManager(FragmentManager fragManager){
 		this.fragManager = fragManager;
 	}
-	
+
 	public void setResources(Resources resources){
 		this.resources = resources;
 	}
-	
+
 	public void showWelcomeDialog(){
 		String title = resources.getString(R.string.welcome_dialog_title);
 		String ok = resources.getString(android.R.string.ok);
 		String cancel = resources.getString(android.R.string.cancel);
 		int layout = R.layout.welcome_dialog;
-		
+
 		DialogFragment dialog = WelcomeDialog.newInstance(title, ok, cancel, layout);
 		dialog.show(fragManager, "welcomeDialog");
 	}
@@ -62,20 +64,20 @@ public class ArbiterDialogs {
 		String ok = resources.getString(android.R.string.ok);
 		String cancel = resources.getString(android.R.string.cancel);
 		int layout = R.layout.project_name_dialog;
-		
+
 		DialogFragment dialog = ProjectNameDialog.newInstance(title, ok, cancel, layout, connectivityListener);
 		dialog.show(fragManager, "projectNameDialog");
 	}
-	
+
 	public void showAddServerDialog(Server server){
 		String title;
-		
+
 		if(server != null){
 			title = server.getName();
 		}else{
 			title = resources.getString(R.string.add_server_dialog_title);
 		}
-		
+
 		String ok = resources.getString(android.R.string.ok);
 		String cancel = resources.getString(android.R.string.cancel);
 		int layout = R.layout.add_server_dialog;
@@ -84,13 +86,13 @@ public class ArbiterDialogs {
 		dialog.show(fragManager, "addServerDialog");
 		Log.d("showAddServerDialog", "server insert");
 	}
-	
+
 	public void showServersDialog(){
 		String title = resources.getString(R.string.server_dialog_title);
 		String ok = resources.getString(android.R.string.ok);
 		String cancel = resources.getString(android.R.string.cancel);
 		int layout = R.layout.servers_dialog;
-		
+
 		DialogFragment dialog = ServersDialog.newInstance(title, ok, cancel, layout);
 		dialog.show(fragManager, "serversDialog");
 	}
@@ -122,32 +124,32 @@ public class ArbiterDialogs {
 		DialogFragment dialog = TilesetInfoDialog.newInstance(title, back, stop, layout, tileset);
 		dialog.show(fragManager, "tilesetInfoDialog");
 	}
-	
+
 	public void showAddLayersDialog(ArrayList<Layer> layersInProject, ConnectivityListener connectivityListener, HasThreadPool hasThreadPool){
 		String title = resources.getString(R.string.add_layers_dialog_title);
 		String ok = resources.getString(android.R.string.ok);
 		String cancel = resources.getString(android.R.string.cancel);
 		int layout = R.layout.add_layers_dialog;
-		
+
 		DialogFragment dialog;
-		
+
 		dialog = AddLayersDialog.newInstance(title, ok, cancel,
 				layout, layersInProject, connectivityListener, hasThreadPool);
-		
+
 		dialog.show(fragManager, "addLayersDialog");
 	}
-	
+
 	public void showAddLayersDialog(boolean creatingProject, ConnectivityListener connectivityListener){
 		String title = resources.getString(R.string.add_layers_dialog_title);
 		String ok = resources.getString(android.R.string.ok);
 		String cancel = resources.getString(android.R.string.cancel);
 		int layout = R.layout.add_layers_dialog;
-		
+
 		DialogFragment dialog;
-		
+
 		dialog = AddLayersDialog.newInstance(title, ok, cancel,
 				layout, creatingProject, connectivityListener);
-		
+
 		dialog.show(fragManager, "addLayersDialog");
 	}
 
@@ -163,22 +165,23 @@ public class ArbiterDialogs {
 
 		dialog.show(fragManager, "CoordinatesDialog");
 	}
+
 	public void showGoOfflineDialog(boolean creatingProject){
 		String title = resources.getString(R.string.go_offline_dialog_title);
 		String ok = resources.getString(android.R.string.ok);
 		String cancel = resources.getString(android.R.string.cancel);
 		int layout = R.layout.add_layers_dialog;
-		
+
 		DialogFragment dialog = GoOfflineDialog.newInstance(title, ok, cancel, layout, creatingProject);
 		dialog.show(fragManager, "goOfflineDialog");
 	}
-	
+
 	public void showChooseAOIDialog(){
 		String title = resources.getString(R.string.choose_aoi_dialog_title);
 		String ok = resources.getString(android.R.string.ok);
 		String cancel = resources.getString(android.R.string.cancel);
 		int layout = R.layout.choose_aoi_dialog;
-		
+
 		DialogFragment dialog = ChooseAOIDialog.newInstance(title, ok, cancel, layout);
 		dialog.show(fragManager, "chooseAOIDialog");
 	}
@@ -193,14 +196,40 @@ public class ArbiterDialogs {
 
 		return dialog;
 	}
-	
+
 	public void showLayersDialog(HasThreadPool hasThreadPool){
 		String title = resources.getString(R.string.layers_dialog_title);
 		String ok = resources.getString(android.R.string.ok);
 		String cancel = resources.getString(android.R.string.cancel);
 		int layout = R.layout.layers_dialog;
-		
+
 		DialogFragment dialog = LayersDialog.newInstance(title, ok, cancel, layout, hasThreadPool);
 		dialog.show(fragManager, "layersDialog");
+	}
+
+	public void showImagesDialog(HasThreadPool hasThreadPool, final CordovaWebView webview){
+		String title = resources.getString(R.string.action_image);
+		String ok = resources.getString(android.R.string.ok);
+		String cancel = resources.getString(android.R.string.cancel);
+		int layout = R.layout.images_dialog;
+
+		DialogFragment dialog;
+
+		dialog = ImagesDialog.newInstance(title, ok, cancel, layout, hasThreadPool, webview);
+
+		dialog.show(fragManager, "imagesDialog");
+	}
+
+	public void showBoundaryDialog(final CordovaWebView webview, String name, String path){
+		String title = resources.getString(R.string.action_boundary);
+		String ok = resources.getString(android.R.string.ok);
+		String cancel = resources.getString(android.R.string.cancel);
+		int layout = R.layout.boundary_find_dialog;
+
+		DialogFragment dialog;
+
+		dialog = BoundaryDialog.newInstance(title, ok, cancel, layout, webview, name, path);
+
+		dialog.show(fragManager, "boundaryDialog");
 	}
 }
