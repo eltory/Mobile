@@ -14,6 +14,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.util.Property;
 import android.webkit.JavascriptInterface;
@@ -21,6 +22,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.lmn.Arbiter_Android.Activities.MapActivity;
 import com.lmn.Arbiter_Android.Activities.MapChangeHelper;
 import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoading;
 import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoadingJob;
@@ -30,6 +32,7 @@ import com.lmn.Arbiter_Android.DatabaseHelpers.TableHelpers.LayersHelper;
 import com.lmn.Arbiter_Android.FileReader.FileBrowser;
 
 public class Map {
+
 	private Map() {
 	}
 
@@ -47,7 +50,6 @@ public class Map {
 		if (map == null) {
 			map = new Map();
 		}
-
 		return map;
 	}
 
@@ -351,6 +353,7 @@ public class Map {
 		});
 	}
 
+
 	public void sync(final CordovaWebView webview) {
 
 		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
@@ -403,6 +406,18 @@ public class Map {
 
 				webview.loadUrl(url5);
 
+			}
+		});
+	}
+
+	public void addBoundaryImage(final CordovaWebView webview, double left, double bottom, double right, double top, String name, String path) {
+
+		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
+			@Override
+			public void run() {
+
+				String url = "javascript:app.waitForArbiterInit(new Function('Arbiter.ImageLayer.addImageByBoundary(\""+path+"\","+left+","+bottom+","+right+","+top+", \"" + name + "\");'))";
+				webview.loadUrl(url);
 			}
 		});
 	}
@@ -603,5 +618,33 @@ public class Map {
 		});
 	}
 
+	/* 가져다가 쓰기
+	public static void reloadImage()
+	{
+		JSONObject imgs = new JSONObject();
+		MapActivity activity = new MapActivity();
+		SharedPreferences reloadImages = activity.getActivity().getSharedPreferences("imgData", 0);
+
+		for(int i=0; i<reloadImages.getInt("size",0);i++)
+		{
+			try {
+				imgs.put("name" + i, reloadImages.getString("name" + i, ""));
+				imgs.put("path" + i, reloadImages.getString("path" + i, ""));
+				imgs.put("size", reloadImages.getInt("size", 0));
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
+			@Override
+			public void run() {
+				String url = "javascript:app.waitForArbiterInit(new Function('Arbiter.Layers.createLocalLayer(" + geoJSON + ","+centerPointLon+","+centerPointLat+");'))";
+				getWebView().loadUrl(url);
+			}
+		});
+
+	}
+	*/
 }
 
