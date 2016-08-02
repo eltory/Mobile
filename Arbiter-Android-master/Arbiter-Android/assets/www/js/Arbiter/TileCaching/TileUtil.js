@@ -176,10 +176,9 @@ Arbiter.TileUtil = function(_projectDb, _map){
 	    } else if (layer instanceof OpenLayers.Layer.TMS) {
 			ext = layer.type;
 	    } else {
-	    	console.log();
-	    	Arbiter.warning("unknown layer type asssuming extension of " + ext);
-	    }
+	    	console.log("unknown layer type asssuming extension of " + ext);
 
+	    }
 	    return ext;
 	};
 
