@@ -82,6 +82,8 @@ Arbiter.ImageLayer = (function() {
                        }
                       }
 
+                      zIndex = 101;
+
                       imgLayerArray.push(imgLayer);
                   }
 
@@ -209,6 +211,8 @@ Arbiter.ImageLayer = (function() {
                        }
                       }
 
+                      zIndex = 101;
+
                       imgLayerArray.push(imgLayer);
 	    },
 
@@ -232,6 +236,17 @@ Arbiter.ImageLayer = (function() {
 
     	imgLayerArray.splice(index,index);
     	}
+
+    	 for(var i=1; i<map.getNumLayers(); i++)
+                              {
+                               if(map.layers[i].id.indexOf("Layer_Image") != -1)
+                               {
+                                    map.layers[i].setZIndex(zIndex);
+                                    zIndex = zIndex + 1;
+                               }
+                              }
+
+              zIndex = 101;
 
     	}
 };
