@@ -5,19 +5,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.logging.Handler;
-import java.util.zip.Inflater;
 
 import org.apache.cordova.Config;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
-import org.apache.cordova.CordovaWebViewClient;
-import org.json.JSONObject;
 
 import com.lmn.Arbiter_Android.ArbiterProject;
 import com.lmn.Arbiter_Android.ArbiterState;
@@ -49,33 +44,29 @@ import com.lmn.Arbiter_Android.ProjectStructure.ProjectStructure;
 import com.lmn.Arbiter_Android.ReturnQueues.OnReturnToMap;
 import com.lmn.Arbiter_Android.Settings.Settings;
 
-import android.app.NativeActivity;
-import android.content.Context;
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
-import android.location.Address;
+import android.content.SharedPreferences;
 import android.location.Geocoder;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.Message;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.webkit.WebView;
+import android.webkit.WebSettings;
+import android.webkit.WebViewClient;
+import android.webkit.JavascriptInterface;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 public class MapActivity extends FragmentActivity implements CordovaInterface,
         Map.MapChangeListener, Map.CordovaMap, HasThreadPool, HasConnectivityListener {
@@ -93,6 +84,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
     private boolean isDestroyed = false;
     // For CORDOVA
     private CordovaWebView cordovaWebView;
+    private String sfName = "imgData";
 
     private final ExecutorService threadPool = Executors.newCachedThreadPool();
     private CordovaPlugin activityResultCallback;
@@ -107,6 +99,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
     static double lat, lon;
     Locale locale;
     Local local;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Config.init(this);
@@ -147,10 +140,14 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         dialogs = new ArbiterDialogs(getApplicationContext(), getResources(), getSupportFragmentManager());
         cordovaWebView = (CordovaWebView) findViewById(R.id.webView1);
 
+        //add interface between javascript and android
+        cordovaWebView.addJavascriptInterface(new JSInterface(this), "Android"); //You will access this via Android.method(args);
+
         cordovaWebView.loadUrl(ArbiterCordova.mainUrl, 5000);
         mapChangeHelper = new MapChangeHelper(MapActivity.this, cordovaWebView, incompleteProjectHelper);
         mCoder = new Geocoder(MapActivity.this);
         checkNotificationsAreComputed();
+
     }
 
     private String getProjectPath() {
@@ -216,7 +213,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         final MapActivity activity = this;
 
         ImageButton layersButton = (ImageButton) findViewById(R.id.layersButton);
-        //Ã¹ µðÆúÆ® ÇÁ·ÎÁ§Æ®¿¡¼­ ´©¸¦ ½Ã, ÇÁ·ÎÁ§Æ®ÀÇ ÀÌ¸§À» ÀÔ·Â¹ÞÀ½.
+        //Ã¹ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½.
         layersButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -237,7 +234,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         ImageButton syncButton = (ImageButton) findViewById(R.id.syncButton);
 
         syncConnectivityListener = new SyncConnectivityListener(this, syncButton);
-        // ¼­¹ö¿Í ¿¬°á µÅ ÀÖ°í, ¼öÁ¤ÇÑ ºÎºÐÀÌ ¾ø´Ù¸é ¼­¹öÀÇ Áöµµ Á¤º¸¸¦ ±â±â·Î µ¿±âÈ­ ÇÑ´Ù.
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö°ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È­ ï¿½Ñ´ï¿½.
         syncButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -262,14 +259,14 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                             });
                         }
                     });
-                }
+            }
             }
         });
 
         cookieConnectivityListener = new CookieConnectivityListener(this, this, this);
 
         ImageButton aoiButton = (ImageButton) findViewById(R.id.AOIButton);
-        // ÃÊ±âÈ­ µÈ À§Ä¡·Î ÀÌµ¿.
+        // ï¿½Ê±ï¿½È­ ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ìµï¿½.
         aoiButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -278,7 +275,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         });
 
         final ImageButton locationButton = (ImageButton) findViewById(R.id.locationButton);
-        // loadURLÀ» ÅëÇÏ¿© ÇöÀç À§Ä¡¸¦ À¥ºä·Î ³ªÅ¸³½´Ù.
+        // loadURLï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½.
         locationButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -392,6 +389,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
 
         if (frag != null) {
             frag.show(getSupportFragmentManager(), InsertFeatureDialog.TAG);
+
         }
     }
 
@@ -407,7 +405,11 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                 if (makeSureNotEditing()) {
                     openInsertFeatureDialog();
                 }
+                return true;
 
+            case R.id.action_new_image:
+                final MapActivity activity = this;
+                dialogs.showImagesDialog(activity, cordovaWebView);
                 return true;
 
             case R.id.action_servers:
@@ -425,7 +427,6 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
 
                 Intent intent2 = new Intent(getApplicationContext(), FileBrowser.class);
                 startActivityForResult(intent2, 202);
-
 
                 return true;
 
@@ -450,6 +451,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                 Intent intent = new Intent(getApplicationContext(), FindAreaActivity.class);
                 startActivityForResult(intent, 101);
                 return true;
+
 
             case R.id.action_aoi:
                 if (makeSureNotEditing()) {
@@ -494,6 +496,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                 return super.onOptionsItemSelected(item);
         }
     }
+
 
     @Override
     protected void onPause() {
@@ -631,6 +634,13 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
 
     @Override
     protected void onDestroy() {
+
+        SharedPreferences destroyImageData = getSharedPreferences(sfName, 0);
+        SharedPreferences.Editor editor = destroyImageData.edit();
+        Log.d("Destroy Image Data", "Clear Success Image data");
+        editor.clear();
+        editor.commit();
+
         this.isDestroyed = true;
         super.onDestroy();
         if (this.cordovaWebView != null) {
