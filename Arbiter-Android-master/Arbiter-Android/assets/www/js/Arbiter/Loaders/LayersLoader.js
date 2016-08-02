@@ -2,7 +2,7 @@ Arbiter.Loaders.LayersLoader = (function(){
 	var layersToLoad; // Number of layers
 	var featuresLoadedFor; // Features loaded for how many layers
 	var errorLoadingFeatures; // An array of feature types that couldn't be loaded
-	
+
 	var reset = function(){
 		layersToLoad = 0;
 		featuresLoadedFor = 0;
@@ -28,7 +28,7 @@ Arbiter.Loaders.LayersLoader = (function(){
 			Arbiter.Cordova.errorLoadingFeatures(errorLoadingFeatures);
 		}
 	};
-	
+
 	var clearMap = function() {
 		Arbiter.Layers.removeAllLayers();
 	};
@@ -201,7 +201,8 @@ Arbiter.Loaders.LayersLoader = (function(){
 		reset();
 		
 		clearMap();
-		
+
+
 		var layerSchemas = Arbiter.getLayerSchemas();
 		
 		var layer = null;
@@ -320,6 +321,8 @@ Arbiter.Loaders.LayersLoader = (function(){
 		}, function(e){
 			doWork();
 		});
+
+		Arbiter.ImageLayer.reloadImages(); //call established images in map
 	};
 	
 	/**
