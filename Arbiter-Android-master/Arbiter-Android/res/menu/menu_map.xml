@@ -11,6 +11,12 @@
         android:icon="@drawable/ic_action_edit"
         android:showAsAction="ifRoom"
         android:title="@string/action_new_feature"/>
+
+    <item
+        android:id="@+id/action_new_image"
+        android:icon="@drawable/ic_action_gallery"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_new_image"/>
     
     <item
         android:id="@+id/action_servers"
