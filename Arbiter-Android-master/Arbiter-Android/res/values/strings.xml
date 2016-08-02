@@ -76,8 +76,8 @@
 	<string name="check_network_connection">Please check your network connection.</string>
 	<string name="layers_limit">Layer limit reached</string>
 	<string name="too_many_layers">You have reached the maximum layers per project.</string>
-	
-	<string name="downloading_schemas">Downloading Schemas</string>
+
+    <string name="downloading_schemas">Downloading Schemas</string>
 	<string name="downloading_tiles">Downloading Tiles</string>
 	<string name="tile_cache_warning">Tiles to download:</string>
 	<string name="syncing_media_title">Syncing Media</string>
@@ -97,6 +97,7 @@
     <!-- MAP ACTIVITY STRINGS -->
     <string name="map_activity_name">Arbiter</string>
     <string name="action_new_feature">Draw</string>
+    <string name="action_new_image">Image</string>
     <string name="action_servers">Servers</string>
     <string name="action_projects">Projects</string>
     <string name="action_aoi">Area of Interest</string>
@@ -121,6 +122,7 @@
     <string name="layer_visibility_off">Off</string>
     <string name="layer_visibility_on">On</string>
     <string name="remove_layer">Remove layer</string>
+
 
     <!-- TILESETS STRINGS -->
     <string name="action_tilesets">Tilesets</string>
@@ -280,6 +282,7 @@
     <string name="unsupported_crs">Unsupported CRS</string>
     <string name="loading_unsupported_crs">Could not load the following layers due to unsupported CRS:</string>
     <string name="overlays">Overlays:</string>
+    <string name="overlayImage">Overlay Image:</string>
     <string name="baselayer">Current:</string>
     <string name="background_map">Background Map:</string>
     <string name="base">Base</string>
@@ -304,6 +307,7 @@
          be on the device.</string>
     <string name="confirm_delete_project">Are you sure you want to delete the project?  Any unsynchronized data will be lost.</string>
     <string name="confirm_delete_layer">Are you sure you want to delete the layer?</string>
+    <string name="confirm_delete_image">Are you sure you want to delete the image?</string>
     <string name="added">ADDED</string>
     <string name="modified">MODIFIED</string>
     <string name="removed">REMOVED</string>
@@ -350,4 +354,20 @@
     <string name="action_coordinate">Coordinates search</string>
     <string name="coordinate_text">Enter the latitude and longitude\n</string>
     <string name="image_overlay">Image overlay</string>
+
+    <!-- Image management -->
+    <string name="action_image">Image</string>
+    <string name="action_image_option">Choose Image Build Option</string>
+    <string name="add_images_button">Add Images</string>
+    <string name="remove_image">Remove Image</string>
+    <string name="images_limit">Image limit reached</string>
+    <string name="too_many_images">You have reached the maximum images per project.</string>
+    <string name="action_boundary">Image overlay</string>
+    <string name="imageName">Name</string>
+    <string name="imagePath">Path</string>
+    <string name="left">Left</string>
+    <string name="bottom">Bottom</string>
+    <string name="right">Right</string>
+    <string name="top">Top</string>
+
 </resources>
