@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -39,12 +40,12 @@ public class ImagesDialog extends ArbiterDialogFragment{
     private HasThreadPool hasThreadPool;
     private static CordovaWebView cordova;
     private String sfName = "imgData";
-    private String[] items = {"Draw Image", "Set boundary value"};
+    private static String[] items = new String[2];
 
     private ArrayList<Image> imgData = new ArrayList<Image>();
 
     public static ImagesDialog newInstance(String title, String ok,
-                                           String cancel, int layout, HasThreadPool hasThreadPool, CordovaWebView cordovaWebView){
+                                           String cancel, int layout, HasThreadPool hasThreadPool, CordovaWebView cordovaWebView, Resources res){
         ImagesDialog frag = new ImagesDialog();
 
         frag.setTitle(title);
@@ -52,6 +53,9 @@ public class ImagesDialog extends ArbiterDialogFragment{
         frag.setLayout(layout);
         frag.hasThreadPool = hasThreadPool;
         cordova = cordovaWebView;
+
+        items[0] = res.getString(R.string.draw_image);
+        items[1] = res.getString(R.string.set_boundary);
 
         return frag;
     }
@@ -86,16 +90,6 @@ public class ImagesDialog extends ArbiterDialogFragment{
         if(view != null){
             registerListeners(view);
         }
-    }
-
-    private void displayImagesLimit(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-
-        builder.setIcon(R.drawable.icon);
-        builder.setTitle(R.string.images_limit);
-        builder.setMessage(R.string.too_many_images);
-
-        builder.create().show();
     }
 
     public void populateListView(View view){
