@@ -1,16 +1,20 @@
 package com.lmn.Arbiter_Android.Activities;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.lmn.Arbiter_Android.R;
@@ -30,7 +34,7 @@ public class FindAreaActivity extends Activity  {
     Geocoder mCoder;
     static double lat,lon;
     EditText address;
-    Button ok;
+    ImageButton ok;
     ListView addressListView;
     ArrayAdapter <String> adapter;
     List<Address> location;
@@ -38,6 +42,7 @@ public class FindAreaActivity extends Activity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Config.init(this);
+        requestWindowFeature(Window.FEATURE_NO_TITLE); //delete titlebar
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.find_area);
@@ -45,13 +50,14 @@ public class FindAreaActivity extends Activity  {
         mCoder = new Geocoder(this,getResources().getConfiguration().locale);
 
         address = (EditText) findViewById(R.id.address);
-        ok = (Button) findViewById(R.id.find);
+        ok = (ImageButton) findViewById(R.id.find);
         addressListView = (ListView) findViewById(R.id.addressList);
         adapter = new ArrayAdapter (this, android.R.layout.simple_list_item_1);
         addressListView.setAdapter(adapter);
         ok.setOnClickListener(addressListener);
         addressListView.setOnItemClickListener(listViewExampleClickListener);
 
+        this.setFinishOnTouchOutside(false); //prevent to exit this dialog activity when user touches outside activity.
     }
     AdapterView.OnItemClickListener listViewExampleClickListener = new AdapterView.OnItemClickListener() {
         public void onItemClick(AdapterView<?> parentView, View clickedView, int position, long id) {
