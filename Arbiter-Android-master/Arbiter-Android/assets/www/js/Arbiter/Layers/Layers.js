@@ -76,28 +76,7 @@ Arbiter.Layers = (function() {
 			return osmLayer;
 		},
 
-		createImageLayer : function(url, left, bottom, right, top, name){
-
-			var options = {isBaseLayer: false, visibility: true};
-
-            var size = new OpenLayers.Size(1,1);
-            var map = Arbiter.Map.getMap();
-			var bounds3 = new OpenLayers.Bounds(left, bottom, right,top).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:900913"));
-            var imgLayer = new OpenLayers.Layer.Image(name, url, bounds3, size, options);
-
-            this.addLayer(imgLayer);
-
-                var lonLat = new OpenLayers.LonLat(left, bottom)
-                                           .transform(
-                                               new OpenLayers.Projection("EPSG:4326"),
-                                               new OpenLayers.Projection("EPSG:900913")
-                                           );
-                                           map.setCenter(lonLat, 12);
-                                           console.log(lonLat.lat);
-                                           console.log(lonLat.lon);
-        },
-
-createLocalLayer: function(jsonobject, lon, lat) {
+        createLocalLayer: function(jsonobject, lon, lat) {
 
             var zoom = 4;
             var map = Arbiter.Map.getMap();
