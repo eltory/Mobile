@@ -423,13 +423,6 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
 
                 return true;
 
-            case R.id.action_image:
-
-                Intent intent2 = new Intent(getApplicationContext(), FileBrowser.class);
-                startActivityForResult(intent2, 202);
-
-                return true;
-
             case R.id.action_tilesets:
                 dialogs.showTilesetsDialog();
                 return true;
@@ -755,39 +748,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
             lon = Double.parseDouble(array[1]);
             Map.getMap().findArea(cordovaWebView, lat, lon);
         }
-        else if (resultCode == 202 && intent != null) {
-            String result = intent.getExtras().getString("path");
-            String name = intent.getExtras().getString("name");
-            String metaPath = result;
-            metaPath = metaPath.substring(0,metaPath.lastIndexOf("."));
-            metaPath = metaPath+".txt";
-
-            FileInputStream fis = null;
-            try {
-                fis = new FileInputStream(metaPath);
-
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-            BufferedReader bufferReader = new BufferedReader(new InputStreamReader(fis));
-            String str, str1="";
-            String map[];
-            try {
-                while( (str = bufferReader.readLine()) != null )
-                str1 += str;
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            map = str1.split(",");
-            double left,bottom,right,top;
-            left = Double.parseDouble(map[0]);
-            bottom = Double.parseDouble(map[1]);
-            right = Double.parseDouble(map[2]);
-            top = Double.parseDouble(map[3]);
-
-            Map.getMap().addImageLayer(cordovaWebView, result,left,bottom,right,top,name);
-        }
-        else if (resultCode == 303 && intent != null)
+        else if (resultCode == 202 && intent != null)
         {
             String fileName = intent.getExtras().getString("name");
             local = new Local(cordovaWebView, fileName);
