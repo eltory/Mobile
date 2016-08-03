@@ -80,23 +80,12 @@ public class FileBrowser extends ListActivity {
         else
         {
             String fileName = file.getName();
-            if (fileName.substring(fileName.lastIndexOf(".")+1, fileName.length()).equalsIgnoreCase("png") ||
-                    fileName.substring(fileName.lastIndexOf(".")+1, fileName.length()).equalsIgnoreCase("jpg") ||
-                    fileName.substring(fileName.lastIndexOf(".")+1, fileName.length()).equalsIgnoreCase("gif"))
-            {
-
-                Intent intent = new Intent();
-                intent.putExtra("path", path.get(position));
-                intent.putExtra("name",fileName);
-                setResult(202, intent);
-                finish();
-            }
-            else if (fileName.substring(fileName.lastIndexOf(".")+1, fileName.length()).equalsIgnoreCase("shp"))
+            if (fileName.substring(fileName.lastIndexOf(".")+1, fileName.length()).equalsIgnoreCase("shp"))
             {
                 fileName = fileName.substring(0,fileName.lastIndexOf("."));
                 Intent intent = new Intent();
                 intent.putExtra("name",fileName);
-                setResult(303, intent);
+                setResult(202, intent);
                 finish();
             }
             else {
