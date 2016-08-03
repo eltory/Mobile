@@ -99,7 +99,7 @@
     <string name="action_new_feature">그림</string>
     <string name="action_servers">서버</string>
     <string name="action_projects">프로젝트</string>
-    <string name="action_shp">파일 읽기</string>
+    <string name="action_shp">로컬 SHP파일 읽기</string>
     <string name="action_search">주소 검색</string>
     <string name="action_aoi">관심있는 지역</string>
     <string name="action_language">언어</string>
@@ -301,8 +301,9 @@
     <string name="insert">삽입</string>
     <string name="feature_outside_aoi_warning">사용자가 선택한 관심있는 지역의 바깥쪽에 특성을 삽입했습니다. 이 특성을 동기화하면,
         그 특성은 더이상 사용자의 디바이스에 있지 않을 것입니다.</string>
-    <string name="confirm_delete_project">정말로 프로젝트를 제거할까요? 동기화하지 않은 모든 데이터는 사라집니다.</string>
-    <string name="confirm_delete_layer">정말로 레이어를 제거할까요?</string>
+    <string name="confirm_delete_project">정말로 프로젝트를 삭제할까요? 동기화하지 않은 모든 데이터는 사라집니다.</string>
+    <string name="confirm_delete_layer">정말로 레이어를 삭제할까요?</string>
+    <string name="confirm_delete_image">정말로 이미지를 삭제할까요?</string>
     <string name="added">추가됨</string>
     <string name="modified">수정됨</string>
     <string name="removed">제거됨</string>
@@ -338,15 +339,26 @@
     <string name="timed_out">요청시간 초과.</string>
     <string name="unauthorized">승인되지 않음.</string>
     <string name="resource_not_found">리소스를 찾을 수 없습니다.</string>
-    <string name="update_error">특성 업데이트 중 오류가 발생했습니다.  특성을 확인해주시고, 나중에 다시 시도해주세요.</string>
+    <string name="update_error">특성 업데이트 중 오류가 발생했습니다. 특성을 확인해주시고, 나중에 다시 시도해주세요.</string>
     <string name="must_complete_upload_first">반드시 업로드를 먼저 해야합니다.</string>
     <string name="always_show_location">항상 현재위치를 보여줌 (베터리는 소모됩니다.)</string>
-    <string name="geolocation_error_msg">당신의 위치를 찾을 수 없습니다.  아비터가 GPS에 접근할 수 있는지 설정을 확인해주시기 바랍니다.  문제가 계속 발생하면, 디바이스를 다시 시작해주세요.</string>
-    <string name="base">밑바탕</string>
-    <string name="find_area_title">찾고자하는 위치의 주소를 입력하세요 : </string>
-    <string name="find_area_button">찾기</string>
+    <string name="geolocation_error_msg">당신의 위치를 찾을 수 없습니다. 아비터가 GPS에 접근할 수 있는지 설정을 확인해주시기 바랍니다. 문제가 계속 발생하면, 디바이스를 다시 시작해주세요.</string>
+    <string name="base">베이스</string>
+    <string name="find_area_title">\n주소를 입력하세요\n</string>
     <string name="action_coordinate">좌표 검색</string>
     <string name="coordinate_text">위도와 경도를 입력해주세요\n</string>
-    <string name="image_overlay">이미지 오버레이</string>
+
+
+    <!-- Image management -->
+    <string name="action_image">이미지 오버레이</string>
+    <string name="image_list">이미지 목록</string>
+    <string name="action_image_option">이미지 구축 옵션</string>
+    <string name="action_boundary">경계값 설정</string>
+    <string name="draw_image">이미지 그리기</string>
+    <string name="set_boundary">경계값으로 이미지 넣기</string>
+    <string name="add_images_button">이미지 추가</string>
+    <string name="remove_image">이미지 삭제</string>
+    <string name="imageName">이름</string>
+    <string name="imagePath">경로</string>
 
 </resources>
