@@ -29,10 +29,6 @@
         android:title="@string/action_projects"/>
 
     <item
-        android:id="@+id/action_image"
-        android:showAsAction="never"
-        android:title="@string/image_overlay"/>
-    <item
         android:id="@+id/action_shp"
         android:showAsAction="never"
         android:title="@string/action_shp"/>
