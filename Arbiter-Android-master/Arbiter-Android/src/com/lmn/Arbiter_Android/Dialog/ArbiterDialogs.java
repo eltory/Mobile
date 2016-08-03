@@ -215,7 +215,7 @@ public class ArbiterDialogs {
 
 		DialogFragment dialog;
 
-		dialog = ImagesDialog.newInstance(title, ok, cancel, layout, hasThreadPool, webview);
+		dialog = ImagesDialog.newInstance(title, ok, cancel, layout, hasThreadPool, webview, resources);
 
 		dialog.show(fragManager, "imagesDialog");
 	}
