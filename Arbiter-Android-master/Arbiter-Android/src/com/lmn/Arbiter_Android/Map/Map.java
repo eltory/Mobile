@@ -422,18 +422,6 @@ public class Map {
 		});
 	}
 
-	public void addImageLayer(final CordovaWebView webview, String path,double left,double bottom,double right, double top, String name) {
-
-		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
-			@Override
-			public void run() {
-
-				String url = "javascript:app.waitForArbiterInit(new Function('Arbiter.Layers.createImageLayer(\""+path+"\","+left+","+bottom+","+right+","+top+", \"" + name + "\");'))";
-				webview.loadUrl(url);
-
-			}
-		});
-	}
 	public void updateAOI(final CordovaWebView webview, final String aoi) {
 
 		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
