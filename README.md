@@ -67,5 +67,5 @@ Libraries
 
 Mail
 ====
-Developer : Seungbum, Ryu
+Developer : Seulgi, Lee
 ghre55@git.co.kr
