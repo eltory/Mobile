@@ -8,6 +8,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
 
+import com.lmn.Arbiter_Android.Dialog.Dialogs.AOIBoundaryDialog;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.BoundaryDialog;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.CoordinatesDialog;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.ImagesDialog;
@@ -231,5 +232,18 @@ public class ArbiterDialogs {
 		dialog = BoundaryDialog.newInstance(title, ok, cancel, layout, webview, name, path);
 
 		dialog.show(fragManager, "boundaryDialog");
+	}
+
+	public void showAOIDialog(final CordovaWebView webview, String name, String path){
+		String title = resources.getString(R.string.action_AOI_image);
+		String ok = resources.getString(android.R.string.ok);
+		String cancel = resources.getString(android.R.string.cancel);
+		int layout = R.layout.aoi_image_dialog;
+
+		DialogFragment dialog;
+
+		dialog = AOIBoundaryDialog.newInstance(title, ok, cancel, layout, webview, name, path);
+
+		dialog.show(fragManager, "AOIBoundaryDialog");
 	}
 }
