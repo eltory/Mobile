@@ -40,7 +40,7 @@ public class ImagesDialog extends ArbiterDialogFragment{
     private HasThreadPool hasThreadPool;
     private static CordovaWebView cordova;
     private String sfName = "imgData";
-    private static String[] items = new String[2];
+    private static String[] items = new String[3];
 
     private ArrayList<Image> imgData = new ArrayList<Image>();
 
@@ -56,6 +56,7 @@ public class ImagesDialog extends ArbiterDialogFragment{
 
         items[0] = res.getString(R.string.draw_image);
         items[1] = res.getString(R.string.set_boundary);
+        items[2] = res.getString(R.string.input_image_AOI);
 
         return frag;
     }
@@ -179,10 +180,17 @@ public class ImagesDialog extends ArbiterDialogFragment{
                                     }
 
                                     //set boundary value
-                                    else
+                                    else if(id == 1)
                                     {
                                         (new ArbiterDialogs(getActivity().getApplicationContext(), getActivity().getResources(),
                                                 getActivity().getSupportFragmentManager())).showBoundaryDialog(cordova, image.getName(), image.getPath());
+                                    }
+
+                                    //input image in AOI
+                                    else
+                                    {
+                                        (new ArbiterDialogs(getActivity().getApplicationContext(), getActivity().getResources(),
+                                                getActivity().getSupportFragmentManager())).showAOIDialog(cordova, image.getName(), image.getPath());
                                     }
 
 
