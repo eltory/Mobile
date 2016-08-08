@@ -1,10 +1,13 @@
 package com.lmn.Arbiter_Android.Activities;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -45,15 +48,23 @@ import com.lmn.Arbiter_Android.ReturnQueues.OnReturnToMap;
 import com.lmn.Arbiter_Android.Settings.Settings;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Picture;
 import android.location.Geocoder;
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
@@ -64,9 +75,11 @@ import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.webkit.JavascriptInterface;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class MapActivity extends FragmentActivity implements CordovaInterface,
         Map.MapChangeListener, Map.CordovaMap, HasThreadPool, HasConnectivityListener {
@@ -85,6 +98,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
     // For CORDOVA
     private CordovaWebView cordovaWebView;
     private String sfName = "imgData";
+    private int captureNum = 0;
 
     private final ExecutorService threadPool = Executors.newCachedThreadPool();
     private CordovaPlugin activityResultCallback;
@@ -108,7 +122,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         setContentView(R.layout.activity_map);
         Init(savedInstanceState);
 
-        final CharSequence[] items = {"Korean", "English", "Portugal","Spain"};
+        final CharSequence[] items = {"Korean", "English", "Portugal", "Spain"};
         AlertDialog.Builder builder = new AlertDialog.Builder(MapActivity.this);
         builder.setTitle("Please select the language you want to use.");
         builder.setSingleChoiceItems(items, -1,
@@ -259,7 +273,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                             });
                         }
                     });
-            }
+                }
             }
         });
 
@@ -410,6 +424,12 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
             case R.id.action_new_image:
                 final MapActivity activity = this;
                 dialogs.showImagesDialog(activity, cordovaWebView);
+                return true;
+
+            case R.id.action_capture:
+                if (makeSureNotEditing()) {
+                    startCapture();
+                }
                 return true;
 
             case R.id.action_servers:
@@ -625,6 +645,54 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         ArbiterState.getArbiterState().setNewAOI(null);
     }
 
+    private void startCapture() {
+
+        cordovaWebView.setDrawingCacheEnabled( true);
+        //Bitmap screenshot = mAppView.getDrawingCache(); //현재 나와있는 화면만 저장
+        //실험코드
+        Bitmap screenshot = Bitmap. createBitmap(cordovaWebView.getWidth(), cordovaWebView.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas c = new Canvas(screenshot);
+
+
+        cordovaWebView.draw(c);
+
+
+        String filename = "Capture" + captureNum + ".png";
+
+
+        try {
+            File f = new File(Environment.getExternalStorageDirectory().toString() + "/DCIM/Camera/", filename);
+
+            f.createNewFile();
+            OutputStream outStream = new FileOutputStream(f);
+
+            screenshot.compress(Bitmap.CompressFormat. PNG, 100, outStream);
+            outStream.close();
+
+            AlertDialog.Builder dialog = new AlertDialog.Builder(MapActivity.this);
+            dialog  .setTitle(R.string.action_capture)
+                    .setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    }).create().show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        cordovaWebView.setDrawingCacheEnabled( false);
+
+        Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+        File f = new File(Environment.getExternalStorageDirectory().toString() + "/DCIM/Camera/", filename);
+        Uri contentUri = Uri.fromFile(f);
+        mediaScanIntent.setData(contentUri);
+        this.sendBroadcast(mediaScanIntent);
+
+        captureNum++;
+
+    }
+
     @Override
     protected void onDestroy() {
 
@@ -747,9 +815,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
             lat = Double.parseDouble(array[0]);
             lon = Double.parseDouble(array[1]);
             Map.getMap().findArea(cordovaWebView, lat, lon);
-        }
-        else if (resultCode == 202 && intent != null)
-        {
+        } else if (resultCode == 202 && intent != null) {
             String fileName = intent.getExtras().getString("name");
             local = new Local(cordovaWebView, fileName);
         }
