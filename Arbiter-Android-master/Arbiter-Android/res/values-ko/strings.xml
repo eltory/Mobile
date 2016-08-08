@@ -361,4 +361,8 @@
     <string name="imageName">이름</string>
     <string name="imagePath">경로</string>
 
+    <!-- Image management -->
+    <string name="action_capture">캡쳐 완료</string>
+    <string name="input_image_AOI">AOI에 삽입</string>
+
 </resources>
