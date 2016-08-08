@@ -369,4 +369,8 @@
     <string name="right">Right</string>
     <string name="top">Top</string>
 
+    <!-- Image management -->
+    <string name="action_capture">Capture Success</string>
+    <string name="input_image_AOI">Input AOI</string>
+    <string name="action_AOI_image">AOI Boundary</string>
 </resources>
