@@ -164,7 +164,7 @@ Arbiter.ImageLayer = (function() {
             var options = {isBaseLayer: false, visibility: true};
             var map = Arbiter.Map.getMap();
             var size = new OpenLayers.Size(1,1);
-            var boundary = new OpenLayers.Bounds(left, bottom, right,top).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:900913"));
+            var boundary = new OpenLayers.Bounds(left, bottom, right,top);
             var imgLayer;
 
 
@@ -195,12 +195,65 @@ Arbiter.ImageLayer = (function() {
 
                       map.addLayer(imgLayer);
 
-                       var lonLat = new OpenLayers.LonLat(left, right)
-                                                                 .transform(
-                                                                     new OpenLayers.Projection("EPSG:4326"),
-                                                                     new OpenLayers.Projection("EPSG:900913")
-                                                                 );
+                       var lonLat = new OpenLayers.LonLat(left, right);
                                                                  map.setCenter(lonLat, 6);
+
+                      for(var i=1; i<map.getNumLayers(); i++)
+                      {
+                       if(map.layers[i].id.indexOf("Layer_Image") != -1)
+                       {
+                            map.layers[i].setZIndex(zIndex);
+                            zIndex = zIndex + 1;
+                       }
+                      }
+
+                      zIndex = 101;
+
+                      imgLayerArray.push(imgLayer);
+	    },
+
+/* add images using aoi boundary dialog */
+	    addImageByAOI : function(url, left, bottom, right, top, name){
+
+            var options = {isBaseLayer: false, visibility: true};
+            var map = Arbiter.Map.getMap();
+            var size = new OpenLayers.Size(1,1);
+            var boundary = new OpenLayers.Bounds(left, bottom, right,top);
+            var imgLayer;
+
+
+                      var imageLayer = new Object();
+                      var boundaryObject = new Object();
+                      var numOfLayers;
+
+                      var index = Android.LoadPreferencesSize("size") -1;
+
+                      boundaryObject.left = boundary.left;
+                      boundaryObject.right = boundary.right;
+                      boundaryObject.top = boundary.top;
+                      boundaryObject.bottom = boundary.bottom;
+
+                      Android.SavePreferences("left"+index, boundary.left);
+                      Android.SavePreferences("right"+index, boundary.right);
+                      Android.SavePreferences("top"+index, boundary.top);
+                      Android.SavePreferences("bottom"+index, boundary.bottom);
+
+                      imageLayer.name = name;
+                      imageLayer.path = url;
+                      imageLayer.boundary = boundaryObject;
+
+                      imageArray.push(imageLayer);
+
+
+                      imgLayer = new OpenLayers.Layer.Image(name, url, boundary, size, options);
+
+                      map.addLayer(imgLayer);
+
+                       var lonLat = new OpenLayers.LonLat(left, right).transform(
+                                                                                        new OpenLayers.Projection("EPSG:4326"),
+                                                                                        new OpenLayers.Projection("EPSG:900913")
+                                                                                 );
+                       map.setCenter(lonLat, 6);
 
                       for(var i=1; i<map.getNumLayers(); i++)
                       {
