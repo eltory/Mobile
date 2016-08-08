@@ -1,26 +1,17 @@
 package com.lmn.Arbiter_Android.Map;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Hashtable;
 
-import org.apache.cordova.CordovaInterface;
-import org.apache.cordova.CordovaPlugin;
+import java.util.ArrayList;
+
 import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.CordovaWebViewClient;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.annotation.SuppressLint;
-import android.content.SharedPreferences;
+
 import android.util.Log;
-import android.util.Property;
-import android.webkit.JavascriptInterface;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+
 
 import com.lmn.Arbiter_Android.Activities.MapActivity;
 import com.lmn.Arbiter_Android.Activities.MapChangeHelper;
@@ -422,6 +413,18 @@ public class Map {
 		});
 	}
 
+	public void addAOIImage(final CordovaWebView webview, double left, double bottom, double right, double top, String name, String path) {
+
+		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
+			@Override
+			public void run() {
+
+				String url = "javascript:app.waitForArbiterInit(new Function('Arbiter.ImageLayer.addImageByAOI(\""+path+"\","+left+","+bottom+","+right+","+top+", \"" + name + "\");'))";
+				webview.loadUrl(url);
+			}
+		});
+	}
+
 	public void updateAOI(final CordovaWebView webview, final String aoi) {
 
 		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
@@ -605,34 +608,5 @@ public class Map {
 			}
 		});
 	}
-
-	/* 가져다가 쓰기
-	public static void reloadImage()
-	{
-		JSONObject imgs = new JSONObject();
-		MapActivity activity = new MapActivity();
-		SharedPreferences reloadImages = activity.getActivity().getSharedPreferences("imgData", 0);
-
-		for(int i=0; i<reloadImages.getInt("size",0);i++)
-		{
-			try {
-				imgs.put("name" + i, reloadImages.getString("name" + i, ""));
-				imgs.put("path" + i, reloadImages.getString("path" + i, ""));
-				imgs.put("size", reloadImages.getInt("size", 0));
-			}catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-
-		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
-			@Override
-			public void run() {
-				String url = "javascript:app.waitForArbiterInit(new Function('Arbiter.Layers.createLocalLayer(" + geoJSON + ","+centerPointLon+","+centerPointLat+");'))";
-				getWebView().loadUrl(url);
-			}
-		});
-
-	}
-	*/
 }
 
