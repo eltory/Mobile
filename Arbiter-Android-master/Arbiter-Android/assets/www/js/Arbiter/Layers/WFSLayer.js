@@ -108,25 +108,26 @@ Arbiter.Layers.WFSLayer = (function(){
 		
         selectStyleTable.pointRadius = "18";
         selectStyleTable.strokeWidth = "${getStrokeWidth}";
-        
+
+        //revise for WFS stroke width
         var context = {
         	getStrokeWidth: function(feature){
         		var map = Arbiter.Map.getMap();
         		
         		if(map.zoom >= 21){
-        			return "30";
-        		}else if(map.zoom >= 18 && map.zoom < 21){
-        			return "20";
-        		}else if(map.zoom >= 16 && map.zoom < 18){
-        			return "10";
-        		}else if(map.zoom >= 13 && map.zoom < 16){
-        			return "5";
-        		}else if(map.zoom >= 10 && map.zoom < 13){
-        			return "3";
-        		}else if(map.zoom >= 7 && map.zoom < 10){
         			return "2";
-        		}else{
+        		}else if(map.zoom >= 18 && map.zoom < 21){
+        			return "1.7";
+        		}else if(map.zoom >= 16 && map.zoom < 18){
+        			return "1.3";
+        		}else if(map.zoom >= 13 && map.zoom < 16){
         			return "1";
+        		}else if(map.zoom >= 10 && map.zoom < 13){
+        			return "0.8";
+        		}else if(map.zoom >= 7 && map.zoom < 10){
+        			return "0.6";
+        		}else{
+        			return "0.4";
         		}
         	}	
         };
