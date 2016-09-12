@@ -24,6 +24,7 @@ OpenGeoDT 팀
 2. 주소 검색 기능
 3. 좌표 검색 기능
 4. 다중 언어 설정(영어, 한국어, 포르투갈어, 스페인)
+5. 레이어 컨트롤러
 
 사용 라이브러리
 =====
@@ -57,6 +58,7 @@ Extended Functions
 2. Address Search
 3. Coordinate Search
 4. Multilingual(English, Korean, Portuguese, Spanish)
+5. Layer Controller
 
 Libraries
 =====
