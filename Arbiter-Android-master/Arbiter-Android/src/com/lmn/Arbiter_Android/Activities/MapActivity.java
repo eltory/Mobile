@@ -17,6 +17,8 @@ import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
 
+import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoading;
+import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoadingJob;
 import com.lmn.Arbiter_Android.ArbiterProject;
 import com.lmn.Arbiter_Android.ArbiterState;
 import com.lmn.Arbiter_Android.FileReader.FileBrowser;
@@ -124,7 +126,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
 
         final CharSequence[] items = {"Korean", "English", "Portugal", "Spain"};
         AlertDialog.Builder builder = new AlertDialog.Builder(MapActivity.this);
-        builder.setTitle("Please select the language you want to use.");
+        builder.setTitle("Language");
         builder.setSingleChoiceItems(items, -1,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
@@ -369,9 +371,12 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         getMenuInflater().inflate(R.menu.menu_map, menu);
         Log.w("MapActivity", "MapActivity onCreateOptionsMenu");
 
-        if (this.notificationBadge == null) {
+        // remove  if clause because Multiple Language updates onCreateOptionsMenu
+      //  if (this.notificationBadge == null) {
+
             this.notificationBadge = new NotificationBadge(this, menu);
-        }
+
+      //  }
 
         return true;
     }
