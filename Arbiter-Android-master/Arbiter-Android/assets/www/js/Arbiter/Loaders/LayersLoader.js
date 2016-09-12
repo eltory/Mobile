@@ -323,6 +323,7 @@ Arbiter.Loaders.LayersLoader = (function(){
 		});
 
 		Arbiter.ImageLayer.reloadImages(); //call established images in map
+		Arbiter.BingMap.loadBingMap(); //call BingMap controller
 	};
 	
 	/**
