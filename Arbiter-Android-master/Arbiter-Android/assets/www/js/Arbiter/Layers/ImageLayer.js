@@ -4,7 +4,7 @@ Arbiter.ImageLayer = (function() {
 
     var imageArray = new Array();
     var imgLayerArray = new Array();
-    var zIndex = 101;
+    var zIndex = 200;
 
 	return {
 		drawBBox : function(name, url){
@@ -19,7 +19,6 @@ Arbiter.ImageLayer = (function() {
             var boxLayer = new OpenLayers.Layer.Vector("Box layer");
 
             map.addLayer(boxLayer);
-            map.addControl(new OpenLayers.Control.LayerSwitcher());
             map.addControl(new OpenLayers.Control.MousePosition());
 
 
@@ -54,18 +53,6 @@ Arbiter.ImageLayer = (function() {
 
                       imageArray.push(imageLayer);
 
-                      // show image data in alert
-                      /*
-                      var answer = "bottom: " + bounds.bottom + "\n";
-                      answer += "left: " + bounds.left + "\n";
-                      answer += "right: " + bounds.right + "\n";
-                      answer += "top: " + bounds.top + "\n";
-                      answer += "name: " + name + "\n";
-                      answer += "url: " + url + "\n";
-                      alert(answer);
-                      */
-
-
                       control.deactivate();
 
                       boundary = new OpenLayers.Bounds(bounds.left, bounds.bottom, bounds.right, bounds.top);
@@ -73,16 +60,7 @@ Arbiter.ImageLayer = (function() {
 
                       map.addLayer(imgLayer);
 
-                      for(var i=1; i<map.getNumLayers(); i++)
-                      {
-                       if(map.layers[i].id.indexOf("Layer_Image") != -1)
-                       {
-                            map.layers[i].setZIndex(zIndex);
-                            zIndex = zIndex + 1;
-                       }
-                      }
-
-                      zIndex = 101;
+                      Arbiter.ImageLayer.arrangeLayerZIndex();
 
                       imgLayerArray.push(imgLayer);
                   }
@@ -158,7 +136,7 @@ Arbiter.ImageLayer = (function() {
 	    }
 	    },
 
-/* add images using boundary dialog */
+        /* add images using boundary dialog */
 	    addImageByBoundary : function(url, left, bottom, right, top, name){
 
             var options = {isBaseLayer: false, visibility: true};
@@ -195,24 +173,15 @@ Arbiter.ImageLayer = (function() {
 
                       map.addLayer(imgLayer);
 
-                       var lonLat = new OpenLayers.LonLat(left, right);
+                      var lonLat = new OpenLayers.LonLat(left, right);
                                                                  map.setCenter(lonLat, 6);
 
-                      for(var i=1; i<map.getNumLayers(); i++)
-                      {
-                       if(map.layers[i].id.indexOf("Layer_Image") != -1)
-                       {
-                            map.layers[i].setZIndex(zIndex);
-                            zIndex = zIndex + 1;
-                       }
-                      }
-
-                      zIndex = 101;
+                      Arbiter.ImageLayer.arrangeLayerZIndex();
 
                       imgLayerArray.push(imgLayer);
 	    },
 
-/* add images using aoi boundary dialog */
+        /* add images using aoi boundary dialog */
 	    addImageByAOI : function(url, left, bottom, right, top, name){
 
             var options = {isBaseLayer: false, visibility: true};
@@ -249,27 +218,18 @@ Arbiter.ImageLayer = (function() {
 
                       map.addLayer(imgLayer);
 
-                       var lonLat = new OpenLayers.LonLat(left, right).transform(
+                      var lonLat = new OpenLayers.LonLat(left, right).transform(
                                                                                         new OpenLayers.Projection("EPSG:4326"),
                                                                                         new OpenLayers.Projection("EPSG:900913")
                                                                                  );
-                       map.setCenter(lonLat, 6);
+                      map.setCenter(lonLat, 6);
 
-                      for(var i=1; i<map.getNumLayers(); i++)
-                      {
-                       if(map.layers[i].id.indexOf("Layer_Image") != -1)
-                       {
-                            map.layers[i].setZIndex(zIndex);
-                            zIndex = zIndex + 1;
-                       }
-                      }
-
-                      zIndex = 101;
+                      Arbiter.ImageLayer.arrangeLayerZIndex();
 
                       imgLayerArray.push(imgLayer);
 	    },
 
-/* delete the image layer */
+        /* delete the image layer */
 		deleteImage : function(url){
 		var map = Arbiter.Map.getMap();
 		var index = -1;
@@ -290,17 +250,24 @@ Arbiter.ImageLayer = (function() {
     	imgLayerArray.splice(index,index);
     	}
 
-    	 for(var i=1; i<map.getNumLayers(); i++)
-                              {
-                               if(map.layers[i].id.indexOf("Layer_Image") != -1)
-                               {
-                                    map.layers[i].setZIndex(zIndex);
-                                    zIndex = zIndex + 1;
-                               }
-                              }
+    	Arbiter.ImageLayer.arrangeLayerZIndex();
 
-              zIndex = 101;
+    	},
 
-    	}
+    	arrangeLayerZIndex : function(){
+        	var map = Arbiter.Map.getMap();
+
+            for(var i=1; i<map.getNumLayers(); i++)
+                    {
+                        if(map.layers[i].id.indexOf("Layer_Image") != -1)
+                             {
+                                  map.layers[i].setZIndex(zIndex);
+                                  zIndex = zIndex + 1;
+                             }
+                    }
+
+                      zIndex = 200;
+
+        }
 };
 })();
