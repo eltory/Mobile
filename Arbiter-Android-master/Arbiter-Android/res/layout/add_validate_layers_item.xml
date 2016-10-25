@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:clickable="false">
+
+    <RelativeLayout
+        android:id="@+id/ValidateLayerNameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp">
+
+        <!-- Layer name-->
+        <TextView
+            android:id="@+id/ValidateLayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/projects_activity_name"
+            android:textColor="#040404"
+            android:typeface="sans"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <!-- SRID name -->
+        <TextView
+            android:id="@+id/ValidateSRIDName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ValidateLayerName"
+            android:textColor="#343434"
+            android:textSize="12sp"
+            android:layout_marginTop="1dip"
+            android:text="@string/server_name_hint" />
+    </RelativeLayout>
+
+
+    <!--  ListRow Left sied ToggleButton -->
+
+    <CheckBox
+        android:id="@+id/addValidateLayerCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dip" />
+
+</RelativeLayout>
