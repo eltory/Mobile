@@ -2,28 +2,36 @@
 
     <item
         android:id="@+id/action_notifications"
-        android:showAsAction="ifRoom"
+        android:showAsAction="always"
         android:actionLayout="@layout/notifications_count"
         android:title="@string/notifications"/>
     
     <item
         android:id="@+id/action_new_feature"
         android:icon="@drawable/ic_action_edit"
-        android:showAsAction="ifRoom"
+        android:showAsAction="always"
         android:title="@string/action_new_feature"/>
 
     <item
         android:id="@+id/action_new_image"
         android:icon="@drawable/ic_action_gallery"
-        android:showAsAction="ifRoom"
+        android:showAsAction="always"
         android:title="@string/action_new_image"/>
 
     <item
         android:id="@+id/action_capture"
         android:icon="@drawable/ic_action_capture"
-        android:showAsAction="ifRoom"
+        android:showAsAction="always"
         android:title="@string/action_capture"/>
-    
+
+
+    <item
+        android:id="@+id/action_validation"
+        android:icon="@drawable/ic_action_validation"
+        android:showAsAction="always"
+        android:title="@string/action_validation"/>
+
+
     <item
         android:id="@+id/action_servers"
         android:showAsAction="never"
