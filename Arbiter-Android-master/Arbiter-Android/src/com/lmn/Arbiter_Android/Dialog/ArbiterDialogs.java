@@ -7,11 +7,18 @@ import android.content.res.Resources;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import com.lmn.Arbiter_Android.BaseClasses.Validation;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.AOIBoundaryDialog;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.BoundaryDialog;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.CoordinatesDialog;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.ImagesDialog;
+import com.lmn.Arbiter_Android.Dialog.Dialogs.AddValidateLayersDialog;
+import com.lmn.Arbiter_Android.Dialog.Dialogs.ValidationDetailOptionSettingDialog;
+import com.lmn.Arbiter_Android.Dialog.Dialogs.ValidationOptionDialog;
+import com.lmn.Arbiter_Android.Dialog.Dialogs.ValidationOptionSettingDialog;
 import com.lmn.Arbiter_Android.R;
 import com.lmn.Arbiter_Android.Activities.HasThreadPool;
 import com.lmn.Arbiter_Android.BaseClasses.Layer;
@@ -246,4 +253,53 @@ public class ArbiterDialogs {
 
 		dialog.show(fragManager, "AOIBoundaryDialog");
 	}
+
+	//add validation layers dialog
+	public void showAddValidateLayersDialog(HasThreadPool hasThreadPool, ConnectivityListener connectivityListener, final CordovaWebView webview){
+		String title = resources.getString(R.string.action_validationLayerList);
+		String ok = resources.getString(android.R.string.ok);
+		String cancel = resources.getString(android.R.string.cancel);
+		int layout = R.layout.add_validate_layers_dialog;
+
+		DialogFragment dialog = AddValidateLayersDialog.newInstance(title, ok, cancel, layout, connectivityListener, hasThreadPool, webview);
+
+		dialog.show(fragManager, "addValidateLayersDialog");
+	}
+
+	//validation option dialog
+	public void showValidationOptionDialog(HasThreadPool hasThreadPool, ArrayList<Validation> checkedLayers, final CordovaWebView webview){
+		String title = resources.getString(R.string.action_validationOption);
+		String ok = resources.getString(R.string.start_validation_button);
+		String cancel = resources.getString(android.R.string.cancel);
+		int layout = R.layout.validation_option_dialog;
+
+		DialogFragment dialog = ValidationOptionDialog.newInstance(title, ok, cancel, layout, hasThreadPool, checkedLayers, webview);
+
+		dialog.show(fragManager, "validationOptionDialog");
+	}
+
+	//validation option setting dialog
+	public void showValidationOptionSettingDialog(HasThreadPool hasThreadPool, Validation selectedLayer){
+		String title = resources.getString(R.string.action_optionSetting);
+		String ok = resources.getString(android.R.string.ok);
+		String cancel = resources.getString(android.R.string.cancel);
+		int layout = R.layout.validation_option_setting_dialog;
+
+		DialogFragment dialog = ValidationOptionSettingDialog.newInstance(title, ok, cancel, layout, hasThreadPool, selectedLayer);
+
+		dialog.show(fragManager, "validationOptionSettingDialog");
+	}
+
+	//validation detail option setting dialog
+	public void showValidationDetailOptionSettingDialog(HasThreadPool hasThreadPool, String optionName, Validation selectedLayer, RelativeLayout selectedOptionNameLayout){
+		String title = resources.getString(R.string.action_detailOptionSetting);
+		String ok = resources.getString(android.R.string.ok);
+		String cancel = resources.getString(android.R.string.cancel);
+		int layout = R.layout.validation_detail_option_setting_dialog;
+
+		DialogFragment dialog = ValidationDetailOptionSettingDialog.newInstance(title, ok, cancel, layout, hasThreadPool, optionName, selectedLayer, selectedOptionNameLayout);
+
+		dialog.show(fragManager, "validationDetailOptionSettingDialog");
+	}
+
 }
