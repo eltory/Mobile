@@ -373,4 +373,14 @@
     <string name="action_capture">Capture Success</string>
     <string name="input_image_AOI">Input AOI</string>
     <string name="action_AOI_image">AOI Boundary</string>
+
+    <!-- validation -->
+    <string name="action_validation">Validation</string>
+    <string name="action_validationLayerList">Validation</string>
+    <string name="validationLayerName">Name</string>
+    <string name="start_validation_button">Start Validation</string>
+    <string name="action_validationOption">Validation Option</string>
+    <string name="action_optionSetting">Option Setting</string>
+    <string name="action_detailOptionSetting">Detailed Option</string>
+    <string name="error500">Internal System Error</string>
 </resources>
