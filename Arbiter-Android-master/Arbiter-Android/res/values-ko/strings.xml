@@ -365,4 +365,13 @@
     <string name="action_capture">캡쳐 완료</string>
     <string name="input_image_AOI">AOI에 삽입</string>
 
+    <!-- validation -->
+    <string name="action_validation">검수</string>
+    <string name="action_validationLayerList">검수 대상 목록</string>
+    <string name="validationLayerName">레이어 이름</string>
+    <string name="start_validation_button">검수 시작</string>
+    <string name="action_validationOption">검수 옵션</string>
+    <string name="action_optionSetting">옵션 설정</string>
+    <string name="action_detailOptionSetting">세부 옵션</string>
+
 </resources>
