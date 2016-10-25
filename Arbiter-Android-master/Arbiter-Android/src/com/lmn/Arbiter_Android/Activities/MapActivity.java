@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -81,6 +82,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.webkit.JavascriptInterface;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class MapActivity extends FragmentActivity implements CordovaInterface,
@@ -419,6 +421,8 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        final MapActivity activity = this;
+
         switch (item.getItemId()) {
             case R.id.action_new_feature:
                 if (makeSureNotEditing()) {
@@ -427,8 +431,17 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                 return true;
 
             case R.id.action_new_image:
-                final MapActivity activity = this;
-                dialogs.showImagesDialog(activity, cordovaWebView);
+                if (makeSureNotEditing()) {
+                    dialogs.showImagesDialog(activity, cordovaWebView);
+                }
+                return true;
+
+            case R.id.action_validation:
+                if (makeSureNotEditing()) {
+                   // callValidateCandidates();  // 기능 완성 후 삭제
+                    dialogs.showAddValidateLayersDialog(activity, getListener(), cordovaWebView);
+                    }
+
                 return true;
 
             case R.id.action_capture:
@@ -697,6 +710,64 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         captureNum++;
 
     }
+
+    /*
+    private void callValidateCandidates()
+    {
+       // AlertDialog mDialog = null;
+
+        String[] items = new String[3];
+        items[0] = getResources().getString(R.string.draw_image);
+        items[1] = getResources().getString(R.string.set_boundary);
+        items[2] = getResources().getString(R.string.input_image_AOI);
+
+        boolean selectAll = true;
+        int length = items.length;
+
+        ArrayList<String> candidates = new ArrayList<String>();
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+        builder.setTitle(R.string.action_validationLayerList);
+
+        builder.setMultiChoiceItems(items, null,
+                new DialogInterface.OnMultiChoiceClickListener() {
+                    public void onClick(DialogInterface dialog,
+                                        int position, boolean isChecked) {
+
+                        if(isChecked)
+                            candidates.add(items[position]);
+
+                        else if(candidates.contains(items[position]))
+                            candidates.remove(candidates.indexOf(items[position]));
+
+                    }
+                })
+                .setPositiveButton(getResources().getString(android.R.string.ok), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int position) {
+
+                    }
+                })
+                .setNeutralButton(R.string.selectAll,
+            new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int position) {
+                    ListView list = ((AlertDialog) dialog).getListView();
+                    for (int i=0; i < list.getCount(); i++) {
+                        list.setItemChecked(i, true);
+                    }
+                  //  ((AlertDialog) dialog).
+                }
+            })
+                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int position) {
+                        dialog.dismiss();
+                    }
+                });
+
+        // create dialog
+        builder.create().show();
+    }
+    */
 
     @Override
     protected void onDestroy() {
