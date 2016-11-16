@@ -24,12 +24,13 @@ OpenGeoDT 팀
 2. 주소 검색 기능
 3. 좌표 검색 기능
 4. 다중 언어 설정(영어, 한국어, 포르투갈어, 스페인)
+5. 기본 맵 추가
+6. 레이어 검수 기능
 
 사용 라이브러리
 =====
 
 1. Arbiter-Android (MIT License) <link>https://github.com/ROGUE-JCTD/Arbiter-Android
-2. diewald_shapeFileReader (GNU General Public License) <link>https://github.com/diwi/diewald_shapeFileReader
 
 
 OpenGDS / Mobile (Geospatial Information Editor)
@@ -57,13 +58,13 @@ Extended Functions
 2. Address Search
 3. Coordinate Search
 4. Multilingual(English, Korean, Portuguese, Spanish)
-5. Layer Controller
+5. Additional Base Map
+6. Layer Validation
 
 Libraries
 =====
 
 1. Arbiter-Android (MIT License) <link>https://github.com/ROGUE-JCTD/Arbiter-Android
-2. diewald_shapeFileReader (GNU General Public License) <link>https://github.com/diwi/diewald_shapeFileReader
 
 
 Mail
