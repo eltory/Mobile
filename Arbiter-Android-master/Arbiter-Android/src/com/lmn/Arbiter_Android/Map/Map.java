@@ -4,23 +4,18 @@ package com.lmn.Arbiter_Android.Map;
 import java.util.ArrayList;
 
 import org.apache.cordova.CordovaWebView;
-import org.apache.cordova.CordovaWebViewClient;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
 import android.util.Log;
 
-
-import com.lmn.Arbiter_Android.Activities.MapActivity;
 import com.lmn.Arbiter_Android.Activities.MapChangeHelper;
 import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoading;
 import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoadingJob;
 import com.lmn.Arbiter_Android.BaseClasses.Layer;
 import com.lmn.Arbiter_Android.DatabaseHelpers.TableHelpers.GeometryColumnsHelper;
 import com.lmn.Arbiter_Android.DatabaseHelpers.TableHelpers.LayersHelper;
-import com.lmn.Arbiter_Android.FileReader.FileBrowser;
 
 public class Map {
 
@@ -373,7 +368,8 @@ public class Map {
 		});
 	}
 
-	public void findArea(final CordovaWebView webview,double latitude,double longitude) {
+	// Connection with CoordinateDialog.java for finding specific area
+	public void findArea(final CordovaWebView webview, double latitude, double longitude) {
 
 		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
 			@Override
@@ -381,6 +377,7 @@ public class Map {
 
 				JSONObject coords = new JSONObject();
 				JSONObject position = new JSONObject();
+
 				try {
 					coords.put("latitude", latitude);
 					coords.put("longitude", longitude);
@@ -393,9 +390,9 @@ public class Map {
 
 				String aoi = "Arbiter.Map.getMap().getLayersByName(Arbiter.AOI)[0]";
 				String getMap = "Arbiter.Map.getMap()";
-				String url5 = "javascript:app.waitForArbiterInit(new Function('Arbiter.findme = new Arbiter.FindMe("+getMap+","+aoi+"); Arbiter.findme._zoom("+position+");'))";
+				String url = "javascript:app.waitForArbiterInit(new Function('Arbiter.findme = new Arbiter.FindMe("+getMap+","+aoi+"); Arbiter.findme._zoom("+position+");'))";
 
-				webview.loadUrl(url5);
+				webview.loadUrl(url);
 
 			}
 		});
@@ -420,6 +417,30 @@ public class Map {
 			public void run() {
 
 				String url = "javascript:app.waitForArbiterInit(new Function('Arbiter.ImageLayer.addImageByAOI(\""+path+"\","+left+","+bottom+","+right+","+top+", \"" + name + "\");'))";
+				webview.loadUrl(url);
+			}
+		});
+	}
+
+	public void baseLayers(final CordovaWebView webview, String layerName) {
+
+		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
+			@Override
+			public void run() {
+
+				String url = "javascript:app.waitForArbiterInit(new Function('Arbiter.BaseLayers.setBaseLayer(\"" + layerName + "\");'))";
+				webview.loadUrl(url);
+			}
+		});
+	}
+
+	public void removeErrorMarking(final CordovaWebView webview) {
+
+		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
+			@Override
+			public void run() {
+
+				String url = "javascript:app.waitForArbiterInit(new Function('Arbiter.Validator.removeErrorMarking();'))";
 				webview.loadUrl(url);
 			}
 		});
@@ -477,6 +498,21 @@ public class Map {
 						+ "app.zoomToFeature(\"" + layerId + "\",\"" + fid + "\")'))";
 
 				Log.w("Map", url);
+				webview.loadUrl(url);
+			}
+		});
+	}
+
+	//Navigating error feature
+	public void navigateFeature(final CordovaWebView webview, final String layerId, final String fid) {
+
+		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
+			@Override
+			public void run() {
+
+				String url = "javascript:app.waitForArbiterInit(new Function('"
+						+ "Arbiter.Validator.navigateFeature(\"" + layerId + "\",\"" + fid + "\")'))";
+
 				webview.loadUrl(url);
 			}
 		});
