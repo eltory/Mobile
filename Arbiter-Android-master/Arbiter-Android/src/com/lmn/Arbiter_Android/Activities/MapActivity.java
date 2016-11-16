@@ -1,14 +1,9 @@
 package com.lmn.Arbiter_Android.Activities;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.util.ArrayList;
 import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -17,13 +12,13 @@ import org.apache.cordova.Config;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
-import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoading;
-import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoadingJob;
 import com.lmn.Arbiter_Android.ArbiterProject;
 import com.lmn.Arbiter_Android.ArbiterState;
-import com.lmn.Arbiter_Android.FileReader.FileBrowser;
-import com.lmn.Arbiter_Android.FileReader.Local;
+import com.lmn.Arbiter_Android.Dialog.Dialogs.ValidationErrorReportDialog;
+import com.lmn.Arbiter_Android.Loaders.ValidationLayersListLoader;
 import com.lmn.Arbiter_Android.OOMWorkaround;
 import com.lmn.Arbiter_Android.R;
 import com.lmn.Arbiter_Android.Util;
@@ -50,13 +45,13 @@ import com.lmn.Arbiter_Android.ProjectStructure.ProjectStructure;
 import com.lmn.Arbiter_Android.ReturnQueues.OnReturnToMap;
 import com.lmn.Arbiter_Android.Settings.Settings;
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Picture;
+import android.graphics.Color;
 import android.location.Geocoder;
 import android.net.Uri;
 import android.os.Bundle;
@@ -67,23 +62,22 @@ import android.content.res.Configuration;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
 import android.os.Handler;
-import android.os.Message;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.webkit.JavascriptInterface;
 import android.widget.ImageButton;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.LinearLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
 public class MapActivity extends FragmentActivity implements CordovaInterface,
         Map.MapChangeListener, Map.CordovaMap, HasThreadPool, HasConnectivityListener {
@@ -99,10 +93,15 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
     private CookieConnectivityListener cookieConnectivityListener;
     private NotificationBadge notificationBadge;
     private boolean isDestroyed = false;
-    // For CORDOVA
-    private CordovaWebView cordovaWebView;
-    private String sfName = "imgData";
+    private CordovaWebView cordovaWebView; // For CORDOVA
+    private String sfName = "imgData"; // SharedPreferences for image data
+    private String upToDateReport = "report"; // SharedPreferences for validation report
     private int captureNum = 0;
+    private TableLayout navigatorTableLayout;
+    private JSONObject reportObject;
+    private JSONArray detailedReports;
+    private int errorSize=0;
+    private int errorPos=0;
 
     private final ExecutorService threadPool = Executors.newCachedThreadPool();
     private CordovaPlugin activityResultCallback;
@@ -116,7 +115,6 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
     private FailedSyncHelper failedSyncHelper;
     static double lat, lon;
     Locale locale;
-    Local local;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,9 +124,11 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         setContentView(R.layout.activity_map);
         Init(savedInstanceState);
 
-        final CharSequence[] items = {"Korean", "English", "Portugal", "Spain"};
+        // Multiple language dialog
+        final CharSequence[] items = {getResources().getString(R.string.action_korean), getResources().getString(R.string.action_english),
+                getResources().getString(R.string.action_portugal), getResources().getString(R.string.action_spain)};
         AlertDialog.Builder builder = new AlertDialog.Builder(MapActivity.this);
-        builder.setTitle("Language");
+        builder.setTitle(getResources().getString(R.string.action_multiple_language));
         builder.setSingleChoiceItems(items, -1,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
@@ -152,6 +152,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                     }
                 });
         AlertDialog alert = builder.create();
+        alert.setCanceledOnTouchOutside(false);
         alert.show();
 
         MapActivity.this.keepRunning = MapActivity.this.getBooleanProperty("KeepRunning", true);
@@ -373,12 +374,11 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         getMenuInflater().inflate(R.menu.menu_map, menu);
         Log.w("MapActivity", "MapActivity onCreateOptionsMenu");
 
-        // remove  if clause because Multiple Language updates onCreateOptionsMenu
-      //  if (this.notificationBadge == null) {
-
+        // remove  it clause because Multiple Language updates onCreateOptionsMenu
+       // if (this.notificationBadge == null)
             this.notificationBadge = new NotificationBadge(this, menu);
 
-      //  }
+
 
         return true;
     }
@@ -438,7 +438,6 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
 
             case R.id.action_validation:
                 if (makeSureNotEditing()) {
-                   // callValidateCandidates();  // 기능 완성 후 삭제
                     dialogs.showAddValidateLayersDialog(activity, getListener(), cordovaWebView);
                     }
 
@@ -458,31 +457,23 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                 if (makeSureNotEditing()) {
                     Map.getMap().goToProjects(cordovaWebView);
                 }
-
                 return true;
 
             case R.id.action_tilesets:
                 dialogs.showTilesetsDialog();
                 return true;
 
-            case R.id.action_shp:
-
-                Intent intent3 = new Intent(getApplicationContext(), FileBrowser.class);
-                startActivityForResult(intent3, 303);
-
+            case R.id.action_baseMap:
+                showBaseLayers();
                 return true;
 
-            case R.id.action_coordinate:
-                dialogs.showCoordinatesDialog(cordovaWebView);
+            case R.id.action_validationManagement:
+                startValidationManagement();
                 return true;
-
 
             case R.id.action_search:
-
-                Intent intent = new Intent(getApplicationContext(), FindAreaActivity.class);
-                startActivityForResult(intent, 101);
+                startSearch();
                 return true;
-
 
             case R.id.action_aoi:
                 if (makeSureNotEditing()) {
@@ -512,15 +503,11 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                 return true;
 
             case R.id.action_settings:
-
                 new Settings(this).displaySettingsDialog(false);
-
                 return true;
 
             case R.id.action_about:
-
                 new About(this).displayAboutDialog();
-
                 return true;
 
             default:
@@ -561,8 +548,6 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                     public void run() {
 
                         if (sync != null && !sync.getNotificationsAreSet()) {
-
-
                             Map.getMap().getNotifications(cordovaWebView, Integer.toString(sync.getId()));
                         } else {
 
@@ -663,20 +648,401 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         ArbiterState.getArbiterState().setNewAOI(null);
     }
 
+    public void startSearch()
+    {
+        String[] options = new String[]{getResources().getString(R.string.action_address), getResources().getString(R.string.action_coordinate)};
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+        builder.setTitle(R.string.action_search);
+
+        builder.setSingleChoiceItems(options, -1,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,
+                                        int id) {
+
+                        if(id==0)
+                        {
+                            Intent intent = new Intent(getApplicationContext(), FindAreaActivity.class);
+                            startActivityForResult(intent, 101);
+                        }
+
+                        else
+                        {
+                            dialogs.showCoordinatesDialog(cordovaWebView);
+                        }
+
+
+                        dialog.dismiss();
+                    }
+                });
+
+        // create dialog
+        builder.setCancelable(false);
+        builder.setNegativeButton(android.R.string.cancel, null);
+        builder.setIcon(R.drawable.icon);
+        builder.create().show();
+    }
+
+    public void showBaseLayers()
+    {
+        String[] layers = new String[]{getResources().getString(R.string.action_baseMap_OpenStreetMap), getResources().getString(R.string.action_baseMap_BingRoad),
+                getResources().getString(R.string.action_baseMap_BingAerial), getResources().getString(R.string.action_baseMap_BingAerialWithLabels)};
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+        builder.setTitle(R.string.action_baseLayers);
+
+        builder.setSingleChoiceItems(layers, -1,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,
+                                        int id) {
+
+                        Map.getMap().baseLayers(cordovaWebView, layers[id]);
+
+
+                        dialog.dismiss();
+                    }
+                });
+
+        // create dialog
+        builder.setCancelable(false);
+        builder.setNegativeButton(android.R.string.cancel, null);
+        builder.setIcon(R.drawable.icon);
+        builder.create().show();
+    }
+
+    private void startValidationManagement()
+    {
+        String[] options = new String[]{getResources().getString(R.string.action_report), getResources().getString(R.string.action_error_navigator),
+                getResources().getString(R.string.action_removeErrorMarking)};
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+        builder.setTitle(R.string.action_validationManagement);
+
+        builder.setSingleChoiceItems(options, -1,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,
+                                        int id) {
+
+                        if(id==0)
+                        {
+                            SharedPreferences getErrorReport = getActivity().getSharedPreferences(upToDateReport, 0);
+                            if(!getErrorReport.getString("report","").equals(""))
+                            {
+                                Intent validationErrorReportIntent = new Intent(getApplicationContext(), ValidationErrorReportDialog.class);
+                                validationErrorReportIntent.putExtra("report",getErrorReport.getString("report",""));
+                                validationErrorReportIntent.putExtra("check",getErrorReport.getBoolean("check",false));
+                                startActivity(validationErrorReportIntent);
+
+                            }
+                            else
+                            {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+                                builder.setTitle(R.string.none_report_title);
+                                builder.setMessage(R.string.none_report_message);
+                                builder.setIcon(R.drawable.icon);
+                                builder.setPositiveButton(android.R.string.ok, null);
+                                builder.setCancelable(false);
+                                builder.create().show();
+                            }
+                        }
+
+                        else if(id==1)
+                        {
+                            SharedPreferences checkValidation = getActivity().getSharedPreferences(upToDateReport, 0);
+                            if(checkValidation.getString("report", "").equals(""))
+                            {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+                                builder.setTitle(R.string.cannot_start_navigator);
+                                builder.setMessage(R.string.navigator_error_message);
+                                builder.setIcon(R.drawable.icon);
+                                builder.setPositiveButton(android.R.string.ok, null);
+                                builder.setCancelable(false);
+                                builder.create().show();
+                            }
+
+                            else
+                            {
+                                //NAVIGATOR REQUEST LANDSCAPE ORIENTATION
+                                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+                                LinearLayout errNavigatorLayout = (LinearLayout) findViewById(R.id.errorNavigator);
+
+                                if(errNavigatorLayout.getVisibility() == View.GONE) {
+
+                                    if(errorPos >= 0 && reportObject!=null)
+                                    {
+                                        errNavigatorLayout.setVisibility(View.VISIBLE);
+                                    }
+
+                                    else {
+                                            errNavigatorLayout.setVisibility(View.VISIBLE);
+                                            try {
+                                                reportObject = new JSONObject(checkValidation.getString("report", ""));
+                                                detailedReports = reportObject.getJSONArray("DetailsReport");
+                                                errorSize = detailedReports.length();
+                                                errorPos = 0;
+                                                startErrorNavigator();
+                                            } catch (Exception e) {
+                                                e.printStackTrace();
+                                            }
+                                    }
+                                }
+                                else
+                                {
+                                    errNavigatorLayout.setVisibility(View.GONE);
+                                }
+                            }
+
+                        }
+
+                        else
+                        {
+                            if (makeSureNotEditing()) {
+                                removeErrorMarking();
+                                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED); // GO BACK TO THE SYSTEM DEFAULTS
+                            }
+                        }
+                        dialog.dismiss();
+                    }
+                });
+
+        // create dialog
+        builder.setNegativeButton(android.R.string.cancel, null);
+        builder.setIcon(R.drawable.icon);
+        builder.setCancelable(false);
+        builder.create().show();
+
+    }
+
+    private void startErrorNavigator()
+    {
+
+        navigatorTableLayout = (TableLayout) findViewById(R.id.navigatorContent);
+        navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount()-1);
+
+        try {
+
+            TableRow tr = new TableRow(getActivity());
+            tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                    TableRow.LayoutParams.WRAP_CONTENT));
+            tr.setBackgroundColor(Color.parseColor("#BDC3C7"));
+            tr.setPadding(1, 1, 1, 1);
+
+            TableRow.LayoutParams tableParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                    TableRow.LayoutParams.WRAP_CONTENT);
+            tableParams.rightMargin = 1;
+
+            TextView errorNumber = new TextView(getActivity());
+            errorNumber.setBackgroundColor(Color.parseColor("#34495E"));
+            errorNumber.setTextSize(13);
+            errorNumber.setPadding(5, 5, 5, 5);
+            errorNumber.setTextColor(Color.parseColor("#ECF0F1"));
+            errorNumber.setGravity(Gravity.CENTER_HORIZONTAL);
+            errorNumber.setText("Error-" + (errorPos+1));
+            errorNumber.setLayoutParams(tableParams);
+            tr.addView(errorNumber);
+
+            TextView errorNameContent = new TextView(getActivity());
+            errorNameContent.setBackgroundColor(Color.parseColor("#34495E"));
+            errorNameContent.setTextSize(13);
+            errorNameContent.setPadding(5, 5, 5, 5);
+            errorNameContent.setTextColor(Color.parseColor("#ECF0F1"));
+            errorNameContent.setGravity(Gravity.CENTER_HORIZONTAL);
+            errorNameContent.setText(detailedReports.getJSONObject(errorPos).getString("errName"));
+            errorNameContent.setLayoutParams(tableParams);
+            tr.addView(errorNameContent);
+
+            TextView errorFeatureID = new TextView(getActivity());
+            errorFeatureID.setBackgroundColor(Color.parseColor("#34495E"));
+            errorFeatureID.setTextSize(13);
+            errorFeatureID.setPadding(5, 5, 5, 5);
+            errorFeatureID.setTextColor(Color.parseColor("#ECF0F1"));
+            errorFeatureID.setGravity(Gravity.CENTER_HORIZONTAL);
+            errorFeatureID.setText(detailedReports.getJSONObject(errorPos).getString("featureID"));
+            errorFeatureID.setLayoutParams(tableParams);
+            tr.addView(errorFeatureID);
+
+            navigatorTableLayout.addView(tr, new TableLayout.LayoutParams(
+                    TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT));
+
+            // Zoom to error feature
+            ValidationLayersListLoader validationLayer = new ValidationLayersListLoader(getActivity());
+            String layerID = validationLayer.getLayerID(detailedReports.getJSONObject(errorPos).getString("featureID"));
+            Map.getMap().navigateFeature(cordovaWebView, layerID, detailedReports.getJSONObject(errorPos).getString("featureID"));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        if(errorPos >= 0)
+        findViewById(R.id.leftButton).setOnClickListener(leftClickListener);
+
+        if(errorPos < errorSize)
+        findViewById(R.id.rightButton).setOnClickListener(rightClickListener);
+    }
+
+    ImageButton.OnClickListener leftClickListener = new View.OnClickListener()
+    {
+        public void onClick(View v)
+        {
+            try {
+
+                findViewById(R.id.leftButton).setEnabled(false);
+                Handler h = new Handler();
+                h.postDelayed(new Runnable(){
+                    public void run()
+                    {
+                        findViewById(R.id.leftButton).setEnabled(true);
+                    }
+                }, 1000); // Should to wait click minimum 1 second for Vector Rendering
+
+                navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount()-1);
+                errorPos = errorPos - 1;
+                if(errorPos < 0)
+                    errorPos = 0;
+
+                TableRow tr = new TableRow(getActivity());
+                tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                        TableRow.LayoutParams.WRAP_CONTENT));
+                tr.setBackgroundColor(Color.parseColor("#BDC3C7"));
+                tr.setPadding(1, 1, 1, 1);
+
+                TableRow.LayoutParams tableParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                        TableRow.LayoutParams.WRAP_CONTENT);
+                tableParams.rightMargin = 1;
+
+                TextView errorNumber = new TextView(getActivity());
+                errorNumber.setBackgroundColor(Color.parseColor("#34495E"));
+                errorNumber.setTextSize(13);
+                errorNumber.setPadding(5, 5, 5, 5);
+                errorNumber.setTextColor(Color.parseColor("#ECF0F1"));
+                errorNumber.setGravity(Gravity.CENTER_HORIZONTAL);
+                errorNumber.setText("Error-" + (errorPos+1));
+                errorNumber.setLayoutParams(tableParams);
+                tr.addView(errorNumber);
+
+                TextView errorNameContent = new TextView(getActivity());
+                errorNameContent.setBackgroundColor(Color.parseColor("#34495E"));
+                errorNameContent.setTextSize(13);
+                errorNameContent.setPadding(5, 5, 5, 5);
+                errorNameContent.setTextColor(Color.parseColor("#ECF0F1"));
+                errorNameContent.setGravity(Gravity.CENTER_HORIZONTAL);
+                errorNameContent.setText(detailedReports.getJSONObject(errorPos).getString("errName"));
+                errorNameContent.setLayoutParams(tableParams);
+                tr.addView(errorNameContent);
+
+                TextView errorFeatureID = new TextView(getActivity());
+                errorFeatureID.setBackgroundColor(Color.parseColor("#34495E"));
+                errorFeatureID.setTextSize(13);
+                errorFeatureID.setPadding(5, 5, 5, 5);
+                errorFeatureID.setTextColor(Color.parseColor("#ECF0F1"));
+                errorFeatureID.setGravity(Gravity.CENTER_HORIZONTAL);
+                errorFeatureID.setText(detailedReports.getJSONObject(errorPos).getString("featureID"));
+                errorFeatureID.setLayoutParams(tableParams);
+                tr.addView(errorFeatureID);
+
+                navigatorTableLayout.addView(tr, new TableLayout.LayoutParams(
+                        TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT));
+
+                // Zoom and Select to error feature
+                ValidationLayersListLoader validationLayer = new ValidationLayersListLoader(getActivity());
+                String layerID = validationLayer.getLayerID(detailedReports.getJSONObject(errorPos).getString("featureID"));
+                Map.getMap().navigateFeature(cordovaWebView, layerID, detailedReports.getJSONObject(errorPos).getString("featureID"));
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    };
+
+    ImageButton.OnClickListener rightClickListener = new View.OnClickListener()
+    {
+        public void onClick(View v)
+        {
+            try {
+                findViewById(R.id.rightButton).setEnabled(false);
+                Handler h = new Handler();
+                h.postDelayed(new Runnable(){
+                    public void run()
+                    {
+                        findViewById(R.id.rightButton).setEnabled(true);
+                    }
+                }, 1000); // Should to wait click minimum 1 second for Vector Rendering
+
+                navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount()-1);
+                errorPos = errorPos + 1;
+                if(errorPos > errorSize-1)
+                    errorPos = errorSize-1;
+
+                TableRow tr = new TableRow(getActivity());
+                tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                        TableRow.LayoutParams.WRAP_CONTENT));
+                tr.setBackgroundColor(Color.parseColor("#BDC3C7"));
+                tr.setPadding(1, 1, 1, 1);
+
+                TableRow.LayoutParams tableParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                        TableRow.LayoutParams.WRAP_CONTENT);
+                tableParams.rightMargin = 1;
+
+                TextView errorNumber = new TextView(getActivity());
+                errorNumber.setBackgroundColor(Color.parseColor("#34495E"));
+                errorNumber.setTextSize(13);
+                errorNumber.setPadding(5, 5, 5, 5);
+                errorNumber.setTextColor(Color.parseColor("#ECF0F1"));
+                errorNumber.setGravity(Gravity.CENTER_HORIZONTAL);
+                errorNumber.setText("Error-" + (errorPos+1));
+                errorNumber.setLayoutParams(tableParams);
+                tr.addView(errorNumber);
+
+                TextView errorNameContent = new TextView(getActivity());
+                errorNameContent.setBackgroundColor(Color.parseColor("#34495E"));
+                errorNameContent.setTextSize(13);
+                errorNameContent.setPadding(5, 5, 5, 5);
+                errorNameContent.setTextColor(Color.parseColor("#ECF0F1"));
+                errorNameContent.setGravity(Gravity.CENTER_HORIZONTAL);
+                errorNameContent.setText(detailedReports.getJSONObject(errorPos).getString("errName"));
+                errorNameContent.setLayoutParams(tableParams);
+                tr.addView(errorNameContent);
+
+                TextView errorFeatureID = new TextView(getActivity());
+                errorFeatureID.setBackgroundColor(Color.parseColor("#34495E"));
+                errorFeatureID.setTextSize(13);
+                errorFeatureID.setPadding(5, 5, 5, 5);
+                errorFeatureID.setTextColor(Color.parseColor("#ECF0F1"));
+                errorFeatureID.setGravity(Gravity.CENTER_HORIZONTAL);
+                errorFeatureID.setText(detailedReports.getJSONObject(errorPos).getString("featureID"));
+                errorFeatureID.setLayoutParams(tableParams);
+                tr.addView(errorFeatureID);
+
+                navigatorTableLayout.addView(tr, new TableLayout.LayoutParams(
+                        TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT));
+
+                // Zoom and Select to error feature
+                ValidationLayersListLoader validationLayer = new ValidationLayersListLoader(getActivity());
+                String layerID = validationLayer.getLayerID(detailedReports.getJSONObject(errorPos).getString("featureID"));
+                Map.getMap().navigateFeature(cordovaWebView, layerID, detailedReports.getJSONObject(errorPos).getString("featureID"));
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    };
+
     private void startCapture() {
 
         cordovaWebView.setDrawingCacheEnabled( true);
-        //Bitmap screenshot = mAppView.getDrawingCache(); //현재 나와있는 화면만 저장
-        //실험코드
+
         Bitmap screenshot = Bitmap. createBitmap(cordovaWebView.getWidth(), cordovaWebView.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas c = new Canvas(screenshot);
 
-
         cordovaWebView.draw(c);
 
-
         String filename = "Capture" + captureNum + ".png";
-
 
         try {
             File f = new File(Environment.getExternalStorageDirectory().toString() + "/DCIM/Camera/", filename);
@@ -688,6 +1054,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
             outStream.close();
 
             AlertDialog.Builder dialog = new AlertDialog.Builder(MapActivity.this);
+            dialog.setCancelable(false);
             dialog  .setTitle(R.string.action_capture)
                     .setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
                         @Override
@@ -699,7 +1066,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         } catch (IOException e) {
             e.printStackTrace();
         }
-        cordovaWebView.setDrawingCacheEnabled( false);
+        cordovaWebView.setDrawingCacheEnabled(false);
 
         Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
         File f = new File(Environment.getExternalStorageDirectory().toString() + "/DCIM/Camera/", filename);
@@ -708,75 +1075,38 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         this.sendBroadcast(mediaScanIntent);
 
         captureNum++;
-
     }
 
-    /*
-    private void callValidateCandidates()
+    private void removeErrorMarking()
     {
-       // AlertDialog mDialog = null;
+        SharedPreferences destroyReportData = getSharedPreferences(upToDateReport, 0);
+        SharedPreferences.Editor reportEditor = destroyReportData.edit();
+        reportEditor.clear();
+        reportEditor.commit();
 
-        String[] items = new String[3];
-        items[0] = getResources().getString(R.string.draw_image);
-        items[1] = getResources().getString(R.string.set_boundary);
-        items[2] = getResources().getString(R.string.input_image_AOI);
+        LinearLayout errNavigatorLayout = (LinearLayout) findViewById(R.id.errorNavigator);
+        errNavigatorLayout.setVisibility(View.GONE);
+        errorPos = 0;
+        errorSize = 0;
+        reportObject = null;
+        detailedReports = null;
 
-        boolean selectAll = true;
-        int length = items.length;
-
-        ArrayList<String> candidates = new ArrayList<String>();
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-
-        builder.setTitle(R.string.action_validationLayerList);
-
-        builder.setMultiChoiceItems(items, null,
-                new DialogInterface.OnMultiChoiceClickListener() {
-                    public void onClick(DialogInterface dialog,
-                                        int position, boolean isChecked) {
-
-                        if(isChecked)
-                            candidates.add(items[position]);
-
-                        else if(candidates.contains(items[position]))
-                            candidates.remove(candidates.indexOf(items[position]));
-
-                    }
-                })
-                .setPositiveButton(getResources().getString(android.R.string.ok), new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int position) {
-
-                    }
-                })
-                .setNeutralButton(R.string.selectAll,
-            new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int position) {
-                    ListView list = ((AlertDialog) dialog).getListView();
-                    for (int i=0; i < list.getCount(); i++) {
-                        list.setItemChecked(i, true);
-                    }
-                  //  ((AlertDialog) dialog).
-                }
-            })
-                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int position) {
-                        dialog.dismiss();
-                    }
-                });
-
-        // create dialog
-        builder.create().show();
+        Map.getMap().removeErrorMarking(cordovaWebView);
     }
-    */
 
     @Override
     protected void onDestroy() {
 
+        //* If you terminate this app, all SharedPreferences data will be removed.
         SharedPreferences destroyImageData = getSharedPreferences(sfName, 0);
-        SharedPreferences.Editor editor = destroyImageData.edit();
-        Log.d("Destroy Image Data", "Clear Success Image data");
-        editor.clear();
-        editor.commit();
+        SharedPreferences destroyReportData = getSharedPreferences(upToDateReport, 0);
+        SharedPreferences.Editor imageEditor = destroyImageData.edit();
+        SharedPreferences.Editor reportEditor = destroyReportData.edit();
+        imageEditor.clear();
+        reportEditor.clear();
+        imageEditor.commit();
+        reportEditor.commit();
+
 
         this.isDestroyed = true;
         super.onDestroy();
@@ -885,15 +1215,13 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         if (callback != null) {
             callback.onActivityResult(requestCode, resultCode, intent);
         }
+        //For Address Search to find selected list item
         if (resultCode == 101 && intent != null) {
             String result = intent.getStringExtra("location");
             String[] array = result.split(",");
             lat = Double.parseDouble(array[0]);
             lon = Double.parseDouble(array[1]);
             Map.getMap().findArea(cordovaWebView, lat, lon);
-        } else if (resultCode == 202 && intent != null) {
-            String fileName = intent.getExtras().getString("name");
-            local = new Local(cordovaWebView, fileName);
         }
     }
 

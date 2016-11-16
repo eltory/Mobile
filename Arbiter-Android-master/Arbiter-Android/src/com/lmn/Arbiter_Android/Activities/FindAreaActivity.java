@@ -1,6 +1,7 @@
 package com.lmn.Arbiter_Android.Activities;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.location.Address;
@@ -31,18 +32,18 @@ import java.util.Locale;
  */
 public class FindAreaActivity extends Activity  {
 
-    Geocoder mCoder;
-    static double lat,lon;
-    EditText address;
-    ImageButton ok;
-    ListView addressListView;
-    ArrayAdapter <String> adapter;
-    List<Address> location;
-    List<Address> addressResult = null;
+    private Geocoder mCoder;
+    private EditText address;
+    private ImageButton ok;
+    private Button cancel;
+    private ListView addressListView;
+    private ArrayAdapter <String> adapter;
+    private List<Address> location;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Config.init(this);
-        requestWindowFeature(Window.FEATURE_NO_TITLE); //delete titlebar
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.find_area);
@@ -51,62 +52,80 @@ public class FindAreaActivity extends Activity  {
 
         address = (EditText) findViewById(R.id.address);
         ok = (ImageButton) findViewById(R.id.find);
+        cancel = (Button) findViewById(R.id.addressSearchButton);
         addressListView = (ListView) findViewById(R.id.addressList);
         adapter = new ArrayAdapter (this, android.R.layout.simple_list_item_1);
         addressListView.setAdapter(adapter);
         ok.setOnClickListener(addressListener);
+        cancel.setOnClickListener(cancelListener);
         addressListView.setOnItemClickListener(listViewExampleClickListener);
 
         this.setFinishOnTouchOutside(false); //prevent to exit this dialog activity when user touches outside activity.
     }
+
     AdapterView.OnItemClickListener listViewExampleClickListener = new AdapterView.OnItemClickListener() {
         public void onItemClick(AdapterView<?> parentView, View clickedView, int position, long id) {
             Intent intent = new Intent();
             double lat = location.get(position).getLatitude();
             double lon = location.get(position).getLongitude();
-            String latlon = lat+","+lon;
-            intent.putExtra("location", latlon);
+            String latLon = lat+","+lon;
+            intent.putExtra("location", latLon);
             setResult(101, intent);
             finish();
         }
     };
+
+    View.OnClickListener cancelListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            finish();
+        }
+    };
+
     View.OnClickListener addressListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
 
             adapter.clear();
-            String saddr = address.getText().toString();
+            String input = address.getText().toString();
 
+            //Show maximum 5 address list
             try{
-                location = mCoder.getFromLocationName(saddr,5);
-
+                location = mCoder.getFromLocationName(input, 5);
             }catch (IOException e)
             {
-                Log.d("IO error : ", e.getMessage());
+                Log.d("IO Exception error : ", e.getMessage());
                 return;
             }
 
+            //If search has no result, show alert dialog.
             if (location.size() == 0)
             {
-                Log.d("no result","no result");
-                return;
+                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+                builder.setTitle(R.string.address_search_no_result_title);
+                builder.setMessage(R.string.address_search_no_result_message);
+                builder.setIcon(R.drawable.icon);
+                builder.setPositiveButton(android.R.string.ok, null);
+                builder.setCancelable(false);
+                builder.create().show();
             }
+
             else
             {
                 for (int i=0; i<location.size(); i++)
                 {
                     Address addr = location.get(i);
                     int MaxIndex = addr.getMaxAddressLineIndex();
-                    String ad="";
+                    String item="";
                     if (MaxIndex == 0)
-                        ad = addr.getAddressLine(0);
+                        item = addr.getAddressLine(0);
                     else
                     {
                         for (int j=0; j<MaxIndex; j++)
-                            ad = ad + addr.getAddressLine(j) + " ";
+                            item = item + addr.getAddressLine(j) + " ";
 
                     }
-                    adapter.add(ad);
+                    adapter.add(item);
                 }
             }
             adapter.notifyDataSetChanged();
