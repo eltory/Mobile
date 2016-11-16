@@ -152,6 +152,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                     }
                 });
         AlertDialog alert = builder.create();
+        alert.setIcon(getResources().getDrawable(R.drawable.icon));
         alert.setCanceledOnTouchOutside(false);
         alert.show();
 
