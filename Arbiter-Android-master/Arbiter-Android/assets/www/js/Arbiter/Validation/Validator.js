@@ -5,6 +5,9 @@ Arbiter.Validator = (function() {
 
            startValidation : function(attributeJsonArr, qaOptionJsonArr, layerNameArr, FIDArr) {
 
+           //Loading UI
+           Android.StartValidationProgressDialog();
+
             var map = Arbiter.Map.getMap();
 
             var index;
@@ -47,8 +50,6 @@ Arbiter.Validator = (function() {
               if(map.layers[i].features[0].fid.indexOf(FIDArr[j]) != -1)
               {
                layers[layerNameArr[j]] = { feature : geoJsonFormat.write(map.layers[i].getFeaturesByAttribute()), attribute : attributeJsonArr[j], qaOption : qaOptionJsonArr[j], weight : 0 };
-               console.log("adas" + layerNameArr[j], layerNameArr[j]);
-               console.log("adzzzzas" + attributeJsonArr[j], attributeJsonArr[j]);
               }
               }
             }
@@ -60,7 +61,7 @@ Arbiter.Validator = (function() {
 
             //send geojson data to validation server
             // CALL BACK METHOD가 오기전까지 비동기처리하여 UI 로딩 생성
-            Arbiter.Validator.sendObjectRequest("http://175.116.181.13:8089/opengds/validator/validate.ajax", validationGeoJson, Arbiter.Validator.doneCallback);
+            Arbiter.Validator.sendObjectRequest("http://175.116.181.13:8080/opengds/validator/validate.ajax", validationGeoJson, Arbiter.Validator.doneCallback);
         },
 
         sendObjectRequest : function(url, params, doneCallback)
@@ -95,6 +96,8 @@ Arbiter.Validator = (function() {
 
         processFail : function(jqXHR, textStatus, errorThrown)
         {
+            Android.ValidationFailProgressDialog();
+
           	if (typeof (console) !== 'undefined' && typeof (console.log) !== 'undefined') {
           		console.log(textStatus + " - " + jqXHR.status + " (" + errorThrown + ")");
           	}
@@ -112,20 +115,27 @@ Arbiter.Validator = (function() {
 
         doneCallback : function(result)
         {
-          console.log("zsxzsszszzzzzz" + result, result);
+          console.log("Validation result" + result, result);
+          //Confirm
 
           // ERROR 표시 함수 호출
           if(result.Error != false)
-          Arbiter.Validator.resultErrorMarking(result);
+            Arbiter.Validator.resultErrorMarking(result);
+
 
           // JS INTERFACE 이용하여 자바로 ERROR REPORT DATA 보내기
-          // ERROR REPORT 확인후, result 이용하여 ERROR NAVIGATOR 함수 호출
+          if(result.Error != false)
+          Android.SaveValidationResult(JSON.stringify(result),true);
+
+          else
+          Android.SaveValidationResult(JSON.stringify(result),false);
 
         },
 
         //show marking point if error exists
         resultErrorMarking : function(result)
         {
+           var layer;
            var map = Arbiter.Map.getMap();
            var errorResults = result.DetailsReport;
            var markingPoints = new Array();
@@ -140,17 +150,79 @@ Arbiter.Validator = (function() {
                       errorResults[i].errCoorX, errorResults[i].errCoorY));
            }
 
-           var layer = new OpenLayers.Layer.Vector('Points', {
-                           styleMap: new OpenLayers.StyleMap({
-                               pointRadius: map.getResolution()+2,
-                               fillOpacity: 0,
-                               strokeColor : "#FF0000"
-                           }),
-                           renderers: renderer
-                       });
-           layer.addFeatures(markingPoints);
-
-           map.addLayer(layer);
+            var i=0;
+                       while(map.layers[i] != null)
+                       {
+                          if(map.layers[i].name == "ErrorMarking")
+                            {
+                              layer = map.layers[i];
+                            }
+                            i++;
+                       }
+        if(layer==null){
+            layer = new OpenLayers.Layer.Vector('ErrorMarking', {
+                                                        styleMap: new OpenLayers.StyleMap({
+                                                            pointRadius: map.getResolution() + 5,
+                                                            fillOpacity: 0,
+                                                            strokeColor : "#FF0000"
+                                                        }),
+                                                        renderers: renderer
+                                                    });
         }
+        else{
+           layer.removeAllFeatures();
+        }
+           layer.addFeatures(markingPoints);
+           map.addLayer(layer);
+        },
+
+        removeErrorMarking : function(){
+
+                    var map = Arbiter.Map.getMap();
+                    var i=0;
+
+                         while(map.layers[i] != null)
+                          {
+                             if(map.layers[i].name == "ErrorMarking")
+                               {
+                                  map.removeLayer(map.layers[i]);
+                                  continue;
+                               }
+                               i++;
+                          }
+        },
+
+  //ADD FUNCTION FOR navigate feature
+  		navigateFeature: function(layerId, fid){
+
+  		            var map = Arbiter.Map.getMap();
+
+          			var layer = Arbiter.Layers.getLayerById(layerId, Arbiter.Layers.type.WFS);
+
+           			var feature = layer.getFeatureByFid(fid);
+
+           			var controlPanel = Arbiter.Controls.ControlPanel;
+
+           			controlPanel.unselect();
+
+           			if(Arbiter.Util.existsAndNotNull(feature)){
+           				feature.geometry.calculateBounds();
+           				var bounds = feature.geometry.getBounds();
+
+           				var zoomForExtent = map.getZoomForExtent(bounds);
+
+           				if(zoomForExtent > 18){
+
+           					var centroid = feature.geometry.getCentroid();
+
+           					map.setCenter(new OpenLayers.LonLat(centroid.x, centroid.y), 18);
+           				}else{
+
+           					map.zoomToExtent(bounds);
+           				}
+
+           				controlPanel.select(feature);
+           			}
+          		}
 	};
 })();
