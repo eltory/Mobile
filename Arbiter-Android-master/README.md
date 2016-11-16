@@ -17,10 +17,20 @@ OpenGeoDT 팀
 
 연구 책임 : 국토연구원 <link>http://www.krihs.re.kr/
 
+확장된 기능
+=====
+
+1. 이미지 오버레이 기능
+2. 주소 검색 기능
+3. 좌표 검색 기능
+4. 다중 언어 설정(영어, 한국어, 포르투갈어, 스페인)
+5. 기본 맵 추가
+6. 레이어 검수 기능
+
 사용 라이브러리
 =====
 
-1. diewald_shapeFileReader (GNU General Public License) <link>https://github.com/diwi/diewald_shapeFileReader
+1. Arbiter-Android (MIT License) <link>https://github.com/ROGUE-JCTD/Arbiter-Android
 
 
 OpenGDS / Mobile (Geospatial Information Editor)
@@ -41,13 +51,23 @@ Group Leader : Pusan National University <link>http://www.pusan.ac.kr/
 
 Research Leader : Korea Research Institute for Human Settlements <link>http://www.krihs.re.kr/
 
+Extended Functions
+=====
+
+1. Image Overlay
+2. Address Search
+3. Coordinate Search
+4. Multilingual(English, Korean, Portuguese, Spanish)
+5. Additional Base Map
+6. Layer Validation
+
 Libraries
 =====
 
-1. diewald_shapeFileReader (GNU General Public License) <link>https://github.com/diwi/diewald_shapeFileReader
+1. Arbiter-Android (MIT License) <link>https://github.com/ROGUE-JCTD/Arbiter-Android
 
 
 Mail
 ====
-Developer : Seungbum, Ryu
-lager000@git.co.kr
+Developer : Seulgi, Lee
+ghre55@git.co.kr
