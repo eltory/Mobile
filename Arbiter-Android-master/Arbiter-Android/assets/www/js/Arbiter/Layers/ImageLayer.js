@@ -21,8 +21,6 @@ Arbiter.ImageLayer = (function() {
             map.addLayer(boxLayer);
             map.addControl(new OpenLayers.Control.MousePosition());
 
-
-
              // Now we call an alert to get the bounds or coordinates from a circle or vector we have drawn
              boxLayer.events.on({
                       featuresadded: onFeaturesAdded });
@@ -59,8 +57,6 @@ Arbiter.ImageLayer = (function() {
                       imgLayer = new OpenLayers.Layer.Image(name, url, boundary, size, options);
 
                       map.addLayer(imgLayer);
-
-                      Arbiter.ImageLayer.arrangeLayerZIndex();
 
                       imgLayerArray.push(imgLayer);
                   }
@@ -144,6 +140,7 @@ Arbiter.ImageLayer = (function() {
             var size = new OpenLayers.Size(1,1);
             var boundary = new OpenLayers.Bounds(left, bottom, right,top);
             var imgLayer;
+            var zoomLevel;
 
 
                       var imageLayer = new Object();
@@ -168,15 +165,24 @@ Arbiter.ImageLayer = (function() {
 
                       imageArray.push(imageLayer);
 
-
                       imgLayer = new OpenLayers.Layer.Image(name, url, boundary, size, options);
 
                       map.addLayer(imgLayer);
 
-                      var lonLat = new OpenLayers.LonLat(left, right);
-                                                                 map.setCenter(lonLat, 6);
+                      var lonLat = boundary.getCenterLonLat();
 
-                      Arbiter.ImageLayer.arrangeLayerZIndex();
+                       var i=0;
+                       while(map.layers[i] != null)
+                       {
+                          if(map.layers[i].name == "aoi")
+                            {
+                                  zoomLevel = map.layers[i].map.zoom;
+                                  break;
+                            }
+                            i++;
+                       }
+
+                      map.setCenter(lonLat, zoomLevel);
 
                       imgLayerArray.push(imgLayer);
 	    },
@@ -189,6 +195,7 @@ Arbiter.ImageLayer = (function() {
             var size = new OpenLayers.Size(1,1);
             var boundary = new OpenLayers.Bounds(left, bottom, right,top);
             var imgLayer;
+            var zoomLevel;
 
 
                       var imageLayer = new Object();
@@ -196,6 +203,8 @@ Arbiter.ImageLayer = (function() {
                       var numOfLayers;
 
                       var index = Android.LoadPreferencesSize("size") -1;
+
+                      Android.StartAddAoiImageProgressDialog();
 
                       boundaryObject.left = boundary.left;
                       boundaryObject.right = boundary.right;
@@ -213,20 +222,28 @@ Arbiter.ImageLayer = (function() {
 
                       imageArray.push(imageLayer);
 
-
                       imgLayer = new OpenLayers.Layer.Image(name, url, boundary, size, options);
 
                       map.addLayer(imgLayer);
 
-                      var lonLat = new OpenLayers.LonLat(left, right).transform(
-                                                                                        new OpenLayers.Projection("EPSG:4326"),
-                                                                                        new OpenLayers.Projection("EPSG:900913")
-                                                                                 );
-                      map.setCenter(lonLat, 6);
+                      // GET CENTER LONLAT
+                      var lonLat = boundary.getCenterLonLat();
 
-                      Arbiter.ImageLayer.arrangeLayerZIndex();
+                      var i=0;
+                      while(map.layers[i] != null)
+                      {
+                        if(map.layers[i].name == "aoi")
+                            {
+                              zoomLevel = map.layers[i].map.zoom;
+                              break;
+                            }
+                         i++;
+                      }
+                      map.setCenter(lonLat, zoomLevel);
 
                       imgLayerArray.push(imgLayer);
+
+                      Android.DoneAddAoiImageProgressDialog();
 	    },
 
         /* delete the image layer */
@@ -250,8 +267,24 @@ Arbiter.ImageLayer = (function() {
     	imgLayerArray.splice(index,index);
     	}
 
-    	Arbiter.ImageLayer.arrangeLayerZIndex();
+    	},
 
+         /* set image opacity */
+		setImageOpacity : function(url, opacityValue){
+		var map = Arbiter.Map.getMap();
+		var index = -1;
+
+    	for(var i = 0; i < imageArray.length; i++){
+
+    	if(imageArray[i].path == url)
+    	index = i;
+
+    	}
+
+    	if(index != -1)
+    	{
+    	imgLayerArray[index].setOpacity(opacityValue);
+    	}
     	},
 
     	arrangeLayerZIndex : function(){
