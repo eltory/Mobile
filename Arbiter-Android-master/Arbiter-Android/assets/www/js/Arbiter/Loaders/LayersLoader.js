@@ -321,9 +321,6 @@ Arbiter.Loaders.LayersLoader = (function(){
 		}, function(e){
 			doWork();
 		});
-
-		Arbiter.ImageLayer.reloadImages(); //call established images in map
-		Arbiter.BingMap.loadBingMap(); //call BingMap controller
 	};
 	
 	/**
@@ -446,6 +443,13 @@ Arbiter.Loaders.LayersLoader = (function(){
 												// properly.  This ensures they
 												// get drawn correctly.
 												redrawWFSLayers();
+
+												//reload Image and Error Marking on the map
+											 	Arbiter.ImageLayer.reloadImages(); //call established images in map
+
+											 	if(Android.reloadValidationResult() != "")
+                                                Arbiter.Validator.resultErrorMarking(JSON.parse(Android.reloadValidationResult())); //reload error marking
+
 												
 												if(Arbiter.Util.existsAndNotNull(layersWithUnsupportedCRS) 
 														&& layersWithUnsupportedCRS.length){
