@@ -2,8 +2,11 @@ package com.lmn.Arbiter_Android.ListAdapters;
 
 import java.util.ArrayList;
 
+import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoading;
+import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoadingJob;
 import com.lmn.Arbiter_Android.ArbiterProject;
 import com.lmn.Arbiter_Android.BaseClasses.Image;
+import com.lmn.Arbiter_Android.Dialog.ArbiterDialogs;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.ImagesDialog;
 import com.lmn.Arbiter_Android.R;
 import com.lmn.Arbiter_Android.Activities.HasThreadPool;
@@ -21,7 +24,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+import android.widget.SeekBar;
 import android.widget.TextView;
+
+import org.apache.cordova.CordovaWebView;
 
 public class ImageList extends CustomList<ArrayList<Image>, Image> {
 
@@ -33,9 +40,14 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
     private HasThreadPool hasThreadPool;
     private String sfName = "imgData";
     private ArrayList<Image> imgList = new ArrayList<Image>();
+    private static String[] items = new String[1];
+    private SeekBar opacityVolumn;
+    private TextView showCurrentOpacity;
+    private double opacityValue = 0;
+    private CordovaWebView cordovaWebView;
 
 
-    public ImageList(ViewGroup viewGroup, Activity activity, int itemLayout, HasThreadPool hasThreadPool){
+    public ImageList(ViewGroup viewGroup, Activity activity, int itemLayout, HasThreadPool hasThreadPool, CordovaWebView cordovaWebView){
         super(viewGroup);
 
         this.activity = activity;
@@ -44,6 +56,9 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
         this.itemLayout = itemLayout;
         this.arbiterProject = ArbiterProject.getArbiterProject();
         this.hasThreadPool = hasThreadPool;
+        this.cordovaWebView = cordovaWebView;
+
+        items[0] = activity.getResources().getString(R.string.image_option_opacity);
     }
 
     @Override
@@ -70,12 +85,22 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
 
         if(image != null){
 
+            RelativeLayout imageItemContainer = (RelativeLayout) view.findViewById(R.id.ImageItemContainer);
             TextView imageNameView = (TextView) view.findViewById(R.id.ImageName);
             ImageButton deleteButton = (ImageButton) view.findViewById(R.id.deleteImage);
 
 
             if(imageNameView != null){
                 imageNameView.setText(image.getName());
+
+                imageItemContainer.setOnClickListener(new OnClickListener(){
+
+                    @Override
+                    public void onClick(View v) {
+
+                        setImageOption(new Image(image), position);
+                    }
+                });
             }
 
 
@@ -94,6 +119,111 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
         }
 
         return view;
+    }
+
+    // Image Option(Opacity, Transition)
+    private void setImageOption(final Image image, int position){
+
+        String loading = activity.getResources().getString(R.string.loading);
+        String pleaseWait = activity.getResources().getString(R.string.please_wait);
+
+        final ProgressDialog progressDialog = ProgressDialog.show(activity, loading, pleaseWait, true);
+
+        hasThreadPool.getThreadPool().execute(new Runnable(){
+            @Override
+            public void run(){
+
+                activity.runOnUiThread(new Runnable(){
+
+                    @Override
+                    public void run(){
+
+                        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+
+                        builder.setTitle(R.string.image_option_setting);
+
+                        builder.setSingleChoiceItems(items, -1,
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog,
+                                                        int id) {
+
+                                        //Opacity
+                                        if(id == 0)
+                                        {
+                                            View innerView = activity.getLayoutInflater().inflate(R.layout.opacity_seek_bar, null);
+
+                                            AlertDialog.Builder opacityBuilder = new AlertDialog.Builder(activity);
+                                            opacityBuilder.setView(innerView);
+                                            opacityVolumn = (SeekBar) innerView.findViewById(R.id.SeekBar_Volumn);
+                                            showCurrentOpacity = (TextView) innerView.findViewById(R.id.Show_CurrentOpacityVolumn);
+                                            setSeekbar();
+
+                                            opacityBuilder.setTitle(R.string.image_option_opacity);
+                                            opacityBuilder.setIcon(R.drawable.icon);
+                                            opacityBuilder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int which)
+                                                {
+                                                    opacityValue = opacityValue / 10;
+
+                                                    AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
+                                                        @Override
+                                                        public void run() {
+
+                                                            String url = "javascript:app.waitForArbiterInit(new Function('Arbiter.ImageLayer.setImageOpacity(\""+image.getPath()+"\","+opacityValue+");'))";
+                                                            cordovaWebView.loadUrl(url);
+                                                        }
+                                                    });
+                                                }
+                                            });
+                                            opacityBuilder.setCancelable(false);
+                                            opacityBuilder.create().show();
+                                        }
+
+                                        dialog.dismiss();
+                                    }
+                                });
+
+                        // create dialog
+                        builder.setNegativeButton(android.R.string.cancel, null);
+                        builder.setIcon(R.drawable.icon);
+                        builder.setCancelable(false);
+                        builder.create().show();
+
+                        progressDialog.dismiss();
+                    }
+                });
+            }
+        });
+    }
+
+    private void setSeekbar(){
+        int maxOpacity = 10;
+        int currentOpacity = 0;
+
+        opacityVolumn.setMax(maxOpacity);
+        opacityVolumn.setProgress(currentOpacity);
+        opacityVolumn.incrementProgressBy(1);
+
+        opacityVolumn.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress,
+                                          boolean fromUser) {
+                showCurrentOpacity.setText(""+progress);
+                opacityValue = progress;
+            }
+        });
     }
 
 

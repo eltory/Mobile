@@ -142,7 +142,7 @@ public class OverlayList extends CustomList<ArrayList<Layer>, Layer> {
 						
 						updateLayerVisibility(layer.getLayerId(), layer.isChecked()); 
 					}
-				});
+			});
             }
             
             if(moveLayerUp != null){
