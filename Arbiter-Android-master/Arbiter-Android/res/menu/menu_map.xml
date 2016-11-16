@@ -22,7 +22,7 @@
         android:id="@+id/action_capture"
         android:icon="@drawable/ic_action_capture"
         android:showAsAction="always"
-        android:title="@string/action_capture"/>
+        android:title="@string/action_capture_title"/>
 
 
     <item
@@ -43,14 +43,14 @@
         android:title="@string/action_projects"/>
 
     <item
-        android:id="@+id/action_shp"
+        android:id="@+id/action_baseMap"
         android:showAsAction="never"
-        android:title="@string/action_shp"/>
+        android:title="@string/action_baseLayers"/>
 
     <item
-        android:id="@+id/action_coordinate"
+        android:id="@+id/action_validationManagement"
         android:showAsAction="never"
-        android:title="@string/action_coordinate"/>
+        android:title="@string/action_validationManagement"/>
 
     <item
         android:id="@+id/action_search"
