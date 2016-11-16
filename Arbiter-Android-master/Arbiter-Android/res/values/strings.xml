@@ -26,8 +26,6 @@
 	<string name="adding_layers">Adding layers</string>
 	<string name="adding_layers_msg">Adding layers to the map&#8230;</string>
 	<string name="feature_dialog_title">Feature</string>
-	<string name="latitude">Latitude</string>
-	<string name="longitude">Longitude</string>
 	<string name="example_longitude">ex. </string>
 	<string name="example_latitude">ex. </string>
 	<string name="back">Back</string>
@@ -97,11 +95,19 @@
     <!-- MAP ACTIVITY STRINGS -->
     <string name="map_activity_name">Arbiter</string>
     <string name="action_new_feature">Draw</string>
+    <string name="action_multiple_language">Language</string>
     <string name="action_new_image">Image</string>
     <string name="action_servers">Servers</string>
     <string name="action_projects">Projects</string>
     <string name="action_aoi">Area of Interest</string>
-    <string name="action_language">Language</string>
+    <string name="action_image">Image Overlay</string>
+    <string name="action_capture_title">Capture</string>
+    <string name="action_validationManagement">Validation Management</string>
+    <string name="action_baseLayers">Base Layers</string>
+    <string name="action_search">Search</string>
+    <string name="action_address">Address search</string>
+    <string name="action_coordinate">Coordinate search</string>
+    <string name="action_validation">Validation</string>
     <string name="layers_button">Layers</string>
     <string name="sync_button">Sync</string>
     <string name="location_button">Find me</string>
@@ -347,14 +353,23 @@
     <string name="must_complete_upload_first">Must complete upload first.</string>
     <string name="always_show_location">Always show current location (drains battery)</string>
     <string name="geolocation_error_msg">Could not get your location.  Please check the device settings to make sure Arbiter has access to Geolocation.  If the problem persists, try restarting the device.</string>
+
+    <!-- multiple language-->
+    <string name="action_korean">Korean</string>
+    <string name="action_english">English</string>
+    <string name="action_portugal">Portugal</string>
+    <string name="action_spain">Spain</string>
+
+    <!-- Search -->
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="coordinate_input_error_title">Input Error</string>
+    <string name="coordinate_input_error_message">Please Enter the correct coordinate</string>
+    <string name="address_search_no_result_title">Alert</string>
+    <string name="address_search_no_result_message">No search result</string>
     <string name="find_area_title">\nEnter the address\n</string>
-    <string name="action_shp">Read a local SHP file</string>
-    <string name="action_search">Address search</string>
-    <string name="action_coordinate">Coordinate search</string>
-    <string name="coordinate_text">Enter the latitude and longitude\n</string>
 
     <!-- Image management -->
-    <string name="action_image">Image Overlay</string>
     <string name="image_list">Image List</string>
     <string name="action_image_option">Image Build Option</string>
     <string name="add_images_button">Add Images</string>
@@ -368,14 +383,16 @@
     <string name="bottom">Bottom</string>
     <string name="right">Right</string>
     <string name="top">Top</string>
-
-    <!-- Image management -->
+    <string name="boundary_image_input_error_title">Input Error</string>
+    <string name="boundary_image_input_error_message">Please Enter the correct boundary value</string>
     <string name="action_capture">Capture Success</string>
     <string name="input_image_AOI">Input AOI</string>
     <string name="action_AOI_image">AOI Boundary</string>
+    <string name="action_AOI_image_progress">AOI Image in progress</string>
+    <string name="image_option_setting">Option Setting</string>
+    <string name="image_option_opacity">Opacity</string>
 
     <!-- validation -->
-    <string name="action_validation">Validation</string>
     <string name="action_validationLayerList">Validation</string>
     <string name="validationLayerName">Name</string>
     <string name="start_validation_button">Start Validation</string>
@@ -383,4 +400,22 @@
     <string name="action_optionSetting">Option Setting</string>
     <string name="action_detailOptionSetting">Detailed Option</string>
     <string name="error500">Internal System Error</string>
+    <string name="report">Report</string>
+    <string name="action_report">Error Report</string>
+    <string name="action_error_navigator">Error Navigator</string>
+    <string name="none_report_title">The report does not exist</string>
+    <string name="none_report_message">You have to operate validation prior to confirming report</string>
+    <string name="action_validation_progress">Validation in progress</string>
+    <string name="navigator_left">Left</string>
+    <string name="navigator_right">Right</string>
+    <string name="cannot_start_navigator">You cannot start Error Navigator</string>
+    <string name="navigator_error_message">You have to operate validation prior to Error Navigator</string>
+    <string name="action_removeErrorMarking">Validation Clean</string>
+
+    <!-- base map -->
+    <string name="action_baseMap_OpenStreetMap">OpenStreetMap</string>
+    <string name="action_baseMap_BingRoad">Bing Road</string>
+    <string name="action_baseMap_BingAerial">Bing Aerial</string>
+    <string name="action_baseMap_BingAerialWithLabels">Bing AerialWithLabels</string>
+
 </resources>
