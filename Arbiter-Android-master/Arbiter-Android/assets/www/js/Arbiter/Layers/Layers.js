@@ -39,7 +39,6 @@ Arbiter.Layers = (function() {
 		 */
 		addLayer : function(layer) {
 			Arbiter.Map.getMap().addLayer(layer);
-			console.log("addlayerkkkkkk");
 		},
 		addDefaultLayer : function(visibility){
 
@@ -75,33 +74,6 @@ Arbiter.Layers = (function() {
 			
 			return osmLayer;
 		},
-
-        createLocalLayer: function(jsonobject, lon, lat) {
-
-            var zoom = 4;
-            var map = Arbiter.Map.getMap();
-
-            var lonLat = new OpenLayers.LonLat(lon, lat).transform(
-                                                                       new OpenLayers.Projection("EPSG:4326"),
-                                                                       new OpenLayers.Projection("EPSG:900913")
-                                                                   );
-
-             console.log(lonLat.lon + ", " + lonLat.lat);
-
-
-           // console.log(jsonobject);
-            var geojson_format = new OpenLayers.Format.GeoJSON();
-
-         //   console.log(geojson_format.read(jsonobject));
-
-
-            var vector_layer = new OpenLayers.Layer.Vector();
-            vector_layer.addFeatures(geojson_format.read(jsonobject));
-            map.addLayer(vector_layer);
-            console.log("kkkkkkkkkkk");
-
-            map.setCenter(lonLat,zoom);
-        },
 
 		/**
 		 * Remove the layer from the map
