@@ -1,5 +1,7 @@
 package com.lmn.Arbiter_Android.Dialog.Dialogs;
 
+import android.app.AlertDialog;
+import android.text.InputType;
 import android.view.View;
 import android.widget.EditText;
 
@@ -31,17 +33,51 @@ public class CoordinatesDialog extends ArbiterDialogFragment {
     public void beforeCreateDialog(View view) {
 
         lat = (EditText) view.findViewById(R.id.Editlat);
+        lat.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+
         lon = (EditText) view.findViewById(R.id.Editlon);
+        lon.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+
 
     }
 
     @Override
     public void onPositiveClick() {
 
-        Double latitude = Double.parseDouble(lat.getText().toString());
-        Double longitude = Double.parseDouble(lon.getText().toString());
+        if(lat.getText().toString().length() != 0 && lon.getText().toString().length() != 0)
+        {
+            if(lat.getText().toString().charAt(0) != '.' && lon.getText().toString().charAt(0) != '.')
+            {
+                Double latitude = Double.parseDouble(lat.getText().toString());
+                Double longitude = Double.parseDouble(lon.getText().toString());
 
-       Map.getMap().findArea(cordova,latitude,longitude);
+                Map.getMap().findArea(cordova,latitude,longitude);
+            }
+
+            else
+            {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+                builder.setTitle(R.string.coordinate_input_error_title);
+                builder.setMessage(R.string.coordinate_input_error_message);
+                builder.setIcon(R.drawable.icon);
+                builder.setPositiveButton(android.R.string.ok, null);
+
+                builder.create().show();
+            }
+        }
+
+        else
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+            builder.setTitle(R.string.coordinate_input_error_title);
+            builder.setMessage(R.string.coordinate_input_error_message);
+            builder.setIcon(R.drawable.icon);
+            builder.setPositiveButton(android.R.string.ok, null);
+
+            builder.create().show();
+        }
     }
 
     @Override

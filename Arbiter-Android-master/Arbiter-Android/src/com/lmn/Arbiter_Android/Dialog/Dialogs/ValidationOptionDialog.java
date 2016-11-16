@@ -1,15 +1,11 @@
 package com.lmn.Arbiter_Android.Dialog.Dialogs;
 
 import java.util.ArrayList;
-
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-
 import android.widget.ListView;
-
 
 import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoading;
 import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoadingJob;
@@ -53,8 +49,11 @@ public class ValidationOptionDialog extends ArbiterDialogFragment{
         frag.checkedLayers = checkedLayers;
 
         cordovaWebView = cordova;
-
         return frag;
+    }
+
+    public ValidationOptionDialog()
+    {
     }
 
     @Override
@@ -69,6 +68,7 @@ public class ValidationOptionDialog extends ArbiterDialogFragment{
             public void onClick(View v) {
                 // 검수 옵션 미완성시 예외처리 다이얼로그 형성
                     onPositiveClick();
+                    getDialog().dismiss();
             }
         });
     }
@@ -86,13 +86,12 @@ public class ValidationOptionDialog extends ArbiterDialogFragment{
     @Override
     public void onPositiveClick() {
 
-        // connect to validator.js for validation
+        //Connection to validator.js for validation
         startValidation();
     }
 
     @Override
     public void onNegativeClick() {
-
     }
 
     @Override
@@ -161,20 +160,20 @@ public class ValidationOptionDialog extends ArbiterDialogFragment{
                         }
                     }
                 } else if (checkedLayers.get(i).getFeatureGeometryType().equalsIgnoreCase("LINESTRING") || checkedLayers.get(i).getFeatureGeometryType().equalsIgnoreCase("MULTILINESTRING")) {
-                    for (int k = 0; k < checkedLayers.get(i).getLineOptionNames().length; k++) {
-                        if (checkedLayers.get(i).callValidationOptionData(checkedLayers.get(i).getLineOptionNames()[k]) != null) {
+                for (int k = 0; k < checkedLayers.get(i).getLineOptionNames().length; k++) {
+                    if (checkedLayers.get(i).callValidationOptionData(checkedLayers.get(i).getLineOptionNames()[k]) != null) {
 
-                            if(checkedLayers.get(i).getLineOptionNames()[k].equalsIgnoreCase("SELFENTITY") || checkedLayers.get(i).getLineOptionNames()[k].equalsIgnoreCase("ENTITYDUPLICATED")
-                                    || checkedLayers.get(i).getLineOptionNames()[k].equalsIgnoreCase("ATTRIBUTEFIX") || checkedLayers.get(i).getLineOptionNames()[k].equalsIgnoreCase("ZVALUEAMBIGUOUS"))
-                                qaOption.put(checkedLayers.get(i).getLineOptionNames()[k], checkedLayers.get(i).callValidationOptionDataArr(checkedLayers.get(i).getLineOptionNames()[k]));
+                        if(checkedLayers.get(i).getLineOptionNames()[k].equalsIgnoreCase("SELFENTITY") || checkedLayers.get(i).getLineOptionNames()[k].equalsIgnoreCase("ENTITYDUPLICATED")
+                                || checkedLayers.get(i).getLineOptionNames()[k].equalsIgnoreCase("ATTRIBUTEFIX") || checkedLayers.get(i).getLineOptionNames()[k].equalsIgnoreCase("ZVALUEAMBIGUOUS"))
+                            qaOption.put(checkedLayers.get(i).getLineOptionNames()[k], checkedLayers.get(i).callValidationOptionDataArr(checkedLayers.get(i).getLineOptionNames()[k]));
 
-                            else
-                                qaOption.put(checkedLayers.get(i).getLineOptionNames()[k], checkedLayers.get(i).callValidationOptionData(checkedLayers.get(i).getLineOptionNames()[k]));
-                        }
+                        else
+                            qaOption.put(checkedLayers.get(i).getLineOptionNames()[k], checkedLayers.get(i).callValidationOptionData(checkedLayers.get(i).getLineOptionNames()[k]));
                     }
                 }
-                qaOptionArr.put(qaOption);
             }
+            qaOptionArr.put(qaOption);
+        }
 
             //send validation information to validator.js
             AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
@@ -189,5 +188,4 @@ public class ValidationOptionDialog extends ArbiterDialogFragment{
             e.printStackTrace();
         }
     }
-
 }

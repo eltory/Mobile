@@ -103,7 +103,7 @@ public class ImagesDialog extends ArbiterDialogFragment{
 
         LinearLayout imageList = (LinearLayout) view.findViewById(R.id.imagesList);
 
-        this.imageList = new ImageList(imageList, this.getActivity(), R.layout.images_list_item, hasThreadPool);
+        this.imageList = new ImageList(imageList, this.getActivity(), R.layout.images_list_item, hasThreadPool, cordova);
 
         SharedPreferences reloadImageData = this.getActivity().getSharedPreferences(sfName, 0);
 
@@ -168,13 +168,12 @@ public class ImagesDialog extends ArbiterDialogFragment{
 
                                     //Draw Image using BBox
                                     if(id == 0) {
+
                                         AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
                                             @Override
                                             public void run() {
-
                                                 String url = "javascript:app.waitForArbiterInit(new Function('Arbiter.ImageLayer.drawBBox(\"" + image.getName() + "\", \"" + image.getPath() + "\");'))";
                                                 cordova.loadUrl(url);
-
                                             }
                                         });
                                     }
@@ -195,10 +194,12 @@ public class ImagesDialog extends ArbiterDialogFragment{
 
 
                                     dialog.dismiss();
+                                    getDialog().dismiss();
                                 }
                             });
 
                     // create dialog
+                    builder.setCancelable(false);
                     builder.create().show();
 
 
