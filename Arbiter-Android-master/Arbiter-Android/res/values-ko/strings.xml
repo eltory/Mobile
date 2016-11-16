@@ -4,8 +4,7 @@
     <string name="error">에러</string>
     <string name="confirm">확인</string>
     <string name="stop">중지</string>
-    <string name="app_name">Arbiter-Android</string>
-    <string name="action_findme">날 찾아줘</string>
+    <string name="action_findme">현재 위치 검색</string>
     <string name="default_project_name">아비터_기본_프로젝트</string>
     <string name="delete">삭제</string>
     <string name="update">업데이트</string>
@@ -26,8 +25,6 @@
     <string name="adding_layers">레이어 추가</string>
     <string name="adding_layers_msg">지도에 레이어 추가&#8230;</string>
     <string name="feature_dialog_title">특성</string>
-    <string name="latitude">위도</string>
-    <string name="longitude">경도</string>
     <string name="example_longitude">예. </string>
     <string name="example_latitude">예. </string>
     <string name="back">뒤로</string>
@@ -99,8 +96,14 @@
     <string name="action_new_feature">그림</string>
     <string name="action_servers">서버</string>
     <string name="action_projects">프로젝트</string>
-    <string name="action_shp">로컬 SHP파일 읽기</string>
-    <string name="action_search">주소 검색</string>
+    <string name="action_image">이미지 오버레이</string>
+    <string name="action_validationManagement">검수 관리</string>
+    <string name="action_search">검색</string>
+    <string name="action_address">주소 검색</string>
+    <string name="action_coordinate">좌표 검색</string>
+    <string name="action_baseLayers">기본 레이어</string>
+    <string name="action_validation">검수</string>
+    <string name="action_capture_title">캡쳐</string>
     <string name="action_aoi">관심있는 지역</string>
     <string name="action_language">언어</string>
     <string name="layers_button">레이어</string>
@@ -232,7 +235,7 @@
 
     <!-- CHOOSE AOI DIALOG STRINGS -->
     <string name="choose_aoi_dialog_title">관심있는 지역 선택</string>
-    <string name="title_activity_aoi">AOIActivity</string>
+    <string name="title_activity_aoi">관심 지역</string>
     <string name="hello_world">Hello world!</string>
 
     <string name="failed_to_sync">동기화 불완전</string>
@@ -344,13 +347,17 @@
     <string name="always_show_location">항상 현재위치를 보여줌 (베터리는 소모됩니다.)</string>
     <string name="geolocation_error_msg">당신의 위치를 찾을 수 없습니다. 아비터가 GPS에 접근할 수 있는지 설정을 확인해주시기 바랍니다. 문제가 계속 발생하면, 디바이스를 다시 시작해주세요.</string>
     <string name="base">베이스</string>
-    <string name="find_area_title">\n주소를 입력하세요\n</string>
-    <string name="action_coordinate">좌표 검색</string>
-    <string name="coordinate_text">위도와 경도를 입력해주세요\n</string>
 
+    <!-- Search -->
+    <string name="find_area_title">\n주소를 입력하세요\n</string>
+    <string name="latitude">위도</string>
+    <string name="longitude">경도</string>
+    <string name="coordinate_input_error_title">입력값 오류</string>
+    <string name="coordinate_input_error_message">올바른 좌표값을 넣어주세요.</string>
+    <string name="address_search_no_result_title">알림</string>
+    <string name="address_search_no_result_message">검색 결과가 없습니다.</string>
 
     <!-- Image management -->
-    <string name="action_image">이미지 오버레이</string>
     <string name="image_list">이미지 목록</string>
     <string name="action_image_option">이미지 구축 옵션</string>
     <string name="action_boundary">경계값 설정</string>
@@ -360,18 +367,41 @@
     <string name="remove_image">이미지 삭제</string>
     <string name="imageName">이름</string>
     <string name="imagePath">경로</string>
-
-    <!-- Image management -->
+    <string name="left">왼쪽</string>
+    <string name="bottom">아래</string>
+    <string name="right">오른쪽</string>
+    <string name="top">위</string>
+    <string name="boundary_image_input_error_title">입력값 오류</string>
+    <string name="boundary_image_input_error_message">올바른 경계값을 입력해주세요.</string>
     <string name="action_capture">캡쳐 완료</string>
     <string name="input_image_AOI">AOI에 삽입</string>
+    <string name="action_AOI_image_progress">AOI 이미지 처리중</string>
+    <string name="image_option_setting">Option Setting</string>
+    <string name="image_option_opacity">Opacity</string>
 
     <!-- validation -->
-    <string name="action_validation">검수</string>
     <string name="action_validationLayerList">검수 대상 목록</string>
     <string name="validationLayerName">레이어 이름</string>
     <string name="start_validation_button">검수 시작</string>
     <string name="action_validationOption">검수 옵션</string>
     <string name="action_optionSetting">옵션 설정</string>
     <string name="action_detailOptionSetting">세부 옵션</string>
+    <string name="error500">내부 시스템 에러</string>
+    <string name="report">검수 결과</string>
+    <string name="action_report">오류 보고서</string>
+    <string name="action_error_navigator">에러 네비게이터</string>
+    <string name="none_report_title">보고서가 존재하지 않습니다.</string>
+    <string name="none_report_message">레포트를 확인하기 전에 검수를 시행해주십시오.</string>
+    <string name="action_validation_progress">검수 진행중</string>
+    <string name="navigator_left">왼쪽</string>
+    <string name="navigator_right">오른쪽</string>
+    <string name="cannot_start_navigator">에러 네비게이터를 실행할 수 없습니다.</string>
+    <string name="navigator_error_message">에러 네비게이터를 시작하기 전에 검수를 시행해주십시오.</string>
+
+    <!-- clean -->
+    <string name="action_removeErrorMarking">검수 기록 삭제</string>
+
+    <!-- base map -->
+
 
 </resources>
