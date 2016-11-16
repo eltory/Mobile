@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
+import android.util.Log;
 
 import com.lmn.Arbiter_Android.ArbiterProject;
 import com.lmn.Arbiter_Android.BaseClasses.Validation;
@@ -49,6 +50,7 @@ public class ValidationLayersListLoader implements BaseColumns {
     public static final String ARBITER_ID = "arbiter_id";
 
 
+    //DB Connection
     public ValidationLayersListLoader(Activity activity) {
 
         projectName = ArbiterProject.getArbiterProject().getOpenProject(activity);
@@ -60,6 +62,7 @@ public class ValidationLayersListLoader implements BaseColumns {
 
     }
 
+    //For getting each Feature Table Name
     public ArrayList<String> getFeature_table_name() {
         String[] columns = {_ID, // 0
                 FEATURE_TABLE_NAME, // 1
@@ -85,6 +88,36 @@ public class ValidationLayersListLoader implements BaseColumns {
         return feature_table_name;
     }
 
+    //For Error Navigator to get layerID
+    public String getLayerID(String errorFeatureFID)
+    {
+        String layer_title = errorFeatureFID.split("\\.")[0];
+        String layerID = "";
+
+        String[] project_columns = {
+                 _ID // 0
+        };
+
+        String whereClauseInProject = LAYER_TITLE + "=?";
+        String[] whereArgsInProject = {
+                layer_title
+        };
+
+        String project_orderBy = LAYER_ORDER + " DESC";
+
+        Cursor project_cursor = projectDb.query(LAYERS_TABLE_NAME, project_columns, whereClauseInProject, whereArgsInProject, null, null, project_orderBy);
+
+
+        for(project_cursor.moveToFirst(); !project_cursor.isAfterLast(); project_cursor.moveToNext()) {
+            layerID = project_cursor.getString(0);
+        }
+
+        project_cursor.close();
+
+        return layerID;
+    }
+
+    //Check Vector Data if exist in AOI
     public boolean existInAOI(String feature_table_name)
     {
         Cursor cursor = featuresDb.query(feature_table_name, null, null,
@@ -97,6 +130,7 @@ public class ValidationLayersListLoader implements BaseColumns {
             return true;
     }
 
+    // Input DB data to Validation object
     public Validation setLayerInfo(String table_name)
     {
         Validation validationLayer = new Validation();
