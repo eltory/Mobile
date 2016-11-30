@@ -242,8 +242,15 @@ public class ValidationLayersListLoader implements BaseColumns {
         ArrayList<String> attributeTypeArr = new ArrayList<String>();
         try {
             JSONObject json = new JSONObject(validationLayer.getFeatureEnumeration());
+
+            char temp = ' ';
+
             for (int i = 0; i < attributeArr.size(); i++)
-            { attributeTypeArr.add(json.getJSONObject(attributeArr.get(i)).getString("type").split(":")[1]); }
+            {
+                temp = (char)(json.getJSONObject(attributeArr.get(i)).getString("type").split(":")[1].charAt(0) - 32);
+
+                attributeTypeArr.add(String.valueOf(temp) + json.getJSONObject(attributeArr.get(i)).getString("type").split(":")[1].substring(1));
+            }
 
             validationLayer.setAttributeTypes(attributeTypeArr);
         }catch (Exception e) {e.printStackTrace();}

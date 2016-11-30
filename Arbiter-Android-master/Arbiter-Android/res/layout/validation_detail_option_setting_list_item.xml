@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="20dp">
 
-        <!-- Layer name-->
+        <!-- Attribute name-->
         <TextView
             android:id="@+id/attributeName"
             android:layout_width="wrap_content"
@@ -23,7 +23,6 @@
             android:typeface="sans"
             android:textSize="18sp"
             android:textStyle="bold"/>
-
     </RelativeLayout>
 
     <CheckBox

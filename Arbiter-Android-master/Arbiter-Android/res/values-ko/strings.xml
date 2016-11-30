@@ -93,14 +93,12 @@
 
     <!-- MAP ACTIVITY STRINGS -->
     <string name="map_activity_name">아비터</string>
-    <string name="action_new_feature">그림</string>
+    <string name="action_new_feature">피쳐 삽입</string>
     <string name="action_servers">서버</string>
     <string name="action_projects">프로젝트</string>
     <string name="action_image">이미지 오버레이</string>
     <string name="action_validationManagement">검수 관리</string>
     <string name="action_search">검색</string>
-    <string name="action_address">주소 검색</string>
-    <string name="action_coordinate">좌표 검색</string>
     <string name="action_baseLayers">기본 레이어</string>
     <string name="action_validation">검수</string>
     <string name="action_capture_title">캡쳐</string>
@@ -349,13 +347,15 @@
     <string name="base">베이스</string>
 
     <!-- Search -->
-    <string name="find_area_title">\n주소를 입력하세요\n</string>
+    <string name="action_address">주소 검색</string>
+    <string name="action_coordinate">좌표 검색</string>
     <string name="latitude">위도</string>
     <string name="longitude">경도</string>
     <string name="coordinate_input_error_title">입력값 오류</string>
     <string name="coordinate_input_error_message">올바른 좌표값을 넣어주세요.</string>
     <string name="address_search_no_result_title">알림</string>
     <string name="address_search_no_result_message">검색 결과가 없습니다.</string>
+    <string name="address_search_title">\n주소를 입력하세요\n</string>
 
     <!-- Image management -->
     <string name="image_list">이미지 목록</string>
@@ -392,9 +392,13 @@
     <string name="action_error_navigator">에러 네비게이터</string>
     <string name="none_report_title">보고서가 존재하지 않습니다.</string>
     <string name="none_report_message">레포트를 확인하기 전에 검수를 시행해주십시오.</string>
-    <string name="action_validation_progress">검수 진행중</string>
+    <string name="action_validation_progress">검수 진행중...</string>
+    <string name="action_report_progress">레포트 생성중...</string>
+    <string name="action_errorMarking_progress">에러 데이터 표시중...</string>
     <string name="navigator_left">왼쪽</string>
     <string name="navigator_right">오른쪽</string>
+    <string name="report_left">왼쪽</string>
+    <string name="report_right">오른쪽</string>
     <string name="cannot_start_navigator">에러 네비게이터를 실행할 수 없습니다.</string>
     <string name="navigator_error_message">에러 네비게이터를 시작하기 전에 검수를 시행해주십시오.</string>
 

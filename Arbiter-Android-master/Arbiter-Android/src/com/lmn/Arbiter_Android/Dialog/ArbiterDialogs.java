@@ -2,24 +2,22 @@ package com.lmn.Arbiter_Android.Dialog;
 
 import java.util.ArrayList;
 
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
+import com.lmn.Arbiter_Android.Activities.MapActivity;
 import com.lmn.Arbiter_Android.BaseClasses.Validation;
-import com.lmn.Arbiter_Android.Dialog.Dialogs.AOIBoundaryDialog;
-import com.lmn.Arbiter_Android.Dialog.Dialogs.BoundaryDialog;
-import com.lmn.Arbiter_Android.Dialog.Dialogs.CoordinatesDialog;
-import com.lmn.Arbiter_Android.Dialog.Dialogs.ImagesDialog;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.AddValidateLayersDialog;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.ValidationDetailOptionSettingDialog;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.ValidationOptionDialog;
 import com.lmn.Arbiter_Android.Dialog.Dialogs.ValidationOptionSettingDialog;
+import com.lmn.Arbiter_Android.Dialog.Dialogs.ValidationErrorReportDialog;
 import com.lmn.Arbiter_Android.R;
 import com.lmn.Arbiter_Android.Activities.HasThreadPool;
 import com.lmn.Arbiter_Android.BaseClasses.Layer;
@@ -162,19 +160,6 @@ public class ArbiterDialogs {
 		dialog.show(fragManager, "addLayersDialog");
 	}
 
-	public void showCoordinatesDialog(final CordovaWebView webview){
-		String title = resources.getString(R.string.action_coordinate);
-		String ok = resources.getString(android.R.string.ok);
-		String cancel = resources.getString(android.R.string.cancel);
-		int layout = R.layout.coordinates_find_dialog;
-
-		DialogFragment dialog;
-
-		dialog = CoordinatesDialog.newInstance(title, ok, cancel, layout, webview);
-
-		dialog.show(fragManager, "CoordinatesDialog");
-	}
-
 	public void showGoOfflineDialog(boolean creatingProject){
 		String title = resources.getString(R.string.go_offline_dialog_title);
 		String ok = resources.getString(android.R.string.ok);
@@ -214,45 +199,6 @@ public class ArbiterDialogs {
 
 		DialogFragment dialog = LayersDialog.newInstance(title, ok, cancel, layout, hasThreadPool);
 		dialog.show(fragManager, "layersDialog");
-	}
-
-	public void showImagesDialog(HasThreadPool hasThreadPool, final CordovaWebView webview){
-		String title = resources.getString(R.string.action_image);
-		String ok = resources.getString(android.R.string.ok);
-		String cancel = resources.getString(android.R.string.cancel);
-		int layout = R.layout.images_dialog;
-
-		DialogFragment dialog;
-
-		dialog = ImagesDialog.newInstance(title, ok, cancel, layout, hasThreadPool, webview, resources);
-
-		dialog.show(fragManager, "imagesDialog");
-	}
-
-	public void showBoundaryDialog(final CordovaWebView webview, String name, String path){
-		String title = resources.getString(R.string.action_boundary);
-		String ok = resources.getString(android.R.string.ok);
-		String cancel = resources.getString(android.R.string.cancel);
-		int layout = R.layout.boundary_find_dialog;
-
-		DialogFragment dialog;
-
-		dialog = BoundaryDialog.newInstance(title, ok, cancel, layout, webview, name, path);
-
-		dialog.show(fragManager, "boundaryDialog");
-	}
-
-	public void showAOIDialog(final CordovaWebView webview, String name, String path){
-		String title = resources.getString(R.string.action_AOI_image);
-		String ok = resources.getString(android.R.string.ok);
-		String cancel = resources.getString(android.R.string.cancel);
-		int layout = R.layout.aoi_image_dialog;
-
-		DialogFragment dialog;
-
-		dialog = AOIBoundaryDialog.newInstance(title, ok, cancel, layout, webview, name, path);
-
-		dialog.show(fragManager, "AOIBoundaryDialog");
 	}
 
 	//add validation layers dialog
@@ -301,6 +247,24 @@ public class ArbiterDialogs {
 		DialogFragment dialog = ValidationDetailOptionSettingDialog.newInstance(title, ok, cancel, layout, hasThreadPool, optionName, selectedLayer, selectedOptionNameLayout);
 
 		dialog.show(fragManager, "validationDetailOptionSettingDialog");
+	}
+
+	public void showValidationErrorReportDialog(MapActivity mapActivity){
+		String title = resources.getString(R.string.report);
+		String ok = resources.getString(android.R.string.ok);
+		int layout = R.layout.validation_report_table;
+
+		//Create Progress dialog
+		ProgressDialog reportProgressDialog = new ProgressDialog(mapActivity);
+		reportProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+		reportProgressDialog.setIcon(mapActivity.getResources().getDrawable(R.drawable.icon));
+		reportProgressDialog.setTitle(R.string.loading);
+		reportProgressDialog.setMessage(mapActivity.getString(R.string.action_report_progress));
+		reportProgressDialog.setCanceledOnTouchOutside(false);
+		reportProgressDialog.show();
+
+			DialogFragment dialog = ValidationErrorReportDialog.newInstance(title, ok, layout, reportProgressDialog);
+			dialog.show(fragManager, "validationReportDialog");
 	}
 
 }

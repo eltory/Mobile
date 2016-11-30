@@ -1,9 +1,5 @@
 package com.lmn.Arbiter_Android.Activities;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -17,7 +13,6 @@ import org.json.JSONObject;
 
 import com.lmn.Arbiter_Android.ArbiterProject;
 import com.lmn.Arbiter_Android.ArbiterState;
-import com.lmn.Arbiter_Android.Dialog.Dialogs.ValidationErrorReportDialog;
 import com.lmn.Arbiter_Android.Loaders.ValidationLayersListLoader;
 import com.lmn.Arbiter_Android.OOMWorkaround;
 import com.lmn.Arbiter_Android.R;
@@ -49,18 +44,13 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.location.Geocoder;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.Environment;
 import android.os.Handler;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
@@ -70,7 +60,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
@@ -79,11 +68,20 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.lmn.OpenGDS_Android.BaseClasses.Image;
+import com.lmn.OpenGDS_Android.BaseLayers.BaseLayers;
+import com.lmn.OpenGDS_Android.BaseLayers.BingMap;
+import com.lmn.OpenGDS_Android.Capture.Capture;
+import com.lmn.OpenGDS_Android.Dialog.Dialogs.MultiLanguageDialog;
+import com.lmn.OpenGDS_Android.Dialog.ArbiterDialogs_Expansion;
+import com.lmn.OpenGDS_Android.JSInterface.JSInterface;
+
+
 public class MapActivity extends FragmentActivity implements CordovaInterface,
         Map.MapChangeListener, Map.CordovaMap, HasThreadPool, HasConnectivityListener {
 
-    private Geocoder mCoder;
     private ArbiterDialogs dialogs;
+    private ArbiterDialogs_Expansion dialogs_expansion;
     private String TAG = "MAP_ACTIVITY";
     private ArbiterProject arbiterProject;
     private MapChangeHelper mapChangeHelper;
@@ -96,12 +94,11 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
     private CordovaWebView cordovaWebView; // For CORDOVA
     private String sfName = "imgData"; // SharedPreferences for image data
     private String upToDateReport = "report"; // SharedPreferences for validation report
-    private int captureNum = 0;
     private TableLayout navigatorTableLayout;
     private JSONObject reportObject;
     private JSONArray detailedReports;
-    private int errorSize=0;
-    private int errorPos=0;
+    private int errorSize = 0;
+    private int errorPos = 0;
 
     private final ExecutorService threadPool = Executors.newCachedThreadPool();
     private CordovaPlugin activityResultCallback;
@@ -111,10 +108,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
     // If true, then the JavaScript and native code continue to run in the background
     // when another application (activity) is started.
     protected boolean keepRunning = true;
-
     private FailedSyncHelper failedSyncHelper;
-    static double lat, lon;
-    Locale locale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,50 +118,24 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         setContentView(R.layout.activity_map);
         Init(savedInstanceState);
 
-        // Multiple language dialog
-        final CharSequence[] items = {getResources().getString(R.string.action_korean), getResources().getString(R.string.action_english),
-                getResources().getString(R.string.action_portugal), getResources().getString(R.string.action_spain)};
-        AlertDialog.Builder builder = new AlertDialog.Builder(MapActivity.this);
-        builder.setTitle(getResources().getString(R.string.action_multiple_language));
-        builder.setSingleChoiceItems(items, -1,
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int item) {
-                        if (item == 0)
-                            locale = new Locale("ko");
-
-                        else if (item == 1)
-                            locale = new Locale("en");
-
-                        else if (item == 2)
-                            locale = new Locale("pt");
-
-                        else if (item == 3)
-                            locale = new Locale("es");
-
-                        Configuration config = new Configuration();
-                        config.locale = locale;
-                        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-                        invalidateOptionsMenu();
-                        dialog.dismiss();
-                    }
-                });
-        AlertDialog alert = builder.create();
-        alert.setIcon(getResources().getDrawable(R.drawable.icon));
-        alert.setCanceledOnTouchOutside(false);
-        alert.show();
+        // set Multi-language dialog
+        CharSequence[] languages = { getResources().getString(R.string.action_korean), getResources().getString(R.string.action_english),
+                getResources().getString(R.string.action_portugal), getResources().getString(R.string.action_spain) };
+        MultiLanguageDialog multiLanguageDialog = new MultiLanguageDialog(getActivity());
+        multiLanguageDialog.setLanguage(languages);
+        multiLanguageDialog.showMultiLanguageDialog();
 
         MapActivity.this.keepRunning = MapActivity.this.getBooleanProperty("KeepRunning", true);
         dialogs = new ArbiterDialogs(getApplicationContext(), getResources(), getSupportFragmentManager());
+        dialogs_expansion = new ArbiterDialogs_Expansion(getApplicationContext(), getResources(), getSupportFragmentManager()); //Add ArbiterDialogs expansion version.
         cordovaWebView = (CordovaWebView) findViewById(R.id.webView1);
 
-        //add interface between javascript and android
-        cordovaWebView.addJavascriptInterface(new JSInterface(this), "Android"); //You will access this via Android.method(args);
+        //Add interface between javascript and android
+        cordovaWebView.addJavascriptInterface(new JSInterface(this, MapActivity.this), "Android"); //You will access this via Android.method(args);
 
         cordovaWebView.loadUrl(ArbiterCordova.mainUrl, 5000);
         mapChangeHelper = new MapChangeHelper(MapActivity.this, cordovaWebView, incompleteProjectHelper);
-        mCoder = new Geocoder(MapActivity.this);
         checkNotificationsAreComputed();
-
     }
 
     private String getProjectPath() {
@@ -357,7 +325,6 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         builder.create().show();
 
         return false;
-
     }
 
     @Override
@@ -376,9 +343,8 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         Log.w("MapActivity", "MapActivity onCreateOptionsMenu");
 
         // remove  it clause because Multiple Language updates onCreateOptionsMenu
-       // if (this.notificationBadge == null)
-            this.notificationBadge = new NotificationBadge(this, menu);
-
+        // if (this.notificationBadge == null)
+        this.notificationBadge = new NotificationBadge(this, menu);
 
 
         return true;
@@ -433,20 +399,27 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
 
             case R.id.action_new_image:
                 if (makeSureNotEditing()) {
-                    dialogs.showImagesDialog(activity, cordovaWebView);
+                    //Need to image overlay option setting
+                    Image imageOption = new Image();
+                    imageOption.setDrawBuildOption();
+                    imageOption.setBoundaryBuildOption();
+                    imageOption.setAOIBuildOption();
+                    imageOption.setImageOpacity();
+                    dialogs_expansion.showImagesDialog(activity, cordovaWebView, imageOption);
                 }
                 return true;
 
             case R.id.action_validation:
                 if (makeSureNotEditing()) {
                     dialogs.showAddValidateLayersDialog(activity, getListener(), cordovaWebView);
-                    }
-
+                }
                 return true;
 
             case R.id.action_capture:
                 if (makeSureNotEditing()) {
-                    startCapture();
+                    //Example for way of using capture
+                    Capture capture = new Capture(cordovaWebView, MapActivity.this);
+                    capture.startCapture("abc");
                 }
                 return true;
 
@@ -465,7 +438,14 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                 return true;
 
             case R.id.action_baseMap:
-                showBaseLayers();
+                //Example for way of using base layers
+                BingMap bing = new BingMap(MapActivity.this);
+                bing.setBingRoad();
+                bing.setBingAerial();
+                bing.setBingAerialWithLabels();
+                BaseLayers baseLayers = new BaseLayers(MapActivity.this, cordovaWebView);
+                baseLayers.addBingMap(bing);
+                baseLayers.showDialog();
                 return true;
 
             case R.id.action_validationManagement:
@@ -649,8 +629,8 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         ArbiterState.getArbiterState().setNewAOI(null);
     }
 
-    public void startSearch()
-    {
+    public void startSearch() {
+        final MapActivity activity = this;
         String[] options = new String[]{getResources().getString(R.string.action_address), getResources().getString(R.string.action_coordinate)};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -662,15 +642,10 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                     public void onClick(DialogInterface dialog,
                                         int id) {
 
-                        if(id==0)
-                        {
-                            Intent intent = new Intent(getApplicationContext(), FindAreaActivity.class);
-                            startActivityForResult(intent, 101);
-                        }
-
-                        else
-                        {
-                            dialogs.showCoordinatesDialog(cordovaWebView);
+                        if (id == 0) {
+                            dialogs_expansion.showAddressSearchDialog(cordovaWebView, activity);
+                        } else {
+                            dialogs_expansion.showCoordinateSearchDialog(cordovaWebView);
                         }
 
 
@@ -685,36 +660,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         builder.create().show();
     }
 
-    public void showBaseLayers()
-    {
-        String[] layers = new String[]{getResources().getString(R.string.action_baseMap_OpenStreetMap), getResources().getString(R.string.action_baseMap_BingRoad),
-                getResources().getString(R.string.action_baseMap_BingAerial), getResources().getString(R.string.action_baseMap_BingAerialWithLabels)};
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-
-        builder.setTitle(R.string.action_baseLayers);
-
-        builder.setSingleChoiceItems(layers, -1,
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog,
-                                        int id) {
-
-                        Map.getMap().baseLayers(cordovaWebView, layers[id]);
-
-
-                        dialog.dismiss();
-                    }
-                });
-
-        // create dialog
-        builder.setCancelable(false);
-        builder.setNegativeButton(android.R.string.cancel, null);
-        builder.setIcon(R.drawable.icon);
-        builder.create().show();
-    }
-
-    private void startValidationManagement()
-    {
+    private void startValidationManagement() {
         String[] options = new String[]{getResources().getString(R.string.action_report), getResources().getString(R.string.action_error_navigator),
                 getResources().getString(R.string.action_removeErrorMarking)};
 
@@ -727,19 +673,11 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                     public void onClick(DialogInterface dialog,
                                         int id) {
 
-                        if(id==0)
-                        {
+                        if (id == 0) {
                             SharedPreferences getErrorReport = getActivity().getSharedPreferences(upToDateReport, 0);
-                            if(!getErrorReport.getString("report","").equals(""))
-                            {
-                                Intent validationErrorReportIntent = new Intent(getApplicationContext(), ValidationErrorReportDialog.class);
-                                validationErrorReportIntent.putExtra("report",getErrorReport.getString("report",""));
-                                validationErrorReportIntent.putExtra("check",getErrorReport.getBoolean("check",false));
-                                startActivity(validationErrorReportIntent);
-
-                            }
-                            else
-                            {
+                            if (!getErrorReport.getString("report", "").equals("")) {
+                                dialogs.showValidationErrorReportDialog(MapActivity.this);
+                            } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
                                 builder.setTitle(R.string.none_report_title);
@@ -749,13 +687,9 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                                 builder.setCancelable(false);
                                 builder.create().show();
                             }
-                        }
-
-                        else if(id==1)
-                        {
+                        } else if (id == 1) {
                             SharedPreferences checkValidation = getActivity().getSharedPreferences(upToDateReport, 0);
-                            if(checkValidation.getString("report", "").equals(""))
-                            {
+                            if (checkValidation.getString("report", "").equals("")) {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
                                 builder.setTitle(R.string.cannot_start_navigator);
@@ -764,45 +698,34 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                                 builder.setPositiveButton(android.R.string.ok, null);
                                 builder.setCancelable(false);
                                 builder.create().show();
-                            }
-
-                            else
-                            {
+                            } else {
                                 //NAVIGATOR REQUEST LANDSCAPE ORIENTATION
                                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
                                 LinearLayout errNavigatorLayout = (LinearLayout) findViewById(R.id.errorNavigator);
 
-                                if(errNavigatorLayout.getVisibility() == View.GONE) {
+                                if (errNavigatorLayout.getVisibility() == View.GONE) {
 
-                                    if(errorPos >= 0 && reportObject!=null)
-                                    {
+                                    if (errorPos >= 0 && reportObject != null) {
                                         errNavigatorLayout.setVisibility(View.VISIBLE);
+                                    } else {
+                                        errNavigatorLayout.setVisibility(View.VISIBLE);
+                                        try {
+                                            reportObject = new JSONObject(checkValidation.getString("report", ""));
+                                            detailedReports = reportObject.getJSONArray("DetailsReport");
+                                            errorSize = detailedReports.length();
+                                            errorPos = 0;
+                                            startErrorNavigator();
+                                        } catch (Exception e) {
+                                            e.printStackTrace();
+                                        }
                                     }
-
-                                    else {
-                                            errNavigatorLayout.setVisibility(View.VISIBLE);
-                                            try {
-                                                reportObject = new JSONObject(checkValidation.getString("report", ""));
-                                                detailedReports = reportObject.getJSONArray("DetailsReport");
-                                                errorSize = detailedReports.length();
-                                                errorPos = 0;
-                                                startErrorNavigator();
-                                            } catch (Exception e) {
-                                                e.printStackTrace();
-                                            }
-                                    }
-                                }
-                                else
-                                {
+                                } else {
                                     errNavigatorLayout.setVisibility(View.GONE);
                                 }
                             }
 
-                        }
-
-                        else
-                        {
+                        } else {
                             if (makeSureNotEditing()) {
                                 removeErrorMarking();
                                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED); // GO BACK TO THE SYSTEM DEFAULTS
@@ -820,11 +743,10 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
 
     }
 
-    private void startErrorNavigator()
-    {
+    private void startErrorNavigator() {
 
         navigatorTableLayout = (TableLayout) findViewById(R.id.navigatorContent);
-        navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount()-1);
+        navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount() - 1);
 
         try {
 
@@ -844,7 +766,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
             errorNumber.setPadding(5, 5, 5, 5);
             errorNumber.setTextColor(Color.parseColor("#ECF0F1"));
             errorNumber.setGravity(Gravity.CENTER_HORIZONTAL);
-            errorNumber.setText("Error-" + (errorPos+1));
+            errorNumber.setText("Error-" + (errorPos + 1));
             errorNumber.setLayoutParams(tableParams);
             tr.addView(errorNumber);
 
@@ -854,7 +776,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
             errorNameContent.setPadding(5, 5, 5, 5);
             errorNameContent.setTextColor(Color.parseColor("#ECF0F1"));
             errorNameContent.setGravity(Gravity.CENTER_HORIZONTAL);
-            errorNameContent.setText(detailedReports.getJSONObject(errorPos).getString("errName"));
+            errorNameContent.setText(detailedReports.getJSONObject(errorPos).getString("errorName"));
             errorNameContent.setLayoutParams(tableParams);
             tr.addView(errorNameContent);
 
@@ -880,31 +802,28 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
             e.printStackTrace();
         }
 
-        if(errorPos >= 0)
-        findViewById(R.id.leftButton).setOnClickListener(leftClickListener);
+        if (errorPos >= 0)
+            findViewById(R.id.leftButton).setOnClickListener(leftClickListener);
 
-        if(errorPos < errorSize)
-        findViewById(R.id.rightButton).setOnClickListener(rightClickListener);
+        if (errorPos < errorSize)
+            findViewById(R.id.rightButton).setOnClickListener(rightClickListener);
     }
 
-    ImageButton.OnClickListener leftClickListener = new View.OnClickListener()
-    {
-        public void onClick(View v)
-        {
+    ImageButton.OnClickListener leftClickListener = new View.OnClickListener() {
+        public void onClick(View v) {
             try {
 
                 findViewById(R.id.leftButton).setEnabled(false);
                 Handler h = new Handler();
-                h.postDelayed(new Runnable(){
-                    public void run()
-                    {
+                h.postDelayed(new Runnable() {
+                    public void run() {
                         findViewById(R.id.leftButton).setEnabled(true);
                     }
                 }, 1000); // Should to wait click minimum 1 second for Vector Rendering
 
-                navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount()-1);
+                navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount() - 1);
                 errorPos = errorPos - 1;
-                if(errorPos < 0)
+                if (errorPos < 0)
                     errorPos = 0;
 
                 TableRow tr = new TableRow(getActivity());
@@ -923,7 +842,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                 errorNumber.setPadding(5, 5, 5, 5);
                 errorNumber.setTextColor(Color.parseColor("#ECF0F1"));
                 errorNumber.setGravity(Gravity.CENTER_HORIZONTAL);
-                errorNumber.setText("Error-" + (errorPos+1));
+                errorNumber.setText("Error-" + (errorPos + 1));
                 errorNumber.setLayoutParams(tableParams);
                 tr.addView(errorNumber);
 
@@ -933,7 +852,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                 errorNameContent.setPadding(5, 5, 5, 5);
                 errorNameContent.setTextColor(Color.parseColor("#ECF0F1"));
                 errorNameContent.setGravity(Gravity.CENTER_HORIZONTAL);
-                errorNameContent.setText(detailedReports.getJSONObject(errorPos).getString("errName"));
+                errorNameContent.setText(detailedReports.getJSONObject(errorPos).getString("errorName"));
                 errorNameContent.setLayoutParams(tableParams);
                 tr.addView(errorNameContent);
 
@@ -961,24 +880,21 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         }
     };
 
-    ImageButton.OnClickListener rightClickListener = new View.OnClickListener()
-    {
-        public void onClick(View v)
-        {
+    ImageButton.OnClickListener rightClickListener = new View.OnClickListener() {
+        public void onClick(View v) {
             try {
                 findViewById(R.id.rightButton).setEnabled(false);
                 Handler h = new Handler();
-                h.postDelayed(new Runnable(){
-                    public void run()
-                    {
+                h.postDelayed(new Runnable() {
+                    public void run() {
                         findViewById(R.id.rightButton).setEnabled(true);
                     }
                 }, 1000); // Should to wait click minimum 1 second for Vector Rendering
 
-                navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount()-1);
+                navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount() - 1);
                 errorPos = errorPos + 1;
-                if(errorPos > errorSize-1)
-                    errorPos = errorSize-1;
+                if (errorPos > errorSize - 1)
+                    errorPos = errorSize - 1;
 
                 TableRow tr = new TableRow(getActivity());
                 tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
@@ -996,7 +912,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                 errorNumber.setPadding(5, 5, 5, 5);
                 errorNumber.setTextColor(Color.parseColor("#ECF0F1"));
                 errorNumber.setGravity(Gravity.CENTER_HORIZONTAL);
-                errorNumber.setText("Error-" + (errorPos+1));
+                errorNumber.setText("Error-" + (errorPos + 1));
                 errorNumber.setLayoutParams(tableParams);
                 tr.addView(errorNumber);
 
@@ -1006,7 +922,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                 errorNameContent.setPadding(5, 5, 5, 5);
                 errorNameContent.setTextColor(Color.parseColor("#ECF0F1"));
                 errorNameContent.setGravity(Gravity.CENTER_HORIZONTAL);
-                errorNameContent.setText(detailedReports.getJSONObject(errorPos).getString("errName"));
+                errorNameContent.setText(detailedReports.getJSONObject(errorPos).getString("errorName"));
                 errorNameContent.setLayoutParams(tableParams);
                 tr.addView(errorNameContent);
 
@@ -1034,52 +950,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         }
     };
 
-    private void startCapture() {
-
-        cordovaWebView.setDrawingCacheEnabled( true);
-
-        Bitmap screenshot = Bitmap. createBitmap(cordovaWebView.getWidth(), cordovaWebView.getHeight(), Bitmap.Config.ARGB_8888);
-        Canvas c = new Canvas(screenshot);
-
-        cordovaWebView.draw(c);
-
-        String filename = "Capture" + captureNum + ".png";
-
-        try {
-            File f = new File(Environment.getExternalStorageDirectory().toString() + "/DCIM/Camera/", filename);
-
-            f.createNewFile();
-            OutputStream outStream = new FileOutputStream(f);
-
-            screenshot.compress(Bitmap.CompressFormat. PNG, 100, outStream);
-            outStream.close();
-
-            AlertDialog.Builder dialog = new AlertDialog.Builder(MapActivity.this);
-            dialog.setCancelable(false);
-            dialog  .setTitle(R.string.action_capture)
-                    .setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    }).create().show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        cordovaWebView.setDrawingCacheEnabled(false);
-
-        Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-        File f = new File(Environment.getExternalStorageDirectory().toString() + "/DCIM/Camera/", filename);
-        Uri contentUri = Uri.fromFile(f);
-        mediaScanIntent.setData(contentUri);
-        this.sendBroadcast(mediaScanIntent);
-
-        captureNum++;
-    }
-
-    private void removeErrorMarking()
-    {
+    private void removeErrorMarking() {
         SharedPreferences destroyReportData = getSharedPreferences(upToDateReport, 0);
         SharedPreferences.Editor reportEditor = destroyReportData.edit();
         reportEditor.clear();
@@ -1215,14 +1086,6 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         CordovaPlugin callback = this.activityResultCallback;
         if (callback != null) {
             callback.onActivityResult(requestCode, resultCode, intent);
-        }
-        //For Address Search to find selected list item
-        if (resultCode == 101 && intent != null) {
-            String result = intent.getStringExtra("location");
-            String[] array = result.split(",");
-            lat = Double.parseDouble(array[0]);
-            lon = Double.parseDouble(array[1]);
-            Map.getMap().findArea(cordovaWebView, lat, lon);
         }
     }
 

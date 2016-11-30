@@ -95,7 +95,6 @@
     <!-- MAP ACTIVITY STRINGS -->
     <string name="map_activity_name">Arbiter</string>
     <string name="action_new_feature">Draw</string>
-    <string name="action_multiple_language">Language</string>
     <string name="action_new_image">Image</string>
     <string name="action_servers">Servers</string>
     <string name="action_projects">Projects</string>
@@ -105,8 +104,6 @@
     <string name="action_validationManagement">Validation Management</string>
     <string name="action_baseLayers">Base Layers</string>
     <string name="action_search">Search</string>
-    <string name="action_address">Address search</string>
-    <string name="action_coordinate">Coordinate search</string>
     <string name="action_validation">Validation</string>
     <string name="layers_button">Layers</string>
     <string name="sync_button">Sync</string>
@@ -355,19 +352,22 @@
     <string name="geolocation_error_msg">Could not get your location.  Please check the device settings to make sure Arbiter has access to Geolocation.  If the problem persists, try restarting the device.</string>
 
     <!-- multiple language-->
+    <string name="action_multiple_language">Language</string>
     <string name="action_korean">Korean</string>
     <string name="action_english">English</string>
     <string name="action_portugal">Portugal</string>
     <string name="action_spain">Spain</string>
 
     <!-- Search -->
+    <string name="action_address">Address search</string>
+    <string name="action_coordinate">Coordinate search</string>
     <string name="latitude">Latitude</string>
     <string name="longitude">Longitude</string>
     <string name="coordinate_input_error_title">Input Error</string>
     <string name="coordinate_input_error_message">Please Enter the correct coordinate</string>
     <string name="address_search_no_result_title">Alert</string>
     <string name="address_search_no_result_message">No search result</string>
-    <string name="find_area_title">\nEnter the address\n</string>
+    <string name="address_search_title">\nEnter the address\n</string>
 
     <!-- Image management -->
     <string name="image_list">Image List</string>
@@ -406,8 +406,12 @@
     <string name="none_report_title">The report does not exist</string>
     <string name="none_report_message">You have to operate validation prior to confirming report</string>
     <string name="action_validation_progress">Validation in progress</string>
+    <string name="action_report_progress">Creating report...</string>
+    <string name="action_errorMarking_progress">Creating error marking...</string>
     <string name="navigator_left">Left</string>
     <string name="navigator_right">Right</string>
+    <string name="report_left">Left</string>
+    <string name="report_right">Right</string>
     <string name="cannot_start_navigator">You cannot start Error Navigator</string>
     <string name="navigator_error_message">You have to operate validation prior to Error Navigator</string>
     <string name="action_removeErrorMarking">Validation Clean</string>

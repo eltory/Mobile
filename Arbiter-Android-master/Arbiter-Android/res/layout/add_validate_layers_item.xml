@@ -35,9 +35,7 @@
             android:text="@string/server_name_hint" />
     </RelativeLayout>
 
-
-    <!--  ListRow Left sied ToggleButton -->
-
+    <!--  CheckBox items in AOI layer list -->
     <CheckBox
         android:id="@+id/addValidateLayerCheckbox"
         android:layout_width="wrap_content"

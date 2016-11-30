@@ -26,7 +26,6 @@
                     android:layout_marginLeft="30dp"
                     android:contentDescription="@string/add_images_button"
                     android:src="@drawable/content_new_black" />
-
             </LinearLayout>
 
             <TextView
@@ -37,7 +36,6 @@
                 android:layout_marginTop="15dp"
                 android:textSize="15sp"
                 android:text="@string/image_list"/>
-
         </RelativeLayout>
 
         <RelativeLayout

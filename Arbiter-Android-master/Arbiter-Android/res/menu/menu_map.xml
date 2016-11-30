@@ -24,13 +24,11 @@
         android:showAsAction="always"
         android:title="@string/action_capture_title"/>
 
-
     <item
         android:id="@+id/action_validation"
         android:icon="@drawable/ic_action_validation"
         android:showAsAction="always"
         android:title="@string/action_validation"/>
-
 
     <item
         android:id="@+id/action_servers"

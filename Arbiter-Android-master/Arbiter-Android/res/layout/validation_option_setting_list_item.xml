@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal">
 
-        <!-- option name-->
+        <!-- Option name-->
         <TextView
             android:id="@+id/optionItemName"
             android:layout_width="wrap_content"

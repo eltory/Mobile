@@ -30,12 +30,12 @@ public abstract class ArbiterDialogFragment extends DialogFragment {
 		
 		setRetainInstance(true);
 	}
-	
+
 	@Override
 	public void onStart(){
 		super.onStart();
 		myDialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE|WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
-		
+
 		if(validatingClickListener != null) {
 			Button positiveButton = myDialog.getButton(DialogInterface.BUTTON_POSITIVE);
 	        positiveButton.setOnClickListener(validatingClickListener);
