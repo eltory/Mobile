@@ -1,8 +1,5 @@
 package com.lmn.OpenGDS_Android.Map;
 
-
-import android.util.Log;
-
 import com.lmn.Arbiter_Android.Activities.MapChangeHelper;
 import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoading;
 import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoadingJob;
@@ -10,8 +7,6 @@ import com.lmn.Arbiter_Android.AppFinishedLoading.AppFinishedLoadingJob;
 import org.apache.cordova.CordovaWebView;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 public class Map_Expansion {
 
@@ -35,7 +30,7 @@ public class Map_Expansion {
 		return map;
 	}
 
-	// Connection with CoordinateDialog.java for finding specific area
+	// Connection with CoordinateDialog and AddressSearchDialog for finding specific area
 	public void findArea(final CordovaWebView webview, double latitude, double longitude) {
 
 		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
@@ -60,7 +55,6 @@ public class Map_Expansion {
 				String url = "javascript:app.waitForArbiterInit(new Function('Arbiter.findme = new Arbiter.FindMe("+getMap+","+aoi+"); Arbiter.findme._zoom("+position+");'))";
 
 				webview.loadUrl(url);
-
 			}
 		});
 	}

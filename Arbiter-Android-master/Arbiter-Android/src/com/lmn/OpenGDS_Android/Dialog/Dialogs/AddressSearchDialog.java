@@ -70,7 +70,7 @@ public class AddressSearchDialog extends ArbiterDialogFragment {
                 return;
             }
 
-            //If search has no result, show alert dialog.
+            //If result is not exist, show alert dialog.
             if (location.size() == 0)
             {
                 AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
@@ -100,7 +100,6 @@ public class AddressSearchDialog extends ArbiterDialogFragment {
                     }
                     addressResults.add(item);
                 }
-
                 addressSearchListAdapter.setData(addressResults);
             }
         }

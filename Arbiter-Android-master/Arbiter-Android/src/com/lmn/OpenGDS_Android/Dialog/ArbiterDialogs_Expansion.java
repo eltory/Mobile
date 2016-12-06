@@ -1,5 +1,6 @@
 package com.lmn.OpenGDS_Android.Dialog;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.res.Resources;
 import android.support.v4.app.DialogFragment;
@@ -7,20 +8,22 @@ import android.support.v4.app.FragmentManager;
 import android.widget.RelativeLayout;
 
 import com.lmn.Arbiter_Android.Activities.HasThreadPool;
-import com.lmn.Arbiter_Android.BaseClasses.Validation;
+import com.lmn.Arbiter_Android.Activities.MapActivity;
 import com.lmn.Arbiter_Android.ConnectivityListeners.ConnectivityListener;
-import com.lmn.Arbiter_Android.Dialog.Dialogs.AddValidateLayersDialog;
-import com.lmn.OpenGDS_Android.Dialog.Dialogs.AddressSearchDialog;
-import com.lmn.OpenGDS_Android.Dialog.Dialogs.CoordinateSearchDialog;
-import com.lmn.Arbiter_Android.Dialog.Dialogs.ValidationDetailOptionSettingDialog;
-import com.lmn.Arbiter_Android.Dialog.Dialogs.ValidationOptionDialog;
-import com.lmn.Arbiter_Android.Dialog.Dialogs.ValidationOptionSettingDialog;
 import com.lmn.Arbiter_Android.R;
 
 import com.lmn.OpenGDS_Android.BaseClasses.Image;
-import com.lmn.OpenGDS_Android.Dialog.Dialogs.AOIBoundaryDialog;
+import com.lmn.OpenGDS_Android.BaseClasses.Validation;
+import com.lmn.OpenGDS_Android.Dialog.Dialogs.AOIBoundaryImageDialog;
 import com.lmn.OpenGDS_Android.Dialog.Dialogs.ImagesDialog;
-import com.lmn.OpenGDS_Android.Dialog.Dialogs.BoundaryDialog;
+import com.lmn.OpenGDS_Android.Dialog.Dialogs.BoundaryImageDialog;
+import com.lmn.OpenGDS_Android.Dialog.Dialogs.AddressSearchDialog;
+import com.lmn.OpenGDS_Android.Dialog.Dialogs.CoordinateSearchDialog;
+import com.lmn.OpenGDS_Android.Dialog.Dialogs.AddValidateLayersDialog;
+import com.lmn.OpenGDS_Android.Dialog.Dialogs.ValidationDetailOptionSettingDialog;
+import com.lmn.OpenGDS_Android.Dialog.Dialogs.ValidationErrorReportDialog;
+import com.lmn.OpenGDS_Android.Dialog.Dialogs.ValidationOptionDialog;
+import com.lmn.OpenGDS_Android.Dialog.Dialogs.ValidationOptionSettingDialog;
 
 import org.apache.cordova.CordovaWebView;
 
@@ -29,7 +32,6 @@ import java.util.ArrayList;
 public class ArbiterDialogs_Expansion {
 	private Resources resources;
 	private FragmentManager fragManager;
-	private ArrayList<String> imageDialogSetting = new ArrayList<String>();
 
 	public ArbiterDialogs_Expansion(Context context, Resources resources, FragmentManager fragManager){
 		this.setResources(resources);
@@ -82,7 +84,7 @@ public class ArbiterDialogs_Expansion {
 		dialog.show(fragManager, "OpenGDS_ImagesDialog");
 	}
 
-	public void showBoundaryDialog(final CordovaWebView webview, String name, String path){
+	public void showBoundaryImageDialog(final CordovaWebView webview, String name, String path){
 		String title = resources.getString(R.string.action_boundary);
 		String ok = resources.getString(android.R.string.ok);
 		String cancel = resources.getString(android.R.string.cancel);
@@ -90,12 +92,12 @@ public class ArbiterDialogs_Expansion {
 
 		DialogFragment dialog;
 
-		dialog = BoundaryDialog.newInstance(title, ok, cancel, layout, webview, name, path);
+		dialog = BoundaryImageDialog.newInstance(title, ok, cancel, layout, webview, name, path);
 
 		dialog.show(fragManager, "OpenGDS_BoundaryDialog");
 	}
 
-	public void showAOIDialog(final CordovaWebView webview, String name, String path){
+	public void showAOIBoundaryImageDialog(final CordovaWebView webview, String name, String path){
 		String title = resources.getString(R.string.action_AOI_image);
 		String ok = resources.getString(android.R.string.ok);
 		String cancel = resources.getString(android.R.string.cancel);
@@ -103,7 +105,7 @@ public class ArbiterDialogs_Expansion {
 
 		DialogFragment dialog;
 
-		dialog = AOIBoundaryDialog.newInstance(title, ok, cancel, layout, webview, name, path);
+		dialog = AOIBoundaryImageDialog.newInstance(title, ok, cancel, layout, webview, name, path);
 
 		dialog.show(fragManager, "OpenGDS_AOIBoundaryDialog");
 	}
@@ -154,6 +156,24 @@ public class ArbiterDialogs_Expansion {
 		DialogFragment dialog = ValidationDetailOptionSettingDialog.newInstance(title, ok, cancel, layout, hasThreadPool, optionName, selectedLayer, selectedOptionNameLayout);
 
 		dialog.show(fragManager, "OpenGDS_ValidationDetailOptionSettingDialog");
+	}
+
+	public void showValidationErrorReportDialog(MapActivity mapActivity){
+		String title = resources.getString(R.string.report);
+		String ok = resources.getString(android.R.string.ok);
+		int layout = R.layout.validation_report_table;
+
+		//Create Progress dialog
+		ProgressDialog reportProgressDialog = new ProgressDialog(mapActivity);
+		reportProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+		reportProgressDialog.setIcon(mapActivity.getResources().getDrawable(R.drawable.icon));
+		reportProgressDialog.setTitle(R.string.loading);
+		reportProgressDialog.setMessage(mapActivity.getString(R.string.action_report_progress));
+		reportProgressDialog.setCanceledOnTouchOutside(false);
+		reportProgressDialog.show();
+
+		DialogFragment dialog = ValidationErrorReportDialog.newInstance(title, ok, layout, reportProgressDialog);
+		dialog.show(fragManager, "validationReportDialog");
 	}
 
 }

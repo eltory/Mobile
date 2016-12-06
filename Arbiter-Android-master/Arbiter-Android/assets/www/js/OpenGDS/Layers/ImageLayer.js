@@ -28,7 +28,7 @@ Arbiter.ImageLayer = (function() {
 				var imageLayer = new Object();
 				var boundaryObject = new Object();
 				var numOfLayers;
-				var index = Android.LoadPreferencesSize("size") - 1;
+				var index = Android.LoadImageDataSize("size") - 1;
 
 				map.removeLayer(boxLayer);
 
@@ -38,10 +38,10 @@ Arbiter.ImageLayer = (function() {
 				boundaryObject.bottom = bounds.bottom;
 
 				//Save BBox boundary value in SharedPreference
-				Android.SavePreferences("left" + index, bounds.left);
-				Android.SavePreferences("right" + index, bounds.right);
-				Android.SavePreferences("top" + index, bounds.top);
-				Android.SavePreferences("bottom" + index, bounds.bottom);
+				Android.SaveImageData("left" + index, bounds.left);
+				Android.SaveImageData("right" + index, bounds.right);
+				Android.SaveImageData("top" + index, bounds.top);
+				Android.SaveImageData("bottom" + index, bounds.bottom);
 
 				imageLayer.name = name;
 				imageLayer.path = url;
@@ -97,17 +97,17 @@ Arbiter.ImageLayer = (function() {
 			var boundaryObject = new Object();
 			var numOfLayers;
 
-			var index = Android.LoadPreferencesSize("size") - 1;
+			var index = Android.LoadImageDataSize("size") - 1;
 
 			boundaryObject.left = boundary.left;
 			boundaryObject.right = boundary.right;
 			boundaryObject.top = boundary.top;
 			boundaryObject.bottom = boundary.bottom;
 
-			Android.SavePreferences("left" + index, boundary.left);
-			Android.SavePreferences("right" + index, boundary.right);
-			Android.SavePreferences("top" + index, boundary.top);
-			Android.SavePreferences("bottom" + index, boundary.bottom);
+			Android.SaveImageData("left" + index, boundary.left);
+			Android.SaveImageData("right" + index, boundary.right);
+			Android.SaveImageData("top" + index, boundary.top);
+			Android.SaveImageData("bottom" + index, boundary.bottom);
 
 			imageLayer.name = name;
 			imageLayer.path = url;
@@ -149,7 +149,7 @@ Arbiter.ImageLayer = (function() {
 			var boundaryObject = new Object();
 			var numOfLayers;
 
-			var index = Android.LoadPreferencesSize("size") - 1;
+			var index = Android.LoadImageDataSize("size") - 1;
 
 			Android.StartAddAoiImageProgressDialog();
 
@@ -158,10 +158,10 @@ Arbiter.ImageLayer = (function() {
 			boundaryObject.top = boundary.top;
 			boundaryObject.bottom = boundary.bottom;
 
-			Android.SavePreferences("left" + index, boundary.left);
-			Android.SavePreferences("right" + index, boundary.right);
-			Android.SavePreferences("top" + index, boundary.top);
-			Android.SavePreferences("bottom" + index, boundary.bottom);
+			Android.SaveImageData("left" + index, boundary.left);
+			Android.SaveImageData("right" + index, boundary.right);
+			Android.SaveImageData("top" + index, boundary.top);
+			Android.SaveImageData("bottom" + index, boundary.bottom);
 
 			imageLayer.name = name;
 			imageLayer.path = url;
@@ -187,7 +187,7 @@ Arbiter.ImageLayer = (function() {
 			map.setCenter(lonLat, zoomLevel);
 
 			//Remove Progress Dialog
-			Android.DoneAddAoiImageProgressDialog();
+			Android.DismissAddAoiImageProgressDialog();
 		},
 		/* Reload the images when map is initialized */
 		reloadImages : function() {
@@ -201,7 +201,7 @@ Arbiter.ImageLayer = (function() {
 			var imgLayer;
 			var imageLayer;
 			var boundaryObject;
-			var imageListLength = Android.LoadPreferencesSize("size");
+			var imageListLength = Android.LoadImageDataSize("size");
 			var left, right, bottom, top;
 			var name, url;
 
@@ -210,12 +210,12 @@ Arbiter.ImageLayer = (function() {
 				imageLayer = new Object();
 				boundaryObject = new Object();
 
-				name = Android.LoadPreferences("name" + i);
-				url = Android.LoadPreferences("path" + i);
-				left = Android.LoadPreferencesBoundary("left" + i);
-				right = Android.LoadPreferencesBoundary("right" + i);
-				top = Android.LoadPreferencesBoundary("top" + i);
-				bottom = Android.LoadPreferencesBoundary("bottom" + i);
+				name = Android.LoadImageData("name" + i);
+				url = Android.LoadImageData("path" + i);
+				left = Android.LoadImageBoundary("left" + i);
+				right = Android.LoadImageBoundary("right" + i);
+				top = Android.LoadImageBoundary("top" + i);
+				bottom = Android.LoadImageBoundary("bottom" + i);
 
 				boundaryObject.left = left;
 				boundaryObject.right = right;

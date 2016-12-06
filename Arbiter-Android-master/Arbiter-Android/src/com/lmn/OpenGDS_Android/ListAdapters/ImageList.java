@@ -121,7 +121,7 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
         return view;
     }
 
-    // Image Option(Opacity, Transition)
+    // Image Option(Opacity)
     private void setImageOption(final Image image, int position){
 
         String loading = activity.getResources().getString(R.string.loading);

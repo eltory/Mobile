@@ -18,16 +18,16 @@ import org.apache.cordova.CordovaWebView;
 /**
  * Created by pc on 2016-05-21.
  */
-public class AOIBoundaryDialog extends ArbiterDialogFragment {
+public class AOIBoundaryImageDialog extends ArbiterDialogFragment {
     private TextView left, right, bottom, top;
     private TextView TextName, TextPath;
     private String AOIFileName, AOIFilePath;
     private String[] boundArr;
     private CordovaWebView cordova;
 
-    public static AOIBoundaryDialog newInstance(String title, String ok,
-                                                String cancel, int layout, CordovaWebView cordovaWebView, String name, String path){
-        AOIBoundaryDialog frag = new AOIBoundaryDialog();
+    public static AOIBoundaryImageDialog newInstance(String title, String ok,
+                                                     String cancel, int layout, CordovaWebView cordovaWebView, String name, String path){
+        AOIBoundaryImageDialog frag = new AOIBoundaryImageDialog();
 
         frag.setTitle(title);
         frag.setOk(ok);
@@ -74,7 +74,6 @@ public class AOIBoundaryDialog extends ArbiterDialogFragment {
 
     @Override
     public void onPositiveClick() {
-
         if(!getAOIBoundaryFromDB().equals("FAIL")) {
             Map_Expansion.getMap().addAOIImage(cordova, Double.valueOf(boundArr[0]).doubleValue(), Double.valueOf(boundArr[1]).doubleValue(), Double.valueOf(boundArr[2]).doubleValue(), Double.valueOf(boundArr[3]).doubleValue(),
                     AOIFileName, AOIFilePath);

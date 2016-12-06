@@ -447,8 +447,8 @@ Arbiter.Loaders.LayersLoader = (function(){
 												//** Add part for reloading images and error marking **//
 											 	Arbiter.ImageLayer.reloadImages(); //Reload the images on the map
 
-											 	if(Android.reloadValidationResult() != "")
-                                                Arbiter.Validator.resultErrorMarking(JSON.parse(Android.reloadValidationResult())); //Reload error marking on the map
+											 	if(Android.ReloadValidationResult() != "")
+                                                Arbiter.Validator.resultErrorMarking(JSON.parse(Android.ReloadValidationResult())); //Reload error marking on the map
 
 												
 												if(Arbiter.Util.existsAndNotNull(layersWithUnsupportedCRS) 

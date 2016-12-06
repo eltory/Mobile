@@ -35,8 +35,6 @@ public class CoordinateSearchDialog extends ArbiterDialogFragment {
 
         lon = (EditText) view.findViewById(R.id.EditLon);
         lon.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
-
-
     }
 
     @Override

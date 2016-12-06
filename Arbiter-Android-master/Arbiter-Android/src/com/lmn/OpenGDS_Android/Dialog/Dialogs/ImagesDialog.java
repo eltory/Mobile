@@ -173,14 +173,14 @@ public class ImagesDialog extends ArbiterDialogFragment{
                                     else if(items[position].equalsIgnoreCase(res.getString(R.string.set_boundary)))
                                     {
                                         (new ArbiterDialogs_Expansion(getActivity().getApplicationContext(), getActivity().getResources(),
-                                                getActivity().getSupportFragmentManager())).showBoundaryDialog(cordova, image.getName(), image.getPath());
+                                                getActivity().getSupportFragmentManager())).showBoundaryImageDialog(cordova, image.getName(), image.getPath());
                                     }
 
                                     //Input image in AOI
                                     else if(items[position].equalsIgnoreCase(res.getString(R.string.input_image_AOI)))
                                     {
                                         (new ArbiterDialogs_Expansion(getActivity().getApplicationContext(), getActivity().getResources(),
-                                                getActivity().getSupportFragmentManager())).showAOIDialog(cordova, image.getName(), image.getPath());
+                                                getActivity().getSupportFragmentManager())).showAOIBoundaryImageDialog(cordova, image.getName(), image.getPath());
                                     }
                                     dialog.dismiss();
                                     getDialog().dismiss();

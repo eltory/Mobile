@@ -4,6 +4,12 @@ package com.lmn.OpenGDS_Android.BaseClasses;
 import java.util.ArrayList;
 
 /* Class for creating image data */
+
+/**
+ * Image object
+ * @author JiJungKeun
+ * @version 1.1 09/12/16
+ */
 public class Image {
 
     private String path;  //image url
@@ -13,12 +19,20 @@ public class Image {
     private float top; //boundary - top
     private float bottom; //boundary - bottom
     private ArrayList<String> imageBuildOptions = new ArrayList<String>();
-    private boolean imageOpacity = false;
+    private boolean imageOpacity = false; //image opacity
 
+    /**
+     * @author JiJungKeun
+     */
     public Image()
     {
     }
 
+    /**
+     * Set image url and image name
+     * @author JiJungKeun
+     * @param item Image object
+     */
     public Image(Image item){
         this.path = item.getPath();
         this.name = item.getName();

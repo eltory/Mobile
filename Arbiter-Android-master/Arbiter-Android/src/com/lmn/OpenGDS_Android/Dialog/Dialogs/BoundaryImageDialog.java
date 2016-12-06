@@ -16,15 +16,15 @@ import org.apache.cordova.CordovaWebView;
 /**
  * Created by pc on 2016-05-21.
  */
-public class BoundaryDialog extends ArbiterDialogFragment {
+public class BoundaryImageDialog extends ArbiterDialogFragment {
     private EditText left, right, bottom, top;
     private TextView TextName, TextPath;
     private String imgName, imgPath;
     private CordovaWebView cordova;
 
-    public static BoundaryDialog newInstance(String title, String ok,
-                                             String cancel, int layout, CordovaWebView cordovaWebView, String name, String path){
-        BoundaryDialog frag = new BoundaryDialog();
+    public static BoundaryImageDialog newInstance(String title, String ok,
+                                                  String cancel, int layout, CordovaWebView cordovaWebView, String name, String path){
+        BoundaryImageDialog frag = new BoundaryImageDialog();
 
         frag.setTitle(title);
         frag.setOk(ok);

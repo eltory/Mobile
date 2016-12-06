@@ -63,6 +63,5 @@ public class BaseLayers {
         builder.setNegativeButton(android.R.string.cancel, null);
         builder.setIcon(R.drawable.icon);
         builder.create().show();
-
     }
 }

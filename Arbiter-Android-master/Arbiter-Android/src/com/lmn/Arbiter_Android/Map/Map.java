@@ -368,18 +368,6 @@ public class Map {
 		});
 	}
 
-	public void removeErrorMarking(final CordovaWebView webview) {
-
-		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
-			@Override
-			public void run() {
-
-				String url = "javascript:app.waitForArbiterInit(new Function('Arbiter.Validator.removeErrorMarking();'))";
-				webview.loadUrl(url);
-			}
-		});
-	}
-
 	public void updateAOI(final CordovaWebView webview, final String aoi) {
 
 		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
@@ -432,21 +420,6 @@ public class Map {
 						+ "app.zoomToFeature(\"" + layerId + "\",\"" + fid + "\")'))";
 
 				Log.w("Map", url);
-				webview.loadUrl(url);
-			}
-		});
-	}
-
-	//Navigating error feature
-	public void navigateFeature(final CordovaWebView webview, final String layerId, final String fid) {
-
-		AppFinishedLoading.getInstance().onAppFinishedLoading(new AppFinishedLoadingJob() {
-			@Override
-			public void run() {
-
-				String url = "javascript:app.waitForArbiterInit(new Function('"
-						+ "Arbiter.Validator.navigateFeature(\"" + layerId + "\",\"" + fid + "\")'))";
-
 				webview.loadUrl(url);
 			}
 		});

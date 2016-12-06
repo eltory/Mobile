@@ -8,12 +8,9 @@ import org.apache.cordova.Config;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import com.lmn.Arbiter_Android.ArbiterProject;
 import com.lmn.Arbiter_Android.ArbiterState;
-import com.lmn.Arbiter_Android.Loaders.ValidationLayersListLoader;
 import com.lmn.Arbiter_Android.OOMWorkaround;
 import com.lmn.Arbiter_Android.R;
 import com.lmn.Arbiter_Android.Util;
@@ -40,22 +37,17 @@ import com.lmn.Arbiter_Android.ProjectStructure.ProjectStructure;
 import com.lmn.Arbiter_Android.ReturnQueues.OnReturnToMap;
 import com.lmn.Arbiter_Android.Settings.Settings;
 
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.Handler;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -63,10 +55,6 @@ import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.TableLayout;
-import android.widget.TableRow;
-import android.widget.TextView;
 
 import com.lmn.OpenGDS_Android.BaseClasses.Image;
 import com.lmn.OpenGDS_Android.BaseLayers.BaseLayers;
@@ -75,6 +63,7 @@ import com.lmn.OpenGDS_Android.Capture.Capture;
 import com.lmn.OpenGDS_Android.Dialog.Dialogs.MultiLanguageDialog;
 import com.lmn.OpenGDS_Android.Dialog.ArbiterDialogs_Expansion;
 import com.lmn.OpenGDS_Android.JSInterface.JSInterface;
+import com.lmn.OpenGDS_Android.Validator.ValidationManagement;
 
 
 public class MapActivity extends FragmentActivity implements CordovaInterface,
@@ -94,11 +83,6 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
     private CordovaWebView cordovaWebView; // For CORDOVA
     private String sfName = "imgData"; // SharedPreferences for image data
     private String upToDateReport = "report"; // SharedPreferences for validation report
-    private TableLayout navigatorTableLayout;
-    private JSONObject reportObject;
-    private JSONArray detailedReports;
-    private int errorSize = 0;
-    private int errorPos = 0;
 
     private final ExecutorService threadPool = Executors.newCachedThreadPool();
     private CordovaPlugin activityResultCallback;
@@ -411,7 +395,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
 
             case R.id.action_validation:
                 if (makeSureNotEditing()) {
-                    dialogs.showAddValidateLayersDialog(activity, getListener(), cordovaWebView);
+                    dialogs_expansion.showAddValidateLayersDialog(activity, getListener(), cordovaWebView);
                 }
                 return true;
 
@@ -419,7 +403,7 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                 if (makeSureNotEditing()) {
                     //Example for way of using capture
                     Capture capture = new Capture(cordovaWebView, MapActivity.this);
-                    capture.startCapture("abc");
+                    capture.startCapture("Capture");
                 }
                 return true;
 
@@ -661,6 +645,9 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
     }
 
     private void startValidationManagement() {
+
+        ValidationManagement validationManagement = new ValidationManagement(getActivity(), cordovaWebView);
+
         String[] options = new String[]{getResources().getString(R.string.action_report), getResources().getString(R.string.action_error_navigator),
                 getResources().getString(R.string.action_removeErrorMarking)};
 
@@ -672,12 +659,14 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,
                                         int id) {
-
-                        if (id == 0) {
-                            SharedPreferences getErrorReport = getActivity().getSharedPreferences(upToDateReport, 0);
-                            if (!getErrorReport.getString("report", "").equals("")) {
-                                dialogs.showValidationErrorReportDialog(MapActivity.this);
-                            } else {
+                        if (id == 0)
+                        {
+                            if (validationManagement.isExistValidationData() == true)
+                            {
+                                dialogs_expansion.showValidationErrorReportDialog(MapActivity.this);
+                            }
+                            else
+                            {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
                                 builder.setTitle(R.string.none_report_title);
@@ -687,9 +676,11 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                                 builder.setCancelable(false);
                                 builder.create().show();
                             }
-                        } else if (id == 1) {
-                            SharedPreferences checkValidation = getActivity().getSharedPreferences(upToDateReport, 0);
-                            if (checkValidation.getString("report", "").equals("")) {
+                        }
+                        else if (id == 1)
+                        {
+                            if (validationManagement.isExistValidationData() == false)
+                            {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
                                 builder.setTitle(R.string.cannot_start_navigator);
@@ -698,37 +689,18 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
                                 builder.setPositiveButton(android.R.string.ok, null);
                                 builder.setCancelable(false);
                                 builder.create().show();
-                            } else {
-                                //NAVIGATOR REQUEST LANDSCAPE ORIENTATION
-                                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
-                                LinearLayout errNavigatorLayout = (LinearLayout) findViewById(R.id.errorNavigator);
-
-                                if (errNavigatorLayout.getVisibility() == View.GONE) {
-
-                                    if (errorPos >= 0 && reportObject != null) {
-                                        errNavigatorLayout.setVisibility(View.VISIBLE);
-                                    } else {
-                                        errNavigatorLayout.setVisibility(View.VISIBLE);
-                                        try {
-                                            reportObject = new JSONObject(checkValidation.getString("report", ""));
-                                            detailedReports = reportObject.getJSONArray("DetailsReport");
-                                            errorSize = detailedReports.length();
-                                            errorPos = 0;
-                                            startErrorNavigator();
-                                        } catch (Exception e) {
-                                            e.printStackTrace();
-                                        }
-                                    }
-                                } else {
-                                    errNavigatorLayout.setVisibility(View.GONE);
-                                }
                             }
+                            else
+                            {
+                                validationManagement.buildNavigator();
+                            }
+                        }
 
-                        } else {
-                            if (makeSureNotEditing()) {
-                                removeErrorMarking();
-                                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED); // GO BACK TO THE SYSTEM DEFAULTS
+                        else
+                        {
+                            if (makeSureNotEditing())
+                            {
+                                validationManagement.clearValidationData();
                             }
                         }
                         dialog.dismiss();
@@ -740,230 +712,6 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         builder.setIcon(R.drawable.icon);
         builder.setCancelable(false);
         builder.create().show();
-
-    }
-
-    private void startErrorNavigator() {
-
-        navigatorTableLayout = (TableLayout) findViewById(R.id.navigatorContent);
-        navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount() - 1);
-
-        try {
-
-            TableRow tr = new TableRow(getActivity());
-            tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                    TableRow.LayoutParams.WRAP_CONTENT));
-            tr.setBackgroundColor(Color.parseColor("#BDC3C7"));
-            tr.setPadding(1, 1, 1, 1);
-
-            TableRow.LayoutParams tableParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                    TableRow.LayoutParams.WRAP_CONTENT);
-            tableParams.rightMargin = 1;
-
-            TextView errorNumber = new TextView(getActivity());
-            errorNumber.setBackgroundColor(Color.parseColor("#34495E"));
-            errorNumber.setTextSize(13);
-            errorNumber.setPadding(5, 5, 5, 5);
-            errorNumber.setTextColor(Color.parseColor("#ECF0F1"));
-            errorNumber.setGravity(Gravity.CENTER_HORIZONTAL);
-            errorNumber.setText("Error-" + (errorPos + 1));
-            errorNumber.setLayoutParams(tableParams);
-            tr.addView(errorNumber);
-
-            TextView errorNameContent = new TextView(getActivity());
-            errorNameContent.setBackgroundColor(Color.parseColor("#34495E"));
-            errorNameContent.setTextSize(13);
-            errorNameContent.setPadding(5, 5, 5, 5);
-            errorNameContent.setTextColor(Color.parseColor("#ECF0F1"));
-            errorNameContent.setGravity(Gravity.CENTER_HORIZONTAL);
-            errorNameContent.setText(detailedReports.getJSONObject(errorPos).getString("errorName"));
-            errorNameContent.setLayoutParams(tableParams);
-            tr.addView(errorNameContent);
-
-            TextView errorFeatureID = new TextView(getActivity());
-            errorFeatureID.setBackgroundColor(Color.parseColor("#34495E"));
-            errorFeatureID.setTextSize(13);
-            errorFeatureID.setPadding(5, 5, 5, 5);
-            errorFeatureID.setTextColor(Color.parseColor("#ECF0F1"));
-            errorFeatureID.setGravity(Gravity.CENTER_HORIZONTAL);
-            errorFeatureID.setText(detailedReports.getJSONObject(errorPos).getString("featureID"));
-            errorFeatureID.setLayoutParams(tableParams);
-            tr.addView(errorFeatureID);
-
-            navigatorTableLayout.addView(tr, new TableLayout.LayoutParams(
-                    TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT));
-
-            // Zoom to error feature
-            ValidationLayersListLoader validationLayer = new ValidationLayersListLoader(getActivity());
-            String layerID = validationLayer.getLayerID(detailedReports.getJSONObject(errorPos).getString("featureID"));
-            Map.getMap().navigateFeature(cordovaWebView, layerID, detailedReports.getJSONObject(errorPos).getString("featureID"));
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        if (errorPos >= 0)
-            findViewById(R.id.leftButton).setOnClickListener(leftClickListener);
-
-        if (errorPos < errorSize)
-            findViewById(R.id.rightButton).setOnClickListener(rightClickListener);
-    }
-
-    ImageButton.OnClickListener leftClickListener = new View.OnClickListener() {
-        public void onClick(View v) {
-            try {
-
-                findViewById(R.id.leftButton).setEnabled(false);
-                Handler h = new Handler();
-                h.postDelayed(new Runnable() {
-                    public void run() {
-                        findViewById(R.id.leftButton).setEnabled(true);
-                    }
-                }, 1000); // Should to wait click minimum 1 second for Vector Rendering
-
-                navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount() - 1);
-                errorPos = errorPos - 1;
-                if (errorPos < 0)
-                    errorPos = 0;
-
-                TableRow tr = new TableRow(getActivity());
-                tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                        TableRow.LayoutParams.WRAP_CONTENT));
-                tr.setBackgroundColor(Color.parseColor("#BDC3C7"));
-                tr.setPadding(1, 1, 1, 1);
-
-                TableRow.LayoutParams tableParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                        TableRow.LayoutParams.WRAP_CONTENT);
-                tableParams.rightMargin = 1;
-
-                TextView errorNumber = new TextView(getActivity());
-                errorNumber.setBackgroundColor(Color.parseColor("#34495E"));
-                errorNumber.setTextSize(13);
-                errorNumber.setPadding(5, 5, 5, 5);
-                errorNumber.setTextColor(Color.parseColor("#ECF0F1"));
-                errorNumber.setGravity(Gravity.CENTER_HORIZONTAL);
-                errorNumber.setText("Error-" + (errorPos + 1));
-                errorNumber.setLayoutParams(tableParams);
-                tr.addView(errorNumber);
-
-                TextView errorNameContent = new TextView(getActivity());
-                errorNameContent.setBackgroundColor(Color.parseColor("#34495E"));
-                errorNameContent.setTextSize(13);
-                errorNameContent.setPadding(5, 5, 5, 5);
-                errorNameContent.setTextColor(Color.parseColor("#ECF0F1"));
-                errorNameContent.setGravity(Gravity.CENTER_HORIZONTAL);
-                errorNameContent.setText(detailedReports.getJSONObject(errorPos).getString("errorName"));
-                errorNameContent.setLayoutParams(tableParams);
-                tr.addView(errorNameContent);
-
-                TextView errorFeatureID = new TextView(getActivity());
-                errorFeatureID.setBackgroundColor(Color.parseColor("#34495E"));
-                errorFeatureID.setTextSize(13);
-                errorFeatureID.setPadding(5, 5, 5, 5);
-                errorFeatureID.setTextColor(Color.parseColor("#ECF0F1"));
-                errorFeatureID.setGravity(Gravity.CENTER_HORIZONTAL);
-                errorFeatureID.setText(detailedReports.getJSONObject(errorPos).getString("featureID"));
-                errorFeatureID.setLayoutParams(tableParams);
-                tr.addView(errorFeatureID);
-
-                navigatorTableLayout.addView(tr, new TableLayout.LayoutParams(
-                        TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT));
-
-                // Zoom and Select to error feature
-                ValidationLayersListLoader validationLayer = new ValidationLayersListLoader(getActivity());
-                String layerID = validationLayer.getLayerID(detailedReports.getJSONObject(errorPos).getString("featureID"));
-                Map.getMap().navigateFeature(cordovaWebView, layerID, detailedReports.getJSONObject(errorPos).getString("featureID"));
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    };
-
-    ImageButton.OnClickListener rightClickListener = new View.OnClickListener() {
-        public void onClick(View v) {
-            try {
-                findViewById(R.id.rightButton).setEnabled(false);
-                Handler h = new Handler();
-                h.postDelayed(new Runnable() {
-                    public void run() {
-                        findViewById(R.id.rightButton).setEnabled(true);
-                    }
-                }, 1000); // Should to wait click minimum 1 second for Vector Rendering
-
-                navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount() - 1);
-                errorPos = errorPos + 1;
-                if (errorPos > errorSize - 1)
-                    errorPos = errorSize - 1;
-
-                TableRow tr = new TableRow(getActivity());
-                tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                        TableRow.LayoutParams.WRAP_CONTENT));
-                tr.setBackgroundColor(Color.parseColor("#BDC3C7"));
-                tr.setPadding(1, 1, 1, 1);
-
-                TableRow.LayoutParams tableParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                        TableRow.LayoutParams.WRAP_CONTENT);
-                tableParams.rightMargin = 1;
-
-                TextView errorNumber = new TextView(getActivity());
-                errorNumber.setBackgroundColor(Color.parseColor("#34495E"));
-                errorNumber.setTextSize(13);
-                errorNumber.setPadding(5, 5, 5, 5);
-                errorNumber.setTextColor(Color.parseColor("#ECF0F1"));
-                errorNumber.setGravity(Gravity.CENTER_HORIZONTAL);
-                errorNumber.setText("Error-" + (errorPos + 1));
-                errorNumber.setLayoutParams(tableParams);
-                tr.addView(errorNumber);
-
-                TextView errorNameContent = new TextView(getActivity());
-                errorNameContent.setBackgroundColor(Color.parseColor("#34495E"));
-                errorNameContent.setTextSize(13);
-                errorNameContent.setPadding(5, 5, 5, 5);
-                errorNameContent.setTextColor(Color.parseColor("#ECF0F1"));
-                errorNameContent.setGravity(Gravity.CENTER_HORIZONTAL);
-                errorNameContent.setText(detailedReports.getJSONObject(errorPos).getString("errorName"));
-                errorNameContent.setLayoutParams(tableParams);
-                tr.addView(errorNameContent);
-
-                TextView errorFeatureID = new TextView(getActivity());
-                errorFeatureID.setBackgroundColor(Color.parseColor("#34495E"));
-                errorFeatureID.setTextSize(13);
-                errorFeatureID.setPadding(5, 5, 5, 5);
-                errorFeatureID.setTextColor(Color.parseColor("#ECF0F1"));
-                errorFeatureID.setGravity(Gravity.CENTER_HORIZONTAL);
-                errorFeatureID.setText(detailedReports.getJSONObject(errorPos).getString("featureID"));
-                errorFeatureID.setLayoutParams(tableParams);
-                tr.addView(errorFeatureID);
-
-                navigatorTableLayout.addView(tr, new TableLayout.LayoutParams(
-                        TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT));
-
-                // Zoom and Select to error feature
-                ValidationLayersListLoader validationLayer = new ValidationLayersListLoader(getActivity());
-                String layerID = validationLayer.getLayerID(detailedReports.getJSONObject(errorPos).getString("featureID"));
-                Map.getMap().navigateFeature(cordovaWebView, layerID, detailedReports.getJSONObject(errorPos).getString("featureID"));
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    };
-
-    private void removeErrorMarking() {
-        SharedPreferences destroyReportData = getSharedPreferences(upToDateReport, 0);
-        SharedPreferences.Editor reportEditor = destroyReportData.edit();
-        reportEditor.clear();
-        reportEditor.commit();
-
-        LinearLayout errNavigatorLayout = (LinearLayout) findViewById(R.id.errorNavigator);
-        errNavigatorLayout.setVisibility(View.GONE);
-        errorPos = 0;
-        errorSize = 0;
-        reportObject = null;
-        detailedReports = null;
-
-        Map.getMap().removeErrorMarking(cordovaWebView);
     }
 
     @Override
@@ -978,7 +726,6 @@ public class MapActivity extends FragmentActivity implements CordovaInterface,
         reportEditor.clear();
         imageEditor.commit();
         reportEditor.commit();
-
 
         this.isDestroyed = true;
         super.onDestroy();
