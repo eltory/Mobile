@@ -31,10 +31,6 @@ OpenGeoDT 팀
 =====
 
 1. Arbiter-Android (MIT License) <link>https://github.com/ROGUE-JCTD/Arbiter-Android
-2. Apache cordova-3.4.0 (Apache License, Version 2.0) <link>https://cordova.apache.org/
-3. OpenLayers-2.13.1 (2-clause BSD License) <link>http://openlayers.org/two/
-4. jQuery-2.0.3.min (MIT License) <link>https://jquery.com/download/
-5. bootstrap.min.css-3.1.0 (MIT License) <link>http://getbootstrap.com/
 
 
 OpenGDS / Mobile (Geospatial Information Editor)
@@ -69,10 +65,6 @@ Libraries
 =====
 
 1. Arbiter-Android (MIT License) <link>https://github.com/ROGUE-JCTD/Arbiter-Android
-2. Apache cordova-3.4.0 (Apache License, Version 2.0) <link>https://cordova.apache.org/
-3. OpenLayers-2.13.1 (2-clause BSD License) <link>http://openlayers.org/two/
-4. jQuery-2.0.3.min (MIT License) <link>https://jquery.com/download/
-5. bootstrap.min.css-3.1.0 (MIT License) <link>http://getbootstrap.com/
 
 
 Mail

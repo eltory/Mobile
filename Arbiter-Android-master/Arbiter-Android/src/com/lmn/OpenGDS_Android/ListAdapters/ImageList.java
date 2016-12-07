@@ -150,7 +150,7 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
                                         //Opacity
                                         if(id == 0)
                                         {
-                                            View innerView = activity.getLayoutInflater().inflate(R.layout.opacity_seek_bar, null);
+                                            View innerView = activity.getLayoutInflater().inflate(R.layout.image_opacity_seek_bar, null);
 
                                             AlertDialog.Builder opacityBuilder = new AlertDialog.Builder(activity);
                                             opacityBuilder.setView(innerView);
