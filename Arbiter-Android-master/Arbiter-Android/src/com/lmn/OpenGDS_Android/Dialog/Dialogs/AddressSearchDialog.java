@@ -60,6 +60,8 @@ public class AddressSearchDialog extends ArbiterDialogFragment {
         @Override
         public void onClick(View v) {
 
+            addressResults.clear();
+
             String input = address.getText().toString();
             //Show maximum 5 address list
             try{
