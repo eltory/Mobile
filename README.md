@@ -1,4 +1,4 @@
-OpenGDS / Mobile (공간자료 편집도구)
+OpenGDS / Mobile (Mobile 공간자료 편집도구)
 =======
 
 (내부 : OpenGeoDT / Mobile)
