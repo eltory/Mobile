@@ -1,0 +1,227 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+    
+    <org.apache.cordova.CordovaWebView
+        android:id="@+id/webView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageButton
+        android:id="@+id/layersButton"
+        android:src="@drawable/layers"
+        android:contentDescription="@string/layers_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="24dp" 
+        android:padding="0dp"
+	    android:background="#CCCCCC"
+	    android:alpha="0.9"/>
+
+    <ImageButton
+        android:id="@+id/locationButton"
+        android:src="@drawable/location"
+        android:contentDescription="@string/location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="24dp" 
+        android:padding="0dp"
+	    android:background="#CCCCCC"
+	    android:alpha="0.9"/>
+
+    <ImageButton
+        android:id="@+id/zoomInButton"
+        android:src="@drawable/zoom_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="80dp" 
+        android:padding="4dp"
+	    android:background="#CCCCCC"
+	    android:alpha="0.9"/>
+
+    <ImageButton
+        android:id="@+id/zoomOutButton"
+        android:src="@drawable/zoom_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="128dp" 
+        android:padding="4dp"
+	    android:background="#CCCCCC"
+	    android:alpha="0.9"/>
+    
+    <ImageButton
+        android:id="@+id/syncButton"
+        android:src="@drawable/sync"
+        android:contentDescription="@string/sync_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginBottom="24dp" 
+        android:padding="8dp"/>
+    
+    <ImageButton
+        android:id="@+id/AOIButton"
+        android:src="@drawable/aoi"
+        android:contentDescription="@string/aoi_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="24dp" 
+        android:padding="2dp"
+	    android:background="#CCCCCC"
+	    android:alpha="0.9"/>
+    
+    <include layout="@layout/edit_buttons" />
+    <include layout="@layout/geometry_parts_buttons"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content" 
+    	android:layout_below="@id/layersButton"
+    	android:layout_marginLeft="15dp"/>
+    
+    <RelativeLayout
+        android:id="@+id/insertFeatureBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+        
+        <View 
+            android:id="@+id/marginView"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_marginTop="24dp"/>
+        
+	    <RelativeLayout
+	        android:layout_below="@id/marginView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@color/transparent_blue">
+	        
+			<RelativeLayout
+			    android:id="@+id/layerInfo"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:paddingLeft="20dp"
+			    android:paddingRight="20dp"
+			    android:layout_centerHorizontal="true">
+			    
+			    <TextView
+			        android:id="@+id/insertLayerTitle"
+			        android:text="@string/insert_layer_title"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textStyle="bold"
+			        android:textSize="14sp"
+			        android:paddingTop="5dp"
+			        android:paddingBottom="10dp"
+			        android:layout_centerHorizontal="true"/>
+			    
+			    <TextView
+			        android:id="@+id/insertLayerText"
+			        android:text="@string/insert_layer_text"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_centerHorizontal="true"
+			        android:paddingBottom="10dp"
+			        android:layout_below="@id/insertLayerTitle"/>
+			</RelativeLayout>
+			
+			<RelativeLayout 
+			    android:layout_below="@id/layerInfo"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:paddingLeft="5dp"
+			    android:layout_centerHorizontal="true">
+			    
+			    <ImageButton
+			        android:id="@+id/cancelInsertButton"
+			        android:src="@drawable/cancel"
+			        android:contentDescription="@string/cancel"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:padding="0dp"/>
+			    
+			    <ImageButton
+			        android:id="@+id/doneInsertingButton"
+			        android:src="@drawable/checkmark"
+			        android:contentDescription="@string/done_editing"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_toRightOf="@id/cancelInsertButton"
+			        android:padding="7dp"/>
+			</RelativeLayout>
+	    </RelativeLayout>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/editFeatureButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" >
+        
+		<ImageButton
+		    android:id="@+id/cancelButton"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_alignParentTop="true"
+		    android:layout_marginTop="24dp"
+		    android:alpha="0.9"
+		    android:background="#CCCCCC"
+		    android:contentDescription="@string/cancel"
+		    android:padding="0dp"
+		    android:src="@drawable/cancel" />
+	    
+	    <ImageButton
+	        android:id="@+id/doneButton"
+	        android:src="@drawable/checkmark"
+	        android:contentDescription="@string/done_editing"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/cancelButton"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginTop="24dp"
+	        android:layout_alignParentTop="true"
+	        android:background="#CCCCCC"
+	        android:alpha="0.9"
+	        android:padding="8dp"/>
+    </RelativeLayout>
+    
+    <View
+        android:id="@+id/mapOverlay"
+    	android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha="0.0"
+        android:clickable="true"
+        android:visibility="gone"/>
+
+	<!-- include layout for Error Navigator -->
+	<include
+		layout="@layout/validation_navigator_table" />
+
+</RelativeLayout>
