@@ -27,9 +27,19 @@ OpenGeoDT 팀
 5. 기본 맵 추가
 6. 레이어 검수 기능
 
+
+Getting Started
+=====
+### 1. 환경 ###
+- Android version 4.1(Jelly Bean) 이상
+- Android SDK Minimum Version = 11, Android SDK Target Version = 19
+
+### 2. 설치 ###
+- 프로젝트 빌드
+- apk 설치
+
 사용 라이브러리
 =====
-
 1. Arbiter-Android (MIT License) <link>https://github.com/ROGUE-JCTD/Arbiter-Android
 
 
