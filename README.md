@@ -38,6 +38,11 @@ Getting Started
 - 프로젝트 빌드
 - apk 설치
 
+### 3. 참고자료 ###
+- Arbiter-Android(기존, 확장) : 기존 / 확장 기능설명
+- Manual
+- OpenGDS Mobile.mp4 : 동영상 설명
+
 사용 라이브러리
 =====
 1. Arbiter-Android (MIT License) <link>https://github.com/ROGUE-JCTD/Arbiter-Android
