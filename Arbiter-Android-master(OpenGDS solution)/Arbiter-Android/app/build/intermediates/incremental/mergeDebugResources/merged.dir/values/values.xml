@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="aoi_background">#B8000000</color>
+    <color name="aoi_title_bar">#FFFF0000</color>
+    <color name="dark_blue">#000080</color>
+    <color name="green">#00FF00</color>
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <color name="layer_list_item">#B6DEDE</color>
+    <color name="layer_list_item_pressed">#90C3FB</color>
+    <color name="light_coral">#F08080</color>
+    <color name="red">#FF0000</color>
+    <color name="remove_list_item_pressed">#bf0000</color>
+    <color name="transparent_blue">#B333b5e5</color>
+    <color name="transparent_green">#B300FF00</color>
+    <color name="transparent_red">#B3FF0000</color>
+    <color name="white">#FFFFFF</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <item name="loader_add_layers" type="id"/>
+    <item name="loader_add_tilesets" type="id"/>
+    <item name="loader_aoi_map" type="id"/>
+    <item name="loader_base_layer_list" type="id"/>
+    <item name="loader_classification_list" type="id"/>
+    <item name="loader_insert_feature_dialog" type="id"/>
+    <item name="loader_layers" type="id"/>
+    <item name="loader_layers_choose_baselayer" type="id"/>
+    <item name="loader_map" type="id"/>
+    <item name="loader_notification_badge" type="id"/>
+    <item name="loader_notifications" type="id"/>
+    <item name="loader_projects" type="id"/>
+    <item name="loader_servers_dropdown" type="id"/>
+    <item name="loader_servers_list" type="id"/>
+    <item name="loader_tilesets_list" type="id"/>
+    <string name="about">About</string>
+    <string name="action_AOI_image">AOI Boundary</string>
+    <string name="action_AOI_image_progress">AOI Image in progress</string>
+    <string name="action_add_layers">Add Layers</string>
+    <string name="action_add_server">Add Server</string>
+    <string name="action_address">Address search</string>
+    <string name="action_aoi">Area of Interest</string>
+    <string name="action_baseLayers">Base Layers</string>
+    <string name="action_baseMap_BingAerial">Bing Aerial</string>
+    <string name="action_baseMap_BingAerialWithLabels">Bing AerialWithLabels</string>
+    <string name="action_baseMap_BingRoad">Bing Road</string>
+    <string name="action_baseMap_OpenStreetMap">OpenStreetMap</string>
+    <string name="action_boundary">Set Boundary</string>
+    <string name="action_capture">Capture Success</string>
+    <string name="action_capture_title">Capture</string>
+    <string name="action_coordinate">Coordinate search</string>
+    <string name="action_detailOptionSetting">Detailed Option</string>
+    <string name="action_english">English</string>
+    <string name="action_errorMarking_progress">Creating error marking...</string>
+    <string name="action_error_navigator">Error Navigator</string>
+    <string name="action_findme">Find me</string>
+    <string name="action_image">Image Overlay</string>
+    <string name="action_image_option">Image Build Option</string>
+    <string name="action_korean">Korean</string>
+    <string name="action_multiple_language">Language</string>
+    <string name="action_new_feature">Draw</string>
+    <string name="action_new_image">Image</string>
+    <string name="action_new_project">New project</string>
+    <string name="action_optionSetting">Option Setting</string>
+    <string name="action_portugal">Portugal</string>
+    <string name="action_projects">Projects</string>
+    <string name="action_removeErrorMarking">Validation Clean</string>
+    <string name="action_report">Error Report</string>
+    <string name="action_report_progress">Creating report...</string>
+    <string name="action_search">Search</string>
+    <string name="action_servers">Servers</string>
+    <string name="action_spain">Spain</string>
+    <string name="action_tilesets">Tilesets</string>
+    <string name="action_validation">Validation</string>
+    <string name="action_validationLayerList">Validation</string>
+    <string name="action_validationManagement">Validation Management</string>
+    <string name="action_validationOption">Validation Option</string>
+    <string name="action_validation_progress">Validation in progress</string>
+    <string name="add">Add</string>
+    <string name="add_classification_dialog_title">Add Classification</string>
+    <string name="add_images_button">Add Images</string>
+    <string name="add_layers_button">Add Layers</string>
+    <string name="add_layers_dialog_title">Add Layers</string>
+    <string name="add_server_button">Add Server</string>
+    <string name="add_server_dialog_title">Add Server</string>
+    <string name="add_tileset_button">Add Tileset</string>
+    <string name="add_tileset_dialog_title">Add Tileset</string>
+    <string name="added">ADDED</string>
+    <string name="adding_layers">Adding layers</string>
+    <string name="adding_layers_msg">Adding layers to the map…</string>
+    <string name="address">Address</string>
+    <string name="address_search_no_result_message">No search result</string>
+    <string name="address_search_no_result_title">Alert</string>
+    <string name="address_search_title">\nEnter the address\n</string>
+    <string name="always_show_location">Always show current location (drains battery)</string>
+    <string name="aoi_button">Zoom to AOI</string>
+    <string name="app_name">Arbiter-Android</string>
+    <string name="arbiter_error">Unexpected error.</string>
+    <string name="authentication_failed">Authentication failed, check the username and password.</string>
+    <string name="back">Back</string>
+    <string name="background_map">Background Map:</string>
+    <string name="base">Base</string>
+    <string name="baselayer">Current:</string>
+    <string name="bottom">Bottom</string>
+    <string name="boundary_image_input_error_message">Please Enter the correct boundary value</string>
+    <string name="boundary_image_input_error_title">Input Error</string>
+    <string name="build_date">Build date:</string>
+    <string name="cancel">Cancel</string>
+    <string name="cancel_download_tileset_alert">Are you sure you want to cancel the download for</string>
+    <string name="cannot_start_navigator">You cannot start Error Navigator</string>
+    <string name="change_baselayer_warning">
+        Changing your background map will remove the previously
+        downloaded tiles for your area of interest.
+        Are you sure you want to continue?
+    </string>
+    <string name="check_errors">Invalid entries</string>
+    <string name="check_errors_msg">Please fix errors before continuing.</string>
+    <string name="check_network_connection">Please check your network connection.</string>
+    <string name="check_server_and_network">Please check the server details and network connection and try again later.</string>
+    <string name="check_update_tilesets">Check for Updates</string>
+    <string name="choose_aoi_dialog_title">Choose AOI</string>
+    <string name="choose_baselayer">Select background map</string>
+    <string name="choose_geometry_type">Geometry type</string>
+    <string name="choose_name_hint">New project name*</string>
+    <string name="choose_project_name">Enter project name.</string>
+    <string name="choose_server">Server</string>
+    <string name="classification_name_hint">classification name EX)F001</string>
+    <string name="clear">clear</string>
+    <string name="click_me">( Click me )</string>
+    <string name="close">close</string>
+    <string name="commit_date">Commit date:</string>
+    <string name="confirm">Confirm</string>
+    <string name="confirm_delete_image">Are you sure you want to delete the image?</string>
+    <string name="confirm_delete_layer">Are you sure you want to delete the layer?</string>
+    <string name="confirm_delete_layers_unsynced_features">This layer has features that have not been synced.  If you delete the layer, these features will be lost!  Are you sure you want to delete the layer?</string>
+    <string name="confirm_delete_project">Are you sure you want to delete the project?  Any unsynchronized data will be lost.</string>
+    <string name="confirm_geometry_removal_msg">Are you sure you wish to remove this geometry from the collection?</string>
+    <string name="confirm_geometry_removal_title">Remove geometry</string>
+    <string name="confirm_part_removal_msg">Are you sure you wish to remove this part of the geometry?</string>
+    <string name="confirm_part_removal_title">Remove part</string>
+    <string name="continue_sync">Continue</string>
+    <string name="coordinate_input_error_message">Please Enter the correct coordinate</string>
+    <string name="coordinate_input_error_title">Input Error</string>
+    <string name="could_not_connect">Could not connect</string>
+    <string name="create_project_msg">Project being created…</string>
+    <string name="create_project_progress">Creating project.</string>
+    <string name="create_project_question">Would you like to create one now?</string>
+    <string name="default_layer_name">OpenStreetMap</string>
+    <string name="default_project_name">_ARBITER_DEFAULT_PROJECT_</string>
+    <string name="delete">Delete</string>
+    <string name="delete_feature">Delete</string>
+    <string name="delete_feature_warning">Delete feature</string>
+    <string name="delete_feature_warning_msg">Are you sure you want to delete this feature?</string>
+    <string name="delete_media">Delete Media</string>
+    <string name="delete_project">Delete project</string>
+    <string name="delete_server_alert">This will delete all layers in all projects associated with this server.</string>
+    <string name="delete_tileset_alert">Are you sure you want to delete </string>
+    <string name="delete_tileset_button">Delete</string>
+    <string name="deleting_msg">Deletion in progress…</string>
+    <string name="deleting_server">Deleting Server</string>
+    <string name="deleting_server_msg">Server deletion in progress…</string>
+    <string name="deleting_tileset">Deleting Tileset</string>
+    <string name="deleting_tileset_msg">Tileset deletion in progress..</string>
+    <string name="disable_wms">Disable WMS for non-base layers</string>
+    <string name="disconnected_no_projects">It seems you are not connected to a network, and don\'t have any projects created.\n
+        \nIf you would like to take full advantage of Arbiter, please connect to a network and create a new project.\n
+        \nYou will know if you\'re connected if the red sync icon turns green.</string>
+    <string name="done">Done</string>
+    <string name="done_editing">Save</string>
+    <string name="download_photos">Download photos for features</string>
+    <string name="downloaded">Downloaded: </string>
+    <string name="downloading_schemas">Downloading Schemas</string>
+    <string name="downloading_tiles">Downloading Tiles</string>
+    <string name="downloading_tileset">Download</string>
+    <string name="downloading_tileset_msg">This download will be </string>
+    <string name="downloading_tileset_msg2">Are you sure you want to continue?</string>
+    <string name="draw_image">Draw image</string>
+    <string name="edit_attributes">Edit</string>
+    <string name="edit_feature">Map</string>
+    <string name="error">Error</string>
+    <string name="error500">Internal System Error</string>
+    <string name="error_adding_layers">Error</string>
+    <string name="error_adding_layers_msg">Couldn\'t add selected layers!</string>
+    <string name="error_aoi_create_project">You must create a project before selecting an area of interest.</string>
+    <string name="error_connecting_tileset1">Error when trying to connect to</string>
+    <string name="error_connecting_tileset2">Please check your connection and try again.</string>
+    <string name="error_creating_project">Error</string>
+    <string name="error_creating_project_msg">Could not create project!</string>
+    <string name="error_loading_features">Error</string>
+    <string name="error_loading_features_msg">Could not create project!</string>
+    <string name="error_retrieving_tileset">Error Retrieving Tileset</string>
+    <string name="error_syncing">Error</string>
+    <string name="error_syncing_msg">Unable to sync</string>
+    <string name="error_updating_aoi">Error</string>
+    <string name="error_updating_aoi_msg">Could not update the area of interest!</string>
+    <string name="example_latitude">ex. </string>
+    <string name="example_longitude">ex. </string>
+    <string name="failed_media_download">The following media items failed to download:</string>
+    <string name="failed_media_upload">The following media items failed to upload:</string>
+    <string name="failed_to_sync">Sync Incomplete</string>
+    <string name="failed_vector_download">The following vector layers failed to download:</string>
+    <string name="failed_vector_upload">The following vector layers failed to upload:</string>
+    <string name="feature_dialog_title">Feature</string>
+    <string name="feature_not_in_aoi">Feature not available</string>
+    <string name="feature_not_in_aoi_msg">The feature has been deleted or moved to a location outside of the area of interest.</string>
+    <string name="feature_outside_aoi_warning">You have placed a feature outside of your selected area of interest.  After syncing this feature, it will no longer
+         be on the device.</string>
+    <string name="feature_saved">Feature saved</string>
+    <string name="feature_saved_msg">The feature has been saved.</string>
+    <string name="find_area_text">Enter the address key.</string>
+    <string name="finish">Finish</string>
+    <string name="finish_editing_message">Please finish editing.</string>
+    <string name="finish_editing_title">Finish Editing</string>
+    <string name="fix_name_hint">EX)layer_1</string>
+    <string name="form_error_bool">Please enter true or false.</string>
+    <string name="form_error_date">Please enter a valid date.</string>
+    <string name="form_error_double">Please enter a valid number.</string>
+    <string name="form_error_float">Please enter a valid number.</string>
+    <string name="form_error_integer">Please enter a valid integer.</string>
+    <string name="form_error_long">Please enter a valid number.</string>
+    <string name="from_camera">From Camera</string>
+    <string name="from_library">From Photo Library</string>
+    <string name="geolocation_error">Geolocation Error</string>
+    <string name="geolocation_error_msg">Could not get your location.  Please check the device settings to make sure Arbiter has access to Geolocation.  If the problem persists, try restarting the device.</string>
+    <string name="go_offline_dialog_title">Offline</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="imageName">Name</string>
+    <string name="imagePath">Path</string>
+    <string name="image_list">Image List</string>
+    <string name="image_option_opacity">Opacity</string>
+    <string name="image_option_setting">Option Setting</string>
+    <string name="initializing">Initializing</string>
+    <string name="input_image_AOI">Input AOI</string>
+    <string name="insert">insert</string>
+    <string name="insert_feature_title">Select layer to insert into.</string>
+    <string name="insert_feature_warning">Insert feature</string>
+    <string name="insert_feature_warning_msg">Insert the feature?</string>
+    <string name="insert_layer_text">Mode: Insert</string>
+    <string name="insert_layer_title">Inserting into:</string>
+    <string name="inspect">Inspect</string>
+    <string name="internal_server_error">An error occurred on the server.</string>
+    <string name="invalid_url">Invalid url</string>
+    <string name="invalid_url_slash_tms">\"TMS\" server urls end with \"/hot/1.0.0/\"</string>
+    <string name="invalid_url_slash_wms">\"WMS\" server urls must end with \"/wms\"</string>
+    <string name="latitude">Latitude</string>
+    <string name="layer_code_hint">layer code EX)F0010000</string>
+    <string name="layer_filter_hint">Filter</string>
+    <string name="layer_info_dialog_title">Layer Info</string>
+    <string name="layer_order">Layer order</string>
+    <string name="layer_visibility_off">Off</string>
+    <string name="layer_visibility_on">On</string>
+    <string name="layers_already_in_project">Could not add the following layers to the project because layers with the same feature types already exist:</string>
+    <string name="layers_button">Layers</string>
+    <string name="layers_dialog_title">Layers</string>
+    <string name="layers_limit">Layer limit reached</string>
+    <string name="left">Left</string>
+    <string name="line">Line</string>
+    <string name="loading">Loading</string>
+    <string name="loading_feature_info">Feature is loading… Please wait…</string>
+    <string name="loading_getcapabilities">Loading layers</string>
+    <string name="loading_layers_please_wait">Loading layers from server. Please wait.</string>
+    <string name="loading_tilesets_getcapabilities">Loading Tilesets..</string>
+    <string name="loading_unsupported_crs">Could not load the following layers due to unsupported CRS:</string>
+    <string name="location_button">Find me</string>
+    <string name="longitude">Longitude</string>
+    <string name="map_activity_name">Arbiter</string>
+    <string name="media">media</string>
+    <string name="media_download_errors_label">Media that failed to download:</string>
+    <string name="media_upload_errors_label">Media that failed to upload:</string>
+    <string name="modified">MODIFIED</string>
+    <string name="move_down">Move down</string>
+    <string name="move_up">Move up</string>
+    <string name="multiline">Multi line</string>
+    <string name="multipoint">Multi point</string>
+    <string name="multipolygon">Multi polygon</string>
+    <string name="must_complete_upload_first">Must complete upload first.</string>
+    <string name="must_create_project">Before editing, you must first create a project.</string>
+    <string name="navigator_error_message">You have to operate validation prior to Error Navigator</string>
+    <string name="navigator_left">Left</string>
+    <string name="navigator_right">Right</string>
+    <string name="no_available_tileset_msg">was found, but did not return any valid tilesets. Please make sure Tilesets have been correctly generated.</string>
+    <string name="no_available_tileset_title">Error Retrieving Tilesets</string>
+    <string name="no_con_checks">Ignore connection status (requires restart)</string>
+    <string name="no_network">No Network Connection</string>
+    <string name="no_valid_geometries">No valid geometries present.</string>
+    <string name="no_valid_geometries_delete_or_cancel">No valid geometries present.  Would you like to delete the feature or cancel?</string>
+    <string name="none_report_message">You have to operate validation prior to confirming report</string>
+    <string name="none_report_title">The report does not exist</string>
+    <string name="not_enough_space">Not Enough Space</string>
+    <string name="not_enough_space_msg1">You do not have enough free space to download</string>
+    <string name="not_enough_space_msg2">Consider freeing up space and trying again.</string>
+    <string name="notifications">Notifications</string>
+    <string name="notify_user_to_add_geometry_msg">Add a geometry or delete the feature.</string>
+    <string name="notify_user_to_add_geometry_title">Must have a geometry</string>
+    <string name="overlayImage">Overlay Image:</string>
+    <string name="overlays">Overlays:</string>
+    <string name="picture_source">Select Source</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="point">Point</string>
+    <string name="polygon">Polygon</string>
+    <string name="project_already_exists">Project already exists.  Please create a new project with a different name.</string>
+    <string name="project_creation_failed">Project creation failed</string>
+    <string name="project_creation_failed_message">Could not create project.  Check to see if you are out of disk space.</string>
+    <string name="project_exists_title">Project Exists</string>
+    <string name="project_incomplete_msg">Project is not available offline. \n\nPlease select an area of interest.</string>
+    <string name="project_name_dialog_title">Project Name</string>
+    <string name="projects_activity_name">Projects</string>
+    <string name="read_only">Read only</string>
+    <string name="read_only_msg">This layer is read only.  Please contact the server administrator to check your permissions.</string>
+    <string name="remove">Remove</string>
+    <string name="remove_image">Remove Image</string>
+    <string name="remove_layer">Remove layer</string>
+    <string name="remove_tileset">Remove Tileset</string>
+    <string name="removed">REMOVED</string>
+    <string name="report">Report</string>
+    <string name="report_left">Left</string>
+    <string name="report_right">Right</string>
+    <string name="required_field">Required field</string>
+    <string name="resource_not_found">Resource not found.</string>
+    <string name="retry">Retry</string>
+    <string name="retry_sync">Try again?</string>
+    <string name="return_to_map">Return to Map</string>
+    <string name="review_feature">Review Feature</string>
+    <string name="right">Right</string>
+    <string name="select_picture_source">Add a photo...</string>
+    <string name="server_dialog_title">Servers</string>
+    <string name="server_name_hint">Name</string>
+    <string name="server_password_hint">Password</string>
+    <string name="server_show_password">Show Password</string>
+    <string name="server_url_hint">ex. http://example.com/geoserver</string>
+    <string name="server_username_hint">Username</string>
+    <string name="set_boundary">Build image by setting boundary value</string>
+    <string name="settings">Settings</string>
+    <string name="space_after_download">After Download: </string>
+    <string name="space_available">Available Space: </string>
+    <string name="start_validation_button">Start Validation</string>
+    <string name="stop">Stop</string>
+    <string name="sure_delete_media">Are you sure you want to remove this item from the feature?</string>
+    <string name="switch_project">Switch to this project?</string>
+    <string name="switch_project_title">Switch Project</string>
+    <string name="sync_button">Sync</string>
+    <string name="sync_in_progress">Syncing</string>
+    <string name="sync_in_progress_msg">Sync in progress…</string>
+    <string name="sync_timed_out">Sync timed out</string>
+    <string name="sync_timed_out_msg">The sync timed out.  Would you like to continue syncing or cancel the remaining sync operations?</string>
+    <string name="syncing_media_title">Syncing Media</string>
+    <string name="syncing_vector_data">Syncing Vector Data</string>
+    <string name="take_picture">Take picture</string>
+    <string name="tile_cache_warning">Tiles to download:</string>
+    <string name="tileset_cancel_download_msg">Stopping download..</string>
+    <string name="tileset_cancel_download_title">Cancelling Download</string>
+    <string name="tileset_dialog_title">Tilesets</string>
+    <string name="tileset_download_error_msg">The file was not downloaded. The download link was invalid or the current network connection is unavailable.</string>
+    <string name="tileset_filesize">Size: 007GB</string>
+    <string name="tileset_finished_downloading_msg">Finished downloading</string>
+    <string name="tileset_info_created_by">Created By: </string>
+    <string name="tileset_info_download_url">Download URL: </string>
+    <string name="tileset_info_filesize">Filesize: </string>
+    <string name="tileset_info_layer_name">Layer Name: </string>
+    <string name="tileset_info_name">Name: </string>
+    <string name="tileset_info_resource_uri">Resource URI: </string>
+    <string name="tileset_info_server_id">Server ID: </string>
+    <string name="tileset_info_server_url">Server URL: </string>
+    <string name="tileset_info_server_username">Server Username: </string>
+    <string name="tileset_info_service_type">Service Type: </string>
+    <string name="tileset_info_status">Status: </string>
+    <string name="tileset_info_time_created">Time Created: </string>
+    <string name="tileset_info_title">Tileset Info</string>
+    <string name="tileset_list_names">Tilesets</string>
+    <string name="tileset_name">NAMEME</string>
+    <string name="tileset_new_project_msg_confirmation">\n\nTo ensure that this project can have a background map while there is no Internet connectivity,
+        a Tileset with the appropriate data should be downloaded.\n\nIf the background map "OpenStreetMap" is selected, the map data will be pulled from the Internet.
+        \n**Data Charges may apply**\n\nWould you like to download tilesets?</string>
+    <string name="tileset_new_project_msg_downloaded">Tilesets currently downloaded: </string>
+    <string name="tileset_no_connection_msg">Arbiter is currently offline, and did not find any Tilesets.\n\nIf you would like to have a background map to be available offline:
+        reconnect Arbiter, and download a Tileset.\n\nThis feature is available at:\nSettings > Tilesets</string>
+    <string name="tileset_started_downloading_msg">Started downloading</string>
+    <string name="tileset_status_downloading">Downloading..</string>
+    <string name="tileset_status_in_database">In Database</string>
+    <string name="tileset_status_on_server">On Server</string>
+    <string name="tileset_zero_filesize">has a filesize of 0. Please make sure the tileset was generated correctly.</string>
+    <string name="timed_out">Request timed out.</string>
+    <string name="title_activity_aoi">AOIActivity</string>
+    <string name="too_many_layers">You have reached the maximum layers per project.</string>
+    <string name="top">Top</string>
+    <string name="try_again_later">Please try again later.  If the problem persists, please contact your administrator.</string>
+    <string name="type">Type</string>
+    <string name="unable_to_connect">Unable to connect to the server, make sure the url is correct.</string>
+    <string name="unauthorized">Unauthorized.</string>
+    <string name="unknown">Unknown</string>
+    <string name="unknown_error">Unexpected error.</string>
+    <string name="unsupported_crs">Unsupported CRS</string>
+    <string name="update">Update</string>
+    <string name="update_aoi_alert">Area of Interest</string>
+    <string name="update_aoi_alert_msg">Updating your area of interest will also sync any changes you have made.</string>
+    <string name="update_error">An error occurred updating the feature.  Please review your features, and try again later.</string>
+    <string name="update_feature_msg">Update the feature?</string>
+    <string name="update_feature_title">Update</string>
+    <string name="update_server_alert">Are you sure you want to update the server?  Invalid changes may result in syncing failures.</string>
+    <string name="update_tileset_button">Update</string>
+    <string name="updating">Updating</string>
+    <string name="updating_msg">Update in progress…</string>
+    <string name="uploaded">Uploaded: </string>
+    <string name="valid_geometry_collection_description">A Geometry Collection must have at least one valid geometry.</string>
+    <string name="valid_line_geometry_description">A Line geometry must have at least two unique points.</string>
+    <string name="valid_multiline_geometry_description">A MultiLine geometry must have at least one valid Line geometry.</string>
+    <string name="valid_multipoint_geometry_description">A MultiPoint geometry must have at least one valid Point geometry.</string>
+    <string name="valid_multipolygon_geometry_description">A MultiPolygon geometry must have at least one valid Polygon geometry.</string>
+    <string name="valid_point_geometry_description">A Point geometry must have at least one point.</string>
+    <string name="valid_polygon_geometry_description">A Polygon geometry must have at least three unique points.</string>
+    <string name="validating_server">Validating Server</string>
+    <string name="validationLayerName">Name</string>
+    <string name="values_hint">(,) EX)line1,line2</string>
+    <string name="vector_download_errors_label">Vector layers that failed to download:</string>
+    <string name="vector_upload_errors_label">Vector layers that failed on upload:</string>
+    <string name="version">Commit:</string>
+    <string name="warning">Warning</string>
+    <string name="welcome_dialog_title">Welcome</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="PopupTheme" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="project_wizard_animation" parent="AppBaseTheme">
+	    <item name="android:windowEnterAnimation">@anim/slide_in_left</item>
+	</style>
+</resources>
