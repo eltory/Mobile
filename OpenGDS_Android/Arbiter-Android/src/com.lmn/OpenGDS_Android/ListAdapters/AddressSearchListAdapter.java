@@ -25,7 +25,6 @@ import org.apache.cordova.CordovaWebView;
 
 /**
  * 주소 검색 리스트 어댑터
- *
  * @author JiJungKeun
  * @version 1.1 2017/01/02
  */
@@ -42,15 +41,15 @@ public class AddressSearchListAdapter extends CustomList<ArrayList<String>, Stri
     private DialogFragment dialog;
 
     /**
-     * @param viewGroup,activity,dialog,itemLayout,hasThreadPool,cordovaWebView,location ViewGroup,Activity,DialogFragment,int,HasThreadPool,CordovaWebView,List<Address>
      * @author JiJungKeun
+     * @param viewGroup,activity,dialog,itemLayout,hasThreadPool,cordovaWebView,location ViewGroup,Activity,DialogFragment,int,HasThreadPool,CordovaWebView,List<Address>
      */
-    public AddressSearchListAdapter(ViewGroup viewGroup, Activity activity, DialogFragment dialog, int itemLayout, HasThreadPool hasThreadPool, CordovaWebView cordovaWebView, List<Address> location) {
+    public AddressSearchListAdapter(ViewGroup viewGroup, Activity activity, DialogFragment dialog, int itemLayout, HasThreadPool hasThreadPool, CordovaWebView cordovaWebView, List<Address> location){
         super(viewGroup);
 
         this.activity = activity;
         this.context = activity.getApplicationContext();
-        this.inflater = LayoutInflater.from(this.context);
+        this.inflater =	LayoutInflater.from(this.context);
         this.itemLayout = itemLayout;
         this.arbiterProject = ArbiterProject.getArbiterProject();
         this.hasThreadPool = hasThreadPool;
@@ -61,7 +60,7 @@ public class AddressSearchListAdapter extends CustomList<ArrayList<String>, Stri
     }
 
     @Override
-    public void setData(ArrayList<String> address) {
+    public void setData(ArrayList<String> address){
         super.setData(address);
     }
 
@@ -82,15 +81,15 @@ public class AddressSearchListAdapter extends CustomList<ArrayList<String>, Stri
 
         final String resultItem = getItem(position);
 
-        if (resultItem != null) {
+        if(resultItem != null){
 
             RelativeLayout searchResultContainer = (RelativeLayout) view.findViewById(R.id.AddressSearchResult);
             TextView searchResultNameView = (TextView) view.findViewById(R.id.AddressName);
 
-            if (searchResultNameView != null) {
+            if(searchResultNameView != null){
                 searchResultNameView.setText(getItem(position));
 
-                searchResultContainer.setOnClickListener(new OnClickListener() {
+                searchResultContainer.setOnClickListener(new OnClickListener(){
 
                     @Override
                     public void onClick(View v) {
@@ -105,7 +104,7 @@ public class AddressSearchListAdapter extends CustomList<ArrayList<String>, Stri
         return view;
     }
 
-    public void setItemLayout(int itemLayout) {
+    public void setItemLayout(int itemLayout){
         this.itemLayout = itemLayout;
     }
 
