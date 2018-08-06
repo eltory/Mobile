@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 /**
  * OpenGDS/Validator 검수 서버에 필요한 검수 대상 레이어 데이터를 DataBase 로부터 추출
+ *
  * @author JiJungKeun
  * @version 1.1 2017/01/02
  */
@@ -53,8 +54,9 @@ public class ValidationLayersListLoader implements BaseColumns {
 
     /**
      * DB Connection
-     * @author JiJungKeun
+     *
      * @param activity Activity
+     * @author JiJungKeun
      */
     public ValidationLayersListLoader(Activity activity) {
 
@@ -68,8 +70,9 @@ public class ValidationLayersListLoader implements BaseColumns {
 
     /**
      * 레이어의 feature 테이블 이름 추출
-     * @author JiJungKeun
+     *
      * @return ArrayList<String>
+     * @author JiJungKeun
      */
     public ArrayList<String> getFeature_table_name() {
         String[] columns = {_ID, // 0
@@ -98,17 +101,17 @@ public class ValidationLayersListLoader implements BaseColumns {
 
     /**
      * 레이어의 ID 추출
-     * @author JiJungKeun
+     *
      * @param errorFeatureFID String
      * @return String
+     * @author JiJungKeun
      */
-    public String getLayerID(String errorFeatureFID)
-    {
+    public String getLayerID(String errorFeatureFID) {
         String layer_title = errorFeatureFID.split("\\.")[0];
         String layerID = "";
 
         String[] project_columns = {
-                 _ID // 0
+                _ID // 0
         };
 
         String whereClauseInProject = LAYER_TITLE + "=?";
@@ -120,7 +123,7 @@ public class ValidationLayersListLoader implements BaseColumns {
 
         Cursor project_cursor = projectDb.query(LAYERS_TABLE_NAME, project_columns, whereClauseInProject, whereArgsInProject, null, null, project_orderBy);
 
-        for(project_cursor.moveToFirst(); !project_cursor.isAfterLast(); project_cursor.moveToNext()) {
+        for (project_cursor.moveToFirst(); !project_cursor.isAfterLast(); project_cursor.moveToNext()) {
             layerID = project_cursor.getString(0);
         }
 
@@ -131,30 +134,26 @@ public class ValidationLayersListLoader implements BaseColumns {
 
     /**
      * 맵 상의 레이어가 AOI 안에 존재하는지 확인
-     * @author JiJungKeun
+     *
      * @param feature_table_name String
      * @return boolean
+     * @author JiJungKeun
      */
-    public boolean existInAOI(String feature_table_name)
-    {
+    public boolean existInAOI(String feature_table_name) {
         Cursor cursor = featuresDb.query(feature_table_name, null, null,
                 null, null, null, null);
 
-        if(cursor.moveToFirst() == false)
-            return false;
-
-        else
-            return true;
+        return cursor.moveToFirst();
     }
 
     /**
      * 검수에 필요한 레이어 데이터 추출
-     * @author JiJungKeun
+     *
      * @param table_name String
      * @return Validation
+     * @author JiJungKeun
      */
-    public Validation setLayerInfo(String table_name)
-    {
+    public Validation setLayerInfo(String table_name) {
         Validation validationLayer = new Validation();
 
         //get validation layer information from project.db
@@ -180,7 +179,7 @@ public class ValidationLayersListLoader implements BaseColumns {
 
         Cursor project_cursor = projectDb.query(LAYERS_TABLE_NAME, project_columns, whereClauseInProject, whereArgsInProject, null, null, project_orderBy);
 
-        for(project_cursor.moveToFirst(); !project_cursor.isAfterLast(); project_cursor.moveToNext()) {
+        for (project_cursor.moveToFirst(); !project_cursor.isAfterLast(); project_cursor.moveToNext()) {
             validationLayer.setLayerTitle(project_cursor.getString(4));
             validationLayer.setLayerId(project_cursor.getString(0));
             validationLayer.setFeatureType(project_cursor.getString(1));
@@ -208,16 +207,16 @@ public class ValidationLayersListLoader implements BaseColumns {
         Cursor features_cursor = featuresDb.query(GEOMETRY_COLUMNS_TABLE_NAME, features_columns, whereClauseInFeature,
                 whereArgsInFeature, null, null, features_orderBy);
 
-        for(features_cursor.moveToFirst(); !features_cursor.isAfterLast(); features_cursor.moveToNext()) {
+        for (features_cursor.moveToFirst(); !features_cursor.isAfterLast(); features_cursor.moveToNext()) {
             validationLayer.setFeatureTableName(features_cursor.getString(1));
             validationLayer.setFeatureGeometryColumn(features_cursor.getString(2));
             validationLayer.setFeatureGeometrySrid(features_cursor.getString(4));
             validationLayer.setFeatureEnumeration(features_cursor.getString(5));
 
-            if(features_cursor.getString(3).equalsIgnoreCase("SURFACE"))
+            if (features_cursor.getString(3).equalsIgnoreCase("SURFACE"))
                 validationLayer.setFeatureGeometryType("Polygon");
 
-            else if(features_cursor.getString(3).equalsIgnoreCase("MULTISURFACE"))
+            else if (features_cursor.getString(3).equalsIgnoreCase("MULTISURFACE"))
                 validationLayer.setFeatureGeometryType("MultiPolygon");
 
             else
@@ -227,7 +226,7 @@ public class ValidationLayersListLoader implements BaseColumns {
         features_cursor.close();
 
         //get first FID from each layers to distinguish in javascript
-        String firstFid="";
+        String firstFid = "";
         String[] fid_columns = {
                 FID, //0
                 ARBITER_ID //1
@@ -238,7 +237,7 @@ public class ValidationLayersListLoader implements BaseColumns {
         Cursor fid_cursor = featuresDb.query(table_name, fid_columns, null,
                 null, null, null, fid_orderBy);
 
-        for(fid_cursor.moveToFirst(); !fid_cursor.isAfterLast(); fid_cursor.moveToNext()) {
+        for (fid_cursor.moveToFirst(); !fid_cursor.isAfterLast(); fid_cursor.moveToNext()) {
             firstFid = fid_cursor.getString(0);
             break;
         }
@@ -252,7 +251,7 @@ public class ValidationLayersListLoader implements BaseColumns {
 
         ArrayList<String> attributeArr = new ArrayList<String>();
 
-        for(int i=5; i<attributes_cursor.getColumnCount(); i++) {
+        for (int i = 5; i < attributes_cursor.getColumnCount(); i++) {
             attributeArr.add(attributes_cursor.getColumnName(i));
         }
 
@@ -267,15 +266,16 @@ public class ValidationLayersListLoader implements BaseColumns {
 
             char temp = ' ';
 
-            for (int i = 0; i < attributeArr.size(); i++)
-            {
-                temp = (char)(json.getJSONObject(attributeArr.get(i)).getString("type").split(":")[1].charAt(0) - 32);
+            for (int i = 0; i < attributeArr.size(); i++) {
+                temp = (char) (json.getJSONObject(attributeArr.get(i)).getString("type").split(":")[1].charAt(0) - 32);
 
                 attributeTypeArr.add(String.valueOf(temp) + json.getJSONObject(attributeArr.get(i)).getString("type").split(":")[1].substring(1));
             }
 
             validationLayer.setAttributeTypes(attributeTypeArr);
-        }catch (Exception e) {e.printStackTrace();}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         return validationLayer;
     }

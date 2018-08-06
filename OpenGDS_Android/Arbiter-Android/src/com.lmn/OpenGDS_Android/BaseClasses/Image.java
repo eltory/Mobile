@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Image 객체에 이미지의 이름 및 경로, 경계값 저장
+ *
  * @author JiJungKeun
  * @version 1.1 2016/09/12
  */
@@ -21,84 +22,90 @@ public class Image {
     /**
      * @author JiJungKeun
      */
-    public Image()
-    {
+    public Image() {
     }
 
     /**
      * Set image url and image name
-     * @author JiJungKeun
+     *
      * @param item Image
+     * @author JiJungKeun
      */
-    public Image(Image item){
+    public Image(Image item) {
         this.path = item.getPath();
         this.name = item.getName();
     }
 
-    public void setPath(String path)
-    {
+    public void setPath(String path) {
         this.path = path;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public void setLeft(float left)
-    {
+    public void setLeft(float left) {
         this.left = left;
     }
 
-    public void setRight(float right)
-    {
+    public void setRight(float right) {
         this.right = right;
     }
 
-    public void setTop(float top) { this.top = top;}
+    public void setTop(float top) {
+        this.top = top;
+    }
 
-    public void setBottom(float bottom) { this.bottom = bottom; }
+    public void setBottom(float bottom) {
+        this.bottom = bottom;
+    }
 
-    public void setDrawBuildOption() { imageBuildOptions.add("DRAW"); }
+    public void setDrawBuildOption() {
+        imageBuildOptions.add("DRAW");
+    }
 
-    public void setBoundaryBuildOption() { imageBuildOptions.add("BOUNDARY"); }
+    public void setBoundaryBuildOption() {
+        imageBuildOptions.add("BOUNDARY");
+    }
 
-    public void setAOIBuildOption() { imageBuildOptions.add("AOI"); }
+    public void setAOIBuildOption() {
+        imageBuildOptions.add("AOI");
+    }
 
-    public void setImageOpacity() { imageOpacity = true; }
+    public void setImageOpacity() {
+        imageOpacity = true;
+    }
 
-    public String getPath()
-    {
+    public String getPath() {
         return path;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public float getLeft()
-    {
+    public float getLeft() {
         return left;
     }
 
-    public float getRight()
-    {
+    public float getRight() {
         return right;
     }
 
-    public float getTop()
-    {
+    public float getTop() {
         return top;
     }
 
-    public float getBottom()
-    {
+    public float getBottom() {
         return bottom;
     }
 
-    public ArrayList<String> getImageBuildOptions(){ return imageBuildOptions; }
+    public ArrayList<String> getImageBuildOptions() {
+        return imageBuildOptions;
+    }
 
-    public boolean getImageOpacity() { return imageOpacity; }
+    public boolean getImageOpacity() {
+        return imageOpacity;
+    }
 
 }

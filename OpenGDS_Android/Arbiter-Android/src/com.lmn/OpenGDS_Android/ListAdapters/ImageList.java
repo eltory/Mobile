@@ -22,7 +22,7 @@ import com.lmn.Arbiter_Android.DatabaseHelpers.CommandExecutor.CommandExecutor;
 import com.lmn.Arbiter_Android.ListAdapters.CustomList;
 import com.lmn.Arbiter_Android.R;
 
-import com.lmn.OpenGDS_Android.Dialog.Dialogs.ImagesDialog;
+import com.lmn.OpenGDS_Android.Dialog.Dialogs.Image.ImagesDialog;
 import com.lmn.OpenGDS_Android.BaseClasses.Image;
 import com.lmn.OpenGDS_Android.Map.Map_Expansion;
 
@@ -32,6 +32,7 @@ import java.util.ArrayList;
 
 /**
  * 이미지 레이어 리스트 어댑터
+ *
  * @author JiJungKeun
  * @version 1.1 2017/01/02
  */
@@ -53,15 +54,15 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
     private Image imageOption;
 
     /**
-     * @author JiJungKeun
      * @param viewGroup,activity,itemLayout,hasThreadPool,cordovaWebView,imageOption ViewGroup,Activity,int,HasThreadPool,CordovaWebView,Image
+     * @author JiJungKeun
      */
-    public ImageList(ViewGroup viewGroup, Activity activity, int itemLayout, HasThreadPool hasThreadPool, CordovaWebView cordovaWebView, Image imageOption){
+    public ImageList(ViewGroup viewGroup, Activity activity, int itemLayout, HasThreadPool hasThreadPool, CordovaWebView cordovaWebView, Image imageOption) {
         super(viewGroup);
 
         this.activity = activity;
         this.context = activity.getApplicationContext();
-        this.inflater =	LayoutInflater.from(this.context);
+        this.inflater = LayoutInflater.from(this.context);
         this.itemLayout = itemLayout;
         this.arbiterProject = ArbiterProject.getArbiterProject();
         this.hasThreadPool = hasThreadPool;
@@ -72,7 +73,7 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
     }
 
     @Override
-    public void setData(ArrayList<Image> image){
+    public void setData(ArrayList<Image> image) {
         super.setData(image);
     }
 
@@ -93,16 +94,16 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
 
         final Image image = getItem(position);
 
-        if(image != null){
+        if (image != null) {
 
             RelativeLayout imageItemContainer = (RelativeLayout) view.findViewById(R.id.ImageItemContainer);
             TextView imageNameView = (TextView) view.findViewById(R.id.ImageName);
             ImageButton deleteButton = (ImageButton) view.findViewById(R.id.deleteImage);
 
-            if(imageNameView != null){
+            if (imageNameView != null) {
                 imageNameView.setText(image.getName());
 
-                if(imageOption.getImageOpacity() == true) {
+                if (imageOption.getImageOpacity() == true) {
                     imageItemContainer.setOnClickListener(new OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -113,8 +114,8 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
             }
 
 
-            if(deleteButton != null){
-                deleteButton.setOnClickListener(new OnClickListener(){
+            if (deleteButton != null) {
+                deleteButton.setOnClickListener(new OnClickListener() {
 
                     @Override
                     public void onClick(View v) {
@@ -131,24 +132,25 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
 
     /**
      * 이미지 레이어 투명도 조절
-     * @author JiJungKeun
+     *
      * @param image,position Image,int
+     * @author JiJungKeun
      */
-    private void setImageOption(final Image image, int position){
+    private void setImageOption(final Image image, int position) {
 
         String loading = activity.getResources().getString(R.string.loading);
         String pleaseWait = activity.getResources().getString(R.string.please_wait);
 
         final ProgressDialog progressDialog = ProgressDialog.show(activity, loading, pleaseWait, true);
 
-        hasThreadPool.getThreadPool().execute(new Runnable(){
+        hasThreadPool.getThreadPool().execute(new Runnable() {
             @Override
-            public void run(){
+            public void run() {
 
-                activity.runOnUiThread(new Runnable(){
+                activity.runOnUiThread(new Runnable() {
 
                     @Override
-                    public void run(){
+                    public void run() {
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
 
@@ -160,8 +162,7 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
                                                         int id) {
 
                                         //Opacity
-                                        if(id == 0)
-                                        {
+                                        if (id == 0) {
                                             View innerView = activity.getLayoutInflater().inflate(R.layout.image_opacity_seek_bar, null);
 
                                             AlertDialog.Builder opacityBuilder = new AlertDialog.Builder(activity);
@@ -173,8 +174,7 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
                                             opacityBuilder.setTitle(R.string.image_option_opacity);
                                             opacityBuilder.setIcon(R.drawable.icon);
                                             opacityBuilder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                                public void onClick(DialogInterface dialog, int which)
-                                                {
+                                                public void onClick(DialogInterface dialog, int which) {
                                                     opacityValue = opacityValue / 10;
 
                                                     Map_Expansion.getMap().setImageOpacity(cordovaWebView, image.getPath(), opacityValue);
@@ -203,9 +203,10 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
 
     /**
      * 투명도 조절 SeekBar 설정
+     *
      * @author JiJungKeun
      */
-    private void setSeekbar(){
+    private void setSeekbar() {
         int maxOpacity = 10;
         int currentOpacity = 0;
 
@@ -228,7 +229,7 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
-                showCurrentOpacity.setText(""+progress);
+                showCurrentOpacity.setText("" + progress);
                 opacityValue = progress;
             }
         });
@@ -236,42 +237,39 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
 
     /**
      * 이미지 삭제 확인
-     * @author JiJungKeun
+     *
      * @param image,position Image,int
+     * @author JiJungKeun
      */
-    private void confirmDeleteImage(final Image image, int position){
+    private void confirmDeleteImage(final Image image, int position) {
 
         String loading = activity.getResources().getString(R.string.loading);
         String pleaseWait = activity.getResources().getString(R.string.please_wait);
-
+        final int pos = position;
         final ProgressDialog progressDialog = ProgressDialog.show(activity, loading, pleaseWait, true);
 
-        hasThreadPool.getThreadPool().execute(new Runnable(){
+        hasThreadPool.getThreadPool().execute(new Runnable() {
             @Override
-            public void run(){
+            public void run() {
 
-                activity.runOnUiThread(new Runnable(){
+                activity.runOnUiThread(new Runnable() {
 
                     @Override
-                    public void run(){
+                    public void run() {
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
 
-                        builder.setTitle(R.string.warning);
+                        builder.setTitle(R.string.warning)
+                                .setMessage(R.string.confirm_delete_image)
+                                .setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {
 
-                        builder.setMessage(R.string.confirm_delete_image);
-
-                        builder.setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                deleteImage(image, position);
-                            }
-                        });
-
-                        builder.setNegativeButton(android.R.string.cancel, null);
-
-                        builder.create().show();
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        deleteImage(image, pos);
+                                    }
+                                })
+                                .setNegativeButton(android.R.string.cancel, null)
+                                .create().show();
 
                         progressDialog.dismiss();
                     }
@@ -282,19 +280,20 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
 
     /**
      * 이미지 삭제(SharedPreference 데이터 삭제)
-     * @author JiJungKeun
+     *
      * @param selectedImage,position Image,int
+     * @author JiJungKeun
      */
-    private void deleteImage(final Image selectedImage, int position){
+    private void deleteImage(final Image selectedImage, int position) {
 
         final String projectName = arbiterProject.getOpenProject(activity);
-
+        final int pos = position;
         String title = activity.getResources().getString(R.string.loading);
         String message = activity.getResources().getString(R.string.please_wait);
 
         final ProgressDialog progressDialog = ProgressDialog.show(activity, title, message, true);
 
-        CommandExecutor.runProcess(new Runnable(){
+        CommandExecutor.runProcess(new Runnable() {
             @Override
             public void run() {
 
@@ -302,20 +301,18 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
 
                 SharedPreferences removeData = activity.getSharedPreferences(sfName, 0);
                 SharedPreferences.Editor editor = removeData.edit();
-                editor.remove("name"+position);
+                editor.remove("name" + pos);
                 editor.commit();
 
-                for(int i=0; i<removeData.getInt("size",0); i++)
-                {
-                    if(!(removeData.getString("name"+i,"").equals("")))
-                    {
+                for (int i = 0; i < removeData.getInt("size", 0); i++) {
+                    if (!(removeData.getString("name" + i, "").equals(""))) {
                         Image image = new Image();
-                        image.setName(removeData.getString("name"+i,"" ));
-                        image.setPath(removeData.getString("path"+i,"" ));
-                        image.setRight(removeData.getFloat("right"+i,0 ));
-                        image.setLeft(removeData.getFloat("left"+i,0 ));
-                        image.setTop(removeData.getFloat("top"+i,0 ));
-                        image.setBottom(removeData.getFloat("bottom"+i,0 ));
+                        image.setName(removeData.getString("name" + i, ""));
+                        image.setPath(removeData.getString("path" + i, ""));
+                        image.setRight(removeData.getFloat("right" + i, 0));
+                        image.setLeft(removeData.getFloat("left" + i, 0));
+                        image.setTop(removeData.getFloat("top" + i, 0));
+                        image.setBottom(removeData.getFloat("bottom" + i, 0));
                         imgList.add(image);
                     }
                 }
@@ -323,24 +320,21 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
                 editor.clear();
                 editor.commit();
 
-                for(int i=0; i<imgList.size(); i++)
-                {
-                    editor.putString("name"+i, imgList.get(i).getName());
-                    editor.putString("path"+i, imgList.get(i).getPath());
-
-                    editor.putFloat("left"+i, imgList.get(i).getLeft());
-                    editor.putFloat("right"+i, imgList.get(i).getRight());
-                    editor.putFloat("top"+i, imgList.get(i).getTop());
-                    editor.putFloat("bottom"+i, imgList.get(i).getBottom());
+                for (int i = 0; i < imgList.size(); i++) {
+                    editor.putString("name" + i, imgList.get(i).getName())
+                            .putString("path" + i, imgList.get(i).getPath())
+                            .putFloat("left" + i, imgList.get(i).getLeft())
+                            .putFloat("right" + i, imgList.get(i).getRight())
+                            .putFloat("top" + i, imgList.get(i).getTop())
+                            .putFloat("bottom" + i, imgList.get(i).getBottom());
                 }
 
-                editor.putInt("size",imgList.size());
-
+                editor.putInt("size", imgList.size());
                 editor.commit();
 
-                activity.runOnUiThread(new Runnable(){
+                activity.runOnUiThread(new Runnable() {
                     @Override
-                    public void run(){
+                    public void run() {
                         progressDialog.dismiss();
                         setData(imgList);
                         onDataUpdated();
@@ -350,7 +344,8 @@ public class ImageList extends CustomList<ArrayList<Image>, Image> {
         });
         ImagesDialog.deleteImageObject(selectedImage);
     }
-    public void setItemLayout(int itemLayout){
+
+    public void setItemLayout(int itemLayout) {
         this.itemLayout = itemLayout;
     }
 }

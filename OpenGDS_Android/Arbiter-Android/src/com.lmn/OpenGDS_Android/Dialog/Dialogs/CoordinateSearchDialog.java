@@ -14,6 +14,7 @@ import org.apache.cordova.CordovaWebView;
 
 /**
  * 좌표 검색
+ *
  * @author JiJungKeun
  * @version 1.1 2017/01/02
  */
@@ -23,12 +24,12 @@ public class CoordinateSearchDialog extends ArbiterDialogFragment {
     private static CordovaWebView cordova;
 
     /**
-     * @author JiJungKeun
      * @param title,ok,cancel,layout,cordovaWebView String,String,String,int,CordovaWebView
      * @return CoordinateSearchDialog
+     * @author JiJungKeun
      */
     public static CoordinateSearchDialog newInstance(String title, String ok,
-                                                     String cancel, int layout, CordovaWebView cordovaWebView){
+                                                     String cancel, int layout, CordovaWebView cordovaWebView) {
         CoordinateSearchDialog frag = new CoordinateSearchDialog();
 
         frag.setTitle(title);
@@ -38,6 +39,7 @@ public class CoordinateSearchDialog extends ArbiterDialogFragment {
         cordova = cordovaWebView;
         return frag;
     }
+
     @Override
     public void beforeCreateDialog(View view) {
 
@@ -51,39 +53,29 @@ public class CoordinateSearchDialog extends ArbiterDialogFragment {
     @Override
     public void onPositiveClick() {
 
-        if(lat.getText().toString().length() != 0 && lon.getText().toString().length() != 0)
-        {
-            if(lat.getText().toString().charAt(0) != '.' && lon.getText().toString().charAt(0) != '.')
-            {
+        if (lat.getText().toString().length() != 0 && lon.getText().toString().length() != 0) {
+            if (lat.getText().toString().charAt(0) != '.' && lon.getText().toString().charAt(0) != '.') {
                 Double latitude = Double.parseDouble(lat.getText().toString());
                 Double longitude = Double.parseDouble(lon.getText().toString());
 
-                Map_Expansion.getMap().findArea(cordova,latitude,longitude);
-            }
-
-            else
-            {
+                Map_Expansion.getMap().findArea(cordova, latitude, longitude);
+            } else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-                builder.setTitle(R.string.coordinate_input_error_title);
-                builder.setMessage(R.string.coordinate_input_error_message);
-                builder.setIcon(R.drawable.icon);
-                builder.setPositiveButton(android.R.string.ok, null);
-
-                builder.create().show();
+                builder.setTitle(R.string.coordinate_input_error_title)
+                        .setMessage(R.string.coordinate_input_error_message)
+                        .setIcon(R.drawable.icon)
+                        .setPositiveButton(android.R.string.ok, null)
+                        .create().show();
             }
-        }
-
-        else
-        {
+        } else {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-            builder.setTitle(R.string.coordinate_input_error_title);
-            builder.setMessage(R.string.coordinate_input_error_message);
-            builder.setIcon(R.drawable.icon);
-            builder.setPositiveButton(android.R.string.ok, null);
-
-            builder.create().show();
+            builder.setTitle(R.string.coordinate_input_error_title)
+                    .setMessage(R.string.coordinate_input_error_message)
+                    .setIcon(R.drawable.icon)
+                    .setPositiveButton(android.R.string.ok, null)
+                    .create().show();
         }
     }
 

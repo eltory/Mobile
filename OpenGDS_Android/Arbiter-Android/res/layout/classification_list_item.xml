@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:focusable="false">
+
+    <RelativeLayout
+        android:id="@+id/layers_load"
+        android:layout_width="match_parent"
+        android:layout_height="56dip"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/list_selector"
+        android:clickable="false"
+        android:focusable="false">
+
+        <!-- Classification name -->
+
+        <TextView
+            android:id="@+id/classificationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="@string/projects_activity_name"
+            android:textColor="#040404"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+    </RelativeLayout>
+
+
+    <!--  ListRow Left side ToggleButton -->
+    <LinearLayout
+        android:id="@+id/removeClassificationButton"
+        android:layout_width="112dip"
+        android:layout_height="55dip"
+        android:layout_alignParentRight="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <!-- Add layer button -->
+        <ImageButton
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:id="@+id/add_layer_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/layers_white" />
+        <!-- Remove Layer button -->
+        <ImageButton
+            android:focusableInTouchMode="false"
+            android:id="@+id/deleteClassification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:contentDescription="@string/remove_layer"
+            android:focusable="false"
+            android:padding="5dip"
+            android:src="@drawable/ic_action_delete" />
+
+    </LinearLayout>
+
+</RelativeLayout>

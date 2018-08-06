@@ -24,6 +24,7 @@ import org.json.JSONObject;
 
 /**
  * 검수 관리(에러 네비게이터, 기록삭제)
+ *
  * @author JiJungKeun
  * @version 1.1 2017/01/02
  */
@@ -39,34 +40,29 @@ public class ValidationManagement {
     private Activity activity;
     private CordovaWebView cordovaWebView;
 
-    public ValidationManagement(Activity activity, CordovaWebView cordovaWebView)
-    {
+    public ValidationManagement(Activity activity, CordovaWebView cordovaWebView) {
         this.activity = activity;
         this.cordovaWebView = cordovaWebView;
     }
 
     /**
      * 검수 결과 데이터 존재 유무 확인
-     * @author JiJungKeun
+     *
      * @return boolean
+     * @author JiJungKeun
      */
-    public boolean isExistValidationData()
-    {
+    public boolean isExistValidationData() {
         getValidationData = activity.getSharedPreferences(upToDateReport, 0);
 
-        if(getValidationData.getString("report", "").equals(""))
-            return false;
-
-        else
-            return true;
+        return !getValidationData.getString("report", "").equals("");
     }
 
     /**
      * 에러 네비게이터 환경 세팅
+     *
      * @author JiJungKeun
      */
-    public void buildNavigator()
-    {
+    public void buildNavigator() {
         //NAVIGATOR REQUEST LANDSCAPE ORIENTATION
         activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         LinearLayout errNavigatorLayout = (LinearLayout) activity.findViewById(R.id.errorNavigator);
@@ -82,7 +78,7 @@ public class ValidationManagement {
                 errNavigatorLayout.setVisibility(View.VISIBLE);
                 try {
                     reportObject = new JSONObject(getValidationData.getString("report", ""));
-                    detailedReports = reportObject.getJSONArray("DetailsReport");
+                    detailedReports = reportObject.getJSONArray("features");
                     errorSize = detailedReports.length();
                     errorPos = 0;
                     startErrorNavigator();
@@ -100,10 +96,10 @@ public class ValidationManagement {
 
     /**
      * 에러 네비게이터 실행
+     *
      * @author JiJungKeun
      */
-    private void startErrorNavigator()
-    {
+    private void startErrorNavigator() {
         navigatorTableLayout = (TableLayout) activity.findViewById(R.id.navigatorContent);
         navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount() - 1);
 
@@ -119,18 +115,18 @@ public class ValidationManagement {
 
     ImageButton.OnClickListener leftClickListener = new View.OnClickListener() {
         public void onClick(View v) {
-                activity.findViewById(R.id.leftButton).setEnabled(false);
-                Handler h = new Handler();
-                h.postDelayed(new Runnable() {
-                    public void run() {
-                        activity.findViewById(R.id.leftButton).setEnabled(true);
-                    }
-                }, 1000); // Should to wait click minimum 1 second for Vector Rendering
+            activity.findViewById(R.id.leftButton).setEnabled(false);
+            Handler h = new Handler();
+            h.postDelayed(new Runnable() {
+                public void run() {
+                    activity.findViewById(R.id.leftButton).setEnabled(true);
+                }
+            }, 1000); // Should to wait click minimum 1 second for Vector Rendering
 
-                navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount() - 1);
-                errorPos = errorPos - 1;
-                if (errorPos < 0)
-                    errorPos = 0;
+            navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount() - 1);
+            errorPos = errorPos - 1;
+            if (errorPos < 0)
+                errorPos = 0;
 
             makeNavigatorTable();
             zoomToErrorFeature();
@@ -139,18 +135,18 @@ public class ValidationManagement {
 
     ImageButton.OnClickListener rightClickListener = new View.OnClickListener() {
         public void onClick(View v) {
-                activity.findViewById(R.id.rightButton).setEnabled(false);
-                Handler h = new Handler();
-                h.postDelayed(new Runnable() {
-                    public void run() {
-                        activity.findViewById(R.id.rightButton).setEnabled(true);
-                    }
-                }, 1000); // Should to wait click minimum 1 second for Vector Rendering
+            activity.findViewById(R.id.rightButton).setEnabled(false);
+            Handler h = new Handler();
+            h.postDelayed(new Runnable() {
+                public void run() {
+                    activity.findViewById(R.id.rightButton).setEnabled(true);
+                }
+            }, 1000); // Should to wait click minimum 1 second for Vector Rendering
 
-                navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount() - 1);
-                errorPos = errorPos + 1;
-                if (errorPos > errorSize - 1)
-                    errorPos = errorSize - 1;
+            navigatorTableLayout.removeViews(1, navigatorTableLayout.getChildCount() - 1);
+            errorPos = errorPos + 1;
+            if (errorPos > errorSize - 1)
+                errorPos = errorSize - 1;
 
             makeNavigatorTable();
             zoomToErrorFeature();
@@ -159,10 +155,10 @@ public class ValidationManagement {
 
     /**
      * 에러 네비게이터 동적 테이블 생성
+     *
      * @author JiJungKeun
      */
-    private void makeNavigatorTable()
-    {
+    private void makeNavigatorTable() {
         try {
             TableRow tr = new TableRow(activity);
             tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
@@ -190,7 +186,7 @@ public class ValidationManagement {
             errorNameContent.setPadding(5, 5, 5, 5);
             errorNameContent.setTextColor(Color.parseColor("#ECF0F1"));
             errorNameContent.setGravity(Gravity.CENTER_HORIZONTAL);
-            errorNameContent.setText(detailedReports.getJSONObject(errorPos).getString("errorName"));
+            errorNameContent.setText(detailedReports.getJSONObject(errorPos).getJSONObject("properties").getString("errName"));
             errorNameContent.setLayoutParams(tableParams);
             tr.addView(errorNameContent);
 
@@ -200,7 +196,7 @@ public class ValidationManagement {
             errorFeatureID.setPadding(5, 5, 5, 5);
             errorFeatureID.setTextColor(Color.parseColor("#ECF0F1"));
             errorFeatureID.setGravity(Gravity.CENTER_HORIZONTAL);
-            errorFeatureID.setText(detailedReports.getJSONObject(errorPos).getString("featureID"));
+            errorFeatureID.setText(detailedReports.getJSONObject(errorPos).getJSONObject("properties").getString("featureID"));
             errorFeatureID.setLayoutParams(tableParams);
             tr.addView(errorFeatureID);
 
@@ -214,14 +210,14 @@ public class ValidationManagement {
 
     /**
      * 에러 네비게이터(에러 추적)
+     *
      * @author JiJungKeun
      */
-    private void zoomToErrorFeature()
-    {
+    private void zoomToErrorFeature() {
         try {
             ValidationLayersListLoader validationLayer = new ValidationLayersListLoader(activity);
-            String layerID = validationLayer.getLayerID(detailedReports.getJSONObject(errorPos).getString("featureID"));
-            Map_Expansion.getMap().navigateFeature(cordovaWebView, layerID, detailedReports.getJSONObject(errorPos).getString("featureID"));
+            String layerID = validationLayer.getLayerID(detailedReports.getJSONObject(errorPos).getJSONObject("properties").getString("featureID"));
+            Map_Expansion.getMap().navigateFeature(cordovaWebView, layerID, detailedReports.getJSONObject(errorPos).getJSONObject("properties").getString("featureID"));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -229,10 +225,10 @@ public class ValidationManagement {
 
     /**
      * 검수 데이터 삭제
+     *
      * @author JiJungKeun
      */
-    public void clearValidationData()
-    {
+    public void clearValidationData() {
         //remove shared preference data
         SharedPreferences destroyValidation = activity.getSharedPreferences(upToDateReport, 0);
         SharedPreferences.Editor validationEditor = destroyValidation.edit();

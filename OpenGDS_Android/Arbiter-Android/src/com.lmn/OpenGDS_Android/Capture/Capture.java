@@ -20,6 +20,7 @@ import java.io.OutputStream;
 
 /**
  * WebView 캡쳐
+ *
  * @author JiJungKeun
  * @version 1.1 2017/01/02
  */
@@ -29,23 +30,22 @@ public class Capture {
     private Activity activity;
 
     /**
-     * @author JiJungKeun
      * @param cordovaWebView,activity CordovaWebView,Activity
+     * @author JiJungKeun
      */
-    public Capture(CordovaWebView cordovaWebView, Activity activity)
-    {
+    public Capture(CordovaWebView cordovaWebView, Activity activity) {
         this.cordovaWebView = cordovaWebView;
         this.activity = activity;
     }
 
     /**
      * 웹뷰 캡쳐 후 갤러리에 이미지 파일로 저장
-     * @author JiJungKeun
+     *
      * @param fileName String
      * @return void
+     * @author JiJungKeun
      */
-    public void startCapture(String fileName)
-    {
+    public void startCapture(String fileName) {
         fileName = fileName + ".png";
 
         cordovaWebView.setDrawingCacheEnabled(true);
@@ -65,8 +65,8 @@ public class Capture {
             outStream.close();
 
             AlertDialog.Builder dialog = new AlertDialog.Builder(activity);
-            dialog.setCancelable(false);
-            dialog.setTitle(R.string.action_capture)
+            dialog.setCancelable(false)
+                    .setTitle(R.string.action_capture)
                     .setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

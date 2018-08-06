@@ -1,0 +1,88 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:orientation="vertical" >
+	    
+        <RelativeLayout
+            android:id="@+id/typeContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp">
+            
+            <TextView 
+	            android:id="@+id/server_type_label"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="15dp"
+	            android:text="@string/type"
+	            android:textSize="20sp"
+	            android:layout_alignBottom="@+id/server_type"/>
+	        
+	        <Spinner 
+	            android:id="@id/server_type"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="15dp"
+	            android:layout_toRightOf="@id/server_type_label"/>
+        </RelativeLayout> 
+        
+        <EditText
+	        android:id="@+id/server_name"
+	        android:layout_below="@id/typeContainer"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="20dip"
+	        android:ems="10"
+	        android:hint="@string/server_name_hint" >
+
+	    </EditText>
+	    
+	    <EditText
+	        android:id="@+id/server_url"
+	        android:layout_below="@id/server_name"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="20dip"
+	        android:ems="10"
+	        android:hint="@string/server_url_hint"
+	        android:inputType="textUri" >
+	    </EditText>
+
+	    <EditText
+	        android:id="@+id/server_username"
+	        android:layout_below="@id/server_url"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="20dip"
+	        android:ems="10"
+	        android:hint="@string/server_username_hint" >
+	    </EditText>
+	    
+	    <EditText
+	        android:id="@+id/server_password"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/server_username"
+	        android:layout_marginBottom="20dip"
+	        android:ems="10"
+	        android:hint="@string/server_password_hint"
+	        android:inputType="textPassword" >
+	    </EditText>
+
+	    <CheckBox
+	        android:id="@+id/server_show_password"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/server_password"
+	        android:focusable="false"
+	        android:focusableInTouchMode="false"
+	        android:text="@string/server_show_password" />
+
+	</RelativeLayout>
+</ScrollView>

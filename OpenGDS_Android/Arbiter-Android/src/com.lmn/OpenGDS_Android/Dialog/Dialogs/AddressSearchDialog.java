@@ -23,6 +23,7 @@ import java.util.List;
 
 /**
  * 주소 검색 다이얼로그
+ *
  * @author JiJungKeun
  * @version 1.1 2017/01/02
  */
@@ -39,12 +40,12 @@ public class AddressSearchDialog extends ArbiterDialogFragment {
     private DialogFragment thisDialog;
 
     /**
-     * @author JiJungKeun
      * @param title,ok,cancel,layout,cordovaWebView,hasThreadPool String,String,String,int,CordovaWebView,HasThreadPool
      * @return AddressSearchDialog
+     * @author JiJungKeun
      */
     public static AddressSearchDialog newInstance(String title, String ok,
-                                                  String cancel, int layout, CordovaWebView cordovaWebView, HasThreadPool hasThreadPool){
+                                                  String cancel, int layout, CordovaWebView cordovaWebView, HasThreadPool hasThreadPool) {
         AddressSearchDialog frag = new AddressSearchDialog();
 
         frag.setTitle(title);
@@ -58,13 +59,14 @@ public class AddressSearchDialog extends ArbiterDialogFragment {
 
     /**
      * GeoCoder 생성, View 객체 생성 및 리스너 설정
-     * @author JiJungKeun
+     *
      * @param view View
      * @return void
+     * @author JiJungKeun
      */
     @Override
     public void beforeCreateDialog(View view) {
-        mCoder = new Geocoder(this.getActivity(),this.getActivity().getResources().getConfiguration().locale);
+        mCoder = new Geocoder(this.getActivity(), this.getActivity().getResources().getConfiguration().locale);
         searchResultContainer = (LinearLayout) view.findViewById(R.id.AddressSearchResultContainer);
         address = (EditText) view.findViewById(R.id.address);
         search = (ImageButton) view.findViewById(R.id.searchButton);
@@ -72,8 +74,7 @@ public class AddressSearchDialog extends ArbiterDialogFragment {
         thisDialog = this;
     }
 
-    View.OnClickListener addressSearchListener = new View.OnClickListener()
-    {
+    View.OnClickListener addressSearchListener = new View.OnClickListener() {
         /**
          * 주소 검색 결과 리스트 생성
          * @author JiJungKeun
@@ -87,40 +88,33 @@ public class AddressSearchDialog extends ArbiterDialogFragment {
 
             String input = address.getText().toString();
             //Show maximum 5 address list
-            try{
+            try {
                 location = mCoder.getFromLocationName(input, 5);
-            }catch (IOException e)
-            {
+            } catch (IOException e) {
                 Log.d("IO Exception error : ", e.getMessage());
                 return;
             }
 
             //If result is not exist, show alert dialog.
-            if (location.size() == 0)
-            {
+            if (location.size() == 0) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                builder.setTitle(R.string.address_search_no_result_title);
-                builder.setMessage(R.string.address_search_no_result_message);
-                builder.setIcon(R.drawable.icon);
-                builder.setPositiveButton(android.R.string.ok, null);
-                builder.setCancelable(false);
-                builder.create().show();
-            }
-
-            else
-            {
+                builder.setTitle(R.string.address_search_no_result_title)
+                        .setMessage(R.string.address_search_no_result_message)
+                        .setIcon(R.drawable.icon)
+                        .setPositiveButton(android.R.string.ok, null)
+                        .setCancelable(false)
+                        .create().show();
+            } else {
                 AddressSearchListAdapter addressSearchListAdapter = new AddressSearchListAdapter(searchResultContainer, getActivity(), thisDialog, R.layout.address_search_result_item, hasThreadPool, cordova, location);
 
-                for (int i=0; i<location.size(); i++)
-                {
+                for (int i = 0; i < location.size(); i++) {
                     Address addr = location.get(i);
                     int MaxIndex = addr.getMaxAddressLineIndex();
-                    String item="";
+                    String item = "";
                     if (MaxIndex == 0)
                         item = addr.getAddressLine(0);
-                    else
-                    {
-                        for (int j=0; j<MaxIndex; j++)
+                    else {
+                        for (int j = 0; j < MaxIndex; j++)
                             item = item + addr.getAddressLine(j) + " ";
                     }
                     addressResults.add(item);
