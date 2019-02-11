@@ -72,7 +72,13 @@ OpenGeoDT 팀
 |:--------:|:--------:|
 | <img width="700" alt="편집전" src="https://user-images.githubusercontent.com/13480171/52546399-278ee800-2e02-11e9-80cf-718b35485bcb.png"> |<img width="700" alt="편집후" src="https://user-images.githubusercontent.com/13480171/52546398-278ee800-2e02-11e9-8a24-4336ddbd3db0.png"> |
   
+### 7. AOI 이미지 삽입
   
+| <center>이미지 삽입 전</center> | <center>이미지 삽입 후</center> |
+|:--------:|:--------:|
+| <img width="700" alt="삽입전" src="https://user-images.githubusercontent.com/13480171/52547050-acc8cb80-2e07-11e9-8754-6fa8c9fa91bd.png"> |<img width="700" alt="삽입후" src="https://user-images.githubusercontent.com/13480171/52547049-acc8cb80-2e07-11e9-9c44-52c5b8c5dd22.png"> |
+  
+
 Getting Started
 =====
 ### 1. 환경 ###
