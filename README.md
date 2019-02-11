@@ -22,22 +22,26 @@ OpenGeoDT 팀
 
 기능 소개
 =====
-
-### 1. 다국어 설정(영어, 한국어, 포르투갈어, 스페인어) 
+  
+  
+  
+### 다국어 설정 
   
   
 <img width="700" alt="다국어 설정" src="https://user-images.githubusercontent.com/13480171/52542114-d66dfc80-2ddf-11e9-83e2-42b74ca9ce8d.png">
   
+<div id="3 4"/>
   
-### 2. 주소 검색 기능
+  
+### 주소 검색 기능
 <img width="700" alt="주소 검색 기능" src="https://user-images.githubusercontent.com/13480171/52542225-fb16a400-2de0-11e9-8f31-98adcacc6ffa.png">
   
   
-### 3. 좌표 검색 기능
+### 좌표 검색 기능
 <img width="700" alt="좌표 검색 기능" src="https://user-images.githubusercontent.com/13480171/52542231-0d90dd80-2de1-11e9-9d85-fe1efd783cae.png">
   
   
-### 4. 기본 맵 추가
+### 기본 맵 추가
 
 | <center>Open Street Map</center> | <center>Bing Road</center> |
 |:--------:|:--------:|
@@ -48,7 +52,7 @@ OpenGeoDT 팀
 | <img width="700" alt="BingAerial" src="https://user-images.githubusercontent.com/13480171/52542538-12a35c00-2de4-11e9-8106-53c02522db0c.png"> |<img width="700" alt="BingAerialWithLabels" src="https://user-images.githubusercontent.com/13480171/52542539-1b942d80-2de4-11e9-8e01-63e19f052a5f.png"> |
   
   
-### 5. 레이어 검수 기능
+### 레이어 검수 기능
 
 | <center>검수 옵션</center> | <center>검수 결과</center> |
 |:--------:|:--------:|
@@ -56,8 +60,8 @@ OpenGeoDT 팀
 
 - 이상 확장된 기능에 대하여 자세하 참고사항은 [Arbiter 모듈 확장 API.docx](https://github.com/ODTBuilder/Mobile/blob/master/Arbiter%20모듈%20확장%20API.docx) 을 참고하십시오.
   
-### 6. 피처 삽입 / 편집
-#### 6-1. 피처 삽입
+### 피처 삽입 / 편집
+#### 피처 삽입
   
   
 | <center>피처 삽입 전</center> | <center>피처 삽입 후</center> |
@@ -65,14 +69,14 @@ OpenGeoDT 팀
 | <img width="700" alt="삽입전" src="https://user-images.githubusercontent.com/13480171/52546402-28277e80-2e02-11e9-8edd-d1da955b4826.png"> |<img width="700" alt="삽입후" src="https://user-images.githubusercontent.com/13480171/52546400-278ee800-2e02-11e9-80d7-6060192a04ea.png"> |
   
   
-#### 6-2. 피처 편집
+#### 피처 편집
   
   
 | <center>피처 편집 전</center> | <center>피처 편집 후</center> |
 |:--------:|:--------:|
 | <img width="700" alt="편집전" src="https://user-images.githubusercontent.com/13480171/52546399-278ee800-2e02-11e9-80cf-718b35485bcb.png"> |<img width="700" alt="편집후" src="https://user-images.githubusercontent.com/13480171/52546398-278ee800-2e02-11e9-8a24-4336ddbd3db0.png"> |
   
-### 7. AOI 이미지 삽입
+### AOI 이미지 삽입
   
 | <center>이미지 삽입 전</center> | <center>이미지 삽입 후</center> |
 |:--------:|:--------:|
@@ -141,3 +145,5 @@ Mail
 ====
 Developer : Seulgi, Lee
 ghre55@git.co.kr
+  
+  [TOC]
