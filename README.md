@@ -5,8 +5,11 @@ Version 1.0 February 11th, 2019
   
   
 (내부 : OpenGeoDT / Mobile)
+  
 이 프로젝트는 국토공간정보연구사업 중, [공간정보 SW 활용을 위한 오픈소스 가공기술 개발]과제를 수행하기 위하여 제작되고 있습니다.
-Arbiter 안드로이드 오픈 소스를 사용하였으며, 정식 버전은 차후에 통합된 환경에서 제공될 예정입니다.
+Arbiter(<link>https://github.com/ROGUE-JCTD/Arbiter-Android) 안드로이드 오픈 소스를 사용하였습니다. Arbiter는 상황 별 인식 및 지형 공간 데이터 수집에 사용할 지도를 제작할 수 있는 모바일 앱입니다. 지도와 레이어를 다운로드하면 Arbiter를 사용하여 오프라인에서 편집 할 수 있습니다. 3G 또는 4G 셀룰러 네트워크 또는 Wi-Fi를 통해 연결하면 지도 레이어를 서버와 동기화 할 수 있으며 다른 사람들도 업데이트를 수신하게됩니다. 
+  
+정식 버전은 차후에 통합된 환경에서 제공될 예정입니다.
 이 프로그램들은 완성되지 않았으며, 최종 완료 전 까지 문제가 발생할 수도 있습니다.
 발생된 문제는 최종 사용자에게 있으며, 완료가 된다면 제시된 라이선스 및 규약을 적용할 예정입니다.
 
@@ -25,17 +28,20 @@ OpenGeoDT 팀
   ### 목차
     
   - [기능 소개](#기능-소개)  
-    - [다국어 설정](#다국어-설정)
-    - [주소 검색 기능](#주소-검색-기능)
-    - [좌표 검색 기능](#좌표-검색-기능)
-    - [기본 맵 추가](#기본-맵-추가)
-    - [레이어 검수 기능](#레이어-검수-기능)
-    - [피처 삽입 / 편집](#피처-삽입-및-편집)
-      - [피처 삽입](#피처-삽입)
-      - [피처 편집](#피처-편집)
-    - [관심지역 이미지 삽입](#관심지역-이미지-삽입)
-    - [오류 네비게이터](#오류-네비게이터)
+    - [기존 기능](#기존-기능)
+      - [피처 삽입 / 편집](#피처-삽입-및-편집)
+        - [피처 삽입](#피처-삽입)
+        - [피처 편집](#피처-편집)
+      - [오류 네비게이터](#오류-네비게이터)
+    - [추가 기능](#추가-기능)
+      - [다국어 설정](#다국어-설정)
+      - [주소 검색 기능](#주소-검색-기능)
+      - [좌표 검색 기능](#좌표-검색-기능)
+      - [베이스 맵 추가](#베이스-맵-추가)
+      - [레이어 검수 기능](#레이어-검수-기능)
+      - [관심지역 이미지 삽입](#관심지역-이미지-삽입)
   - [요구 사양](#요구-사양)
+  - [참고 자료](#참고-자료)ㅏ
   - [사용 라이브러리](#사용-라이브러리)
 
 
@@ -43,6 +49,27 @@ OpenGeoDT 팀
 기능 소개
 =====
    
+# 기존 기능
+  
+    
+### 피처 삽입 및 편집
+#### 피처 삽입
+  
+  
+| <center>피처 삽입 전</center> | <center>피처 삽입 후</center> |
+|:--------:|:--------:|
+| <img width="700" alt="삽입전" src="https://user-images.githubusercontent.com/13480171/52546402-28277e80-2e02-11e9-8edd-d1da955b4826.png"> |<img width="700" alt="삽입후" src="https://user-images.githubusercontent.com/13480171/52546400-278ee800-2e02-11e9-80d7-6060192a04ea.png"> |
+  
+  #### 피처 편집
+  
+| <center>피처 편집 전</center> | <center>피처 편집 후</center> |
+|:--------:|:--------:|
+| <img width="700" alt="편집전" src="https://user-images.githubusercontent.com/13480171/52546399-278ee800-2e02-11e9-80cf-718b35485bcb.png"> |<img width="700" alt="편집후" src="https://user-images.githubusercontent.com/13480171/52546398-278ee800-2e02-11e9-8a24-4336ddbd3db0.png"> |
+
+  ### 오류 네비게이터
+  <img width="700" alt="오류네비게이터" src="https://user-images.githubusercontent.com/13480171/52548570-d71f8680-2e11-11e9-8b1d-c544333e7702.png">
+  
+# 추가 기능
   
 ### 다국어 설정 
   
@@ -60,7 +87,7 @@ OpenGeoDT 팀
 <img width="700" alt="좌표 검색 기능" src="https://user-images.githubusercontent.com/13480171/52542231-0d90dd80-2de1-11e9-9d85-fe1efd783cae.png">
   
   
-### 기본 맵 추가
+### 베이스 맵 추가
 
 | <center>Open Street Map</center> | <center>Bing Road</center> |
 |:--------:|:--------:|
@@ -79,30 +106,13 @@ OpenGeoDT 팀
 
 - 이상 확장된 기능에 대하여 자세하 참고사항은 [Arbiter 모듈 확장 API.docx](https://github.com/ODTBuilder/Mobile/blob/master/Arbiter%20모듈%20확장%20API.docx) 을 참고하십시오.
   
-### 피처 삽입 및 편집
-#### 피처 삽입
-  
-  
-| <center>피처 삽입 전</center> | <center>피처 삽입 후</center> |
-|:--------:|:--------:|
-| <img width="700" alt="삽입전" src="https://user-images.githubusercontent.com/13480171/52546402-28277e80-2e02-11e9-8edd-d1da955b4826.png"> |<img width="700" alt="삽입후" src="https://user-images.githubusercontent.com/13480171/52546400-278ee800-2e02-11e9-80d7-6060192a04ea.png"> |
-  
-  
-#### 피처 편집
-  
-  
-| <center>피처 편집 전</center> | <center>피처 편집 후</center> |
-|:--------:|:--------:|
-| <img width="700" alt="편집전" src="https://user-images.githubusercontent.com/13480171/52546399-278ee800-2e02-11e9-80cf-718b35485bcb.png"> |<img width="700" alt="편집후" src="https://user-images.githubusercontent.com/13480171/52546398-278ee800-2e02-11e9-8a24-4336ddbd3db0.png"> |
-  
 ### 관심지역 이미지 삽입
   
 | <center>이미지 삽입 전</center> | <center>이미지 삽입 후</center> |
 |:--------:|:--------:|
 | <img width="700" alt="삽입전" src="https://user-images.githubusercontent.com/13480171/52547050-acc8cb80-2e07-11e9-8754-6fa8c9fa91bd.png"> |<img width="700" alt="삽입후" src="https://user-images.githubusercontent.com/13480171/52547049-acc8cb80-2e07-11e9-9c44-52c5b8c5dd22.png"> |
   
-  ### 오류 네비게이터
-  <img width="700" alt="오류네비게이터" src="https://user-images.githubusercontent.com/13480171/52548570-d71f8680-2e11-11e9-8b1d-c544333e7702.png">
+
   
   
 요구 사양
@@ -115,7 +125,8 @@ OpenGeoDT 팀
 - 프로젝트 빌드
 - apk 설치
 
-### 3. 참고자료 ###
+참고 자료
+=====
 - Arbiter-Android(기존, 확장) : 기존 / 확장 기능설명
 - Manual
 
