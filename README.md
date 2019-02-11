@@ -34,6 +34,7 @@ OpenGeoDT 팀
       - [피처 삽입](#피처-삽입)
       - [피처 편집](#피처-편집)
     - [관심지역 이미지 삽입](#관심지역-이미지-삽입)
+    - [오류 네비게이터](#오류-네비게이터)
   - [요구 사양](#요구-사양)
   - [사용 라이브러리](#사용-라이브러리)
 
@@ -99,6 +100,10 @@ OpenGeoDT 팀
 | <center>이미지 삽입 전</center> | <center>이미지 삽입 후</center> |
 |:--------:|:--------:|
 | <img width="700" alt="삽입전" src="https://user-images.githubusercontent.com/13480171/52547050-acc8cb80-2e07-11e9-8754-6fa8c9fa91bd.png"> |<img width="700" alt="삽입후" src="https://user-images.githubusercontent.com/13480171/52547049-acc8cb80-2e07-11e9-9c44-52c5b8c5dd22.png"> |
+  
+  ### 오류 네비게이터
+  <img width="700" alt="오류네비게이터" src="https://user-images.githubusercontent.com/13480171/52548570-d71f8680-2e11-11e9-8b1d-c544333e7702.png">
+  
   
 요구 사양
 =====
