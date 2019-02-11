@@ -23,17 +23,22 @@ OpenGeoDT 팀
 기능 소개
 =====
 
-1. 다국어 설정(영어, 한국어, 포르투갈어, 스페인어)
-<img width="700" alt="다국어 설정" src="https://user-images.githubusercontent.com/13480171/52542114-d66dfc80-2ddf-11e9-83e2-42b74ca9ce8d.png">
-
-2. 주소 검색 기능
-<img width="700" alt="주소 검색 기능" src="https://user-images.githubusercontent.com/13480171/52542225-fb16a400-2de0-11e9-8f31-98adcacc6ffa.png">
-
-3. 좌표 검색 기능
-<img width="700" alt="좌표 검색 기능" src="https://user-images.githubusercontent.com/13480171/52542231-0d90dd80-2de1-11e9-9d85-fe1efd783cae.png">
-
-4. 기본 맵 추가
+### 1. 다국어 설정(영어, 한국어, 포르투갈어, 스페인어) 
   
+  
+<img width="700" alt="다국어 설정" src="https://user-images.githubusercontent.com/13480171/52542114-d66dfc80-2ddf-11e9-83e2-42b74ca9ce8d.png">
+  
+  
+### 2. 주소 검색 기능
+<img width="700" alt="주소 검색 기능" src="https://user-images.githubusercontent.com/13480171/52542225-fb16a400-2de0-11e9-8f31-98adcacc6ffa.png">
+  
+  
+### 3. 좌표 검색 기능
+<img width="700" alt="좌표 검색 기능" src="https://user-images.githubusercontent.com/13480171/52542231-0d90dd80-2de1-11e9-9d85-fe1efd783cae.png">
+  
+  
+### 4. 기본 맵 추가
+
 | <center>Open Street Map</center> | <center>Bing Road</center> |
 |:--------:|:--------:|
 | <img width="700" alt="openStreetMap" src="https://user-images.githubusercontent.com/13480171/52542534-0fa86b80-2de4-11e9-9227-fe4a84b1c3c9.png"> |<img width="700" alt="BingRoad" src="https://user-images.githubusercontent.com/13480171/52542536-10410200-2de4-11e9-8ef5-d68c3932b7d2.png"> |
@@ -41,9 +46,10 @@ OpenGeoDT 팀
 | <center>Bing Aerial</center> | <center>Bing Aerial With Labels</center> |
 |:--------:|:--------:|
 | <img width="700" alt="BingAerial" src="https://user-images.githubusercontent.com/13480171/52542538-12a35c00-2de4-11e9-8106-53c02522db0c.png"> |<img width="700" alt="BingAerialWithLabels" src="https://user-images.githubusercontent.com/13480171/52542539-1b942d80-2de4-11e9-8e01-63e19f052a5f.png"> |
-
-5. 레이어 검수 기능
   
+  
+### 5. 레이어 검수 기능
+
 | <center>검수 옵션</center> | <center>검수 결과</center> |
 |:--------:|:--------:|
 | <img width="700" alt="검수옵션" src="https://user-images.githubusercontent.com/13480171/52542596-bee54280-2de4-11e9-99ab-430fff20a971.png"> |<img width="700" alt="검수결과" src="https://user-images.githubusercontent.com/13480171/52542595-be4cac00-2de4-11e9-9a64-db28f73df122.png"> |
