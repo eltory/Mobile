@@ -19,11 +19,26 @@ OpenGeoDT 팀
 세부 책임 : 부산대학교 <link>http://www.pusan.ac.kr/
 
 연구 책임 : 국토연구원 <link>http://www.krihs.re.kr/
+  
+    
+  ### 목차
+    
+    
+  - [다국어 설정](#다국어-설정)
+  - [주소 검색 기능](#주소-검색-기능)
+  - [좌표 검색 기능](#좌표-검색-기능)
+  - [기본 맵 추가](#기본-맵-추가)
+  - [레이어 검수 기능](#레이어-검수-기능)
+  - [피처 삽입 / 편집](#피처-삽입-및-편집)
+    - [피처 삽입](#피처-삽입)
+    - [피처 편집](#피처-편집)
+  - [관심지역 이미지 삽입](#관심지역-이미지-삽입)
+
+
 
 기능 소개
 =====
-  
-  
+   
   
 ### 다국어 설정 
   
@@ -60,7 +75,7 @@ OpenGeoDT 팀
 
 - 이상 확장된 기능에 대하여 자세하 참고사항은 [Arbiter 모듈 확장 API.docx](https://github.com/ODTBuilder/Mobile/blob/master/Arbiter%20모듈%20확장%20API.docx) 을 참고하십시오.
   
-### 피처 삽입 / 편집
+### 피처 삽입 및 편집
 #### 피처 삽입
   
   
@@ -76,7 +91,7 @@ OpenGeoDT 팀
 |:--------:|:--------:|
 | <img width="700" alt="편집전" src="https://user-images.githubusercontent.com/13480171/52546399-278ee800-2e02-11e9-80cf-718b35485bcb.png"> |<img width="700" alt="편집후" src="https://user-images.githubusercontent.com/13480171/52546398-278ee800-2e02-11e9-8a24-4336ddbd3db0.png"> |
   
-### AOI 이미지 삽입
+### 관심지역 이미지 삽입
   
 | <center>이미지 삽입 전</center> | <center>이미지 삽입 후</center> |
 |:--------:|:--------:|
@@ -145,5 +160,3 @@ Mail
 ====
 Developer : Seulgi, Lee
 ghre55@git.co.kr
-  
-  [TOC]
