@@ -55,8 +55,18 @@ OpenGeoDT 팀
 | <img width="700" alt="검수옵션" src="https://user-images.githubusercontent.com/13480171/52542596-bee54280-2de4-11e9-99ab-430fff20a971.png"> |<img width="700" alt="검수결과" src="https://user-images.githubusercontent.com/13480171/52542595-be4cac00-2de4-11e9-9a64-db28f73df122.png"> |
 
 - 이상 확장된 기능에 대하여 자세하 참고사항은 [Arbiter 모듈 확장 API.docx](https://github.com/ODTBuilder/Mobile/blob/master/Arbiter%20모듈%20확장%20API.docx) 을 참고하십시오.
-
-
+  
+### 6. 피처 삽입 / 편집
+  
+| <center>피처 삽입 전</center> | <center>피처 삽입 후</center> |
+|:--------:|:--------:|
+| <img width="700" alt="삽입전" src="https://user-images.githubusercontent.com/13480171/52546402-28277e80-2e02-11e9-8edd-d1da955b4826.png"> |<img width="700" alt="삽입후" src="https://user-images.githubusercontent.com/13480171/52546400-278ee800-2e02-11e9-80d7-6060192a04ea.png"> |
+  
+| <center>피처 편집 전</center> | <center>피처 편집 후</center> |
+|:--------:|:--------:|
+| <img width="700" alt="편집전" src="https://user-images.githubusercontent.com/13480171/52546399-278ee800-2e02-11e9-80cf-718b35485bcb.png"> |<img width="700" alt="편집후" src="https://user-images.githubusercontent.com/13480171/52546398-278ee800-2e02-11e9-8a24-4336ddbd3db0.png"> |
+  
+  
 Getting Started
 =====
 ### 1. 환경 ###
