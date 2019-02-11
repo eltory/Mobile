@@ -1,6 +1,9 @@
 OpenGDS / Mobile (공간자료 편집도구)
 =======
-
+Version 1.0 February 11th, 2019
+![logo](https://user-images.githubusercontent.com/13480171/52541836-c0127180-2ddc-11e9-88ad-27cf0af977c9.png)
+  
+  
 (내부 : OpenGeoDT / Mobile)
 이 프로젝트는 국토공간정보연구사업 중, [공간정보 SW 활용을 위한 오픈소스 가공기술 개발]과제를 수행하기 위하여 제작되고 있습니다.
 Arbiter 안드로이드 오픈 소스를 사용하였으며, 정식 버전은 차후에 통합된 환경에서 제공될 예정입니다.
@@ -17,26 +20,33 @@ OpenGeoDT 팀
 
 연구 책임 : 국토연구원 <link>http://www.krihs.re.kr/
 
-확장된 기능
+기능 소개
 =====
 
-1. 이미지 오버레이 기능
-<img width="1013" alt="2018-08-07 10 16 22" src="https://user-images.githubusercontent.com/20057558/43748621-88c0594e-9a2b-11e8-8f63-c2eb717d8b18.png">
+1. 다국어 설정(영어, 한국어, 포르투갈어, 스페인어)
+<img width="700" alt="다국어 설정" src="https://user-images.githubusercontent.com/13480171/52542114-d66dfc80-2ddf-11e9-83e2-42b74ca9ce8d.png">
 
 2. 주소 검색 기능
-<img width="682" alt="2018-08-07 10 15 35" src="https://user-images.githubusercontent.com/20057558/43748668-d2355e62-9a2b-11e8-868e-4178f923350e.png">
+<img width="700" alt="주소 검색 기능" src="https://user-images.githubusercontent.com/13480171/52542225-fb16a400-2de0-11e9-8f31-98adcacc6ffa.png">
 
 3. 좌표 검색 기능
-<img width="684" alt="2018-08-07 10 15 47" src="https://user-images.githubusercontent.com/20057558/43748651-b9bbd97e-9a2b-11e8-98d2-5edbb6b07119.png">
+<img width="700" alt="좌표 검색 기능" src="https://user-images.githubusercontent.com/13480171/52542231-0d90dd80-2de1-11e9-9d85-fe1efd783cae.png">
 
-4. 다중 언어 설정(영어, 한국어, 포르투갈어, 스페인)
-<img width="684" alt="2018-08-07 10 15 13" src="https://user-images.githubusercontent.com/20057558/43748690-e8997df0-9a2b-11e8-852d-9aba995688b4.png">
+4. 기본 맵 추가
+  
+| <center>Open Street Map</center> | <center>Bing Road</center> |
+|:--------:|:--------:|
+| <img width="700" alt="openStreetMap" src="https://user-images.githubusercontent.com/13480171/52542534-0fa86b80-2de4-11e9-9227-fe4a84b1c3c9.png"> |<img width="700" alt="BingRoad" src="https://user-images.githubusercontent.com/13480171/52542536-10410200-2de4-11e9-8ef5-d68c3932b7d2.png"> |
+  
+| <center>Bing Aerial</center> | <center>Bing Aerial With Labels</center> |
+|:--------:|:--------:|
+| <img width="700" alt="BingAerial" src="https://user-images.githubusercontent.com/13480171/52542538-12a35c00-2de4-11e9-8106-53c02522db0c.png"> |<img width="700" alt="BingAerialWithLabels" src="https://user-images.githubusercontent.com/13480171/52542539-1b942d80-2de4-11e9-8e01-63e19f052a5f.png"> |
 
-5. 기본 맵 추가
-<img width="901" alt="2018-08-07 10 34 40" src="https://user-images.githubusercontent.com/20057558/43749374-cbd2d7a4-9a2e-11e8-89d0-be4ee36255cd.png">
-
-6. 레이어 검수 기능
-<img width="684" src="https://user-images.githubusercontent.com/20057558/43749386-d76b3c14-9a2e-11e8-92ef-9ef812432f45.png">
+5. 레이어 검수 기능
+  
+| <center>검수 옵션</center> | <center>검수 결과</center> |
+|:--------:|:--------:|
+| <img width="700" alt="검수옵션" src="https://user-images.githubusercontent.com/13480171/52542596-bee54280-2de4-11e9-99ab-430fff20a971.png"> |<img width="700" alt="검수결과" src="https://user-images.githubusercontent.com/13480171/52542595-be4cac00-2de4-11e9-9a64-db28f73df122.png"> |
 
 - 이상 확장된 기능에 대하여 자세하 참고사항은 [Arbiter 모듈 확장 API.docx](https://github.com/ODTBuilder/Mobile/blob/master/Arbiter%20모듈%20확장%20API.docx) 을 참고하십시오.
 
@@ -58,7 +68,12 @@ Getting Started
 사용 라이브러리
 =====
 1. Arbiter-Android (MIT License) <link>https://github.com/ROGUE-JCTD/Arbiter-Android
-
+2. Android SDK <link>https://www.android.com
+3. Cordova <link>https://cordova.apache.org
+4. GSON <link>https://github.com/google/gson
+5. JQuery <link>https://jquery.com
+6. OpenLayers <link>https://openlayers.org
+7. Proj4js <link>http://proj4js.org
 
 OpenGDS / Mobile (Geospatial Information Editor)
 =======
