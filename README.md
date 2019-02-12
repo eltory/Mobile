@@ -7,7 +7,6 @@ Version 1.0 February 11th, 2019
 ![logo](https://user-images.githubusercontent.com/13480171/52541836-c0127180-2ddc-11e9-88ad-27cf0af977c9.png)
   
   
-(내부 : OpenGeoDT / Mobile)
   
 이 프로젝트는 국토공간정보연구사업 중, [공간정보 SW 활용을 위한 오픈소스 가공기술 개발]과제를 수행하기 위하여 제작되고 있습니다.
 Arbiter(<link>https://github.com/ROGUE-JCTD/Arbiter-Android) 안드로이드 오픈 소스를 사용하였습니다. Arbiter는 상황 별 인식 및 지형 공간 데이터 수집에 사용할 지도를 제작할 수 있는 모바일 앱입니다. 지도와 레이어를 다운로드하면 Arbiter를 사용하여 오프라인에서 편집 할 수 있습니다. 3G 또는 4G 셀룰러 네트워크 또는 Wi-Fi를 통해 연결하면 지도 레이어를 서버와 동기화 할 수 있으며 다른 사람들도 업데이트를 수신하게됩니다. 
@@ -110,16 +109,16 @@ OpenGeoDT 팀
   -검수에 대한 자세한 설명은 [사용자 매뉴얼]()의 3.9 검수 작업을 참고하십시오.
   
   
-- 이상 확장된 기능에 대하여 자세한 참고사항은 [Arbiter 모듈 확장 API.docx](https://github.com/ODTBuilder/Mobile/blob/master/Arbiter%20모듈%20확장%20API.docx) 을 참고하십시오.
-  
 ### 관심지역 이미지 삽입
   
 | <center>이미지 삽입 전</center> | <center>이미지 삽입 후</center> |
 |:--------:|:--------:|
 | <img width="700" alt="삽입전" src="https://user-images.githubusercontent.com/13480171/52547050-acc8cb80-2e07-11e9-8754-6fa8c9fa91bd.png"> |<img width="700" alt="삽입후" src="https://user-images.githubusercontent.com/13480171/52547049-acc8cb80-2e07-11e9-9c44-52c5b8c5dd22.png"> |
-  
 
-  
+  #
+
+- 이상 확장된 기능에 대하여 자세한 참고사항은 [Arbiter 모듈 확장 API.docx](https://github.com/ODTBuilder/Mobile/blob/master/Arbiter%20모듈%20확장%20API.docx) 을. 참고하십시오.
+  #  
   
 요구 사양
 =====
