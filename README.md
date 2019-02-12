@@ -1,3 +1,6 @@
+[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
+[![Korean](https://img.shields.io/badge/language-Korean-blue.svg)](#korean)  
+  
 OpenGDS / Mobile (공간자료 편집도구)
 =======
 Version 1.0 February 11th, 2019
@@ -124,6 +127,7 @@ OpenGeoDT 팀
 ### 2. 설치 ###
 - 프로젝트 빌드
 - apk 설치
+- 솔루션 설치 및 서버 구동([OpenGDSBuilder2018Prod](https://github.com/ODTBuilder/OpenGDSBuilder2018Prod)와 [OpenGDSBuilder2018Cons](https://github.com/ODTBuilder/OpenGDSBuilder2018Cons))
 
 참고 자료
 =====
