@@ -44,7 +44,7 @@ OpenGeoDT 팀
       - [레이어 검수 기능](#레이어-검수-기능)
       - [관심지역 이미지 삽입](#관심지역-이미지-삽입)
   - [요구 사양](#요구-사양)
-  - [참고 자료](#참고-자료)ㅏ
+  - [참고 자료](#참고-자료)
   - [사용 라이브러리](#사용-라이브러리)
 
 
@@ -107,7 +107,7 @@ OpenGeoDT 팀
 |:--------:|:--------:|
 | <img width="700" alt="검수옵션" src="https://user-images.githubusercontent.com/13480171/52542596-bee54280-2de4-11e9-99ab-430fff20a971.png"> |<img width="700" alt="검수결과" src="https://user-images.githubusercontent.com/13480171/52542595-be4cac00-2de4-11e9-9a64-db28f73df122.png"> |
 
-- 이상 확장된 기능에 대하여 자세하 참고사항은 [Arbiter 모듈 확장 API.docx](https://github.com/ODTBuilder/Mobile/blob/master/Arbiter%20모듈%20확장%20API.docx) 을 참고하십시오.
+- 이상 확장된 기능에 대하여 자세한 참고사항은 [Arbiter 모듈 확장 API.docx](https://github.com/ODTBuilder/Mobile/blob/master/Arbiter%20모듈%20확장%20API.docx) 을 참고하십시오.
   
 ### 관심지역 이미지 삽입
   
@@ -133,6 +133,7 @@ OpenGeoDT 팀
 =====
 - Arbiter-Android(기존, 확장) : 기존 / 확장 기능설명
 - Manual
+- Arbiter 모듈 확장
 
 사용 라이브러리
 =====
