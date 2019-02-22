@@ -11,6 +11,10 @@ Version 1.0 February 11th, 2019
   
   
 본 솔루션의 이름은 GeoDT Moible이며 소개 홈페이지는 다음과 같습니다. <link>(http://www.geodt.co.kr/pages/mobile.html)
+
+  
+  
+  [Arbiter 모듈 확장 API.docx](https://github.com/ODTBuilder/Mobile/blob/master/Arbiter%20모듈%20확장%20API.docx)를 참고하여 [OpenGDS](https://github.com/ODTBuilder/Mobile/tree/master/OpenGDS_Android)를 추가하여 API를 적용하세요.
   
   
 이 프로젝트는 국토공간정보연구사업 중, [공간정보 SW 활용을 위한 오픈소스 가공기술 개발]과제를 수행하기 위하여 제작되고 있습니다.
