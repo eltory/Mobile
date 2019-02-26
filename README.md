@@ -8,6 +8,15 @@ Version 1.0 February 11th, 2019
   
   
   
+  
+  
+본 솔루션의 이름은 GeoDT Moible이며 소개 홈페이지는 다음과 같습니다. <link>(http://www.geodt.co.kr/pages/mobile.html)
+
+  
+  
+  [Arbiter 모듈 확장 API.docx](https://github.com/ODTBuilder/Mobile/blob/master/Arbiter%20모듈%20확장%20API.docx)를 참고하여 [OpenGDS](https://github.com/ODTBuilder/Mobile/tree/master/OpenGDS_Android)를 추가하여 API를 적용하세요.
+  
+  
 이 프로젝트는 국토공간정보연구사업 중, [공간정보 SW 활용을 위한 오픈소스 가공기술 개발]과제를 수행하기 위하여 제작되고 있습니다.
 Arbiter(<link>https://github.com/ROGUE-JCTD/Arbiter-Android) 안드로이드 오픈 소스를 사용하였습니다. Arbiter는 상황 별 인식 및 지형 공간 데이터 수집에 사용할 지도를 제작할 수 있는 모바일 앱입니다. 지도와 레이어를 다운로드하면 Arbiter를 사용하여 오프라인에서 편집 할 수 있습니다. 3G 또는 4G 셀룰러 네트워크 또는 Wi-Fi를 통해 연결하면 지도 레이어를 서버와 동기화 할 수 있으며 다른 사람들도 업데이트를 수신하게됩니다. 
   
@@ -51,9 +60,7 @@ OpenGeoDT 팀
 기능 소개
 =====
    
-# 기존 기능
-  
-    
+## 기존 기능
 ### 피처 삽입 및 편집
 #### 피처 삽입
   
@@ -71,8 +78,7 @@ OpenGeoDT 팀
   ### 오류 네비게이터
   <img width="700" alt="오류네비게이터" src="https://user-images.githubusercontent.com/13480171/52548570-d71f8680-2e11-11e9-8b1d-c544333e7702.png">
   
-# 추가 기능
-  
+## 추가 기능
 ### 다국어 설정 
   
   
@@ -106,7 +112,7 @@ OpenGeoDT 팀
 |:--------:|:--------:|
 | <img width="700" alt="검수옵션" src="https://user-images.githubusercontent.com/13480171/52542596-bee54280-2de4-11e9-99ab-430fff20a971.png"> |<img width="700" alt="검수결과" src="https://user-images.githubusercontent.com/13480171/52542595-be4cac00-2de4-11e9-9a64-db28f73df122.png"> |
   
-  -검수에 대한 자세한 설명은 [사용자 매뉴얼]()의 3.9 검수 작업을 참고하십시오.
+  -검수에 대한 자세한 설명은 [사용자 매뉴얼](https://github.com/ODTBuilder/Mobile/blob/master/GeoDT_Mobile%20v1.0%20사용자%20매뉴얼.pdf)의 3.9 검수 작업을 참고하십시오.
   
   
 ### 관심지역 이미지 삽입
