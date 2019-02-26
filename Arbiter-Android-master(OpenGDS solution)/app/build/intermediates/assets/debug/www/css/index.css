@@ -1,0 +1,9 @@
+.olControlAttribution {
+	bottom: 5px;
+	left: 5px;
+}
+
+.olImageLoadError {
+	
+	display: none !important;
+}

@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Equal">수치와 같으면</string>
+    <string name="Over">수치보다 크면</string>
+    <string name="Under">수치보다 작으면</string>
+    <string name="SmallArea">허용 범위 면적</string>
+    <string name="EntityDuplicated">요소 중복 오류</string>
+    <string name="SelfEntity">단독 존재 오류</string>
+    <string name="PointDuplicated">중복점 오류</string>
+    <string name="AttributeFix">AttributeFix</string>
+    <string name="SmallLength">허용 범위 길이</string>
+    <string name="ConIntersected">등고선 교차 오류</string>
+    <string name="ConOverDegree">등고선 꺾임 오류</string>
+    <string name="ConBreak">등고선 끊김 오류</string>
+    <string name="ZValueAmbiguous">고도값 오류</string>
+    <string name="UselessPoint">등고선 직선화 미처리</string>
+    <string name="used">사용된 라이브러리</string>
+    <string name="AndroidSDK">Android 소프트웨어 개발 키트 라이선스 계약\n
+\n
+1. 소개\n
+\n
+\n
+1.1 Android 소프트웨어 개발 키트(라이선스 계약에서는 \'SDK\'라고 하며 특히 Android 시스템 파일, 패키지 API 및 Google API 부가기능을 포함)는 라이선스 계약의 약관에 따라 귀하에게 라이선스를 부여합니다. 라이선스 계약은 SDK 사용과 관련하여 귀하와 Google 간에 체결하는 법적 구속력을 지니는 계약입니다.\n
+\n
+1.2 \'Android\'는 Android 오픈소스 프로젝트(http://source.android.com/ 에서 확인할 수 있음)에 따라 사용할 수 있도록 만들어진, 기기를 대상으로 하는 Android 소프트웨어 스택을 의미하며 수시로 업데이트될 수 있습니다.\n
+\n
+1.3 \'호환 가능한 구현\'은 (i) Android 호환성 웹사이트(http://source.android.com/compatibility) 에서 확인할 수 있으며 수시로 업데이트될 수 있는 Android 호환성 정의 문서를 준수하며 (ii) Android 호환성 테스트 도구 모음(CTS)을 통과하는 Android 기기를 의미합니다.\n
+\n
+1.4 \'Google\'은 미국 델라웨어주 법인이며 1600 Amphitheatre Parkway, Mountain View, CA 94043에 주 사업장을 둔 Google LLC를 의미합니다.\n
+\n
+\n
+2. 라이선스 계약 동의\n
+\n
+\n
+2.1 SDK를 사용하려면 먼저 라이선스 계약에 동의해야 합니다. 라이선스 계약에 동의하지 않으면 SDK를 사용할 수 없습니다.\n
+\n
+2.2 동의를 클릭하면 라이선스 계약의 약관에 동의하는 것으로 간주됩니다.\n
+\n
+2.3 미국 또는 거주하는 국가나 SDK를 사용하는 국가 등의 기타 국가의 법률에 따라 SDK 수신이 금지된 경우 SDK를 사용할 수 없으며 라이선스 계약에 동의할 수 없습니다.\n
+\n
+2.4 귀하의 고용인 또는 기타 법인을 대신하여 본 계약을 체결하는 데 동의하는 것은 해당 고용인이나 법인을 라이선스 계약에 구속하기 위한 충분한 법적 권한이 귀하에게 있음을 진술하고 보증하는 것입니다. 귀하에게 필요한 권한이 없는 경우 고용인 또는 기타 법인을 대신하여 라이선스 계약에 동의하거나 SDK를 사용할 수 없습니다.\n
+\n
+\n
+3. Google의 SDK 라이선스\n
+\n
+\n
+3.1 Google은 라이선스 계약의 약관에 따라 Android에서 호환 가능한 구현을 위한 애플리케이션을 개발하는 목적으로만 SDK를 사용할 수 있도록 귀하에게 제한적이고, 전 세계적이고, 양도 불가능하고, 비독점적이고, 재판매 불가능한 무료 라이선스를 부여합니다.\n
+\n
+3.2 Android의 호환 불가능한 구현을 포함한 다른 플랫폼의 애플리케이션을 개발하거나 다른 SDK를 개발하는 데 이 SDK를 사용할 수 없습니다. 이 SDK를 해당 목적에 사용하지 않는다면 Android의 호환 불가능한 구현을 포함한 다른 플랫폼의 애플리케이션을 자유롭게 개발할 수 있습니다.\n
+\n
+3.3 귀하는 Google 또는 제3자가 SDK에 대한 모든 지적 재산권을 포함하여 SDK에 대한 모든 법적 권리, 명의 및 이권을 보유하고 있다는 점에 동의합니다. \'지적 재산권\'은 특허법, 저작권법, 영업비밀보호법, 상표법 및 기타 모든 독점적 권한에 따른 모든 권리를 의미합니다. Google은 귀하에게 명시적으로 부여하지 않은 모든 권한을 보유합니다.\n
+\n
+3.4 귀하는 라이선스 계약에서 명시적으로 허용되지 않은 목적으로 SDK를 사용할 수 없습니다. 관련 제3자 라이선스에서 요구되는 경우를 제외하고 귀하는 SDK나 SDK의 어떤 부분도 복사(백업 목적 제외), 수정, 조정, 재배포, 디컴파일, 리버스 엔지니어링, 해체, 파생물 제작을 할 수 없습니다.\n
+\n
+3.5 오픈소스 소프트웨어 라이선스에 의해 허용된 라이선스 SDK의 구성요소를 사용, 재생산 및 배포하는 것은 라이선스 계약이 아니라 전적으로 해당 오픈소스 소프트웨어 라이선스 약관의 적용을 받습니다.\n
+\n
+3.6 귀하는 Google에서 제공하는 SDK의 형식과 특성이 사전 통지 없이 변경될 수 있으며 SDK의 이후 버전이 SDK의 이전 버전에서 개발한 애플리케이션과 호환되지 않을 수 있다는 점에 동의합니다. 귀하는 Google에서 SDK 또는 SDK에 포함된 모든 기능을 귀하 또는 사용자에게 일반적으로 제공하는 행위를 Google의 단독 재량권에 따라 예고 없이 영구적 또는 일시적으로 중단할 수 있다는 점에 동의합니다.\n
+\n
+3.7 라이선스 계약의 어느 부분도 귀하에게 Google의 상표 이름, 상표, 서비스 표시, 로고, 도메인 이름 또는 기타 고유한 브랜드 표시에 대한 사용권을 부여하지 않습니다.\n
+\n
+3.8 귀하는 SDK에 첨부되었거나 포함된 저작권 및 상표권을 포함한 모든 독점권 고지를 제거하거나 숨기거나 변경하지 않을 것에 동의합니다.\n
+\n
+\n
+4. 귀하의 SDK 사용\n
+\n
+v
+4.1 Google은 본 라이선스 계약에 따라 귀하(또는 귀하의 라이선스 제공자)로부터 해당 애플리케이션에 속한 모든 지적 재산권을 포함, 귀하가 SDK를 사용하여 개발하는 모든 소프트웨어 애플리케이션에 있어 어떠한 권리, 명의 또는 이권도 취하지 않을 것에 동의합니다.\n
+\n
+4.2 귀하는 (a) 본 라이선스 계약 및 (b) 관련 관할권의 모든 관련 법, 규약 또는 일반적으로 용인된 관행 또는 가이드라인(미국 또는 기타 관련 국가 대상 데이터 또는 소프트웨어 수입이나 수출에 관련된 법 포함)에서 허용하는 용도로만 SDK를 사용하고 애플리케이션을 개발할 것에 동의합니다.\n
+\n
+4.3 귀하는 일반 사용자를 위한 애플리케이션 개발 목적으로 SDK를 사용할 경우 사용자의 개인정보 및 법적 권리를 보호할 것에 동의합니다. 사용자가 사용자 이름, 비밀번호 또는 기타 로그인 정보나 개인 정보를 제공할 경우 귀하는 이러한 정보가 귀하의 애플리케이션에 사용될 것임을 알려야 하며 사용자에게 적절한 개인정보보호 관련 공지사항을 제공하고 보호해야 합니다. 귀하의 애플리케이션이 사용자가 제공한 개인정보 또는 민감한 정보를 저장하는 경우 안전하게 저장해야 합니다. 사용자가 애플리케이션에 Google 계정 정보를 제공하는 경우 사용자가 허용한 시기에 허용한 용도에 한하여 사용자의 Google 계정에 액세스하기 위해 계정 정보를 사용할 수 있습니다.\n
+\n
+4.4 Google 또는 모든 모바일 통신 업체 등 모든 제3자의 서버, 네트워크 또는 기타 자산이나 서비스를 방해하거나 손상하거나 무단으로 액세스하는 어떠한 활동에도 애플리케이션의 개발 또는 배포를 비롯해 SDK를 사용하지 않을 것에 동의합니다.\n
+\n
+4.5 귀하는 Android 및/또는 Android용 애플리케이션을 통해 제작, 전송 또는 표시하는 모든 데이터, 콘텐츠 또는 리소스 및 이로 인한 모든 활동의 결과(Google이 입을 수 있는 손실 또는 손해 포함)에 대한 책임은 전적으로 귀하에게 있으며, Google은 귀하 또는 제3자에 대해 어떠한 책임도 지지 않는 것에 동의합니다.\n
+\n
+4.6 귀하는 라이선스 계약, 관련된 제3자 계약이나 서비스 약관 또는 관련 법률이나 규정에 따른 의무 위반 및 이러한 위반의 결과(Google 또는 제3자가 입을 수 있는 손실 또는 손해 포함)에 대한 책임은 전적으로 귀하에게 있으며, Google은 귀하 또는 제3자에 대해 어떠한 책임도 지지 않는 것에 동의합니다.\n
+\n
+\n
+5. 개발자 정보\n
+\n
+\n
+5.1 귀하는 Google에서 귀하에게 발행하거나 스스로 선택할 수 있는 개발자 인증 정보에 대해 비밀을 유지할 책임이 있으며 귀하의 개발자 인증 정보에 따라 개발된 모든 애플리케이션에 대한 책임은 전적으로 귀하에게 있습니다.\n
+\n
+\n
+6. 개인정보 보호 및 정보\n
+\n
+\n
+6.1 SDK를 지속적으로 혁신하고 개선하기 위해 Google은 고유 식별자, 연결된 IP 주소, 소프트웨어 버전 번호, 그리고 SDK의 어떤 도구 및/또는 서비스가 사용되고 있는지와 이러한 도구 또는 서비스가 어떻게 사용되고 있는지에 대한 정보를 포함하며 이에 국한되지 않는 소프트웨어의 특정 사용 통계를 수집할 수 있습니다. 이러한 정보가 수집되기 전에는 SDK가 알림을 보내고 동의를 구합니다. 동의를 보류하면 정보가 수집되지 않습니다.\n
+\n
+6.2 수집된 데이터는 SDK를 개선하기 위해 총계 형태로 검토되며 Google의 개인정보취급방침에 따라 관리됩니다.\n
+\n
+\n
+7. 타사 애플리케이션\n
+\n
+\n
+7.1 타사에서 개발했거나 타사에서 제공하는 데이터, 콘텐츠 또는 리소스에 액세스하는 애플리케이션을 실행하기 위해 SDK를 사용하는 경우 귀하는 Google이 이러한 애플리케이션, 데이터, 콘텐츠 또는 리소스에 대해 책임지지 않는다는 것에 동의하는 것으로 간주됩니다. 귀하는 이러한 타사 애플리케이션을 통해 액세스할 수 있는 모든 데이터, 콘텐츠 또는 리소스에 대한 책임은 전적으로 처음 제공한 사람에게 있으며, Google은 귀하가 이 타사 애플리케이션, 데이터, 콘텐츠 또는 리소스를 사용하거나 액세스함으로써 발생할 수 있는 어떠한 손해 또는 손상에 대해 책임을 지지 않는다는 것을 이해합니다.\n
+\n
+7.2 귀하는 타사 애플리케이션을 통해 귀하에게 제공되는 데이터, 콘텐츠 및 리소스가 제공업체(또는 이 제공업체를 대신하는 기타 개인 또는 회사)가 소유하는 지적 재산권으로 보호될 수 있다는 점을 인지해야 합니다. 귀하는 관련 소유자가 특별히 그러도록 권한을 명시적으로 부여한 경우를 제외하고 이러한 데이터, 콘텐츠 또는 리소스의 일부 또는 전부를 수정, 임대, 대여, 판매 또는 배포하거나 이를 바탕으로 파생물을 만들어서는 안 됩니다.\n
+\n
+7.3 귀하는 귀하의 타사 애플리케이션, 데이터, 콘텐츠 또는 리소스 사용에 귀하 및 관련 타사 간의 개별 약관이 적용될 수 있음을 이해합니다. 이 경우 라이선스 계약은 이러한 타사와 귀하의 법적 관계에 영향을 주지 않습니다.\n
+\n
+\n
+8. Android API 사용\n
+\n
+\n
+8.1 Google 데이터 API\n
+\n
+8.1.1 귀하는 Google에서 데이터를 검색하기 위해 API를 사용하는 경우 이 데이터가 Google 또는 데이터를 제공하는 업체(또는 이 제공업체를 대신하는 기타 개인 또는 회사)가 소유하는 지적 재산권으로 보호될 수 있다는 점을 이해합니다. 귀하가 이러한 API를 사용하는 경우 추가 서비스 약관이 적용될 수 있습니다. 이 서비스 약관에서 허용하지 않는 한 귀하는 이 데이터의 일부 또는 전부를 수정, 임대, 대여, 판매 또는 배포하거나 이를 바탕으로 파생물을 만들어서는 안 됩니다.\n
+\n
+8.1.2 Google로부터 사용자의 데이터를 검색하기 위해 API를 사용하는 경우 귀하는 사용자의 명시적인 동의가 있으며 사용자가 귀하에게 해당 권한을 부여한 시기에 한하여 제한된 용도로 데이터를 검색할 수 있다는 점을 이해하고 이에 동의합니다.\n
+\n
+\n
+9. 라이선스 계약의 해지\n
+\n
+\n
+9.1 본 라이선스 계약은 아래에 제시된 대로 귀하 또는 Google에 의해 해지될 때까지 계속 적용됩니다.\n
+\n
+9.2 라이선스 계약을 해지하려면 SDK 및 관련 개발자 인증 정보의 사용을 중단하면 됩니다.\n
+\n
+9.3 Google은 다음에 해당하는 경우 언제든지 라이선스 계약을 해지할 수 있습니다.\n
+(A) 귀하가 본 라이선스 계약의 조항을 위반한 경우, 또는\n
+(B) 법에 따라 Google이 계약을 해지해야 하는 경우, 또는\n
+(C) Google과 함께 귀하에게 API와 같은 SDK의 특정 부분을 제공한 파트너가 Google과의 관계를 종료하거나 귀하에게 SDK의 특정 부분을 제공 중단하는 경우, 또는\n
+(D) Google이 귀하가 거주하거나 서비스를 이용하는 국가의 사용자에게 더 이상 SDK 또는 SDK의 특정 부분을 제공하지 않도록 결정하거나, Google의 단독 재량권에 따라 Google이 귀하에게 SDK 또는 특정 SDK 서비스를 제공하는 것이 더 이상은 상업적으로 실행 불가능하다고 판단되는 경우\n
+\n
+9.4 본 라이선스 계약을 해지해도 귀하와 Google이 혜택을 받거나 적용 대상이 되거나 본 라이선스 계약이 적용되는 동안 발생했거나 무기한으로 계속하기로 명시한 모든 법적 권한, 의무 및 채무는 영향을 받지 않으며, 해당 권한, 의무 및 채무에는 조항 14.7이 계속 무기한으로 적용됩니다.\n
+\n
+\n
+10. 보증 면책조항\n
+\n
+\n
+10.1 귀하는 전적으로 본인의 책임 하에 SDK를 사용하며 SDK가 Google의 보증 없이 \'있는 그대로\' \'가용한 범위 내에서\' 제공됨을 확실히 이해하고 이에 동의합니다.\n
+\n
+10.2 귀하는 단독 재량권에 따라 전적으로 본인의 책임 하에 SDK와 SDK에서 다운로드하거나 그 외 다른 방법으로 SDK를 통해 취득한 모든 자료를 사용합니다. 또한 컴퓨터 시스템이나 기타 기기의 손상 또는 그러한 사용으로 인한 데이터 손실에 대한 책임은 전적으로 귀하에게 있습니다.\n
+\n
+10.3 Google은 상품성, 특정 목적에의 적합성 및 비침해성에 대한 묵시적 보증 및 조건을 포함(이에 국한되지 않음)하여 모든 명시적, 묵시적 보증 및 조건을 부인합니다.\n
+\n
+\n
+11. 책임의 제한\n
+\n
+\n
+귀하는 데이터 손실을 포함하여 귀하에 의해 발생할 수 있는 직접적, 간접적, 부수적, 특수적, 결과적 또는 징벌적 손해에 대하여, Google이나 그 대표자가 그와 같은 손실 가능성을 사전에 통보받았거나 알고 있어야 했는지와 관계없이 Google, 자회사 및 제휴사 또는 라이선스 제공자가 어떠한 책임 이론에 의해서도 책임을 지지 않는다는 점을 명확하게 이해하고 동의합니다.\n
+\n
+\n
+12. 배상\n
+\n
+\n
+12.1 귀하는 (a) 귀하가 SDK를 사용하고 (b) 귀하가 SDK에서 개발하는 애플리케이션이 다른 사람의 저작권, 상표권, 영업비밀, 상품 외장, 특허권 또는 기타 지적 재산권을 침해하거나 다른 사람의 명예를 훼손하거나 퍼블리시티권 또는 사생활 보호권을 침해하며 (c) 귀하가 라이선스 계약을 준수하지 않아 발생하는 모든 손실, 채무, 손해, 비용 및 경비(합리적인 변호사 수임료 포함)뿐만 아니라 모든 청구, 법적 조치, 소송 또는 절차에 대해 Google, 제휴사, Google과 제휴사의 이사, 간부, 직원 및 대리인을 법에서 허용하는 최대 범위까지 보호하고 배상하며 책임을 면제하는 데 동의합니다.\n
+\n
+\n
+13. 라이선스 계약의 변경\n
+\n
+\n
+13.1 Google은 SDK의 새 버전을 배포할 때 라이선스 계약을 변경할 수 있습니다. 변경된 내용이 있는 경우 Google은 SDK가 제공되는 웹사이트에 새로운 버전의 라이선스 계약을 제공합니다.\n
+\n
+\n
+14. 일반 법률 약관\n
+\n
+\n
+14.1 본 라이선스 계약은 귀하와 Google 간의 완전한 법적 합의를 구성하며 별도의 서면 계약을 통해 Google에서 제공하는 서비스를 제외한 귀하의 SDK 사용에 적용되며 SDK와 관련하여 귀하와 Google 간에 체결한 이전 계약을 완전히 대체합니다.\n
+\n
+14.2 귀하는 Google이 본 라이선스 계약에 포함되거나 Google이 관련 법에 따라 혜택을 받는 법적 권리 또는 구제 조치를 실행 또는 행사하지 않더라도 Google의 권리에 대한 공식적인 권리 포기로 이어지지 않으며 Google이 해당 권리 또는 구제 조치를 여전히 사용할 수 있음에 동의합니다.\n
+\n
+14.3 이 문제에 대한 판결권이 있는 법원이 본 라이선스 계약의 조항을 무효로 판결하는 경우 이 조항은 나머지 계약 조항에 영향을 주지 않고 본 라이선스 계약에서 삭제됩니다. 본 라이선스 계약관의 나머지 조항은 계속해서 유효하며 강제력을 갖습니다.\n
+\n
+14.4 귀하는 Google의 자회사가 라이선스 계약에 있어 제3의 수혜자가 되며 자회사는 혜택(또는 권리)을 주는 본 라이선스 계약의 조항을 직접 시행하고 이에 의존할 자격이 있음을 이해하고 이에 동의합니다. 이 업체를 제외한 다른 회사 또는 개인은 본 라이선스 계약에 대한 제3의 수혜자가 될 수 없습니다.\n
+\n
+14.5 수출 제한. SDK는 미국 수출 법규 및 규정의 적용 대상입니다. 귀하는 SDK에 적용되는 모든 국내 및 국제 수출 법규 및 규정을 준수해야 합니다. 이러한 법에는 목적지, 최종 사용자 및 최종 용도에 대한 제한사항이 포함됩니다.\n
+\n
+14.6 본 라이선스 계약에서 부여된 권리는 상대방의 사전 서면 승인 없이 귀하 또는 Google 중 어느 일방에 의해 양도 또는 이전될 수 없습니다. 또한 귀하 또는 Google은 상대방의 사전 서면 승인 없이 본 라이선스 계약에 따른 책임 또는 의무사항을 위임할 수 없습니다.\n
+\n
+14.7 본 라이선스 계약 및 라이선스 계약에 따른 Google과 귀하의 관계는 법 조항 저촉 여부와 상관없이 캘리포니아 주 법에 따릅니다. 귀하와 Google은 본 라이선스 계약으로부터 발생하는 모든 법적 문제를 해결하기 위해 캘리포니아 산타클라라 카운티 내에 위치한 법원의 배타적인 관할권에 따를 것을 동의합니다. 다만 위 규정에도 불구하고 귀하는 Google이 여전히 모든 관할권에서 강제 구제책(또는 이에 상응하는 종류의 긴급 법적 구제)을 신청할 수 있음에 동의합니다.\n
+\n
+\n
+2016년 12월 9일</string>
+    <string name="openSource">오픈소스 소프트웨어에 대한 라이센스 정보.</string>
+    <string name="simplyGeoDT">GeoDT의 모바일 버전에 대한 설명입니다.</string>
+    <string name="ruledby">본 어플리케이션은 LGPL 3.0 기반으로 배포 되었습니다. </string>
+    <string name="about_geo">본 어플리케이션은 Arbiter_mobile을 기반으로 만들어졌습니다.\n\n지도와 지도 레이어를 다운로드 받으면 오프라인에서 편집이 가능합니다.\n온라인 상태가 되면 오프라인 상태에서 수정했던 정보를 업로드 할 수 있습니다.\n온라인 상태에서 데이터 다운, 저장, 단일레이어 검수를 통해 현장에서 데이터 구축이 가능합니다.\nGeoDT Web과의 데이터 공유를 통해 공동작업이 가능합니다.\n관심 지역에 사용자의 사진을 추가하여 편리성을 높일 수 있습니다.\n화면을 캡쳐할 수 있습니다.\n\n기타 문의사항이 있다면 ghre55@git.co.kr 로 연락 주세요.\n\nhttp://www.geodt.co.kr/pages/mobile.html</string>
+    <string name="LGPL3.0">버전 3, 2007년 6월 29일\n
+Copyright (C) 2007 Free Software Foundation, Inc. http://fsf.org/
+\n
+\n
+\n
+누구든지 본 라이선스를 원문 그대로 복제하고 배포할 수 있다. 그러나 본문에 대한 수정은 허용되지 않는다.\n
+\n
+제0조. 추가적 정의\n
+본문 중에서 \"본 라이선스\"는 GNU 약소 일반 공중 라이선스의 버전 3, GNU GPL은 GNU 일반 공중 라이선스의 버전3을 의미한다.\n
+\n
+\"라이브러리\"란 아래에 정의된 응용 프로그램이나 결합 저작물을 제외하고 본 라이선스의 적용을 받는 GPL 적용 저작물을 지칭한다.\n
+\n
+\"응용프로그램\"이란 라이브러리에 의해 제공되는 인터페이스를 사용하지만, 라이브러리에 기반하지는 않는 모든 저작물을 의미한다. 라이브러리에 의해 정의된 클래스의 서브클래스를 정의하는 것은 라이브러리에 의해 제공된 인터페이스를 사용하는 형식으로 간주된다.\n
+\n
+\"결합 저작물\"이란 라이브러리에 응용프로그램을 결합하거나 링크로 연결하여 생성된 저작물을 의미한다. 결합 저작물을 만들 때 사용된 라이브러리의 특정 버전은 \"연결 버전\"이라고 지칭한다.\n
+\n
+결합 저작물의 \"최소 해당 소스\"란 결합 저작물의 해당 소스 중에서, 독립적으로 간주될 때 연결 버전이 아닌 응용프로그램에 기반한 결합 저작물의 일부를 위한 소스 코드를 제외한 것을 의미한다.\n
+\n
+결합 저작물의 \"해당 응용프로그램 코드\"는 응용프로그램으로부터 결합 저작물을 재생성 시키는데 요구되는 모든 데이터와 유틸리티 프로그램을 포함하며, 결합저작물의 시스템 라이브러리를 제외한, 응용프로그램을 위한 오브젝트 코드 및 소스코드를 의미한다.\n
+\n
+제1조. GNU GPL 3조의 예외\n
+GNU GPL의 제3조의 조건과 관계없이 본 라이선스의 제3조와 제4조의 조항에 따라 GPL 적용 저작물을 컨베이할 수 있다.\n
+\n
+제2조. 수정된 버전에 대한 컨베이\n
+라이브러리의 복제본을 수정하는데 있어, 어떤 기능이 그 기능을 사용하는 응용프로그램에 의해 제공되는 어떤 함수나 데이터를 언급할 경우 (기능이 호출될 때 전달되는 인수는 제외함), 다음과 같은 조건 하에 수정된 버전의 복제본을 컨베이할 수 있다.\n
+\n
+a) 본 라이선스에 따라서 컨베이 한다. 단, 응용프로그램이 함수나 데이터를 제공하지 않는 경우에도 기능이 작동하고 본래의 목적을 정상적으로 수행하도록 최선을 다해 노력해야 한다. 또는,\n
+\n
+b) GNU GPL에 따라서 컨베이 한다. 이 경우, 본 라이선스의 추가적 허용사항을 적용하지 않는다.\n
+\n
+제3조. 라이브러리 헤더 파일의 자료를 결합하는 오브젝트 코드\n
+응용프로그램의 오브젝트 코드는 라이브러리의 일부를 구성하는 헤더 파일의 자료를 결합한 형태로 작성될 수 있다. 만약 이러한 오브젝트 코드와 결합된 자료가 숫자 매개변수, 데이터 구조의 설계형태, 접근도구, 작은 매크로, (10행 이하의) 인라인 함수, 그리고 템플릿으로 제한되는 것이 아니라면, 그 오브젝트 코드는 다음과 같은 두 가지 조건을 충족시킨다는 조건 하에 당신이 임의로 정한 규정에 따라 컨베이 될 수 있다.\n
+\n
+a) 오브젝트 코드 내에 라이브러리가 사용되고 있다는 사실과 라이브러리 및 라이브러리의 사용에 대해 본 라이선스가 적용된다는 내용의 안내 문구를 각 복제본에 명확하게 고지해야 한다.\n
+\n
+b) GNU GPL의 사본 및 본 라이선스 문서를 오브젝트 코드에 첨부해야 한다.\n
+\n
+제4조. 결합 저작물\n
+당신은 임의로 정한 조건에 따라 결합 저작물을 컨베이할 수 있다. 단, 당신이 정한 조건들은 결합 저작물 내에 포함된 라이브러리의 일부에 대한 수정 및 그 수정 부분을 디버깅하기 위한 역공학에 대해 제한을 두어서는 안 되며, 다음의 조건들을 충족시켜야 한다.\n
+\n
+a) 결합 저작물 내에 라이브러리가 사용되고 있다는 사실과 라이브러리 및 라이브러리의 사용에 대해 본 라이선스가 적용된다는 내용의 안내 문구를 각 복제본에 명확하게 고지해야 한다.\n
+\n
+b) GNU GPL의 사본 및 본 라이선스 문서를 결합 저작물과 함께 제공해야 한다.\n
+c) 결합 저작물이 실행되는 도중에 저작권 사항이 표시되는 경우에는, 라이브러리에 대한 저작권 사항도 함께 포함시켜야 하며, GNU GPL 및 본 라이선스의 사본을 참고할 수 있는 방법을 명시해야 한다.\n
+d) 다음 중 하나의 방법을 사용해야 한다:\n
+0) 해당 소스의 컨베이 행위에 관한 GNU GPL의 제6조에 상술된 방식에 기반하여, 최소 해당 소스는 본 라이선스의 규정에 따라 컨베이하고, 해당 응용프로그램 코드는 사용자가 응용프로그램과 연결 버전의 수정된 버전을 재결합 혹은 재연결하여 수정된 결합 저작물을 생성하는 것이 가능하도록, 그리고 이에 적합한 형태로 컨베이 해야 한다.\n
+1) 라이브러리와 연결시키기에 적절한 공유 라이브러리 방식을 사용해야 한다. 적절한 방식이란, (a) 실행 시점에서 볼 때 이미 사용자의 컴퓨터 시스템 상에 존재하고 있는 라이브러리의 복제물을 사용하는 방식, 그리고 (b) 연결 버전과 인터페이스 상으로 호환되는, 라이브러리의 수정된 버전으로도 적절하게 작동할 수 있는 방식을 의미한다.\n
+\n
+e) GNU GPL의 제6조에 따라 설치 정보 제공에 대한 요구를 받게 될 경우에 한해 설치 정보를 제공해야 한다. 이 설치 정보는 응용프로그램과 연결 버전의 수정 버전을 재결합하거나 재연결한 결과로 생성된, 수정된 버전의 결합 저작물을 설치하고 실행하는데 필요한 정보에 한한다. (제4조 d항의 0번 옵션을 사용하는 경우에는 최소 해당 소스와 해당 응용프로그램 소스와 함께 설치 정보가 동반되어야 한다. 4조d항의 1번 옵션을 사용하는 경우에는 해당 소스의 컨베이 행위에 대한 GNU GPL의 제6조에 상술된 방식으로 설치 정보를 제공해야 한다.)\n
+\n
+제5조. 결합 라이브러리\n
+라이브러리에 기반한 저작물인 라이브러리의 기능을 본 라이선스가 적용되지 않는 다른 라이브러리의 기능들과 하나의 라이브러리 내에 병존시키고, 이러한 결합 라이브러리를 다음과 같은 두 가지 조건을 모두 충족시킨다는 조건 하에, 당신이 임의로 정한 규정에 따라 컨베이할 수 있다.\n
+\n
+a) 라이브러리에 기반한 저작물의 복제물을 다른 어떤 라이브러리와도 결합되지 않은 독립된 상태로 결합 라이브러리와 함께 제공해야 하며, 이는 본 라이선스의 규정에 따라 컨베이 되어야 한다.\n
+\n
+b) 결합 라이브러리의 일부가 라이브러리에 기반한 저작물이라는 사실을 명확하게 고지해야 하며, 그 저작물의 결합되지 않은 형태를 어디에서 구할 수 있는지를 명시해야 한다.\n
+\n
+제6조. GNU 약소 일반 공중 라이선스의 개정판\n
+자유 소프트웨어 재단은 때때로 GNU 약소 일반 공중 라이선스의 개정판이나 신규 버전을 공표할 수 있다. 새롭게 공표될 신규 버전은 기본적인 취지에 있어 원판과 변함이 없을 것이지만, 새로운 문제나 현안에 대처하기 위해 세부적인 내용에 차이가 발생할 수 있다.\n
+\n
+각각의 판들은 버전 넘버를 사용해서 구별된다. GNU 약소 일반 공중 라이선스의 어떤 특정한 버전 넘버와 \"그 이후에 출시된 버전\"을 따른다는 사항이 명시된 프로그램에는 해당 버전이나 그 이후에 자유 소프트웨어 재단에서 발행된 어떤 버전을 선택해서 적용해도 무방하다. 버전 넘버를 명시하고 있지 않은 라이브러리의 경우에는 자유 소프트웨어 재단이 공표한 어떠한 버전의 판을 적용해도 무방하다.\n
+\n
+당신이 양도받은 라이브러리가 GNU 약소 일반 공중 라이선스의 버전 선택을 대리인에게 위임한다고 명시하는 경우, 그 대리인이 특정 버전의 수용을 공표함으로써 당신이 그 라이브러리에 어떤 버전을 사용할지 영구적으로 결정된다.</string>
+    <string name="action_info">정보</string>
+    <string name="warning">경고</string>
+    <string name="error">에러</string>
+    <string name="confirm">확인</string>
+    <string name="stop">중지</string>
+    <string name="action_findme">현재 위치 검색</string>
+    <string name="default_project_name">아비터_기본_프로젝트</string>
+    <string name="delete">삭제</string>
+    <string name="update">업데이트</string>
+    <string name="default_layer_name">오픈 스트리트 지도</string>
+    <string name="project_exists_title">프로젝트 존재</string>
+    <string name="project_already_exists">프로젝트가 이미 존재합니다.  다른 이름으로 프로젝트를 생성해 주세요.</string>
+    <string name="project_creation_failed">프로젝트 생성 실패</string>
+    <string name="project_creation_failed_message">프로젝트를 생성할 수 없습니다.  디스크에 여유공간이 있는지 확인해 주세요.</string>
+    <string name="create_project_progress">프로젝트 생성중</string>
+    <string name="create_project_msg">프로젝트가 생성되었습니다.&#8230;</string>
+    <string name="error_aoi_create_project">관심있는 지역을 선택하기 전에 새로운 프로젝트를 생성해야만 합니다.</string>
+    <string name="error_creating_project">에러</string>
+    <string name="error_creating_project_msg">프로젝트를 생성할 수 없습니다!</string>
+    <string name="error_loading_features">에러</string>
+    <string name="error_loading_features_msg">프로젝트를 생성할 수 없습니다!</string>
+    <string name="error_adding_layers">에러</string>
+    <string name="error_adding_layers_msg">선택된 레이어를 추가할 수 없습니다!</string>
+    <string name="adding_layers">레이어 추가</string>
+    <string name="adding_layers_msg">지도에 레이어 추가&#8230;</string>
+    <string name="feature_dialog_title">특성</string>
+    <string name="example_longitude">예. </string>
+    <string name="example_latitude">예. </string>
+    <string name="back">뒤로</string>
+    <string name="edit_attributes">편집</string>
+    <string name="done_editing">저장</string>
+    <string name="delete_feature">삭제</string>
+    <string name="edit_feature">지도</string>
+    <string name="cancel">취소</string>
+    <string name="update_feature_title">업데이트</string>
+    <string name="update_feature_msg">특성을 업데이트 할까요?</string>
+    <string name="updating">업데이트</string>
+    <string name="updating_msg">업데이트 진행중&#8230;</string>
+    <string name="insert_feature_title">선택한 레이어를 삽입</string>
+    <string name="insert_layer_title">삽입할 위치:</string>
+    <string name="insert_layer_text">모드: 삽입</string>
+    <string name="feature_saved">특성 저장</string>
+    <string name="feature_saved_msg">특성이 저장되었습니다.</string>
+    <string name="return_to_map">지도로 되돌아가기</string>
+    <string name="picture_source">자료 선택</string>
+    <string name="select_picture_source">사진 추가&#8230;</string>
+    <string name="from_camera">카메라 사용</string>
+    <string name="from_library">갤러리 사용</string>
+    <string name="review_feature">특성 리뷰</string>
+    <string name="insert_feature_warning">특성 삽입</string>
+    <string name="insert_feature_warning_msg">특성을 삽입할까요?</string>
+    <string name="delete_feature_warning">특성 삭제</string>
+    <string name="delete_feature_warning_msg">정말로 이 특성을 지울까요?</string>
+    <string name="deleting_msg">삭제 진행중&#8230;</string>
+    <string name="sync_in_progress">동기화</string>
+    <string name="sync_in_progress_msg">동기화 진행중&#8230;</string>
+    <string name="error_syncing">에러</string>
+    <string name="error_syncing_msg">동기화 불가능</string>
+    <string name="project_incomplete_msg">프로젝트는 오프라인에서 이용할 수 없습니다.. \n\n관심있는 지역을 선택해주세요.</string>
+    <string name="click_me">( 여기를 눌러주세요 )</string>
+    <string name="media">미디어</string>
+    <string name="take_picture">사진 촬영</string>
+    <string name="initializing">초기화</string>
+    <string name="please_wait">잠시만 기다려주세요&#8230;</string>
+    <string name="update_aoi_alert">관심있는 지역</string>
+    <string name="update_aoi_alert_msg">관심있는 지역을 업데이트 하는 것은 당신이 만든 어떠한 변경사항도 동기화 할 것입니다.</string>
+    <string name="error_updating_aoi">에러</string>
+    <string name="error_updating_aoi_msg">관심있는 지역을 업데이트 할 수 없습니다!</string>
+    <string name="loading_feature_info">특성 불러오는중&#8230; 잠시만 기다려주세요&#8230;</string>
+    <string name="loading">불러오기</string>
+    <string name="no_network">네트워크 미연결</string>
+    <string name="check_network_connection">네트워크 연결을 확인해주세요.</string>
+    <string name="layers_limit">레이어 갯수 한계</string>
+    <string name="too_many_layers">프로젝트당 최대 생성 레이어 갯수에 도달하였습니다.</string>
+
+    <string name="downloading_schemas">스키마 다운로드</string>
+    <string name="downloading_tiles">타일 다운로드</string>
+    <string name="tile_cache_warning">Tiles to download:</string>
+    <string name="syncing_media_title">미디어 동기화중</string>
+    <string name="syncing_vector_data">벡터 데이터 동기화중</string>
+    <string name="downloaded">다운로드 된 것: </string>
+    <string name="uploaded">업로드 된 것: </string>
+    <string name="form_error_date">유효한 날짜를 입력하세요.</string>
+    <string name="form_error_integer">유효한 정수를 입력하세요.</string>
+    <string name="form_error_double">유효한 숫자를 입력하세요.</string>
+    <string name="form_error_long">유효한 숫자를 입력하세요.</string>
+    <string name="form_error_float">유효한 숫자를 입력하세요.</string>
+    <string name="form_error_bool">True 또는 False를 입력하세요.</string>
+    <string name="check_errors">유효하지 않은 입력</string>
+    <string name="check_errors_msg">계속 진행하기 전에 오류를 고쳐주세요.</string>
+    <string name="loading_layers_please_wait">서버에서 레이어를 불러오는중. 잠시만 기다려주세요.</string>
+
+    <!-- MAP ACTIVITY STRINGS -->
+    <string name="map_activity_name">아비터</string>
+    <string name="action_new_feature">피쳐 삽입</string>
+    <string name="action_servers">서버</string>
+    <string name="action_projects">프로젝트</string>
+    <string name="action_image">이미지 오버레이</string>
+    <string name="action_validationManagement">검수 관리</string>
+    <string name="action_search">검색</string>
+    <string name="action_baseLayers">기본 레이어</string>
+    <string name="action_validation">검수</string>
+    <string name="action_capture_title">캡쳐</string>
+    <string name="action_aoi">관심있는 지역</string>
+    <string name="action_language">언어</string>
+    <string name="layers_button">레이어</string>
+    <string name="sync_button">동기화</string>
+    <string name="location_button">나의 위치</string>
+    <string name="aoi_button">관심있는 지역 확대</string>
+
+    <!-- PROJECTS ACTIVITY STRINGS -->
+    <string name="projects_activity_name">프로젝트</string>
+    <string name="delete_project">프로젝트 삭제</string>
+    <string name="action_new_project">새로운 프로젝트</string>
+    <string name="switch_project_title">프로젝트 전환</string>
+    <string name="switch_project">이 프로젝트를 전환할까요?</string>
+
+    <!-- LAYERS DIALOG STRINGS -->
+    <string name="layers_dialog_title">레이어</string>
+    <string name="add_layers_button">레이어 추가</string>
+    <string name="action_add_layers">레이어 추가</string>
+    <string name="layer_visibility_off">끔</string>
+    <string name="layer_visibility_on">켬</string>
+    <string name="remove_layer">레이어 제거</string>
+
+    <!-- TILESETS STRINGS -->
+    <string name="action_tilesets">요소집합</string>
+    <string name="add_tileset_button">요소집합 추가</string>
+    <string name="tileset_dialog_title">요소집합</string>
+    <string name="add_tileset_dialog_title">요소집합 추가</string>
+    <string name="remove_tileset">요소집합 제거</string>
+    <string name="tileset_list_names">요소집합</string>
+    <string name="loading_tilesets_getcapabilities">요소집합 불러오는중..</string>
+    <string name="delete_tileset_button">삭제</string>
+    <string name="update_tileset_button">업데이트</string>
+    <string name="check_update_tilesets">업데이트 확인</string>
+    <string name="tileset_name">NAMEME</string>
+    <string name="deleting_tileset">요소집합 삭제중</string>
+    <string name="deleting_tileset_msg">요소집합 삭제중..</string>
+    <string name="delete_tileset_alert">정말로 이 요소집합을 지우시겠습니까? </string>
+    <string name="tileset_filesize">크기: 007GB</string>
+    <string name="downloading_tileset">다운로드</string>
+    <string name="downloading_tileset_msg">이 다운로드는 </string>
+    <string name="downloading_tileset_msg2">정말로 계속할까요?</string>
+    <string name="space_available">여유공간: </string>
+    <string name="space_after_download">다운로드 후: </string>
+    <string name="tileset_info_name">이름: </string>
+    <string name="tileset_info_time_created">생성된 시간: </string>
+    <string name="tileset_info_created_by">제작자: </string>
+    <string name="tileset_info_filesize">파일 크기: </string>
+    <string name="tileset_info_layer_name">레이어 이름: </string>
+    <string name="tileset_info_status">상태: </string>
+    <string name="tileset_info_resource_uri">재원 URI: </string>
+    <string name="tileset_info_service_type">서비스 타입: </string>
+    <string name="tileset_info_download_url">다운로드 URL: </string>
+    <string name="tileset_info_server_url">서버 URL: </string>
+    <string name="tileset_info_server_username">서버 사용자 이름: </string>
+    <string name="tileset_info_server_id">서버 ID: </string>
+    <string name="tileset_cancel_download_title">다운로드 취소중..</string>
+    <string name="tileset_cancel_download_msg">다운로드 멈추는중..</string>
+    <string name="cancel_download_tileset_alert">정말로 지금 다운로드 받는것을 취소할까요?</string>
+    <string name="error_retrieving_tileset">요소집합 검색 오류</string>
+    <string name="tileset_info_title">요소집합 정보</string>
+    <string name="error_connecting_tileset1">연결 오류</string>
+    <string name="error_connecting_tileset2">인터넷 상태를 확인한 후 재시도 하세요.</string>
+    <string name="tileset_status_downloading">다운로드중..</string>
+    <string name="tileset_status_in_database">데이터베이스</string>
+    <string name="tileset_status_on_server">서버</string>
+    <string name="tileset_started_downloading_msg">다운로드가 시작됨</string>
+    <string name="tileset_finished_downloading_msg">다운로드가 끝남</string>
+    <string name="not_enough_space">공간이 충분하지 않습니다.</string>
+    <string name="not_enough_space_msg1">다운로드 하기에 충분한 공간이 없습니다.</string>
+    <string name="not_enough_space_msg2">여유공간을 확보한 후 재시도 하세요.</string>
+    <string name="no_available_tileset_title">요소집합 검색 오류</string>
+    <string name="no_available_tileset_msg">발견되었지만 어떤 요소집합도 불러오지 못했습니다. 요소집합이 제대로 만들어졌는지 확인해주세요.</string>
+    <string name="tileset_download_error_msg">파일이 다운로드 되지 못했습니다. 다운로드 링크가 올바르지 않던가 또는 현재 인터넷 상태가 사용불가 입니다.</string>
+    <string name="tileset_zero_filesize">파일 사이즈가 0입니다. 요소집합이 제대로 만들어졌는지 확인해주세요.</string>
+    <string name="tileset_new_project_msg_downloaded">현재 다운로드 된 요소집합: </string>
+    <string name="tileset_new_project_msg_confirmation">\n\n이 프로젝트는 인터넷 연결이 없는 반면에 배경지도를 갖고 있습니다는 것을 보장하기 위해서,
+        적절한 데이터의 요소집합이 다운로드 되어야 합니다.\n\n만약 배경지도가 "오픈 스트리트 지도"가 선택되었다면, 지도 데이터는 인터넷에서 불러올 것입니다.
+        \n**데이터 요금이 나올 수 있습니다**\n\n요소집합을 다운로드 할까요?</string>
+    <string name="tileset_no_connection_msg">아비터는 현재 오프라인이고, 다른 요소집합을 찾을 수 없습니다.\n\n만약 사용자가 배경지도를 오프라인에서 사용할 수 있게 하고 싶다면:
+        아비터를 다시 실행하고, 요소집합을 다운로드 하면 됩니다.\n\n이러한 기능은 이곳에서 가능합니다:\n설정 > 요소집합</string>
+
+    <!-- LAYER INFO DIALOG STRINGS -->
+    <string name="layer_info_dialog_title">레이어 정보</string>
+
+    <!-- ADD LAYERS DIALOG STRINGS -->
+    <string name="add_layers_dialog_title">레이어 추가</string>
+    <string name="layer_filter_hint">필터</string>
+    <string name="action_add_server">서버 추가</string>
+    <string name="choose_server">서버</string>
+
+    <!-- WELCOME DIALOG STRINGS -->
+
+    <string name="welcome_dialog_title">환영합니다</string>
+    <string name="must_create_project">편집하기 전에 프로젝트를 먼저 만들어야 합니다.</string>
+    <string name="create_project_question">지금 프로젝트를 하나 만들까요?</string>
+
+    <!-- PROJECT NAME DIALOG STRINGS -->
+
+    <string name="project_name_dialog_title">프로젝트 이름</string>
+    <string name="choose_project_name">프로젝트 이름을 입력하세요.</string>
+    <string name="choose_name_hint">새로운 프로젝트 이름*</string>
+    <string name="disconnected_no_projects">이러한 현상은 사용자가 인터넷에 연결이 안되어있다는 것과,어떠한 프로젝트도 만들어져 있지 않다는 것을 말해줍니다.\n
+        \n만약 사용자가 아비터의 모든 기능을 이용하고 싶다면, 네트워크에 연결해주시고 프로젝트를 만들어 주세요.\n
+        \n사용자도 알다시피, 연결이 된다면 빨간색 동기화 버튼이 초록색으로 바뀝니다..</string>
+
+    <!-- SERVER DIALOG STRINGS -->
+
+    <string name="server_dialog_title">서버</string>
+    <string name="add_server_button">서버 추가</string>
+    <string name="delete_server_alert">이 서버와 관련된 모든 프로젝트와 그 안의 모든 레이어가 삭제됩니다.</string>
+    <string name="update_server_alert">정말 서버를 업데이트 할까요?  동기화 실패로 인한 원치 않은 결과가 나올 수 있습니다.</string>
+    <string name="deleting_server">서버 삭제중</string>
+    <string name="deleting_server_msg">서버 삭제 진행중&#8230;</string>
+
+    <!-- ADD SERVER DIALOG STRINGS -->
+
+    <string name="add_server_dialog_title">서버 추가</string>
+    <string name="server_name_hint">이름</string>
+    <string name="server_url_hint">예. http://example.com/geoserver</string>
+    <string name="server_username_hint">사용자 이름</string>
+    <string name="server_password_hint">비밀번호</string>
+    <string name="server_show_password">비밀번호 표시</string>
+    <string name="validating_server">유효한 서버</string>
+    <string name="authentication_failed">인증 실패, 사용자 이름과 비밀번호를 확인해주세요.</string>
+    <string name="unable_to_connect">서버에 연결할 수 없습니다, url이 맞는지 확인해주세요.</string>
+
+    <!-- GO OFFLINE DIALOG STRINGS -->
+    <string name="go_offline_dialog_title">오프라인</string>
+
+    <!-- CHOOSE AOI DIALOG STRINGS -->
+    <string name="choose_aoi_dialog_title">관심있는 지역 선택</string>
+    <string name="title_activity_aoi">관심 지역</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="failed_to_sync">동기화 불완전</string>
+    <string name="failed_vector_upload">벡터 레이어 업로드 실패:</string>
+    <string name="failed_vector_download">벡터 레이어 다운로드 실패:</string>
+    <string name="failed_media_upload">미디어 항목 업로드 실패:</string>
+    <string name="failed_media_download">미디어 항목 다운로드 실패:</string>
+    <string name="retry_sync">재시도?</string>
+
+    <string name="vector_upload_errors_label">벡터 레이어 업로드 실패:</string>
+    <string name="vector_download_errors_label">벡터 레이어 다운로드 실패:</string>
+    <string name="media_upload_errors_label">미디어 항목 업로드 실패:</string>
+    <string name="media_download_errors_label">미디어 항목 다운로드 실패:</string>
+    <string name="retry">재시도</string>
+    <string name="geolocation_error">지리위치 오류</string>
+    <string name="layer_order">레이어 순서</string>
+    <string name="move_down">아래로</string>
+    <string name="move_up">위로</string>
+    <string name="settings">설정</string>
+    <string name="about">설명</string>
+    <string name="version">커밋:</string>
+    <string name="commit_date">커밋 날짜:</string>
+    <string name="build_date">빌드 날짜:</string>
+    <string name="unknown">알려지지 않음</string>
+    <string name="point">점</string>
+    <string name="line">선</string>
+    <string name="polygon">도형</string>
+    <string name="multipoint">다중 점</string>
+    <string name="multiline">다중 선</string>
+    <string name="multipolygon">다중 도형</string>
+    <string name="choose_geometry_type">Geometry 타입</string>
+    <string name="done">완료</string>
+    <string name="add">추가</string>
+    <string name="remove">제거</string>
+    <string name="inspect">점검</string>
+    <string name="finish">완료</string>
+    <string name="confirm_part_removal_title">부분 제거</string>
+    <string name="confirm_part_removal_msg">정말로 이 부분의 geometry를 지우고 싶으신가요?</string>
+    <string name="confirm_geometry_removal_title">geometry 제거</string>
+    <string name="confirm_geometry_removal_msg">이 수집품 중에서 geometry를 제거하고 싶으신건가요?</string>
+    <string name="notify_user_to_add_geometry_title">geometry가 반드시 필요합니다.</string>
+    <string name="notify_user_to_add_geometry_msg">geometry 추가 또는 특성 삭제.</string>
+    <string name="finish_editing_title">편집 완료</string>
+    <string name="finish_editing_message">편집을 완료해주세요.</string>
+    <string name="unsupported_crs">지원되지 않는 CRS</string>
+    <string name="loading_unsupported_crs">지원되지 않는 CRS때문에 레이어를 불러올 수 없습니다:</string>
+    <string name="overlays">오버레이:</string>
+    <string name="baselayer">현재:</string>
+    <string name="background_map">배경지도:</string>
+    <string name="choose_baselayer">배경지도를 선택하세요</string>
+    <string name="change_baselayer_warning">
+        사용자의 배경지도를 바꾸는 것은
+        당신의 이전 관심있는 지역의 다운로드된 타일을 지우는 것입니다.
+        정말 계속 진행할까요?
+    </string>
+    <string name="type">타입</string>
+    <string name="notifications">공지</string>
+    <string name="clear">초기화</string>
+    <string name="close">닫기</string>
+    <string name="feature_not_in_aoi">특성 이용 불가</string>
+    <string name="feature_not_in_aoi_msg">특성이 관심있는 지역에서 지워졌거나 바깥쪽으로 이동되었습니다.</string>
+    <string name="layers_already_in_project">프로젝트에 지금 작업중인 레이어를 추가할 수 없습니다. 이미 똑같은 특성을 가진 레이어가 이미 존재합니다:</string>
+    <string name="invalid_url">유효하지 않는 url</string>
+    <string name="invalid_url_slash_wms">\"WMS\" 서버 url은 반드시 \"/wms\"로 끝나야 합니다.</string>
+    <string name="invalid_url_slash_tms">\"TMS\" 서버 url은 반드시 \"/hot/1.0.0/\"로 끝나야 합니다.</string>
+    <string name="insert">삽입</string>
+    <string name="feature_outside_aoi_warning">사용자가 선택한 관심있는 지역의 바깥쪽에 특성을 삽입했습니다. 이 특성을 동기화하면,
+        그 특성은 더이상 사용자의 디바이스에 있지 않을 것입니다.</string>
+    <string name="confirm_delete_project">정말로 프로젝트를 삭제할까요? 동기화하지 않은 모든 데이터는 사라집니다.</string>
+    <string name="confirm_delete_layer">정말로 레이어를 삭제할까요?</string>
+    <string name="confirm_delete_image">정말로 이미지를 삭제할까요?</string>
+    <string name="added">추가됨</string>
+    <string name="modified">수정됨</string>
+    <string name="removed">제거됨</string>
+    <string name="no_valid_geometries">유효한 geometry가 없습니다..</string>
+    <string name="no_valid_geometries_delete_or_cancel">유효한 geometry가 없습니다..  특성을 지우거나 또는 취소할까요?</string>
+    <string name="valid_point_geometry_description">점 geometry는 최소한 한개의 점이 필요합니다.</string>
+    <string name="valid_line_geometry_description">선 geometry는 최소한 두개의 서로 다른 점이 필요합니다.</string>
+    <string name="valid_polygon_geometry_description">도형 geometry는 최소한 세개의 서로 다른 점이 필요합니다.</string>
+    <string name="valid_multipoint_geometry_description">다중 점 geometry는 최소한 한개의 유효한 점 geometry가 필요합니다.</string>
+    <string name="valid_multiline_geometry_description">다중 선 geometry는 최소한 한개의 유효한 선 geometry가 필요합니다.</string>
+    <string name="valid_multipolygon_geometry_description">다중 도형 geometry는 최소한 한개의 도형 geometry가 필요합니다.</string>
+    <string name="valid_geometry_collection_description">Geometry Collection은 최소한 한개의 유효한 geometry가 필요합니다.</string>
+    <string name="delete_media">미디어 삭제</string>
+    <string name="sure_delete_media">정말 특성에서 이 항목을 제거할까요?</string>
+    <string name="read_only">읽기 전용</string>
+    <string name="read_only_msg">이 레이어는 읽기 전용입니다. 서버 관리자에게 허락을 받아야 접근 가능합니다.</string>
+
+    <string name="sync_timed_out">동기화 시간초과</string>
+    <string name="sync_timed_out_msg">동기화 시간 초과되었습니다.  계속해서 동기화 할까요 아니면 현재 동기화 작업을 취소할까요?</string>
+    <string name="continue_sync">계속</string>
+    <string name="loading_getcapabilities">레이어 불러오는중</string>
+    <string name="could_not_connect">연결할 수 없음</string>
+    <string name="check_server_and_network">서버 세부사항과 네트워크 연결상태 확인하세요. 그리고 나중에 다시 시도하세요.</string>
+    <string name="required_field">요구되는 분야</string>
+    <string name="download_photos">특성에 대한 사진을 다운로드</string>
+    <string name="disable_wms">베이스 레이어가 아니면 WMS 사용 불가</string>
+    <string name="no_con_checks">연결상태 무시 (재시작이 필요합니다.)</string>
+    <string name="confirm_delete_layers_unsynced_features">이 레이어는 동기화가 되지 않은 특성이 포함되어 있습니다.  만약 이 레이어를 제거한다면, 동기화 되지 않은 특성도 사라집니다!  정말로 이 레이어를 삭제할까요?</string>
+    <string name="try_again_later">나중에 다시 시도해주세요.  만약 문제가 계속된다면, 관리자에게 물어보시기 바랍니다.</string>
+    <string name="arbiter_error">예상치 못한 오류.</string>
+    <string name="unknown_error">예상치 못한 오류.</string>
+    <string name="internal_server_error">서버에서 오류가 발생했습니다.</string>
+    <string name="timed_out">요청시간 초과.</string>
+    <string name="unauthorized">승인되지 않음.</string>
+    <string name="resource_not_found">리소스를 찾을 수 없습니다.</string>
+    <string name="update_error">특성 업데이트 중 오류가 발생했습니다. 특성을 확인해주시고, 나중에 다시 시도해주세요.</string>
+    <string name="must_complete_upload_first">반드시 업로드를 먼저 해야합니다.</string>
+    <string name="always_show_location">항상 현재위치를 보여줌 (베터리는 소모됩니다.)</string>
+    <string name="geolocation_error_msg">당신의 위치를 찾을 수 없습니다. 아비터가 GPS에 접근할 수 있는지 설정을 확인해주시기 바랍니다. 문제가 계속 발생하면, 디바이스를 다시 시작해주세요.</string>
+    <string name="base">베이스</string>
+
+    <!-- Search -->
+    <string name="action_address">주소 검색</string>
+    <string name="action_coordinate">좌표 검색</string>
+    <string name="latitude">위도</string>
+    <string name="longitude">경도</string>
+    <string name="coordinate_input_error_title">입력값 오류</string>
+    <string name="coordinate_input_error_message">올바른 좌표값을 넣어주세요.</string>
+    <string name="address_search_no_result_title">알림</string>
+    <string name="address_search_no_result_message">검색 결과가 없습니다.</string>
+    <string name="address_search_title">\n주소를 입력하세요\n</string>
+
+    <!-- Image management -->
+    <string name="image_list">이미지 목록</string>
+    <string name="action_image_option">이미지 구축 옵션</string>
+    <string name="action_boundary">경계값 설정</string>
+    <string name="draw_image">이미지 그리기</string>
+    <string name="set_boundary">경계값으로 이미지 넣기</string>
+    <string name="add_images_button">이미지 추가</string>
+    <string name="remove_image">이미지 삭제</string>
+    <string name="imageName">이름</string>
+    <string name="imagePath">경로</string>
+    <string name="left">왼쪽</string>
+    <string name="bottom">아래</string>
+    <string name="right">오른쪽</string>
+    <string name="top">위</string>
+    <string name="boundary_image_input_error_title">입력값 오류</string>
+    <string name="boundary_image_input_error_message">올바른 경계값을 입력해주세요.</string>
+    <string name="action_capture">캡쳐 완료</string>
+    <string name="input_image_AOI">AOI에 삽입</string>
+    <string name="action_AOI_image_progress">AOI 이미지 처리중</string>
+    <string name="image_option_setting">Option Setting</string>
+    <string name="image_option_opacity">Opacity</string>
+
+    <!-- validation -->
+    <string name="action_validationLayerList">검수 대상 목록</string>
+    <string name="validationLayerName">레이어 이름</string>
+    <string name="start_validation_button">검수 시작</string>
+    <string name="action_validationOption">검수 옵션</string>
+    <string name="action_optionSetting">옵션 설정</string>
+    <string name="action_detailOptionSetting">세부 옵션</string>
+    <string name="error500">내부 시스템 에러</string>
+    <string name="report">검수 결과</string>
+    <string name="action_report">오류 보고서</string>
+    <string name="action_error_navigator">에러 네비게이터</string>
+    <string name="none_report_title">보고서가 존재하지 않습니다.</string>
+    <string name="none_report_message">레포트를 확인하기 전에 검수를 시행해주십시오.</string>
+    <string name="action_validation_progress">검수 진행중...</string>
+    <string name="action_report_progress">레포트 생성중...</string>
+    <string name="action_errorMarking_progress">에러 데이터 표시중...</string>
+    <string name="navigator_left">왼쪽</string>
+    <string name="navigator_right">오른쪽</string>
+    <string name="report_left">왼쪽</string>
+    <string name="report_right">오른쪽</string>
+    <string name="cannot_start_navigator">에러 네비게이터를 실행할 수 없습니다.</string>
+    <string name="navigator_error_message">에러 네비게이터를 시작하기 전에 검수를 시행해주십시오.</string>
+
+    <!-- clean -->
+    <string name="action_removeErrorMarking">검수 기록 삭제</string>
+
+    <!-- base map -->
+
+
+</resources>

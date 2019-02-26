@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main$Generated" generated="true"><source path="/Users/hansseop/Desktop/Modified/app/src/main/res"/><source path="/Users/hansseop/Desktop/Modified/app/build/generated/res/rs/release"/><source path="/Users/hansseop/Desktop/Modified/app/build/generated/res/resValues/release"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="/Users/hansseop/Desktop/Modified/app/src/main/res"><file name="button_rotate" path="/Users/hansseop/Desktop/Modified/app/src/main/res/anim/button_rotate.xml" qualifiers="" type="anim"/><file name="slide_in_left" path="/Users/hansseop/Desktop/Modified/app/src/main/res/anim/slide_in_left.xml" qualifiers="" type="anim"/><file path="/Users/hansseop/Desktop/Modified/app/src/main/res/values-v11/styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        
+    </style></file><file path="/Users/hansseop/Desktop/Modified/app/src/main/res/values-sw720dp-land/dimens.xml" qualifiers="sw720dp-land-v13"><dimen name="activity_horizontal_margin">128dp</dimen></file><file name="image_opacity_seek_bar" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/image_opacity_seek_bar.xml" qualifiers="" type="layout"/><file name="errors_syncing_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/errors_syncing_dialog.xml" qualifiers="" type="layout"/><file name="downloading_tileset_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/downloading_tileset_dialog.xml" qualifiers="" type="layout"/><file name="about_main" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/about_main.xml" qualifiers="" type="layout"/><file name="add_tileset_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_tileset_dialog.xml" qualifiers="" type="layout"/><file name="notification_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/notification_list_item.xml" qualifiers="" type="layout"/><file name="choose_baselayer_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/choose_baselayer_dialog.xml" qualifiers="" type="layout"/><file name="tileset_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/tileset_list_item.xml" qualifiers="" type="layout"/><file name="choose_aoi_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/choose_aoi_dialog.xml" qualifiers="" type="layout"/><file name="project_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/project_list_item.xml" qualifiers="" type="layout"/><file name="settings" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/settings.xml" qualifiers="" type="layout"/><file name="choose_geometry_type_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/choose_geometry_type_list_item.xml" qualifiers="" type="layout"/><file name="choose_geometry_type" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/choose_geometry_type.xml" qualifiers="" type="layout"/><file name="validation_option_setting_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_option_setting_list_item.xml" qualifiers="" type="layout"/><file name="activity_notifications" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/activity_notifications.xml" qualifiers="" type="layout"/><file name="license_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/license_item.xml" qualifiers="" type="layout"/><file name="images_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/images_dialog.xml" qualifiers="" type="layout"/><file name="add_layer_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_layer_dialog.xml" qualifiers="" type="layout"/><file name="geometry_parts_buttons" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/geometry_parts_buttons.xml" qualifiers="" type="layout"/><file name="activity_projects" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/activity_projects.xml" qualifiers="" type="layout"/><file name="media_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/media_dialog.xml" qualifiers="" type="layout"/><file name="validation_option_setting_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_option_setting_dialog.xml" qualifiers="" type="layout"/><file name="address_search_result_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/address_search_result_item.xml" qualifiers="" type="layout"/><file name="edit_buttons" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/edit_buttons.xml" qualifiers="" type="layout"/><file name="switch_project" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/switch_project.xml" qualifiers="" type="layout"/><file name="welcome_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/welcome_dialog.xml" qualifiers="" type="layout"/><file name="new_validation_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/new_validation_list_item.xml" qualifiers="" type="layout"/><file name="child_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/child_item.xml" qualifiers="" type="layout"/><file name="feature_media" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/feature_media.xml" qualifiers="" type="layout"/><file name="classification_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/classification_list_item.xml" qualifiers="" type="layout"/><file name="textview" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/textview.xml" qualifiers="" type="layout"/><file name="feature_dropdown" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/feature_dropdown.xml" qualifiers="" type="layout"/><file name="feature_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/feature_dialog.xml" qualifiers="" type="layout"/><file name="add_layers_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_layers_list_item.xml" qualifiers="" type="layout"/><file name="add_validate_layers_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_validate_layers_item.xml" qualifiers="" type="layout"/><file name="validation_report_table" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_report_table.xml" qualifiers="" type="layout"/><file name="activity_map" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/activity_map.xml" qualifiers="" type="layout"/><file name="validation_option_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_option_dialog.xml" qualifiers="" type="layout"/><file name="tileset_info_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/tileset_info_dialog.xml" qualifiers="" type="layout"/><file name="layers_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/layers_dialog.xml" qualifiers="" type="layout"/><file name="row" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/row.xml" qualifiers="" type="layout"/><file name="notifications_count" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/notifications_count.xml" qualifiers="" type="layout"/><file name="feature_attribute" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/feature_attribute.xml" qualifiers="" type="layout"/><file name="insert_feature_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/insert_feature_list_item.xml" qualifiers="" type="layout"/><file name="address_search_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/address_search_dialog.xml" qualifiers="" type="layout"/><file name="validation_option_layers_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_option_layers_item.xml" qualifiers="" type="layout"/><file name="drop_down_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/drop_down_item.xml" qualifiers="" type="layout"/><file name="layers_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/layers_list_item.xml" qualifiers="" type="layout"/><file name="add_layers_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_layers_dialog.xml" qualifiers="" type="layout"/><file name="aoi_image_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/aoi_image_dialog.xml" qualifiers="" type="layout"/><file name="insert_feature_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/insert_feature_dialog.xml" qualifiers="" type="layout"/><file name="images_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/images_list_item.xml" qualifiers="" type="layout"/><file name="project_name_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/project_name_dialog.xml" qualifiers="" type="layout"/><file name="base_layer_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/base_layer_list_item.xml" qualifiers="" type="layout"/><file name="servers_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/servers_dialog.xml" qualifiers="" type="layout"/><file name="layer_selection_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/layer_selection_list_item.xml" qualifiers="" type="layout"/><file name="coordinates_search_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/coordinates_search_dialog.xml" qualifiers="" type="layout"/><file name="order_layers_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/order_layers_list_item.xml" qualifiers="" type="layout"/><file name="spinner_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/spinner_item.xml" qualifiers="" type="layout"/><file name="classification_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/classification_dialog.xml" qualifiers="" type="layout"/><file name="detail_option_2" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/detail_option_2.xml" qualifiers="" type="layout"/><file name="about_geodt" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/about_geodt.xml" qualifiers="" type="layout"/><file name="layer_selection_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/layer_selection_dialog.xml" qualifiers="" type="layout"/><file name="license_detail" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/license_detail.xml" qualifiers="" type="layout"/><file name="boundary_image_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/boundary_image_dialog.xml" qualifiers="" type="layout"/><file name="layer_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/layer_list_item.xml" qualifiers="" type="layout"/><file name="about" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/about.xml" qualifiers="" type="layout"/><file name="add_fix" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_fix.xml" qualifiers="" type="layout"/><file name="tilesets_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/tilesets_dialog.xml" qualifiers="" type="layout"/><file name="detail_option_1" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/detail_option_1.xml" qualifiers="" type="layout"/><file name="validation_navigator_table" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_navigator_table.xml" qualifiers="" type="layout"/><file name="add_tilesets_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_tilesets_list_item.xml" qualifiers="" type="layout"/><file name="validation_detail_option_setting_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_detail_option_setting_list_item.xml" qualifiers="" type="layout"/><file name="failed_sync" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/failed_sync.xml" qualifiers="" type="layout"/><file name="add_validate_layers_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_validate_layers_dialog.xml" qualifiers="" type="layout"/><file name="validation_detail_option_setting_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_detail_option_setting_dialog.xml" qualifiers="" type="layout"/><file name="add_server_dialog" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_server_dialog.xml" qualifiers="" type="layout"/><file name="license_list" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/license_list.xml" qualifiers="" type="layout"/><file name="server_list_item" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/server_list_item.xml" qualifiers="" type="layout"/><file name="media_image_view" path="/Users/hansseop/Desktop/Modified/app/src/main/res/layout/media_image_view.xml" qualifiers="" type="layout"/><file path="/Users/hansseop/Desktop/Modified/app/src/main/res/values-sw600dp/dimens.xml" qualifiers="sw600dp-v13"/><file path="/Users/hansseop/Desktop/Modified/app/src/main/res/values/colors.xml" qualifiers=""><color name="layer_list_item">#B6DEDE</color><color name="layer_list_item_pressed">#90C3FB</color><color name="remove_list_item_pressed">#bf0000</color><color name="aoi_background">#B8000000</color><color name="aoi_title_bar">#FFFF0000</color><color name="holo_blue_light">#ff33b5e5</color><color name="red">#FF0000</color><color name="green">#00FF00</color><color name="transparent_green">#B300FF00</color><color name="transparent_blue">#B333b5e5</color><color name="transparent_red">#B3FF0000</color><color name="dark_blue">#000080</color><color name="light_coral">#F08080</color><color name="white">#FFFFFF</color><color name="light_gray">#3D3F41</color></file><file path="/Users/hansseop/Desktop/Modified/app/src/main/res/values/dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen></file><file path="/Users/hansseop/Desktop/Modified/app/src/main/res/values/themes.xml" qualifiers=""><style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style></file><file path="/Users/hansseop/Desktop/Modified/app/src/main/res/values/styles.xml" qualifiers=""><style name="AppBaseTheme" parent="android:Theme.Light">
+        
+    </style><style name="AppTheme" parent="AppBaseTheme">
+        
+    </style><style name="PopupTheme" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style><style name="project_wizard_animation" parent="AppBaseTheme">
+	    <item name="android:windowEnterAnimation">@anim/slide_in_left</item>
+	</style></file><file path="/Users/hansseop/Desktop/Modified/app/src/main/res/values/strings.xml" qualifiers=""><string name="action_language">Language</string><string name="used">Library used</string><string name="AndroidSDK">This is the Android Software Development Kit License Agreement\n
+\n
+1. Introduction\n
+\n
+\n
+1.1 The Android Software Development Kit (referred to in the License Agreement as the \"SDK\" and specifically including the Android system files, packaged APIs, and Google APIs add-ons) is licensed to you subject to the terms of the License Agreement. The License Agreement forms a legally binding contract between you and Google in relation to your use of the SDK.\n
+\n
+1.2 \"Android\" means the Android software stack for devices, as made available under the Android Open Source Project, which is located at the following URL: http://source.android.com/, as updated from time to time.\n
+\n
+1.3 A \"compatible implementation\" means any Android device that (i) complies with the Android Compatibility Definition document, which can be found at the Android compatibility website (http://source.android.com/compatibility) and which may be updated from time to time; and (ii) successfully passes the Android Compatibility Test Suite (CTS).\n
+\n
+1.4 \"Google\" means Google LLC, a Delaware corporation with principal place of business at 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States.\n
+\n
+\n
+2. Accepting this License Agreement\n
+\n
+\n
+2.1 In order to use the SDK, you must first agree to the License Agreement. You may not use the SDK if you do not accept the License Agreement.\n
+\n
+2.2 By clicking to accept, you hereby agree to the terms of the License Agreement.\n
+\n
+2.3 You may not use the SDK and may not accept the License Agreement if you are a person barred from receiving the SDK under the laws of the United States or other countries, including the country in which you are resident or from which you use the SDK.\n
+\n
+2.4 If you are agreeing to be bound by the License Agreement on behalf of your employer or other entity, you represent and warrant that you have full legal authority to bind your employer or such entity to the License Agreement. If you do not have the requisite authority, you may not accept the License Agreement or use the SDK on behalf of your employer or other entity.\n
+\n
+\n
+3. SDK License from Google\n
+\n
+\n
+3.1 Subject to the terms of the License Agreement, Google grants you a limited, worldwide, royalty-free, non-assignable, non-exclusive, and non-sublicensable license to use the SDK solely to develop applications for compatible implementations of Android.\n
+\n
+3.2 You may not use this SDK to develop applications for other platforms (including non-compatible implementations of Android) or to develop another SDK. You are of course free to develop applications for other platforms, including non-compatible implementations of Android, provided that this SDK is not used for that purpose.\n
+\n
+3.3 You agree that Google or third parties own all legal right, title and interest in and to the SDK, including any Intellectual Property Rights that subsist in the SDK. "Intellectual Property Rights" means any and all rights under patent law, copyright law, trade secret law, trademark law, and any and all other proprietary rights. Google reserves all rights not expressly granted to you.\n
+\n
+3.4 You may not use the SDK for any purpose not expressly permitted by the License Agreement.  Except to the extent required by applicable third party licenses, you may not copy (except for backup purposes), modify, adapt, redistribute, decompile, reverse engineer, disassemble, or create derivative works of the SDK or any part of the SDK.\n
+\n
+3.5 Use, reproduction and distribution of components of the SDK licensed under an open source software license are governed solely by the terms of that open source software license and not the License Agreement.\n
+\n
+3.6 You agree that the form and nature of the SDK that Google provides may change without prior notice to you and that future versions of the SDK may be incompatible with applications developed on previous versions of the SDK. You agree that Google may stop (permanently or temporarily) providing the SDK (or any features within the SDK) to you or to users generally at Google\'s sole discretion, without prior notice to you.\n
+\n
+3.7 Nothing in the License Agreement gives you a right to use any of Google\'s trade names, trademarks, service marks, logos, domain names, or other distinctive brand features.\n
+\n
+3.8 You agree that you will not remove, obscure, or alter any proprietary rights notices (including copyright and trademark notices) that may be affixed to or contained within the SDK.\n
+\n
+\n
+4. Use of the SDK by You\n
+\n
+\n
+4.1 Google agrees that it obtains no right, title or interest from you (or your licensors) under the License Agreement in or to any software applications that you develop using the SDK, including any intellectual property rights that subsist in those applications.\n
+\n
+4.2 You agree to use the SDK and write applications only for purposes that are permitted by (a) the License Agreement and (b) any applicable law, regulation or generally accepted practices or guidelines in the relevant jurisdictions (including any laws regarding the export of data or software to and from the United States or other relevant countries).\n
+\n
+4.3 You agree that if you use the SDK to develop applications for general public users, you will protect the privacy and legal rights of those users. If the users provide you with user names, passwords, or other login information or personal information, you must make the users aware that the information will be available to your application, and you must provide legally adequate privacy notice and protection for those users. If your application stores personal or sensitive information provided by users, it must do so securely. If the user provides your application with Google Account information, your application may only use that information to access the user\'s Google Account when, and for the limited purposes for which, the user has given you permission to do so.\n
+\n
+4.4 You agree that you will not engage in any activity with the SDK, including the development or distribution of an application, that interferes with, disrupts, damages, or accesses in an unauthorized manner the servers, networks, or other properties or services of any third party including, but not limited to, Google or any mobile communications carrier.\n
+\n
+4.5 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any data, content, or resources that you create, transmit or display through Android and/or applications for Android, and for the consequences of your actions (including any loss or damage which Google may suffer) by doing so.\n
+\n
+4.6 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any breach of your obligations under the License Agreement, any applicable third party contract or Terms of Service, or any applicable law or regulation, and for the consequences (including any loss or damage which Google or any third party may suffer) of any such breach.\n
+\n
+\n
+5. Your Developer Credentials\n
+\n
+\n
+5.1 You agree that you are responsible for maintaining the confidentiality of any developer credentials that may be issued to you by Google or which you may choose yourself and that you will be solely responsible for all applications that are developed under your developer credentials.\n
+\n
+\n
+6. Privacy and Information\n
+\n
+\n
+6.1 In order to continually innovate and improve the SDK, Google may collect certain usage statistics from the software including but not limited to a unique identifier, associated IP address, version number of the software, and information on which tools and/or services in the SDK are being used and how they are being used. Before any of this information is collected, the SDK will notify you and seek your consent. If you withhold consent, the information will not be collected.\n
+\n
+6.2 The data collected is examined in the aggregate to improve the SDK and is maintained in accordance with Google\'s Privacy Policy.\n
+\n
+\n
+7. Third Party Applications\n
+\n
+\n
+7.1 If you use the SDK to run applications developed by a third party or that access data, content or resources provided by a third party, you agree that Google is not responsible for those applications, data, content, or resources. You understand that all data, content or resources which you may access through such third party applications are the sole responsibility of the person from which they originated and that Google is not liable for any loss or damage that you may experience as a result of the use or access of any of those third party applications, data, content, or resources.\n
+\n
+7.2 You should be aware the data, content, and resources presented to you through such a third party application may be protected by intellectual property rights which are owned by the providers (or by other persons or companies on their behalf). You may not modify, rent, lease, loan, sell, distribute or create derivative works based on these data, content, or resources (either in whole or in part) unless you have been specifically given permission to do so by the relevant owners.\n
+\n
+7.3 You acknowledge that your use of such third party applications, data, content, or resources may be subject to separate terms between you and the relevant third party. In that case, the License Agreement does not affect your legal relationship with these third parties.\n
+\n
+\n
+8. Using Android APIs\n
+\n
+\n
+8.1 Google Data APIs\n
+\n
+8.1.1 If you use any API to retrieve data from Google, you acknowledge that the data may be protected by intellectual property rights which are owned by Google or those parties that provide the data (or by other persons or companies on their behalf). Your use of any such API may be subject to additional Terms of Service. You may not modify, rent, lease, loan, sell, distribute or create derivative works based on this data (either in whole or in part) unless allowed by the relevant Terms of Service.\n
+\n
+8.1.2 If you use any API to retrieve a user\'s data from Google, you acknowledge and agree that you shall retrieve data only with the user\'s explicit consent and only when, and for the limited purposes for which, the user has given you permission to do so.\n
+\n
+\n
+9. Terminating this License Agreement\n
+\n
+\n
+9.1 The License Agreement will continue to apply until terminated by either you or Google as set out below.\n
+\n
+9.2 If you want to terminate the License Agreement, you may do so by ceasing your use of the SDK and any relevant developer credentials.\n
+\n
+9.3 Google may at any time, terminate the License Agreement with you if:\n
+(A) you have breached any provision of the License Agreement; or\n
+(B) Google is required to do so by law; or\n
+(C) the partner with whom Google offered certain parts of SDK (such as APIs) to you has terminated its relationship with Google or ceased to offer certain parts of the SDK to you; or\n
+(D) Google decides to no longer provide the SDK or certain parts of the SDK to users in the country in which you are resident or from which you use the service, or the provision of the SDK or certain SDK services to you by Google is, in Google\'s sole discretion, no longer commercially viable.\n
+\n
+9.4 When the License Agreement comes to an end, all of the legal rights, obligations and liabilities that you and Google have benefited from, been subject to (or which have accrued over time whilst the License Agreement has been in force) or which are expressed to continue indefinitely, shall be unaffected by this cessation, and the provisions of paragraph 14.7 shall continue to apply to such rights, obligations and liabilities indefinitely.\n
+\n
+\n
+10. DISCLAIMER OF WARRANTIES\n
+\n
+\n
+10.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE SDK IS AT YOUR SOLE RISK AND THAT THE SDK IS PROVIDED \"AS IS\" AND \"AS AVAILABLE\" WITHOUT WARRANTY OF ANY KIND FROM GOOGLE.\n
+\n
+10.2 YOUR USE OF THE SDK AND ANY MATERIAL DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SDK IS AT YOUR OWN DISCRETION AND RISK AND YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR OTHER DEVICE OR LOSS OF DATA THAT RESULTS FROM SUCH USE.\n
+\n
+10.3 GOOGLE FURTHER EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.\n
+\n
+\n
+11. LIMITATION OF LIABILITY\n
+\n
+\n
+11.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT GOOGLE, ITS SUBSIDIARIES AND AFFILIATES, AND ITS LICENSORS SHALL NOT BE LIABLE TO YOU UNDER ANY THEORY OF LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES THAT MAY BE INCURRED BY YOU, INCLUDING ANY LOSS OF DATA, WHETHER OR NOT GOOGLE OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF ANY SUCH LOSSES ARISING.\n
+\n
+\n
+12. Indemnification\n
+\n
+\n
+12.1 To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless Google, its affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from (a) your use of the SDK, (b) any application you develop on the SDK that infringes any copyright, trademark, trade secret, trade dress, patent or other intellectual property right of any person or defames any person or violates their rights of publicity or privacy, and (c) any non-compliance by you with the License Agreement.\n
+\n
+\n
+13. Changes to the License Agreement\n
+\n
+\n
+13.1 Google may make changes to the License Agreement as it distributes new versions of the SDK. When these changes are made, Google will make a new version of the License Agreement available on the website where the SDK is made available.\n
+\n
+\n
+14. General Legal Terms\n
+\n
+\n
+14.1 The License Agreement constitutes the whole legal agreement between you and Google and governs your use of the SDK (excluding any services which Google may provide to you under a separate written agreement), and completely replaces any prior agreements between you and Google in relation to the SDK.\n
+\n
+14.2 You agree that if Google does not exercise or enforce any legal right or remedy which is contained in the License Agreement (or which Google has the benefit of under any applicable law), this will not be taken to be a formal waiver of Google\'s rights and that those rights or remedies will still be available to Google.\n
+\n
+14.3 If any court of law, having the jurisdiction to decide on this matter, rules that any provision of the License Agreement is invalid, then that provision will be removed from the License Agreement without affecting the rest of the License Agreement. The remaining provisions of the License Agreement will continue to be valid and enforceable.\n
+\n
+14.4 You acknowledge and agree that each member of the group of companies of which Google is the parent shall be third party beneficiaries to the License Agreement and that such other companies shall be entitled to directly enforce, and rely upon, any provision of the License Agreement that confers a benefit on (or rights in favor of) them. Other than this, no other person or company shall be third party beneficiaries to the License Agreement.\n
+\n
+14.5 EXPORT RESTRICTIONS. THE SDK IS SUBJECT TO UNITED STATES EXPORT LAWS AND REGULATIONS. YOU MUST COMPLY WITH ALL DOMESTIC AND INTERNATIONAL EXPORT LAWS AND REGULATIONS THAT APPLY TO THE SDK. THESE LAWS INCLUDE RESTRICTIONS ON DESTINATIONS, END USERS AND END USE.\n
+\n
+14.6 The rights granted in the License Agreement may not be assigned or transferred by either you or Google without the prior written approval of the other party. Neither you nor Google shall be permitted to delegate their responsibilities or obligations under the License Agreement without the prior written approval of the other party.\n
+\n
+14.7 The License Agreement, and your relationship with Google under the License Agreement, shall be governed by the laws of the State of California without regard to its conflict of laws provisions. You and Google agree to submit to the exclusive jurisdiction of the courts located within the county of Santa Clara, California to resolve any legal matter arising from the License Agreement. Notwithstanding this, you agree that Google shall still be allowed to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.\n
+\n
+\n
+December 9, 2016
+</string><string name="JQuery">https://jquery.com\n\n
+        https://github.com/jquery/jquery\n\n
+        Copyright JS Foundation and other contributors, https://js.foundation/\n
+\n
+Permission is hereby granted, free of charge, to any person obtaining\n
+a copy of this software and associated documentation files (the\n
+\"Software\"), to deal in the Software without restriction, including\n
+without limitation the rights to use, copy, modify, merge, publish,\n
+distribute, sublicense, and/or sell copies of the Software, and to\n
+permit persons to whom the Software is furnished to do so, subject to\n
+the following conditions:\n
+\n
+The above copyright notice and this permission notice shall be\n
+included in all copies or substantial portions of the Software.\n
+\n
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\n
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\n
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\n
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\n
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\n
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\n
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string><string name="Cordova">https://cordova.apache.org\n\n
+        Apache License\n
+                           Version 2.0, January 2004\n
+                        http://www.apache.org/licenses/\n
+\n
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n
+\n
+   1. Definitions.\n
+\n
+      \"License\" shall mean the terms and conditions for use, reproduction,\n
+      and distribution as defined by Sections 1 through 9 of this document.\n
+\n
+      \"Licensor\" shall mean the copyright owner or entity authorized by\n
+      the copyright owner that is granting the License.\n
+\n
+      \"Legal Entity\" shall mean the union of the acting entity and all\n
+      other entities that control, are controlled by, or are under common\n
+      control with that entity. For the purposes of this definition,\n
+      \"control\" means (i) the power, direct or indirect, to cause the\n
+      direction or management of such entity, whether by contract or\n
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n
+      outstanding shares, or (iii) beneficial ownership of such entity.\n
+\n
+      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n
+      exercising permissions granted by this License.\n
+\n
+      \"Source\" form shall mean the preferred form for making modifications,\n
+      including but not limited to software source code, documentation\n
+      source, and configuration files.\n
+\n
+      \"Object\" form shall mean any form resulting from mechanical\n
+      transformation or translation of a Source form, including but\n
+      not limited to compiled object code, generated documentation,\n
+      and conversions to other media types.\n
+\n
+      \"Work\" shall mean the work of authorship, whether in Source or\n
+      Object form, made available under the License, as indicated by a\n
+      copyright notice that is included in or attached to the work\n
+      (an example is provided in the Appendix below).\n
+\n
+      \"Derivative Works\" shall mean any work, whether in Source or Object\n
+      form, that is based on (or derived from) the Work and for which the\n
+      editorial revisions, annotations, elaborations, or other modifications\n
+      represent, as a whole, an original work of authorship. For the purposes\n
+      of this License, Derivative Works shall not include works that remain\n
+      separable from, or merely link (or bind by name) to the interfaces of,\n
+      the Work and Derivative Works thereof.\n
+\n
+      \"Contribution\" shall mean any work of authorship, including\n
+      the original version of the Work and any modifications or additions\n
+      to that Work or Derivative Works thereof, that is intentionally\n
+      submitted to Licensor for inclusion in the Work by the copyright owner\n
+      or by an individual or Legal Entity authorized to submit on behalf of\n
+      the copyright owner. For the purposes of this definition, \"submitted\"\n
+      means any form of electronic, verbal, or written communication sent\n
+      to the Licensor or its representatives, including but not limited to\n
+      communication on electronic mailing lists, source code control systems,\n
+      and issue tracking systems that are managed by, or on behalf of, the\n
+      Licensor for the purpose of discussing and improving the Work, but\n
+      excluding communication that is conspicuously marked or otherwise\n
+      designated in writing by the copyright owner as \"Not a Contribution.\"\n
+\n
+      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n
+      on behalf of whom a Contribution has been received by Licensor and\n
+      subsequently incorporated within the Work.\n
+\n
+   2. Grant of Copyright License. Subject to the terms and conditions of\n
+      this License, each Contributor hereby grants to You a perpetual,\n
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n
+      copyright license to reproduce, prepare Derivative Works of,\n
+      publicly display, publicly perform, sublicense, and distribute the\n
+      Work and such Derivative Works in Source or Object form.\n
+\n
+   3. Grant of Patent License. Subject to the terms and conditions of\n
+      this License, each Contributor hereby grants to You a perpetual,\n
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n
+      (except as stated in this section) patent license to make, have made,\n
+      use, offer to sell, sell, import, and otherwise transfer the Work,\n
+      where such license applies only to those patent claims licensable\n
+      by such Contributor that are necessarily infringed by their\n
+      Contribution(s) alone or by combination of their Contribution(s)\n
+      with the Work to which such Contribution(s) was submitted. If You\n
+      institute patent litigation against any entity (including a\n
+      cross-claim or counterclaim in a lawsuit) alleging that the Work\n
+      or a Contribution incorporated within the Work constitutes direct\n
+      or contributory patent infringement, then any patent licenses\n
+      granted to You under this License for that Work shall terminate\n
+      as of the date such litigation is filed.\n
+\n
+   4. Redistribution. You may reproduce and distribute copies of the\n
+      Work or Derivative Works thereof in any medium, with or without\n
+      modifications, and in Source or Object form, provided that You\n
+      meet the following conditions:\n
+\n
+      (a) You must give any other recipients of the Work or\n
+          Derivative Works a copy of this License; and\n
+\n
+      (b) You must cause any modified files to carry prominent notices\n
+          stating that You changed the files; and\n
+\n
+      (c) You must retain, in the Source form of any Derivative Works\n
+          that You distribute, all copyright, patent, trademark, and\n
+          attribution notices from the Source form of the Work,\n
+          excluding those notices that do not pertain to any part of\n
+          the Derivative Works; and\n
+\n
+      (d) If the Work includes a \"NOTICE\" text file as part of its\n
+          distribution, then any Derivative Works that You distribute must\n
+          include a readable copy of the attribution notices contained\n
+          within such NOTICE file, excluding those notices that do not\n
+          pertain to any part of the Derivative Works, in at least one\n
+          of the following places: within a NOTICE text file distributed\n
+          as part of the Derivative Works; within the Source form or\n
+          documentation, if provided along with the Derivative Works; or,\n
+          within a display generated by the Derivative Works, if and\n
+          wherever such third-party notices normally appear. The contents\n
+          of the NOTICE file are for informational purposes only and\n
+          do not modify the License. You may add Your own attribution\n
+          notices within Derivative Works that You distribute, alongside\n
+          or as an addendum to the NOTICE text from the Work, provided\n
+          that such additional attribution notices cannot be construed\n
+          as modifying the License.\n
+\n
+      You may add Your own copyright statement to Your modifications and\n
+      may provide additional or different license terms and conditions\n
+      for use, reproduction, or distribution of Your modifications, or\n
+      for any such Derivative Works as a whole, provided Your use,\n
+      reproduction, and distribution of the Work otherwise complies with\n
+      the conditions stated in this License.\n
+\n
+   5. Submission of Contributions. Unless You explicitly state otherwise,\n
+      any Contribution intentionally submitted for inclusion in the Work\n
+      by You to the Licensor shall be under the terms and conditions of\n
+      this License, without any additional terms or conditions.\n
+      Notwithstanding the above, nothing herein shall supersede or modify\n
+      the terms of any separate license agreement you may have executed\n
+      with Licensor regarding such Contributions.\n
+\n
+   6. Trademarks. This License does not grant permission to use the trade\n
+      names, trademarks, service marks, or product names of the Licensor,\n
+      except as required for reasonable and customary use in describing the\n
+      origin of the Work and reproducing the content of the NOTICE file.\n
+\n
+   7. Disclaimer of Warranty. Unless required by applicable law or\n
+      agreed to in writing, Licensor provides the Work (and each\n
+      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n
+      implied, including, without limitation, any warranties or conditions\n
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n
+      PARTICULAR PURPOSE. You are solely responsible for determining the\n
+      appropriateness of using or redistributing the Work and assume any\n
+      risks associated with Your exercise of permissions under this License.\n
+\n
+   8. Limitation of Liability. In no event and under no legal theory,\n
+      whether in tort (including negligence), contract, or otherwise,\n
+      unless required by applicable law (such as deliberate and grossly\n
+      negligent acts) or agreed to in writing, shall any Contributor be\n
+      liable to You for damages, including any direct, indirect, special,\n
+      incidental, or consequential damages of any character arising as a\n
+      result of this License or out of the use or inability to use the\n
+      Work (including but not limited to damages for loss of goodwill,\n
+      work stoppage, computer failure or malfunction, or any and all\n
+      other commercial damages or losses), even if such Contributor\n
+      has been advised of the possibility of such damages.\n
+\n
+   9. Accepting Warranty or Additional Liability. While redistributing\n
+      the Work or Derivative Works thereof, You may choose to offer,\n
+      and charge a fee for, acceptance of support, warranty, indemnity,\n
+      or other liability obligations and/or rights consistent with this\n
+      License. However, in accepting such obligations, You may act only\n
+      on Your own behalf and on Your sole responsibility, not on behalf\n
+      of any other Contributor, and only if You agree to indemnify,\n
+      defend, and hold each Contributor harmless for any liability\n
+      incurred by, or claims asserted against, such Contributor by reason\n
+      of your accepting any such warranty or additional liability.\n
+\n
+   END OF TERMS AND CONDITIONS\n
+\n
+   Copyright [2019] [GeoDT]\n
+\n
+   Licensed under the Apache License, Version 2.0 (the \"License\");\n
+   you may not use this file except in compliance with the License.\n
+   You may obtain a copy of the License at\n
+\n
+       http://www.apache.org/licenses/LICENSE-2.0\n
+\n
+   Unless required by applicable law or agreed to in writing, software\n
+   distributed under the License is distributed on an \"AS IS\" BASIS,\n
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n
+   See the License for the specific language governing permissions and\n
+   limitations under the License.
+    </string><string name="OpenLayers">https://openlayers.org\n
+        \n
+        https://github.com/openlayers/openlayersn\n
+        \n
+        Copyright 2005-present OpenLayers Contributors. All rights reserved.\n
+\n
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n
+\n
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\n
+\n
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\n
+\n
+THIS SOFTWARE IS PROVIDED BY OPENLAYERS CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n
+\n
+The views and conclusions contained in the software and documentation are those of the authors and should not be interpreted as representing official policies, either expressed or implied, of OpenLayers Contributors.</string><string name="Proj4js">https://github.com/proj4js/proj4js\n
+        \n
+        Authors:\n
+\n
+Mike Adair madairATdmsolutions.ca\n
+Richard Greenwood richATgreenwoodmap.com\n
+Didier Richard didier.richardATign.fr\n
+Stephen Irons stephen.ironsATclear.net.nz\n
+Olivier Terral oterralATgmail.com\n
+Calvin Metcalf cmetcalfATappgeo.com\n
+Copyright (c) 2014, Mike Adair, Richard Greenwood, Didier Richard, Stephen Irons, Olivier Terral and Calvin Metcalf\n
+\n
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n
+\n
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n
+\n
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string><string name="GSON">https://github.com/google/gson\n\n
+        Apache License\n
+                           Version 2.0, January 2004\n
+                        http://www.apache.org/licenses/\n
+\n
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n
+\n
+   1. Definitions.\n
+\n
+      \"License\" shall mean the terms and conditions for use, reproduction,\n
+      and distribution as defined by Sections 1 through 9 of this document.\n
+\n
+      \"Licensor\" shall mean the copyright owner or entity authorized by\n
+      the copyright owner that is granting the License.\n
+\n
+      \"Legal Entity\" shall mean the union of the acting entity and all\n
+      other entities that control, are controlled by, or are under common\n
+      control with that entity. For the purposes of this definition,\n
+      \"control\" means (i) the power, direct or indirect, to cause the\n
+      direction or management of such entity, whether by contract or\n
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n
+      outstanding shares, or (iii) beneficial ownership of such entity.\n
+\n
+      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n
+      exercising permissions granted by this License.\n
+\n
+      \"Source\" form shall mean the preferred form for making modifications,\n
+      including but not limited to software source code, documentation\n
+      source, and configuration files.\n
+\n
+      \"Object\" form shall mean any form resulting from mechanical\n
+      transformation or translation of a Source form, including but\n
+      not limited to compiled object code, generated documentation,\n
+      and conversions to other media types.\n
+\n
+      \"Work\" shall mean the work of authorship, whether in Source or\n
+      Object form, made available under the License, as indicated by a\n
+      copyright notice that is included in or attached to the work\n
+      (an example is provided in the Appendix below).\n
+\n
+      \"Derivative Works\" shall mean any work, whether in Source or Object\n
+      form, that is based on (or derived from) the Work and for which the\n
+      editorial revisions, annotations, elaborations, or other modifications\n
+      represent, as a whole, an original work of authorship. For the purposes\n
+      of this License, Derivative Works shall not include works that remain\n
+      separable from, or merely link (or bind by name) to the interfaces of,\n
+      the Work and Derivative Works thereof.\n
+\n
+      \"Contribution\" shall mean any work of authorship, including\n
+      the original version of the Work and any modifications or additions\n
+      to that Work or Derivative Works thereof, that is intentionally\n
+      submitted to Licensor for inclusion in the Work by the copyright owner\n
+      or by an individual or Legal Entity authorized to submit on behalf of\n
+      the copyright owner. For the purposes of this definition, \"submitted\"\n
+      means any form of electronic, verbal, or written communication sent\n
+      to the Licensor or its representatives, including but not limited to\n
+      communication on electronic mailing lists, source code control systems,\n
+      and issue tracking systems that are managed by, or on behalf of, the\n
+      Licensor for the purpose of discussing and improving the Work, but\n
+      excluding communication that is conspicuously marked or otherwise\n
+      designated in writing by the copyright owner as \"Not a Contribution.\"\n
+\n
+      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n
+      on behalf of whom a Contribution has been received by Licensor and\n
+      subsequently incorporated within the Work.\n
+\n
+   2. Grant of Copyright License. Subject to the terms and conditions of\n
+      this License, each Contributor hereby grants to You a perpetual,\n
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n
+      copyright license to reproduce, prepare Derivative Works of,\n
+      publicly display, publicly perform, sublicense, and distribute the\n
+      Work and such Derivative Works in Source or Object form.\n
+\n
+   3. Grant of Patent License. Subject to the terms and conditions of\n
+      this License, each Contributor hereby grants to You a perpetual,\n
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n
+      (except as stated in this section) patent license to make, have made,\n
+      use, offer to sell, sell, import, and otherwise transfer the Work,\n
+      where such license applies only to those patent claims licensable\n
+      by such Contributor that are necessarily infringed by their\n
+      Contribution(s) alone or by combination of their Contribution(s)\n
+      with the Work to which such Contribution(s) was submitted. If You\n
+      institute patent litigation against any entity (including a\n
+      cross-claim or counterclaim in a lawsuit) alleging that the Work\n
+      or a Contribution incorporated within the Work constitutes direct\n
+      or contributory patent infringement, then any patent licenses\n
+      granted to You under this License for that Work shall terminate\n
+      as of the date such litigation is filed.\n
+\n
+   4. Redistribution. You may reproduce and distribute copies of the\n
+      Work or Derivative Works thereof in any medium, with or without\n
+      modifications, and in Source or Object form, provided that You\n
+      meet the following conditions:\n
+\n
+      (a) You must give any other recipients of the Work or\n
+          Derivative Works a copy of this License; and\n
+\n
+      (b) You must cause any modified files to carry prominent notices\n
+          stating that You changed the files; and\n
+\n
+      (c) You must retain, in the Source form of any Derivative Works\n
+          that You distribute, all copyright, patent, trademark, and\n
+          attribution notices from the Source form of the Work,\n
+          excluding those notices that do not pertain to any part of\n
+          the Derivative Works; and\n
+\n
+      (d) If the Work includes a \"NOTICE\" text file as part of its\n
+          distribution, then any Derivative Works that You distribute must\n
+          include a readable copy of the attribution notices contained\n
+          within such NOTICE file, excluding those notices that do not\n
+          pertain to any part of the Derivative Works, in at least one\n
+          of the following places: within a NOTICE text file distributed\n
+          as part of the Derivative Works; within the Source form or\n
+          documentation, if provided along with the Derivative Works; or,\n
+          within a display generated by the Derivative Works, if and\n
+          wherever such third-party notices normally appear. The contents\n
+          of the NOTICE file are for informational purposes only and\n
+          do not modify the License. You may add Your own attribution\n
+          notices within Derivative Works that You distribute, alongside\n
+          or as an addendum to the NOTICE text from the Work, provided\n
+          that such additional attribution notices cannot be construed\n
+          as modifying the License.\n
+\n
+      You may add Your own copyright statement to Your modifications and\n
+      may provide additional or different license terms and conditions\n
+      for use, reproduction, or distribution of Your modifications, or\n
+      for any such Derivative Works as a whole, provided Your use,\n
+      reproduction, and distribution of the Work otherwise complies with\n
+      the conditions stated in this License.\n
+\n
+   5. Submission of Contributions. Unless You explicitly state otherwise,\n
+      any Contribution intentionally submitted for inclusion in the Work\n
+      by You to the Licensor shall be under the terms and conditions of\n
+      this License, without any additional terms or conditions.\n
+      Notwithstanding the above, nothing herein shall supersede or modify\n
+      the terms of any separate license agreement you may have executed\n
+      with Licensor regarding such Contributions.\n
+\n
+   6. Trademarks. This License does not grant permission to use the trade\n
+      names, trademarks, service marks, or product names of the Licensor,\n
+      except as required for reasonable and customary use in describing the\n
+      origin of the Work and reproducing the content of the NOTICE file.\n
+\n
+   7. Disclaimer of Warranty. Unless required by applicable law or\n
+      agreed to in writing, Licensor provides the Work (and each\n
+      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n
+      implied, including, without limitation, any warranties or conditions\n
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n
+      PARTICULAR PURPOSE. You are solely responsible for determining the\n
+      appropriateness of using or redistributing the Work and assume any\n
+      risks associated with Your exercise of permissions under this License.\n
+\n
+   8. Limitation of Liability. In no event and under no legal theory,\n
+      whether in tort (including negligence), contract, or otherwise,\n
+      unless required by applicable law (such as deliberate and grossly\n
+      negligent acts) or agreed to in writing, shall any Contributor be\n
+      liable to You for damages, including any direct, indirect, special,\n
+      incidental, or consequential damages of any character arising as a\n
+      result of this License or out of the use or inability to use the\n
+      Work (including but not limited to damages for loss of goodwill,\n
+      work stoppage, computer failure or malfunction, or any and all\n
+      other commercial damages or losses), even if such Contributor\n
+      has been advised of the possibility of such damages.\n
+\n
+   9. Accepting Warranty or Additional Liability. While redistributing\n
+      the Work or Derivative Works thereof, You may choose to offer,\n
+      and charge a fee for, acceptance of support, warranty, indemnity,\n
+      or other liability obligations and/or rights consistent with this\n
+      License. However, in accepting such obligations, You may act only\n
+      on Your own behalf and on Your sole responsibility, not on behalf\n
+      of any other Contributor, and only if You agree to indemnify,\n
+      defend, and hold each Contributor harmless for any liability\n
+      incurred by, or claims asserted against, such Contributor by reason\n
+      of your accepting any such warranty or additional liability.\n
+\n
+   END OF TERMS AND CONDITIONS\n
+\n
+   Copyright [2019] [GeoDT]\n
+\n
+   Licensed under the Apache License, Version 2.0 (the \"License\");\n
+   you may not use this file except in compliance with the License.\n
+   You may obtain a copy of the License at\n
+\n
+       http://www.apache.org/licenses/LICENSE-2.0\n
+\n
+   Unless required by applicable law or agreed to in writing, software\n
+   distributed under the License is distributed on an \"AS IS\" BASIS,\n
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n
+   See the License for the specific language governing permissions and\n
+   limitations under the License.</string><string name="simplyGeoDT">Explanation of GeoDT mobile version.</string><string name="openSource">License information of openSource software.</string><string name="ruledby">This application was distributed based on LGPL 3.0.</string><string name="about_geo">This application is based on Arbiter_mobile.\n\nIf you download maps and map layers, you can edit them offline.\nWhen you go online, you can upload the information that you modified while offline.\nOnline status You can build data in the field with data downloading, saving and single layer inspection.\nYou can collaborate by sharing data with GeoDT Web.\nYou can add your photos to your AOI to improve convenience.\nYou can capture the screen.\n\nIf you have any further questions, please contact us at ghre55@git.co.kr\n\nhttp://www.geodt.co.kr/pages/mobile.html</string><string name="LGPL3.0">Copyright (C) 2007 Free Software Foundation, Inc. &lt;http://fsf.org/>\n
+\n
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.\n
+\n
+This version of the GNU Lesser General Public License incorporates the terms and conditions of version 3 of the GNU General Public License, supplemented by the additional permissions listed below.\n
+\n
+0. Additional Definitions.\n
+As used herein, \"this License\" refers to version 3 of the GNU Lesser General Public License, and the \"GNU GPL\" refers to version 3 of the GNU General Public License.\n
+\n
+\"The Library\" refers to a covered work governed by this License, other than an Application or a Combined Work as defined below.\n
+\n
+An \"Application\" is any work that makes use of an interface provided by the Library, but which is not otherwise based on the Library. Defining a subclass of a class defined by the Library is deemed a mode of using an interface provided by the Library.\n
+\n
+A \"Combined Work\" is a work produced by combining or linking an Application with the Library. The particular version of the Library with which the Combined Work was made is also called the \"Linked Version\".\n
+\n
+The \"Minimal Corresponding Source\" for a Combined Work means the Corresponding Source for the Combined Work, excluding any source code for portions of the Combined Work that, considered in isolation, are based on the Application, and not on the Linked Version.\n
+\n
+The \"Corresponding Application Code\" for a Combined Work means the object code and/or source code for the Application, including any data and utility programs needed for reproducing the Combined Work from the Application, but excluding the System Libraries of the Combined Work.\n
+\n
+1. Exception to Section 3 of the GNU GPL.\n
+You may convey a covered work under sections 3 and 4 of this License without being bound by section 3 of the GNU GPL.\n
+\n
+2. Conveying Modified Versions.\n
+If you modify a copy of the Library, and, in your modifications, a facility refers to a function or data to be supplied by an Application that uses the facility (other than as an argument passed when the facility is invoked), then you may convey a copy of the modified version:\n
+\n
+·         a) under this License, provided that you make a good faith effort to ensure that, in the event an Application does not supply the function or data, the facility still operates, and performs whatever part of its purpose remains meaningful, or\n
+·         b) under the GNU GPL, with none of the additional permissions of this License applicable to that copy.\n
+3. Object Code Incorporating Material from Library Header Files.\n
+The object code form of an Application may incorporate material from a header file that is part of the Library. You may convey such object code under terms of your choice, provided that, if the incorporated material is not limited to numerical parameters, data structure layouts and accessors, or small macros, inline functions and templates (ten or fewer lines in length), you do both of the following:\n
+\n
+·         a) Give prominent notice with each copy of the object code that the Library is used in it and that the Library and its use are covered by this License.\n
+·         b) Accompany the object code with a copy of the GNU GPL and this license document.\n
+4. Combined Works.\n
+You may convey a Combined Work under terms of your choice that, taken together, effectively do not restrict modification of the portions of the Library contained in the Combined Work and reverse engineering for debugging such modifications, if you also do each of the following:\n
+\n
+·         a) Give prominent notice with each copy of the Combined Work that the Library is used in it and that the Library and its use are covered by this License.\n
+·         b) Accompany the Combined Work with a copy of the GNU GPL and this license document.\n
+·         c) For a Combined Work that displays copyright notices during execution, include the copyright notice for the Library among these notices, as well as a reference directing the user to the copies of the GNU GPL and this license document.\n
+·         d) Do one of the following:\n
+o    0) Convey the Minimal Corresponding Source under the terms of this License, and the Corresponding Application Code in a form suitable for, and under terms that permit, the user to recombine or relink the Application with a modified version of the Linked Version to produce a modified Combined Work, in the manner specified by section 6 of the GNU GPL for conveying Corresponding Source.\n
+o    1) Use a suitable shared library mechanism for linking with the Library. A suitable mechanism is one that (a) uses at run time a copy of the Library already present on the user\'s computer system, and (b) will operate properly with a modified version of the Library that is interface-compatible with the Linked Version.\n
+·         e) Provide Installation Information, but only if you would otherwise be required to provide such information under section 6 of the GNU GPL, and only to the extent that such information is necessary to install and execute a modified version of the Combined Work produced by recombining or relinking the Application with a modified version of the Linked Version. (If you use option 4d0, the Installation Information must accompany the Minimal Corresponding Source and Corresponding Application Code. If you use option 4d1, you must provide the Installation Information in the manner specified by section 6 of the GNU GPL for conveying Corresponding Source.)\n
+5. Combined Libraries.\n
+You may place library facilities that are a work based on the Library side by side in a single library together with other library facilities that are not Applications and are not covered by this License, and convey such a combined library under terms of your choice, if you do both of the following:\n
+\n
+·         a) Accompany the combined library with a copy of the same work based on the Library, uncombined with any other library facilities, conveyed under the terms of this License.\n
+·         b) Give prominent notice with the combined library that part of it is a work based on the Library, and explaining where to find the accompanying uncombined form of the same work.\n
+6. Revised Versions of the GNU Lesser General Public License.\n
+The Free Software Foundation may publish revised and/or new versions of the GNU Lesser General Public License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.\n
+\n
+Each version is given a distinguishing version number. If the Library as you received it specifies that a certain numbered version of the GNU Lesser General Public License \"or any later version\" applies to it, you have the option of following the terms and conditions either of that published version or of any later version published by the Free Software Foundation. If the Library as you received it does not specify a version number of the GNU Lesser General Public License, you may choose any version of the GNU Lesser General Public License ever published by the Free Software Foundation.\n
+\n
+If the Library as you received it specifies that a proxy can decide whether future versions of the GNU Lesser General Public License shall apply, that proxy\'s public statement of acceptance of any version is permanent authorization for you to choose that version for the Library.</string><string name="action_info">Information</string><string name="warning">Warning</string><string name="error">Error</string><string name="confirm">Confirm</string><string name="stop">Stop</string><string name="app_name">GeoDT mobile</string><string name="action_findme">Find me</string><string name="default_project_name">_ARBITER_DEFAULT_PROJECT_</string><string name="delete">Delete</string><string name="update">Update</string><string name="default_layer_name">OpenStreetMap</string><string name="project_exists_title">Project Exists</string><string name="project_already_exists">Project already exists.  Please create a new project with a different name.</string><string name="project_creation_failed">Project creation failed</string><string name="project_creation_failed_message">Could not create project.  Check to see if you are out of disk space.</string><string name="create_project_progress">Creating project.</string><string name="create_project_msg">Project being created…</string><string name="error_aoi_create_project">You must create a project before selecting an area of interest.</string><string name="error_creating_project">Error</string><string name="error_creating_project_msg">Could not create project!</string><string name="error_loading_features">Error</string><string name="error_loading_features_msg">Could not create project!</string><string name="error_adding_layers">Error</string><string name="error_adding_layers_msg">Couldn\'t add selected layers!</string><string name="adding_layers">Adding layers</string><string name="adding_layers_msg">Adding layers to the map…</string><string name="feature_dialog_title">Feature</string><string name="example_longitude">ex. </string><string name="example_latitude">ex. </string><string name="back">Back</string><string name="edit_attributes">Edit</string><string name="done_editing">Save</string><string name="delete_feature">Delete</string><string name="edit_feature">Map</string><string name="cancel">Cancel</string><string name="update_feature_title">Update</string><string name="update_feature_msg">Update the feature?</string><string name="updating">Updating</string><string name="updating_msg">Update in progress…</string><string name="insert_feature_title">Select layer to insert into.</string><string name="insert_layer_title">Inserting into:</string><string name="insert_layer_text">Mode: Insert</string><string name="feature_saved">Feature saved</string><string name="feature_saved_msg">The feature has been saved.</string><string name="return_to_map">Return to Map</string><string name="picture_source">Select Source</string><string name="select_picture_source">Add a photo...</string><string name="from_camera">From Camera</string><string name="from_library">From Photo Library</string><string name="review_feature">Review Feature</string><string name="insert_feature_warning">Insert feature</string><string name="insert_feature_warning_msg">Insert the feature?</string><string name="delete_feature_warning">Delete feature</string><string name="delete_feature_warning_msg">Are you sure you want to delete this feature?</string><string name="deleting_msg">Deletion in progress…</string><string name="sync_in_progress">Syncing</string><string name="sync_in_progress_msg">Sync in progress…</string><string name="error_syncing">Error</string><string name="error_syncing_msg">Unable to sync</string><string name="project_incomplete_msg">Project is not available offline. \n\nPlease select an area of interest.</string><string name="click_me">( Click me )</string><string name="media">media</string><string name="take_picture">Take picture</string><string name="initializing">Initializing</string><string name="please_wait">Please wait…</string><string name="update_aoi_alert">Area of Interest</string><string name="update_aoi_alert_msg">Updating your area of interest will also sync any changes you have made.</string><string name="error_updating_aoi">Error</string><string name="error_updating_aoi_msg">Could not update the area of interest!</string><string name="loading_feature_info">Feature is loading… Please wait…</string><string name="loading">Loading</string><string name="no_network">No Network Connection</string><string name="check_network_connection">Please check your network connection.</string><string name="layers_limit">Layer limit reached</string><string name="too_many_layers">You have reached the maximum layers per project.</string><string name="downloading_schemas">Downloading Schemas</string><string name="downloading_tiles">Downloading Tiles</string><string name="tile_cache_warning">Tiles to download:</string><string name="syncing_media_title">Syncing Media</string><string name="syncing_vector_data">Syncing Vector Data</string><string name="downloaded">Downloaded: </string><string name="uploaded">Uploaded: </string><string name="form_error_date">Please enter a valid date.</string><string name="form_error_integer">Please enter a valid integer.</string><string name="form_error_double">Please enter a valid number.</string><string name="form_error_long">Please enter a valid number.</string><string name="form_error_float">Please enter a valid number.</string><string name="form_error_bool">Please enter true or false.</string><string name="check_errors">Invalid entries</string><string name="check_errors_msg">Please fix errors before continuing.</string><string name="loading_layers_please_wait">Loading layers from server. Please wait.</string><string name="map_activity_name">Arbiter</string><string name="action_new_feature">Draw</string><string name="action_new_image">Image</string><string name="action_servers">Servers</string><string name="action_projects">Projects</string><string name="action_aoi">Area of Interest</string><string name="action_image">Image Overlay</string><string name="action_capture_title">Capture</string><string name="action_validationManagement">Validation Management</string><string name="action_baseLayers">Base Layers</string><string name="action_search">Search</string><string name="action_validation">Validation</string><string name="layers_button">Layers</string><string name="sync_button">Sync</string><string name="location_button">Find me</string><string name="aoi_button">Zoom to AOI</string><string name="projects_activity_name">Projects</string><string name="address">Address</string><string name="delete_project">Delete project</string><string name="action_new_project">New project</string><string name="switch_project_title">Switch Project</string><string name="switch_project">Switch to this project?</string><string name="layers_dialog_title">Layers</string><string name="add_layers_button">Add Layers</string><string name="action_add_layers">Add Layers</string><string name="layer_visibility_off">Off</string><string name="layer_visibility_on">On</string><string name="remove_layer">Remove layer</string><string name="action_tilesets">Tilesets</string><string name="add_tileset_button">Add Tileset</string><string name="tileset_dialog_title">Tilesets</string><string name="add_tileset_dialog_title">Add Tileset</string><string name="remove_tileset">Remove Tileset</string><string name="tileset_list_names">Tilesets</string><string name="loading_tilesets_getcapabilities">Loading Tilesets..</string><string name="delete_tileset_button">Delete</string><string name="update_tileset_button">Update</string><string name="check_update_tilesets">Check for Updates</string><string name="tileset_name">NAMEME</string><string name="deleting_tileset">Deleting Tileset</string><string name="deleting_tileset_msg">Tileset deletion in progress..</string><string name="delete_tileset_alert">Are you sure you want to delete </string><string name="tileset_filesize">Size: 007GB</string><string name="downloading_tileset">Download</string><string name="downloading_tileset_msg">This download will be </string><string name="downloading_tileset_msg2">Are you sure you want to continue?</string><string name="space_available">Available Space: </string><string name="space_after_download">After Download: </string><string name="tileset_info_name">Name: </string><string name="tileset_info_time_created">Time Created: </string><string name="tileset_info_created_by">Created By: </string><string name="tileset_info_filesize">Filesize: </string><string name="tileset_info_layer_name">Layer Name: </string><string name="tileset_info_status">Status: </string><string name="tileset_info_resource_uri">Resource URI: </string><string name="tileset_info_service_type">Service Type: </string><string name="tileset_info_download_url">Download URL: </string><string name="tileset_info_server_url">Server URL: </string><string name="tileset_info_server_username">Server Username: </string><string name="tileset_info_server_id">Server ID: </string><string name="tileset_cancel_download_title">Cancelling Download</string><string name="tileset_cancel_download_msg">Stopping download..</string><string name="cancel_download_tileset_alert">Are you sure you want to cancel the download for</string><string name="error_retrieving_tileset">Error Retrieving Tileset</string><string name="tileset_info_title">Tileset Info</string><string name="error_connecting_tileset1">Error when trying to connect to</string><string name="error_connecting_tileset2">Please check your connection and try again.</string><string name="tileset_status_downloading">Downloading..</string><string name="tileset_status_in_database">In Database</string><string name="tileset_status_on_server">On Server</string><string name="tileset_started_downloading_msg">Started downloading</string><string name="tileset_finished_downloading_msg">Finished downloading</string><string name="not_enough_space">Not Enough Space</string><string name="not_enough_space_msg1">You do not have enough free space to download</string><string name="not_enough_space_msg2">Consider freeing up space and trying again.</string><string name="no_available_tileset_title">Error Retrieving Tilesets</string><string name="no_available_tileset_msg">was found, but did not return any valid tilesets. Please make sure Tilesets have been correctly generated.</string><string name="tileset_download_error_msg">The file was not downloaded. The download link was invalid or the current network connection is unavailable.</string><string name="tileset_zero_filesize">has a filesize of 0. Please make sure the tileset was generated correctly.</string><string name="tileset_new_project_msg_downloaded">Tilesets currently downloaded: </string><string name="tileset_new_project_msg_confirmation">\n\nTo ensure that this project can have a background map while there is no Internet connectivity,
+        a Tileset with the appropriate data should be downloaded.\n\nIf the background map "OpenStreetMap" is selected, the map data will be pulled from the Internet.
+        \n**Data Charges may apply**\n\nWould you like to download tilesets?</string><string name="tileset_no_connection_msg">Arbiter is currently offline, and did not find any Tilesets.\n\nIf you would like to have a background map to be available offline:
+        reconnect Arbiter, and download a Tileset.\n\nThis feature is available at:\nSettings > Tilesets</string><string name="layer_info_dialog_title">Layer Info</string><string name="add_layers_dialog_title">Add Layers</string><string name="layer_filter_hint">Filter</string><string name="action_add_server">Add Server</string><string name="choose_server">Server</string><string name="welcome_dialog_title">Welcome</string><string name="must_create_project">Before editing, you must first create a project.</string><string name="create_project_question">Would you like to create one now?</string><string name="project_name_dialog_title">Project Name</string><string name="choose_project_name">Enter project name.</string><string name="choose_name_hint">New project name*</string><string name="disconnected_no_projects">It seems you are not connected to a network, and don\'t have any projects created.\n
+        \nIf you would like to take full advantage of Arbiter, please connect to a network and create a new project.\n
+        \nYou will know if you\'re connected if the red sync icon turns green.</string><string name="server_dialog_title">Servers</string><string name="add_server_button">Add Server</string><string name="find_area_text">Enter the address key.</string><string name="delete_server_alert">This will delete all layers in all projects associated with this server.</string><string name="update_server_alert">Are you sure you want to update the server?  Invalid changes may result in syncing failures.</string><string name="deleting_server">Deleting Server</string><string name="deleting_server_msg">Server deletion in progress…</string><string name="add_server_dialog_title">Add Server</string><string name="server_name_hint">Name</string><string name="server_url_hint">ex. http://example.com/geoserver</string><string name="server_username_hint">Username</string><string name="server_password_hint">Password</string><string name="server_show_password">Show Password</string><string name="validating_server">Validating Server</string><string name="authentication_failed">Authentication failed, check the username and password.</string><string name="unable_to_connect">Unable to connect to the server, make sure the url is correct.</string><string name="add_classification_dialog_title">Add Classification</string><string name="classification_name_hint">classification name EX)F001</string><string name="layer_code_hint">layer code EX)F0010000</string><string name="fix_name_hint">EX)layer_1</string><string name="values_hint">(,) EX)line1,line2</string><string name="go_offline_dialog_title">Offline</string><string name="choose_aoi_dialog_title">Choose AOI</string><string name="title_activity_aoi">AOIActivity</string><string name="hello_world">Hello world!</string><string name="failed_to_sync">Sync Incomplete</string><string name="failed_vector_upload">The following vector layers failed to upload:</string><string name="failed_vector_download">The following vector layers failed to download:</string><string name="failed_media_upload">The following media items failed to upload:</string><string name="failed_media_download">The following media items failed to download:</string><string name="retry_sync">Try again?</string><string name="vector_upload_errors_label">Vector layers that failed on upload:</string><string name="vector_download_errors_label">Vector layers that failed to download:</string><string name="media_upload_errors_label">Media that failed to upload:</string><string name="media_download_errors_label">Media that failed to download:</string><string name="retry">Retry</string><string name="geolocation_error">Geolocation Error</string><string name="layer_order">Layer order</string><string name="move_down">Move down</string><string name="move_up">Move up</string><string name="settings">Settings</string><string name="about">About</string><string name="version">Commit:</string><string name="commit_date">Commit date:</string><string name="build_date">Build date:</string><string name="unknown">Unknown</string><string name="point">Point</string><string name="line">Line</string><string name="polygon">Polygon</string><string name="multipoint">Multi point</string><string name="multiline">Multi line</string><string name="multipolygon">Multi polygon</string><string name="choose_geometry_type">Geometry type</string><string name="done">Done</string><string name="add">Add</string><string name="remove">Remove</string><string name="inspect">Inspect</string><string name="finish">Finish</string><string name="confirm_part_removal_title">Remove part</string><string name="confirm_part_removal_msg">Are you sure you wish to remove this part of the geometry?</string><string name="confirm_geometry_removal_title">Remove geometry</string><string name="confirm_geometry_removal_msg">Are you sure you wish to remove this geometry from the collection?</string><string name="notify_user_to_add_geometry_title">Must have a geometry</string><string name="notify_user_to_add_geometry_msg">Add a geometry or delete the feature.</string><string name="finish_editing_title">Finish Editing</string><string name="finish_editing_message">Please finish editing.</string><string name="unsupported_crs">Unsupported CRS</string><string name="loading_unsupported_crs">Could not load the following layers due to unsupported CRS:</string><string name="overlays">Overlays:</string><string name="overlayImage">Overlay Image:</string><string name="baselayer">Current:</string><string name="background_map">Background Map:</string><string name="base">Base</string><string name="choose_baselayer">Select background map</string><string name="change_baselayer_warning">
+        Changing your background map will remove the previously
+        downloaded tiles for your area of interest.
+        Are you sure you want to continue?
+    </string><string name="type">Type</string><string name="notifications">Notifications</string><string name="clear">clear</string><string name="close">close</string><string name="feature_not_in_aoi">Feature not available</string><string name="feature_not_in_aoi_msg">The feature has been deleted or moved to a location outside of the area of interest.</string><string name="layers_already_in_project">Could not add the following layers to the project because layers with the same feature types already exist:</string><string name="invalid_url">Invalid url</string><string name="invalid_url_slash_wms">\"WMS\" server urls must end with \"/wms\"</string><string name="invalid_url_slash_tms">\"TMS\" server urls end with \"/hot/1.0.0/\"</string><string name="insert">insert</string><string name="feature_outside_aoi_warning">You have placed a feature outside of your selected area of interest.  After syncing this feature, it will no longer
+         be on the device.</string><string name="confirm_delete_project">Are you sure you want to delete the project?  Any unsynchronized data will be lost.</string><string name="confirm_delete_layer">Are you sure you want to delete the layer?</string><string name="confirm_delete_image">Are you sure you want to delete the image?</string><string name="added">ADDED</string><string name="modified">MODIFIED</string><string name="removed">REMOVED</string><string name="no_valid_geometries">No valid geometries present.</string><string name="no_valid_geometries_delete_or_cancel">No valid geometries present.  Would you like to delete the feature or cancel?</string><string name="valid_point_geometry_description">A Point geometry must have at least one point.</string><string name="valid_line_geometry_description">A Line geometry must have at least two unique points.</string><string name="valid_polygon_geometry_description">A Polygon geometry must have at least three unique points.</string><string name="valid_multipoint_geometry_description">A MultiPoint geometry must have at least one valid Point geometry.</string><string name="valid_multiline_geometry_description">A MultiLine geometry must have at least one valid Line geometry.</string><string name="valid_multipolygon_geometry_description">A MultiPolygon geometry must have at least one valid Polygon geometry.</string><string name="valid_geometry_collection_description">A Geometry Collection must have at least one valid geometry.</string><string name="delete_media">Delete Media</string><string name="sure_delete_media">Are you sure you want to remove this item from the feature?</string><string name="read_only">Read only</string><string name="read_only_msg">This layer is read only.  Please contact the server administrator to check your permissions.</string><string name="sync_timed_out">Sync timed out</string><string name="sync_timed_out_msg">The sync timed out.  Would you like to continue syncing or cancel the remaining sync operations?</string><string name="continue_sync">Continue</string><string name="loading_getcapabilities">Loading layers</string><string name="could_not_connect">Could not connect</string><string name="check_server_and_network">Please check the server details and network connection and try again later.</string><string name="required_field">Required field</string><string name="download_photos">Download photos for features</string><string name="disable_wms">Disable WMS for non-base layers</string><string name="no_con_checks">Ignore connection status (requires restart)</string><string name="confirm_delete_layers_unsynced_features">This layer has features that have not been synced.  If you delete the layer, these features will be lost!  Are you sure you want to delete the layer?</string><string name="try_again_later">Please try again later.  If the problem persists, please contact your administrator.</string><string name="arbiter_error">Unexpected error.</string><string name="unknown_error">Unexpected error.</string><string name="internal_server_error">An error occurred on the server.</string><string name="timed_out">Request timed out.</string><string name="unauthorized">Unauthorized.</string><string name="resource_not_found">Resource not found.</string><string name="update_error">An error occurred updating the feature.  Please review your features, and try again later.</string><string name="must_complete_upload_first">Must complete upload first.</string><string name="always_show_location">Always show current location (drains battery)</string><string name="geolocation_error_msg">Could not get your location.  Please check the device settings to make sure Arbiter has access to Geolocation.  If the problem persists, try restarting the device.</string><string name="action_multiple_language">Language</string><string name="action_korean">Korean</string><string name="action_english">English</string><string name="action_portugal">Portugal</string><string name="action_spain">Spain</string><string name="action_address">Address search</string><string name="action_coordinate">Coordinate search</string><string name="latitude">Latitude</string><string name="longitude">Longitude</string><string name="coordinate_input_error_title">Input Error</string><string name="coordinate_input_error_message">Please Enter the correct coordinate</string><string name="address_search_no_result_title">Alert</string><string name="address_search_no_result_message">No search result</string><string name="address_search_title">\nEnter the address\n</string><string name="image_list">Image List</string><string name="action_image_option">Image Build Option</string><string name="add_images_button">Add Images</string><string name="remove_image">Remove Image</string><string name="action_boundary">Set Boundary</string><string name="draw_image">Draw image</string><string name="set_boundary">Build image by setting boundary value</string><string name="imageName">Name</string><string name="imagePath">Path</string><string name="left">Left</string><string name="bottom">Bottom</string><string name="right">Right</string><string name="top">Top</string><string name="boundary_image_input_error_title">Input Error</string><string name="boundary_image_input_error_message">Please Enter the correct boundary value</string><string name="action_capture">Capture Success</string><string name="input_image_AOI">Input AOI</string><string name="action_AOI_image">AOI Boundary</string><string name="action_AOI_image_progress">AOI Image in progress</string><string name="image_option_setting">Option Setting</string><string name="image_option_opacity">Opacity</string><string name="action_validationLayerList">Validation</string><string name="validationLayerName">Name</string><string name="start_validation_button">Start Validation</string><string name="action_validationOption">Validation Option</string><string name="action_optionSetting">Option Setting</string><string name="action_detailOptionSetting">Detailed Option</string><string name="error500">Internal System Error</string><string name="report">Report</string><string name="action_report">Error Report</string><string name="action_error_navigator">Error Navigator</string><string name="none_report_title">The report does not exist</string><string name="none_report_message">You have to operate validation prior to confirming report</string><string name="action_validation_progress">Validation in progress</string><string name="action_report_progress">Creating report...</string><string name="action_errorMarking_progress">Creating error marking...</string><string name="navigator_left">Left</string><string name="navigator_right">Right</string><string name="report_left">Left</string><string name="report_right">Right</string><string name="cannot_start_navigator">You cannot start Error Navigator</string><string name="navigator_error_message">You have to operate validation prior to Error Navigator</string><string name="action_removeErrorMarking">Validation Clean</string><string name="action_baseMap_OpenStreetMap">OpenStreetMap</string><string name="action_baseMap_BingRoad">Bing Road</string><string name="action_baseMap_BingAerial">Bing Aerial</string><string name="action_baseMap_BingAerialWithLabels">Bing AerialWithLabels</string></file><file path="/Users/hansseop/Desktop/Modified/app/src/main/res/values/loaders.xml" qualifiers=""><item name="loader_projects" type="id"/><item name="loader_notifications" type="id"/><item name="loader_notification_badge" type="id"/><item name="loader_servers_list" type="id"/><item name="loader_tilesets_list" type="id"/><item name="loader_servers_dropdown" type="id"/><item name="loader_base_layer_list" type="id"/><item name="loader_add_layers" type="id"/><item name="loader_add_tilesets" type="id"/><item name="loader_layers" type="id"/><item name="loader_layers_choose_baselayer" type="id"/><item name="loader_map" type="id"/><item name="loader_aoi_map" type="id"/><item name="loader_insert_feature_dialog" type="id"/><item name="loader_classification_list" type="id"/></file><file name="ic_action_validation" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_action_validation.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_white" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/icon_white.png" qualifiers="xhdpi-v4" type="drawable"/><file name="content_new_white" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/content_new_white.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/icon.png" qualifiers="xhdpi-v4" type="drawable"/><file name="arrow_up" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/arrow_up.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_report_left" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_report_left.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_action_search" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_action_search.png" qualifiers="xhdpi-v4" type="drawable"/><file name="zoom_in" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/zoom_in.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_action_gallery" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_action_gallery.PNG" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_report_right" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_report_right.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_white_back_bk" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/icon_white_back_bk.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_navigator_right" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_navigator_right.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_action_delete" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_action_delete.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_action_refresh" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_action_refresh.png" qualifiers="xhdpi-v4" type="drawable"/><file name="content_new_black" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/content_new_black.png" qualifiers="xhdpi-v4" type="drawable"/><file name="zoom_out" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/zoom_out.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_navigator_right_click" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_navigator_right_click.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file name="layers_white" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/layers_white.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_action_capture" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_action_capture.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_navigator_left" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_navigator_left.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_action_edit" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_action_edit.png" qualifiers="xhdpi-v4" type="drawable"/><file name="arrow_down" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/arrow_down.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_navigator_left_click" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_navigator_left_click.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_action_validation" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_action_validation.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="icon_white" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/icon_white.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="icon" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/icon.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_report_left" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_report_left.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_action_search" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_action_search.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_action_gallery" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_action_gallery.PNG" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_report_right" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_report_right.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="icon_white_back_bk" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/icon_white_back_bk.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_navigator_right" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_navigator_right.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_action_delete" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_action_delete.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_action_refresh" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_action_refresh.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_navigator_right_click" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_navigator_right_click.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_launcher.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="layers_white" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/layers_white.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_action_capture" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_action_capture.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_navigator_left" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_navigator_left.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_action_edit" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_action_edit.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_navigator_left_click" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_navigator_left_click.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="config" path="/Users/hansseop/Desktop/Modified/app/src/main/res/xml/config.xml" qualifiers="" type="xml"/><file path="/Users/hansseop/Desktop/Modified/app/src/main/res/values-v14/styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        
+    </style></file><file name="ic_action_validation" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_action_validation.png" qualifiers="hdpi-v4" type="drawable"/><file name="icon_white" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/icon_white.png" qualifiers="hdpi-v4" type="drawable"/><file name="content_new_white" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/content_new_white.png" qualifiers="hdpi-v4" type="drawable"/><file name="icon" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/icon.png" qualifiers="hdpi-v4" type="drawable"/><file name="arrow_up" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/arrow_up.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_report_left" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_report_left.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_action_search" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_action_search.png" qualifiers="hdpi-v4" type="drawable"/><file name="zoom_in" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/zoom_in.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_action_gallery" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_action_gallery.PNG" qualifiers="hdpi-v4" type="drawable"/><file name="ic_report_right" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_report_right.png" qualifiers="hdpi-v4" type="drawable"/><file name="icon_white_back_bk" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/icon_white_back_bk.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_navigator_right" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_navigator_right.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_action_delete" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_action_delete.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_action_refresh" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_action_refresh.png" qualifiers="hdpi-v4" type="drawable"/><file name="content_new_black" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/content_new_black.png" qualifiers="hdpi-v4" type="drawable"/><file name="zoom_out" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/zoom_out.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_navigator_right_click" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_navigator_right_click.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="layers_white" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/layers_white.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_action_capture" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_action_capture.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_navigator_left" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_navigator_left.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_action_edit" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_action_edit.png" qualifiers="hdpi-v4" type="drawable"/><file name="arrow_down" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/arrow_down.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_navigator_left_click" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_navigator_left_click.png" qualifiers="hdpi-v4" type="drawable"/><file name="menu_modified" path="/Users/hansseop/Desktop/Modified/app/src/main/res/menu/menu_modified.xml" qualifiers="" type="menu"/><file name="aoi" path="/Users/hansseop/Desktop/Modified/app/src/main/res/menu/aoi.xml" qualifiers="" type="menu"/><file name="menu_map" path="/Users/hansseop/Desktop/Modified/app/src/main/res/menu/menu_map.xml" qualifiers="" type="menu"/><file name="menu_projects" path="/Users/hansseop/Desktop/Modified/app/src/main/res/menu/menu_projects.xml" qualifiers="" type="menu"/><file name="menu_settings" path="/Users/hansseop/Desktop/Modified/app/src/main/res/menu/menu_settings.xml" qualifiers="" type="menu"/><file name="menu_add_layers" path="/Users/hansseop/Desktop/Modified/app/src/main/res/menu/menu_add_layers.xml" qualifiers="" type="menu"/><file name="menu_layers" path="/Users/hansseop/Desktop/Modified/app/src/main/res/menu/menu_layers.xml" qualifiers="" type="menu"/><file name="info" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/info.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_action_validation" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_action_validation.png" qualifiers="mdpi-v4" type="drawable"/><file name="icon_white" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/icon_white.png" qualifiers="mdpi-v4" type="drawable"/><file name="warning" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/warning.png" qualifiers="mdpi-v4" type="drawable"/><file name="list_selector" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/list_selector.xml" qualifiers="mdpi-v4" type="drawable"/><file name="content_new_white" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/content_new_white.png" qualifiers="mdpi-v4" type="drawable"/><file name="icon" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/icon.png" qualifiers="mdpi-v4" type="drawable"/><file name="layers" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/layers.png" qualifiers="mdpi-v4" type="drawable"/><file name="arrow_up" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/arrow_up.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_report_left" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_report_left.png" qualifiers="mdpi-v4" type="drawable"/><file name="right_button_event" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/right_button_event.xml" qualifiers="mdpi-v4" type="drawable"/><file name="remove_geometry" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/remove_geometry.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_action_search" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_action_search.png" qualifiers="mdpi-v4" type="drawable"/><file name="zoom_in" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/zoom_in.png" qualifiers="mdpi-v4" type="drawable"/><file name="cancel" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/cancel.png" qualifiers="mdpi-v4" type="drawable"/><file name="sorting" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/sorting.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_action_gallery" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_action_gallery.PNG" qualifiers="mdpi-v4" type="drawable"/><file name="ic_report_right" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_report_right.png" qualifiers="mdpi-v4" type="drawable"/><file name="icon_white_back_bk" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/icon_white_back_bk.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_navigator_right" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_navigator_right.png" qualifiers="mdpi-v4" type="drawable"/><file name="add_geometry" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/add_geometry.png" qualifiers="mdpi-v4" type="drawable"/><file name="tools" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/tools.png" qualifiers="mdpi-v4" type="drawable"/><file name="aoi_selector" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/aoi_selector.xml" qualifiers="mdpi-v4" type="drawable"/><file name="checkmark" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/checkmark.png" qualifiers="mdpi-v4" type="drawable"/><file name="aoi" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/aoi.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_action_delete" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_action_delete.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_action_refresh" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_action_refresh.png" qualifiers="mdpi-v4" type="drawable"/><file name="content_new_black" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/content_new_black.png" qualifiers="mdpi-v4" type="drawable"/><file name="zoom_out" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/zoom_out.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_navigator_right_click" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_navigator_right_click.png" qualifiers="mdpi-v4" type="drawable"/><file name="add_part" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/add_part.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="layers_white" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/layers_white.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_action_capture" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_action_capture.png" qualifiers="mdpi-v4" type="drawable"/><file name="location" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/location.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_navigator_left" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_navigator_left.png" qualifiers="mdpi-v4" type="drawable"/><file name="sync" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/sync.png" qualifiers="mdpi-v4" type="drawable"/><file name="remove_part" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/remove_part.png" qualifiers="mdpi-v4" type="drawable"/><file name="left_button_event" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/left_button_event.xml" qualifiers="mdpi-v4" type="drawable"/><file name="ic_action_edit" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_action_edit.png" qualifiers="mdpi-v4" type="drawable"/><file name="camera" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/camera.png" qualifiers="mdpi-v4" type="drawable"/><file name="arrow_down" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/arrow_down.png" qualifiers="mdpi-v4" type="drawable"/><file name="option_selector" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/option_selector.xml" qualifiers="mdpi-v4" type="drawable"/><file name="ic_navigator_left_click" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_navigator_left_click.png" qualifiers="mdpi-v4" type="drawable"/><file name="shape_notification" path="/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/shape_notification.xml" qualifiers="mdpi-v4" type="drawable"/><file path="/Users/hansseop/Desktop/Modified/app/src/main/res/values-es/strings.xml" qualifiers="es"><string name="action_info">información</string><string name="warning">Advertencia</string><string name="error">Error</string><string name="app_name">Arbiter-Android</string><string name="action_findme">Búscame</string><string name="default_project_name">_ARBITER_DEFAULT_PROJECT_</string><string name="delete">Borrar</string><string name="update">Actualizar</string><string name="default_layer_name">OpenStreetMap</string><string name="project_exists_title">Existe Proyecto</string><string name="project_already_exists">Ya existe proyecto. Por favor, cree un nuevo proyecto con un nombre diferente.</string><string name="project_creation_failed">creacion del proyecto fallido</string><string name="project_creation_failed_message">No pudo crear el proyecto. Comprobar para ver si usted esta fuera de espacio en disco.</string><string name="create_project_progress">Creando de proyecto.</string><string name="create_project_msg">Proyecto que se esta creando…</string><string name="error_aoi_create_project">Debe crear un proyecto antes de seleccionar un área de interés.</string><string name="error_creating_project">Error</string><string name="error_creating_project_msg">No se pudo crear el proyecto!</string><string name="error_loading_features">Error</string><string name="error_loading_features_msg">No se pudo crear el proyecto!</string><string name="error_adding_layers">Error</string><string name="error_adding_layers_msg">No se pudo agregar capas seleccionadas!</string><string name="adding_layers">Adición de capas</string><string name="adding_layers_msg">Adición de capas al mapa…</string><string name="feature_dialog_title">Elemento</string><string name="latitude">Latitud</string><string name="longitude">Longitud</string><string name="example_longitude">ex. </string><string name="example_latitude">ex. </string><string name="back">Atrás</string><string name="edit_attributes">Editar</string><string name="done_editing">Guardar</string><string name="delete_feature">Borrar</string><string name="edit_feature">Mapa</string><string name="cancel">Cancelar</string><string name="update_feature_title">Actualizar</string><string name="update_feature_msg">Actualizar este elemento?</string><string name="updating">Actualización</string><string name="updating_msg">Actualización en curso…</string><string name="insert_feature_title">Seleccionar capa para insertar.</string><string name="insert_layer_title">Inserción en:</string><string name="insert_layer_text">Moda: Inserción</string><string name="feature_saved">Elemento guardado</string><string name="feature_saved_msg">El elemento se ha guardado.</string><string name="return_to_map">Volver al Mapa</string><string name="picture_source">Seleccionar la Fuente</string><string name="select_picture_source">Añadir una foto…</string><string name="from_camera">Desde la Cámara</string><string name="from_library">Desde el Álbum</string><string name="review_feature">Revise Elemento</string><string name="insert_feature_warning">Insertar el elemento</string><string name="insert_feature_warning_msg">Inserte el Elemento?</string><string name="delete_feature_warning">Eliminar elemento</string><string name="delete_feature_warning_msg">¿Seguro que quieres borrar este elemento?</string><string name="deleting_msg">Eliminación en curso…</string><string name="sync_in_progress">Sincronización</string><string name="sync_in_progress_msg">Sincronización en curso…</string><string name="error_syncing">Error</string><string name="error_syncing_msg">Incapaz de sincronizar</string><string name="project_incomplete_msg">Proyecto no está disponible sin conexión. \n \nPor favor, seleccione un área de interés.</string><string name="click_me">( Clic Aquí )</string><string name="media">fotos</string><string name="take_picture">Tomar la foto</string><string name="initializing">Inicializar</string><string name="please_wait">Por favor, espere…</string><string name="update_aoi_alert">Áreas de interés</string><string name="update_aoi_alert_msg">Actualización de su área de interés también se sincronizará los cambios que ha realizado.</string><string name="error_updating_aoi">Error</string><string name="error_updating_aoi_msg">No se pudo actualizar el área de interés!</string><string name="loading_feature_info">El elemento se está cargando… Por favor, espere…</string><string name="loading">Cargando</string><string name="no_network">Sin conexión a la red</string><string name="check_network_connection">Compruebe su conexión de red.</string><string name="layers_limit">Capa límite alcanzado</string><string name="too_many_layers">Usted ha llegado a las capas máximos por proyecto.</string><string name="downloading_schemas">Descarga de esquemas</string><string name="downloading_tiles">Descarga de Teselas</string><string name="tile_cache_warning">Teselas para descargar:</string><string name="syncing_media_title">Sincronizar Fotos</string><string name="syncing_vector_data">Sincronización de datos vectoriales</string><string name="downloaded">Descargado: </string><string name="uploaded">Subido: </string><string name="form_error_date">Por favor, introduzca una fecha válida.</string><string name="form_error_integer">Por favor, introduzca un entero válido.</string><string name="form_error_double">Por favor, introduzca un número válido.</string><string name="form_error_long">Por favor, introduzca un número válido.</string><string name="form_error_float">Por favor, introduzca un número válido.</string><string name="form_error_bool">Por favor introduzca verdadero o falso.</string><string name="check_errors">Las entradas no válidas</string><string name="check_errors_msg">Por favor, corrija los errores antes de continuar.</string><string name="loading_layers_please_wait">Cargando capas de servidor. Por favor, espere.</string><string name="map_activity_name">Arbiter</string><string name="action_new_feature">Dibujar</string><string name="action_servers">Servidores</string><string name="action_tilesets">Tilesets</string><string name="action_projects">Proyectos</string><string name="action_aoi">Área de Interés</string><string name="action_language">Idioma</string><string name="layers_button">Capas</string><string name="sync_button">Sincroniza</string><string name="location_button">Búscame</string><string name="aoi_button">Zoom en área de interés</string><string name="projects_activity_name">Proyectos</string><string name="delete_project">Eliminar proyecto</string><string name="action_new_project">Nuevo proyecto</string><string name="switch_project_title">Interruptor de Proyecto</string><string name="switch_project">Cambie a este proyecto?</string><string name="layers_dialog_title">Capas</string><string name="add_layers_button">Añadir capas</string><string name="action_add_layers">Añadir capas</string><string name="layer_visibility_off">Off</string><string name="layer_visibility_on">On</string><string name="remove_layer">Eliminar la capa</string><string name="layer_info_dialog_title">Información de capa</string><string name="add_layers_dialog_title">Añadir capas</string><string name="layer_filter_hint">Filtrar</string><string name="action_add_server">Añadir servidor</string><string name="choose_server">Servidor</string><string name="welcome_dialog_title">Bienvenido</string><string name="must_create_project">Antes de editar, primero debe crear un proyecto.</string><string name="create_project_question">¿Desea crear una ahora?</string><string name="project_name_dialog_title">Nombre del proyecto</string><string name="choose_project_name">Introduzca el nombre del proyecto.</string><string name="choose_name_hint">Nuevo nombre de proyecto*</string><string name="server_dialog_title">Servidores</string><string name="add_server_button">Añadir servidor</string><string name="delete_server_alert">Esto eliminará todas las capas en todos los proyectos asociados con este servidor.</string><string name="update_server_alert">¿Está seguro que desea actualizar el servidor? Cambios no válidos pueden producir errores de sincronización.</string><string name="deleting_server">Borrado del servidor</string><string name="deleting_server_msg">Borrado del servidor en curso…</string><string name="add_server_dialog_title">Añadir servidor</string><string name="server_name_hint">Nombre</string><string name="server_url_hint">ex. http://ejemplo.com/geoserver</string><string name="server_username_hint">Nombre de usuario</string><string name="server_password_hint">Contraseña</string><string name="server_show_password">Mostrar Contraseña</string><string name="validating_server">Validating Server</string><string name="authentication_failed">Error de autenticación, compruebe el nombre de usuario y contraseña.</string><string name="unable_to_connect">No se puede conectar con el servidor, asegúrese de que la URL es correcta.</string><string name="go_offline_dialog_title">Desconectado</string><string name="choose_aoi_dialog_title">Elija área de interés</string><string name="title_activity_aoi">AOIActivity</string><string name="hello_world">¡Hola, mundo!</string><string name="failed_to_sync">Sincroniza Incompleto</string><string name="failed_vector_upload">Las siguientes capas vectoriales no se han cargado:</string><string name="failed_vector_download">Las siguientes capas vectoriales no pudieron descargarse:</string><string name="failed_media_upload">Las siguientes fotos no se han cargado:</string><string name="failed_media_download">Las siguientes fotos no pudieron descargarse:</string><string name="retry_sync">Inténtelo de nuevo?</string><string name="vector_upload_errors_label">Capas vectoriales que fallaron en la carga:</string><string name="vector_download_errors_label">Capas vectoriales que fallaron para descargar:</string><string name="media_upload_errors_label">Fotos que no se pudieron cargar:</string><string name="media_download_errors_label">Fotos que no pudieron descargar:</string><string name="retry">Reintente</string><string name="geolocation_error">Error de geolocalización</string><string name="layer_order">Orden de las capas</string><string name="move_down">Mueve hacia abajo</string><string name="move_up">Mueve hacia arriba</string><string name="settings">Ajustes</string><string name="about">Sobre</string><string name="version">Destino:</string><string name="commit_date">Tiempo de Destino:</string><string name="build_date">Fecha de construcción:</string><string name="unknown">Ignoto</string><string name="point">Punto</string><string name="line">Línea</string><string name="polygon">Polígono</string><string name="multipoint">Puntos múltiple</string><string name="multiline">Línea múltiple</string><string name="multipolygon">Polígono múltiple</string><string name="choose_geometry_type">Tipo de geometría</string><string name="done">Terminado</string><string name="inspect">Inspeccionar</string><string name="finish">Termina</string><string name="confirm_part_removal_title">Elimina la parte</string><string name="confirm_part_removal_msg">¿Está seguro que desea eliminar esta parte de la geometría?</string><string name="confirm_geometry_removal_title">Elimina la geometría</string><string name="confirm_geometry_removal_msg">¿Está seguro que desea eliminar esta geometría de la colección?</string><string name="notify_user_to_add_geometry_title">Tiene que tener una geometría</string><string name="notify_user_to_add_geometry_msg">Añade una geometría o elimina el elemento.</string><string name="finish_editing_title">Termina la edición</string><string name="finish_editing_message">Por favor, termina la edición.</string><string name="unsupported_crs">La CRS todavía no está soportado.</string><string name="loading_unsupported_crs">No se pudo cargar las capas siguientes porque sus crs todavía no está soportado.</string><string name="overlays">Capas sobrepuestas</string><string name="baselayer">Capa base</string><string name="base">Base</string><string name="choose_baselayer">Eliga su capa base</string><string name="change_baselayer_warning">
+        Cambiando la capa de base se eliminará el anteriormente 
+         descargado teselas y descargar nuevas teselas 
+          para su área de interés. ¿Está seguro que desea continuar?
+    </string><string name="type">Tipo</string><string name="notifications">Notificaciones</string><string name="clear">limpia</string><string name="close">cierra</string><string name="feature_not_in_aoi">Elemento no disponible</string><string name="feature_not_in_aoi_msg">El elemento se haya eliminado o movido a un lugar fuera de la zona de interés.</string><string name="layers_already_in_project">No se pudo agregar las siguientes capas porque capas con los mismos tipos de características ya existe:</string><string name="invalid_url">URL Inválida</string><string name="invalid_url_slash_wms">Las urls de los servidores \"WMS\" deben terminar con \"/wms\"</string><string name="invalid_url_slash_tms">Las urls de los servidores \"TMS\" deben terminar con \"/hot/1.0.0/\"</string><string name="insert">inserta</string><string name="feature_outside_aoi_warning">Ha depositado un elemento fuera de su área de interés seleccionada.  Después de la sincronización
+         de esto elemento, el elemento no estará en el dispositivo.</string><string name="confirm_delete_project">¿Está seguro que desea eliminar el proyecto? Se perderán los datos no sincronizados.</string><string name="confirm_delete_layer">¿Está seguro que desea eliminar la capa? Se perderán los datos no sincronizados.</string><string name="added">AÑADIDO</string><string name="modified">MODIFICADO</string><string name="removed">ELIMINADO</string><string name="no_valid_geometries">No hay geometrías válidos presentes.</string><string name="no_valid_geometries_delete_or_cancel">No hay geometrías válidos presentes. ¿Le gustaría eliminar el elemento o cancelar?</string><string name="valid_point_geometry_description">Una geometría de la punta debe tener al menos un punto.</string><string name="valid_line_geometry_description">Una geometría de línea debe tener por lo menos dos punto singulares.</string><string name="valid_polygon_geometry_description">Una geometría de polígono debe tener al menos tres puntos únicos.</string><string name="valid_multipoint_geometry_description">Una geometría de puntos múltiple debe tener al menos una geometría de la punta válida.</string><string name="valid_multiline_geometry_description">Una geometría de línea múltiple debe tener al menos una geometría de línea válida.</string><string name="valid_multipolygon_geometry_description">Una geometría de polígono múltiple debe tener al menos una geometría de polígono válida.</string><string name="valid_geometry_collection_description">Una geometría de grupo debe tener al menos una geometría válida.</string><string name="delete_media">Eliminar Foto</string><string name="sure_delete_media">¿Está seguro de que desea eliminar esta foto desde el elemento?</string><string name="read_only">Sólo lectura</string><string name="read_only_msg">Esta capa es de sólo lectura. Por favor, póngase en contacto con el administrador del servidor para comprobar sus permisos.</string><string name="continue_sync">Continuar</string><string name="loading_getcapabilities">Cargando capas</string><string name="could_not_connect">No se pudo conectar</string><string name="check_server_and_network">Por favor, consulte los detalles del servidor y la conexión de red y vuelva a intentarlo más tarde.</string><string name="required_field">Campo obligatorio</string><string name="download_photos">Descargar fotos para los elementos</string><string name="disable_wms">Desactivar WMS para las capas de base no</string><string name="no_con_checks">No haga caso de estado de la conexión (requiere reiniciar)</string><string name="confirm_delete_layers_unsynced_features">Esta capa tiene elementos que no han sido sincronizados.  ¡Si se elimina la capa, estas elementos se perderán! ¿Está seguro que desea eliminar la capa?</string><string name="try_again_later">Por favor, inténtelo de nuevo más tarde.  Si el problema persiste, póngase en contacto con el administrador.</string><string name="arbiter_error">Error inesperado.</string><string name="unknown_error">Error inesperado.</string><string name="internal_server_error">Se ha producido un error en el servidor.</string><string name="timed_out">Tiempo de espera agotado.</string><string name="unauthorized">No autorizado.</string><string name="resource_not_found">Recurso no encontrado.</string><string name="update_error">Se ha producido un error al actualizar la característica.  Por favor revise sus características, y vuelva a intentarlo más tarde.</string><string name="must_complete_upload_first">Tiene que completar carga primero.</string><string name="always_show_location">Siempre mostrar la ubicación actual (batería de drenajes)</string><string name="geolocation_error_msg">No se pudo obtener su ubicación.  Por favor, compruebe la configuración del dispositivo para asegurarse Arbiter tiene acceso a su ubicación.  Si el problema persiste, pruebe a reiniciar el dispositivo.</string><string name="find_area_title">Introduzca la dirección del lugar que busca :</string><string name="find_area_button">buscar</string><string name="action_shp">leer un archivo</string><string name="action_search">Búsqueda de direcciones</string><string name="action_coordinate">Coordina la búsqueda</string><string name="coordinate_text">Introduzca la latitud y longitud\n</string><string name="image_overlay">superposición de imágenes</string></file><file path="/Users/hansseop/Desktop/Modified/app/src/main/res/values-ko/strings.xml" qualifiers="ko"><string name="used">사용된 라이브러리</string><string name="AndroidSDK">Android 소프트웨어 개발 키트 라이선스 계약\n
+\n
+1. 소개\n
+\n
+\n
+1.1 Android 소프트웨어 개발 키트(라이선스 계약에서는 \'SDK\'라고 하며 특히 Android 시스템 파일, 패키지 API 및 Google API 부가기능을 포함)는 라이선스 계약의 약관에 따라 귀하에게 라이선스를 부여합니다. 라이선스 계약은 SDK 사용과 관련하여 귀하와 Google 간에 체결하는 법적 구속력을 지니는 계약입니다.\n
+\n
+1.2 \'Android\'는 Android 오픈소스 프로젝트(http://source.android.com/ 에서 확인할 수 있음)에 따라 사용할 수 있도록 만들어진, 기기를 대상으로 하는 Android 소프트웨어 스택을 의미하며 수시로 업데이트될 수 있습니다.\n
+\n
+1.3 \'호환 가능한 구현\'은 (i) Android 호환성 웹사이트(http://source.android.com/compatibility) 에서 확인할 수 있으며 수시로 업데이트될 수 있는 Android 호환성 정의 문서를 준수하며 (ii) Android 호환성 테스트 도구 모음(CTS)을 통과하는 Android 기기를 의미합니다.\n
+\n
+1.4 \'Google\'은 미국 델라웨어주 법인이며 1600 Amphitheatre Parkway, Mountain View, CA 94043에 주 사업장을 둔 Google LLC를 의미합니다.\n
+\n
+\n
+2. 라이선스 계약 동의\n
+\n
+\n
+2.1 SDK를 사용하려면 먼저 라이선스 계약에 동의해야 합니다. 라이선스 계약에 동의하지 않으면 SDK를 사용할 수 없습니다.\n
+\n
+2.2 동의를 클릭하면 라이선스 계약의 약관에 동의하는 것으로 간주됩니다.\n
+\n
+2.3 미국 또는 거주하는 국가나 SDK를 사용하는 국가 등의 기타 국가의 법률에 따라 SDK 수신이 금지된 경우 SDK를 사용할 수 없으며 라이선스 계약에 동의할 수 없습니다.\n
+\n
+2.4 귀하의 고용인 또는 기타 법인을 대신하여 본 계약을 체결하는 데 동의하는 것은 해당 고용인이나 법인을 라이선스 계약에 구속하기 위한 충분한 법적 권한이 귀하에게 있음을 진술하고 보증하는 것입니다. 귀하에게 필요한 권한이 없는 경우 고용인 또는 기타 법인을 대신하여 라이선스 계약에 동의하거나 SDK를 사용할 수 없습니다.\n
+\n
+\n
+3. Google의 SDK 라이선스\n
+\n
+\n
+3.1 Google은 라이선스 계약의 약관에 따라 Android에서 호환 가능한 구현을 위한 애플리케이션을 개발하는 목적으로만 SDK를 사용할 수 있도록 귀하에게 제한적이고, 전 세계적이고, 양도 불가능하고, 비독점적이고, 재판매 불가능한 무료 라이선스를 부여합니다.\n
+\n
+3.2 Android의 호환 불가능한 구현을 포함한 다른 플랫폼의 애플리케이션을 개발하거나 다른 SDK를 개발하는 데 이 SDK를 사용할 수 없습니다. 이 SDK를 해당 목적에 사용하지 않는다면 Android의 호환 불가능한 구현을 포함한 다른 플랫폼의 애플리케이션을 자유롭게 개발할 수 있습니다.\n
+\n
+3.3 귀하는 Google 또는 제3자가 SDK에 대한 모든 지적 재산권을 포함하여 SDK에 대한 모든 법적 권리, 명의 및 이권을 보유하고 있다는 점에 동의합니다. \'지적 재산권\'은 특허법, 저작권법, 영업비밀보호법, 상표법 및 기타 모든 독점적 권한에 따른 모든 권리를 의미합니다. Google은 귀하에게 명시적으로 부여하지 않은 모든 권한을 보유합니다.\n
+\n
+3.4 귀하는 라이선스 계약에서 명시적으로 허용되지 않은 목적으로 SDK를 사용할 수 없습니다. 관련 제3자 라이선스에서 요구되는 경우를 제외하고 귀하는 SDK나 SDK의 어떤 부분도 복사(백업 목적 제외), 수정, 조정, 재배포, 디컴파일, 리버스 엔지니어링, 해체, 파생물 제작을 할 수 없습니다.\n
+\n
+3.5 오픈소스 소프트웨어 라이선스에 의해 허용된 라이선스 SDK의 구성요소를 사용, 재생산 및 배포하는 것은 라이선스 계약이 아니라 전적으로 해당 오픈소스 소프트웨어 라이선스 약관의 적용을 받습니다.\n
+\n
+3.6 귀하는 Google에서 제공하는 SDK의 형식과 특성이 사전 통지 없이 변경될 수 있으며 SDK의 이후 버전이 SDK의 이전 버전에서 개발한 애플리케이션과 호환되지 않을 수 있다는 점에 동의합니다. 귀하는 Google에서 SDK 또는 SDK에 포함된 모든 기능을 귀하 또는 사용자에게 일반적으로 제공하는 행위를 Google의 단독 재량권에 따라 예고 없이 영구적 또는 일시적으로 중단할 수 있다는 점에 동의합니다.\n
+\n
+3.7 라이선스 계약의 어느 부분도 귀하에게 Google의 상표 이름, 상표, 서비스 표시, 로고, 도메인 이름 또는 기타 고유한 브랜드 표시에 대한 사용권을 부여하지 않습니다.\n
+\n
+3.8 귀하는 SDK에 첨부되었거나 포함된 저작권 및 상표권을 포함한 모든 독점권 고지를 제거하거나 숨기거나 변경하지 않을 것에 동의합니다.\n
+\n
+\n
+4. 귀하의 SDK 사용\n
+\n
+v
+4.1 Google은 본 라이선스 계약에 따라 귀하(또는 귀하의 라이선스 제공자)로부터 해당 애플리케이션에 속한 모든 지적 재산권을 포함, 귀하가 SDK를 사용하여 개발하는 모든 소프트웨어 애플리케이션에 있어 어떠한 권리, 명의 또는 이권도 취하지 않을 것에 동의합니다.\n
+\n
+4.2 귀하는 (a) 본 라이선스 계약 및 (b) 관련 관할권의 모든 관련 법, 규약 또는 일반적으로 용인된 관행 또는 가이드라인(미국 또는 기타 관련 국가 대상 데이터 또는 소프트웨어 수입이나 수출에 관련된 법 포함)에서 허용하는 용도로만 SDK를 사용하고 애플리케이션을 개발할 것에 동의합니다.\n
+\n
+4.3 귀하는 일반 사용자를 위한 애플리케이션 개발 목적으로 SDK를 사용할 경우 사용자의 개인정보 및 법적 권리를 보호할 것에 동의합니다. 사용자가 사용자 이름, 비밀번호 또는 기타 로그인 정보나 개인 정보를 제공할 경우 귀하는 이러한 정보가 귀하의 애플리케이션에 사용될 것임을 알려야 하며 사용자에게 적절한 개인정보보호 관련 공지사항을 제공하고 보호해야 합니다. 귀하의 애플리케이션이 사용자가 제공한 개인정보 또는 민감한 정보를 저장하는 경우 안전하게 저장해야 합니다. 사용자가 애플리케이션에 Google 계정 정보를 제공하는 경우 사용자가 허용한 시기에 허용한 용도에 한하여 사용자의 Google 계정에 액세스하기 위해 계정 정보를 사용할 수 있습니다.\n
+\n
+4.4 Google 또는 모든 모바일 통신 업체 등 모든 제3자의 서버, 네트워크 또는 기타 자산이나 서비스를 방해하거나 손상하거나 무단으로 액세스하는 어떠한 활동에도 애플리케이션의 개발 또는 배포를 비롯해 SDK를 사용하지 않을 것에 동의합니다.\n
+\n
+4.5 귀하는 Android 및/또는 Android용 애플리케이션을 통해 제작, 전송 또는 표시하는 모든 데이터, 콘텐츠 또는 리소스 및 이로 인한 모든 활동의 결과(Google이 입을 수 있는 손실 또는 손해 포함)에 대한 책임은 전적으로 귀하에게 있으며, Google은 귀하 또는 제3자에 대해 어떠한 책임도 지지 않는 것에 동의합니다.\n
+\n
+4.6 귀하는 라이선스 계약, 관련된 제3자 계약이나 서비스 약관 또는 관련 법률이나 규정에 따른 의무 위반 및 이러한 위반의 결과(Google 또는 제3자가 입을 수 있는 손실 또는 손해 포함)에 대한 책임은 전적으로 귀하에게 있으며, Google은 귀하 또는 제3자에 대해 어떠한 책임도 지지 않는 것에 동의합니다.\n
+\n
+\n
+5. 개발자 정보\n
+\n
+\n
+5.1 귀하는 Google에서 귀하에게 발행하거나 스스로 선택할 수 있는 개발자 인증 정보에 대해 비밀을 유지할 책임이 있으며 귀하의 개발자 인증 정보에 따라 개발된 모든 애플리케이션에 대한 책임은 전적으로 귀하에게 있습니다.\n
+\n
+\n
+6. 개인정보 보호 및 정보\n
+\n
+\n
+6.1 SDK를 지속적으로 혁신하고 개선하기 위해 Google은 고유 식별자, 연결된 IP 주소, 소프트웨어 버전 번호, 그리고 SDK의 어떤 도구 및/또는 서비스가 사용되고 있는지와 이러한 도구 또는 서비스가 어떻게 사용되고 있는지에 대한 정보를 포함하며 이에 국한되지 않는 소프트웨어의 특정 사용 통계를 수집할 수 있습니다. 이러한 정보가 수집되기 전에는 SDK가 알림을 보내고 동의를 구합니다. 동의를 보류하면 정보가 수집되지 않습니다.\n
+\n
+6.2 수집된 데이터는 SDK를 개선하기 위해 총계 형태로 검토되며 Google의 개인정보취급방침에 따라 관리됩니다.\n
+\n
+\n
+7. 타사 애플리케이션\n
+\n
+\n
+7.1 타사에서 개발했거나 타사에서 제공하는 데이터, 콘텐츠 또는 리소스에 액세스하는 애플리케이션을 실행하기 위해 SDK를 사용하는 경우 귀하는 Google이 이러한 애플리케이션, 데이터, 콘텐츠 또는 리소스에 대해 책임지지 않는다는 것에 동의하는 것으로 간주됩니다. 귀하는 이러한 타사 애플리케이션을 통해 액세스할 수 있는 모든 데이터, 콘텐츠 또는 리소스에 대한 책임은 전적으로 처음 제공한 사람에게 있으며, Google은 귀하가 이 타사 애플리케이션, 데이터, 콘텐츠 또는 리소스를 사용하거나 액세스함으로써 발생할 수 있는 어떠한 손해 또는 손상에 대해 책임을 지지 않는다는 것을 이해합니다.\n
+\n
+7.2 귀하는 타사 애플리케이션을 통해 귀하에게 제공되는 데이터, 콘텐츠 및 리소스가 제공업체(또는 이 제공업체를 대신하는 기타 개인 또는 회사)가 소유하는 지적 재산권으로 보호될 수 있다는 점을 인지해야 합니다. 귀하는 관련 소유자가 특별히 그러도록 권한을 명시적으로 부여한 경우를 제외하고 이러한 데이터, 콘텐츠 또는 리소스의 일부 또는 전부를 수정, 임대, 대여, 판매 또는 배포하거나 이를 바탕으로 파생물을 만들어서는 안 됩니다.\n
+\n
+7.3 귀하는 귀하의 타사 애플리케이션, 데이터, 콘텐츠 또는 리소스 사용에 귀하 및 관련 타사 간의 개별 약관이 적용될 수 있음을 이해합니다. 이 경우 라이선스 계약은 이러한 타사와 귀하의 법적 관계에 영향을 주지 않습니다.\n
+\n
+\n
+8. Android API 사용\n
+\n
+\n
+8.1 Google 데이터 API\n
+\n
+8.1.1 귀하는 Google에서 데이터를 검색하기 위해 API를 사용하는 경우 이 데이터가 Google 또는 데이터를 제공하는 업체(또는 이 제공업체를 대신하는 기타 개인 또는 회사)가 소유하는 지적 재산권으로 보호될 수 있다는 점을 이해합니다. 귀하가 이러한 API를 사용하는 경우 추가 서비스 약관이 적용될 수 있습니다. 이 서비스 약관에서 허용하지 않는 한 귀하는 이 데이터의 일부 또는 전부를 수정, 임대, 대여, 판매 또는 배포하거나 이를 바탕으로 파생물을 만들어서는 안 됩니다.\n
+\n
+8.1.2 Google로부터 사용자의 데이터를 검색하기 위해 API를 사용하는 경우 귀하는 사용자의 명시적인 동의가 있으며 사용자가 귀하에게 해당 권한을 부여한 시기에 한하여 제한된 용도로 데이터를 검색할 수 있다는 점을 이해하고 이에 동의합니다.\n
+\n
+\n
+9. 라이선스 계약의 해지\n
+\n
+\n
+9.1 본 라이선스 계약은 아래에 제시된 대로 귀하 또는 Google에 의해 해지될 때까지 계속 적용됩니다.\n
+\n
+9.2 라이선스 계약을 해지하려면 SDK 및 관련 개발자 인증 정보의 사용을 중단하면 됩니다.\n
+\n
+9.3 Google은 다음에 해당하는 경우 언제든지 라이선스 계약을 해지할 수 있습니다.\n
+(A) 귀하가 본 라이선스 계약의 조항을 위반한 경우, 또는\n
+(B) 법에 따라 Google이 계약을 해지해야 하는 경우, 또는\n
+(C) Google과 함께 귀하에게 API와 같은 SDK의 특정 부분을 제공한 파트너가 Google과의 관계를 종료하거나 귀하에게 SDK의 특정 부분을 제공 중단하는 경우, 또는\n
+(D) Google이 귀하가 거주하거나 서비스를 이용하는 국가의 사용자에게 더 이상 SDK 또는 SDK의 특정 부분을 제공하지 않도록 결정하거나, Google의 단독 재량권에 따라 Google이 귀하에게 SDK 또는 특정 SDK 서비스를 제공하는 것이 더 이상은 상업적으로 실행 불가능하다고 판단되는 경우\n
+\n
+9.4 본 라이선스 계약을 해지해도 귀하와 Google이 혜택을 받거나 적용 대상이 되거나 본 라이선스 계약이 적용되는 동안 발생했거나 무기한으로 계속하기로 명시한 모든 법적 권한, 의무 및 채무는 영향을 받지 않으며, 해당 권한, 의무 및 채무에는 조항 14.7이 계속 무기한으로 적용됩니다.\n
+\n
+\n
+10. 보증 면책조항\n
+\n
+\n
+10.1 귀하는 전적으로 본인의 책임 하에 SDK를 사용하며 SDK가 Google의 보증 없이 \'있는 그대로\' \'가용한 범위 내에서\' 제공됨을 확실히 이해하고 이에 동의합니다.\n
+\n
+10.2 귀하는 단독 재량권에 따라 전적으로 본인의 책임 하에 SDK와 SDK에서 다운로드하거나 그 외 다른 방법으로 SDK를 통해 취득한 모든 자료를 사용합니다. 또한 컴퓨터 시스템이나 기타 기기의 손상 또는 그러한 사용으로 인한 데이터 손실에 대한 책임은 전적으로 귀하에게 있습니다.\n
+\n
+10.3 Google은 상품성, 특정 목적에의 적합성 및 비침해성에 대한 묵시적 보증 및 조건을 포함(이에 국한되지 않음)하여 모든 명시적, 묵시적 보증 및 조건을 부인합니다.\n
+\n
+\n
+11. 책임의 제한\n
+\n
+\n
+귀하는 데이터 손실을 포함하여 귀하에 의해 발생할 수 있는 직접적, 간접적, 부수적, 특수적, 결과적 또는 징벌적 손해에 대하여, Google이나 그 대표자가 그와 같은 손실 가능성을 사전에 통보받았거나 알고 있어야 했는지와 관계없이 Google, 자회사 및 제휴사 또는 라이선스 제공자가 어떠한 책임 이론에 의해서도 책임을 지지 않는다는 점을 명확하게 이해하고 동의합니다.\n
+\n
+\n
+12. 배상\n
+\n
+\n
+12.1 귀하는 (a) 귀하가 SDK를 사용하고 (b) 귀하가 SDK에서 개발하는 애플리케이션이 다른 사람의 저작권, 상표권, 영업비밀, 상품 외장, 특허권 또는 기타 지적 재산권을 침해하거나 다른 사람의 명예를 훼손하거나 퍼블리시티권 또는 사생활 보호권을 침해하며 (c) 귀하가 라이선스 계약을 준수하지 않아 발생하는 모든 손실, 채무, 손해, 비용 및 경비(합리적인 변호사 수임료 포함)뿐만 아니라 모든 청구, 법적 조치, 소송 또는 절차에 대해 Google, 제휴사, Google과 제휴사의 이사, 간부, 직원 및 대리인을 법에서 허용하는 최대 범위까지 보호하고 배상하며 책임을 면제하는 데 동의합니다.\n
+\n
+\n
+13. 라이선스 계약의 변경\n
+\n
+\n
+13.1 Google은 SDK의 새 버전을 배포할 때 라이선스 계약을 변경할 수 있습니다. 변경된 내용이 있는 경우 Google은 SDK가 제공되는 웹사이트에 새로운 버전의 라이선스 계약을 제공합니다.\n
+\n
+\n
+14. 일반 법률 약관\n
+\n
+\n
+14.1 본 라이선스 계약은 귀하와 Google 간의 완전한 법적 합의를 구성하며 별도의 서면 계약을 통해 Google에서 제공하는 서비스를 제외한 귀하의 SDK 사용에 적용되며 SDK와 관련하여 귀하와 Google 간에 체결한 이전 계약을 완전히 대체합니다.\n
+\n
+14.2 귀하는 Google이 본 라이선스 계약에 포함되거나 Google이 관련 법에 따라 혜택을 받는 법적 권리 또는 구제 조치를 실행 또는 행사하지 않더라도 Google의 권리에 대한 공식적인 권리 포기로 이어지지 않으며 Google이 해당 권리 또는 구제 조치를 여전히 사용할 수 있음에 동의합니다.\n
+\n
+14.3 이 문제에 대한 판결권이 있는 법원이 본 라이선스 계약의 조항을 무효로 판결하는 경우 이 조항은 나머지 계약 조항에 영향을 주지 않고 본 라이선스 계약에서 삭제됩니다. 본 라이선스 계약관의 나머지 조항은 계속해서 유효하며 강제력을 갖습니다.\n
+\n
+14.4 귀하는 Google의 자회사가 라이선스 계약에 있어 제3의 수혜자가 되며 자회사는 혜택(또는 권리)을 주는 본 라이선스 계약의 조항을 직접 시행하고 이에 의존할 자격이 있음을 이해하고 이에 동의합니다. 이 업체를 제외한 다른 회사 또는 개인은 본 라이선스 계약에 대한 제3의 수혜자가 될 수 없습니다.\n
+\n
+14.5 수출 제한. SDK는 미국 수출 법규 및 규정의 적용 대상입니다. 귀하는 SDK에 적용되는 모든 국내 및 국제 수출 법규 및 규정을 준수해야 합니다. 이러한 법에는 목적지, 최종 사용자 및 최종 용도에 대한 제한사항이 포함됩니다.\n
+\n
+14.6 본 라이선스 계약에서 부여된 권리는 상대방의 사전 서면 승인 없이 귀하 또는 Google 중 어느 일방에 의해 양도 또는 이전될 수 없습니다. 또한 귀하 또는 Google은 상대방의 사전 서면 승인 없이 본 라이선스 계약에 따른 책임 또는 의무사항을 위임할 수 없습니다.\n
+\n
+14.7 본 라이선스 계약 및 라이선스 계약에 따른 Google과 귀하의 관계는 법 조항 저촉 여부와 상관없이 캘리포니아 주 법에 따릅니다. 귀하와 Google은 본 라이선스 계약으로부터 발생하는 모든 법적 문제를 해결하기 위해 캘리포니아 산타클라라 카운티 내에 위치한 법원의 배타적인 관할권에 따를 것을 동의합니다. 다만 위 규정에도 불구하고 귀하는 Google이 여전히 모든 관할권에서 강제 구제책(또는 이에 상응하는 종류의 긴급 법적 구제)을 신청할 수 있음에 동의합니다.\n
+\n
+\n
+2016년 12월 9일</string><string name="openSource">오픈소스 소프트웨어에 대한 라이센스 정보.</string><string name="simplyGeoDT">GeoDT의 모바일 버전에 대한 설명입니다.</string><string name="ruledby">본 어플리케이션은 LGPL 3.0 기반으로 배포 되었습니다. </string><string name="about_geo">본 어플리케이션은 Arbiter_mobile을 기반으로 만들어졌습니다.\n\n지도와 지도 레이어를 다운로드 받으면 오프라인에서 편집이 가능합니다.\n온라인 상태가 되면 오프라인 상태에서 수정했던 정보를 업로드 할 수 있습니다.\n온라인 상태에서 데이터 다운, 저장, 단일레이어 검수를 통해 현장에서 데이터 구축이 가능합니다.\nGeoDT Web과의 데이터 공유를 통해 공동작업이 가능합니다.\n관심 지역에 사용자의 사진을 추가하여 편리성을 높일 수 있습니다.\n화면을 캡쳐할 수 있습니다.\n\n기타 문의사항이 있다면 ghre55@git.co.kr 로 연락 주세요.\n\nhttp://www.geodt.co.kr/pages/mobile.html</string><string name="LGPL3.0">버전 3, 2007년 6월 29일\n
+Copyright (C) 2007 Free Software Foundation, Inc. http://fsf.org/
+\n
+\n
+\n
+누구든지 본 라이선스를 원문 그대로 복제하고 배포할 수 있다. 그러나 본문에 대한 수정은 허용되지 않는다.\n
+\n
+제0조. 추가적 정의\n
+본문 중에서 \"본 라이선스\"는 GNU 약소 일반 공중 라이선스의 버전 3, GNU GPL은 GNU 일반 공중 라이선스의 버전3을 의미한다.\n
+\n
+\"라이브러리\"란 아래에 정의된 응용 프로그램이나 결합 저작물을 제외하고 본 라이선스의 적용을 받는 GPL 적용 저작물을 지칭한다.\n
+\n
+\"응용프로그램\"이란 라이브러리에 의해 제공되는 인터페이스를 사용하지만, 라이브러리에 기반하지는 않는 모든 저작물을 의미한다. 라이브러리에 의해 정의된 클래스의 서브클래스를 정의하는 것은 라이브러리에 의해 제공된 인터페이스를 사용하는 형식으로 간주된다.\n
+\n
+\"결합 저작물\"이란 라이브러리에 응용프로그램을 결합하거나 링크로 연결하여 생성된 저작물을 의미한다. 결합 저작물을 만들 때 사용된 라이브러리의 특정 버전은 \"연결 버전\"이라고 지칭한다.\n
+\n
+결합 저작물의 \"최소 해당 소스\"란 결합 저작물의 해당 소스 중에서, 독립적으로 간주될 때 연결 버전이 아닌 응용프로그램에 기반한 결합 저작물의 일부를 위한 소스 코드를 제외한 것을 의미한다.\n
+\n
+결합 저작물의 \"해당 응용프로그램 코드\"는 응용프로그램으로부터 결합 저작물을 재생성 시키는데 요구되는 모든 데이터와 유틸리티 프로그램을 포함하며, 결합저작물의 시스템 라이브러리를 제외한, 응용프로그램을 위한 오브젝트 코드 및 소스코드를 의미한다.\n
+\n
+제1조. GNU GPL 3조의 예외\n
+GNU GPL의 제3조의 조건과 관계없이 본 라이선스의 제3조와 제4조의 조항에 따라 GPL 적용 저작물을 컨베이할 수 있다.\n
+\n
+제2조. 수정된 버전에 대한 컨베이\n
+라이브러리의 복제본을 수정하는데 있어, 어떤 기능이 그 기능을 사용하는 응용프로그램에 의해 제공되는 어떤 함수나 데이터를 언급할 경우 (기능이 호출될 때 전달되는 인수는 제외함), 다음과 같은 조건 하에 수정된 버전의 복제본을 컨베이할 수 있다.\n
+\n
+a) 본 라이선스에 따라서 컨베이 한다. 단, 응용프로그램이 함수나 데이터를 제공하지 않는 경우에도 기능이 작동하고 본래의 목적을 정상적으로 수행하도록 최선을 다해 노력해야 한다. 또는,\n
+\n
+b) GNU GPL에 따라서 컨베이 한다. 이 경우, 본 라이선스의 추가적 허용사항을 적용하지 않는다.\n
+\n
+제3조. 라이브러리 헤더 파일의 자료를 결합하는 오브젝트 코드\n
+응용프로그램의 오브젝트 코드는 라이브러리의 일부를 구성하는 헤더 파일의 자료를 결합한 형태로 작성될 수 있다. 만약 이러한 오브젝트 코드와 결합된 자료가 숫자 매개변수, 데이터 구조의 설계형태, 접근도구, 작은 매크로, (10행 이하의) 인라인 함수, 그리고 템플릿으로 제한되는 것이 아니라면, 그 오브젝트 코드는 다음과 같은 두 가지 조건을 충족시킨다는 조건 하에 당신이 임의로 정한 규정에 따라 컨베이 될 수 있다.\n
+\n
+a) 오브젝트 코드 내에 라이브러리가 사용되고 있다는 사실과 라이브러리 및 라이브러리의 사용에 대해 본 라이선스가 적용된다는 내용의 안내 문구를 각 복제본에 명확하게 고지해야 한다.\n
+\n
+b) GNU GPL의 사본 및 본 라이선스 문서를 오브젝트 코드에 첨부해야 한다.\n
+\n
+제4조. 결합 저작물\n
+당신은 임의로 정한 조건에 따라 결합 저작물을 컨베이할 수 있다. 단, 당신이 정한 조건들은 결합 저작물 내에 포함된 라이브러리의 일부에 대한 수정 및 그 수정 부분을 디버깅하기 위한 역공학에 대해 제한을 두어서는 안 되며, 다음의 조건들을 충족시켜야 한다.\n
+\n
+a) 결합 저작물 내에 라이브러리가 사용되고 있다는 사실과 라이브러리 및 라이브러리의 사용에 대해 본 라이선스가 적용된다는 내용의 안내 문구를 각 복제본에 명확하게 고지해야 한다.\n
+\n
+b) GNU GPL의 사본 및 본 라이선스 문서를 결합 저작물과 함께 제공해야 한다.\n
+c) 결합 저작물이 실행되는 도중에 저작권 사항이 표시되는 경우에는, 라이브러리에 대한 저작권 사항도 함께 포함시켜야 하며, GNU GPL 및 본 라이선스의 사본을 참고할 수 있는 방법을 명시해야 한다.\n
+d) 다음 중 하나의 방법을 사용해야 한다:\n
+0) 해당 소스의 컨베이 행위에 관한 GNU GPL의 제6조에 상술된 방식에 기반하여, 최소 해당 소스는 본 라이선스의 규정에 따라 컨베이하고, 해당 응용프로그램 코드는 사용자가 응용프로그램과 연결 버전의 수정된 버전을 재결합 혹은 재연결하여 수정된 결합 저작물을 생성하는 것이 가능하도록, 그리고 이에 적합한 형태로 컨베이 해야 한다.\n
+1) 라이브러리와 연결시키기에 적절한 공유 라이브러리 방식을 사용해야 한다. 적절한 방식이란, (a) 실행 시점에서 볼 때 이미 사용자의 컴퓨터 시스템 상에 존재하고 있는 라이브러리의 복제물을 사용하는 방식, 그리고 (b) 연결 버전과 인터페이스 상으로 호환되는, 라이브러리의 수정된 버전으로도 적절하게 작동할 수 있는 방식을 의미한다.\n
+\n
+e) GNU GPL의 제6조에 따라 설치 정보 제공에 대한 요구를 받게 될 경우에 한해 설치 정보를 제공해야 한다. 이 설치 정보는 응용프로그램과 연결 버전의 수정 버전을 재결합하거나 재연결한 결과로 생성된, 수정된 버전의 결합 저작물을 설치하고 실행하는데 필요한 정보에 한한다. (제4조 d항의 0번 옵션을 사용하는 경우에는 최소 해당 소스와 해당 응용프로그램 소스와 함께 설치 정보가 동반되어야 한다. 4조d항의 1번 옵션을 사용하는 경우에는 해당 소스의 컨베이 행위에 대한 GNU GPL의 제6조에 상술된 방식으로 설치 정보를 제공해야 한다.)\n
+\n
+제5조. 결합 라이브러리\n
+라이브러리에 기반한 저작물인 라이브러리의 기능을 본 라이선스가 적용되지 않는 다른 라이브러리의 기능들과 하나의 라이브러리 내에 병존시키고, 이러한 결합 라이브러리를 다음과 같은 두 가지 조건을 모두 충족시킨다는 조건 하에, 당신이 임의로 정한 규정에 따라 컨베이할 수 있다.\n
+\n
+a) 라이브러리에 기반한 저작물의 복제물을 다른 어떤 라이브러리와도 결합되지 않은 독립된 상태로 결합 라이브러리와 함께 제공해야 하며, 이는 본 라이선스의 규정에 따라 컨베이 되어야 한다.\n
+\n
+b) 결합 라이브러리의 일부가 라이브러리에 기반한 저작물이라는 사실을 명확하게 고지해야 하며, 그 저작물의 결합되지 않은 형태를 어디에서 구할 수 있는지를 명시해야 한다.\n
+\n
+제6조. GNU 약소 일반 공중 라이선스의 개정판\n
+자유 소프트웨어 재단은 때때로 GNU 약소 일반 공중 라이선스의 개정판이나 신규 버전을 공표할 수 있다. 새롭게 공표될 신규 버전은 기본적인 취지에 있어 원판과 변함이 없을 것이지만, 새로운 문제나 현안에 대처하기 위해 세부적인 내용에 차이가 발생할 수 있다.\n
+\n
+각각의 판들은 버전 넘버를 사용해서 구별된다. GNU 약소 일반 공중 라이선스의 어떤 특정한 버전 넘버와 \"그 이후에 출시된 버전\"을 따른다는 사항이 명시된 프로그램에는 해당 버전이나 그 이후에 자유 소프트웨어 재단에서 발행된 어떤 버전을 선택해서 적용해도 무방하다. 버전 넘버를 명시하고 있지 않은 라이브러리의 경우에는 자유 소프트웨어 재단이 공표한 어떠한 버전의 판을 적용해도 무방하다.\n
+\n
+당신이 양도받은 라이브러리가 GNU 약소 일반 공중 라이선스의 버전 선택을 대리인에게 위임한다고 명시하는 경우, 그 대리인이 특정 버전의 수용을 공표함으로써 당신이 그 라이브러리에 어떤 버전을 사용할지 영구적으로 결정된다.</string><string name="action_info">정보</string><string name="warning">경고</string><string name="error">에러</string><string name="confirm">확인</string><string name="stop">중지</string><string name="action_findme">현재 위치 검색</string><string name="default_project_name">아비터_기본_프로젝트</string><string name="delete">삭제</string><string name="update">업데이트</string><string name="default_layer_name">오픈 스트리트 지도</string><string name="project_exists_title">프로젝트 존재</string><string name="project_already_exists">프로젝트가 이미 존재합니다.  다른 이름으로 프로젝트를 생성해 주세요.</string><string name="project_creation_failed">프로젝트 생성 실패</string><string name="project_creation_failed_message">프로젝트를 생성할 수 없습니다.  디스크에 여유공간이 있는지 확인해 주세요.</string><string name="create_project_progress">프로젝트 생성중</string><string name="create_project_msg">프로젝트가 생성되었습니다.…</string><string name="error_aoi_create_project">관심있는 지역을 선택하기 전에 새로운 프로젝트를 생성해야만 합니다.</string><string name="error_creating_project">에러</string><string name="error_creating_project_msg">프로젝트를 생성할 수 없습니다!</string><string name="error_loading_features">에러</string><string name="error_loading_features_msg">프로젝트를 생성할 수 없습니다!</string><string name="error_adding_layers">에러</string><string name="error_adding_layers_msg">선택된 레이어를 추가할 수 없습니다!</string><string name="adding_layers">레이어 추가</string><string name="adding_layers_msg">지도에 레이어 추가…</string><string name="feature_dialog_title">특성</string><string name="example_longitude">예. </string><string name="example_latitude">예. </string><string name="back">뒤로</string><string name="edit_attributes">편집</string><string name="done_editing">저장</string><string name="delete_feature">삭제</string><string name="edit_feature">지도</string><string name="cancel">취소</string><string name="update_feature_title">업데이트</string><string name="update_feature_msg">특성을 업데이트 할까요?</string><string name="updating">업데이트</string><string name="updating_msg">업데이트 진행중…</string><string name="insert_feature_title">선택한 레이어를 삽입</string><string name="insert_layer_title">삽입할 위치:</string><string name="insert_layer_text">모드: 삽입</string><string name="feature_saved">특성 저장</string><string name="feature_saved_msg">특성이 저장되었습니다.</string><string name="return_to_map">지도로 되돌아가기</string><string name="picture_source">자료 선택</string><string name="select_picture_source">사진 추가…</string><string name="from_camera">카메라 사용</string><string name="from_library">갤러리 사용</string><string name="review_feature">특성 리뷰</string><string name="insert_feature_warning">특성 삽입</string><string name="insert_feature_warning_msg">특성을 삽입할까요?</string><string name="delete_feature_warning">특성 삭제</string><string name="delete_feature_warning_msg">정말로 이 특성을 지울까요?</string><string name="deleting_msg">삭제 진행중…</string><string name="sync_in_progress">동기화</string><string name="sync_in_progress_msg">동기화 진행중…</string><string name="error_syncing">에러</string><string name="error_syncing_msg">동기화 불가능</string><string name="project_incomplete_msg">프로젝트는 오프라인에서 이용할 수 없습니다.. \n\n관심있는 지역을 선택해주세요.</string><string name="click_me">( 여기를 눌러주세요 )</string><string name="media">미디어</string><string name="take_picture">사진 촬영</string><string name="initializing">초기화</string><string name="please_wait">잠시만 기다려주세요…</string><string name="update_aoi_alert">관심있는 지역</string><string name="update_aoi_alert_msg">관심있는 지역을 업데이트 하는 것은 당신이 만든 어떠한 변경사항도 동기화 할 것입니다.</string><string name="error_updating_aoi">에러</string><string name="error_updating_aoi_msg">관심있는 지역을 업데이트 할 수 없습니다!</string><string name="loading_feature_info">특성 불러오는중… 잠시만 기다려주세요…</string><string name="loading">불러오기</string><string name="no_network">네트워크 미연결</string><string name="check_network_connection">네트워크 연결을 확인해주세요.</string><string name="layers_limit">레이어 갯수 한계</string><string name="too_many_layers">프로젝트당 최대 생성 레이어 갯수에 도달하였습니다.</string><string name="downloading_schemas">스키마 다운로드</string><string name="downloading_tiles">타일 다운로드</string><string name="tile_cache_warning">Tiles to download:</string><string name="syncing_media_title">미디어 동기화중</string><string name="syncing_vector_data">벡터 데이터 동기화중</string><string name="downloaded">다운로드 된 것: </string><string name="uploaded">업로드 된 것: </string><string name="form_error_date">유효한 날짜를 입력하세요.</string><string name="form_error_integer">유효한 정수를 입력하세요.</string><string name="form_error_double">유효한 숫자를 입력하세요.</string><string name="form_error_long">유효한 숫자를 입력하세요.</string><string name="form_error_float">유효한 숫자를 입력하세요.</string><string name="form_error_bool">True 또는 False를 입력하세요.</string><string name="check_errors">유효하지 않은 입력</string><string name="check_errors_msg">계속 진행하기 전에 오류를 고쳐주세요.</string><string name="loading_layers_please_wait">서버에서 레이어를 불러오는중. 잠시만 기다려주세요.</string><string name="map_activity_name">아비터</string><string name="action_new_feature">피쳐 삽입</string><string name="action_servers">서버</string><string name="action_projects">프로젝트</string><string name="action_image">이미지 오버레이</string><string name="action_validationManagement">검수 관리</string><string name="action_search">검색</string><string name="action_baseLayers">기본 레이어</string><string name="action_validation">검수</string><string name="action_capture_title">캡쳐</string><string name="action_aoi">관심있는 지역</string><string name="action_language">언어</string><string name="layers_button">레이어</string><string name="sync_button">동기화</string><string name="location_button">나의 위치</string><string name="aoi_button">관심있는 지역 확대</string><string name="projects_activity_name">프로젝트</string><string name="delete_project">프로젝트 삭제</string><string name="action_new_project">새로운 프로젝트</string><string name="switch_project_title">프로젝트 전환</string><string name="switch_project">이 프로젝트를 전환할까요?</string><string name="layers_dialog_title">레이어</string><string name="add_layers_button">레이어 추가</string><string name="action_add_layers">레이어 추가</string><string name="layer_visibility_off">끔</string><string name="layer_visibility_on">켬</string><string name="remove_layer">레이어 제거</string><string name="action_tilesets">요소집합</string><string name="add_tileset_button">요소집합 추가</string><string name="tileset_dialog_title">요소집합</string><string name="add_tileset_dialog_title">요소집합 추가</string><string name="remove_tileset">요소집합 제거</string><string name="tileset_list_names">요소집합</string><string name="loading_tilesets_getcapabilities">요소집합 불러오는중..</string><string name="delete_tileset_button">삭제</string><string name="update_tileset_button">업데이트</string><string name="check_update_tilesets">업데이트 확인</string><string name="tileset_name">NAMEME</string><string name="deleting_tileset">요소집합 삭제중</string><string name="deleting_tileset_msg">요소집합 삭제중..</string><string name="delete_tileset_alert">정말로 이 요소집합을 지우시겠습니까? </string><string name="tileset_filesize">크기: 007GB</string><string name="downloading_tileset">다운로드</string><string name="downloading_tileset_msg">이 다운로드는 </string><string name="downloading_tileset_msg2">정말로 계속할까요?</string><string name="space_available">여유공간: </string><string name="space_after_download">다운로드 후: </string><string name="tileset_info_name">이름: </string><string name="tileset_info_time_created">생성된 시간: </string><string name="tileset_info_created_by">제작자: </string><string name="tileset_info_filesize">파일 크기: </string><string name="tileset_info_layer_name">레이어 이름: </string><string name="tileset_info_status">상태: </string><string name="tileset_info_resource_uri">재원 URI: </string><string name="tileset_info_service_type">서비스 타입: </string><string name="tileset_info_download_url">다운로드 URL: </string><string name="tileset_info_server_url">서버 URL: </string><string name="tileset_info_server_username">서버 사용자 이름: </string><string name="tileset_info_server_id">서버 ID: </string><string name="tileset_cancel_download_title">다운로드 취소중..</string><string name="tileset_cancel_download_msg">다운로드 멈추는중..</string><string name="cancel_download_tileset_alert">정말로 지금 다운로드 받는것을 취소할까요?</string><string name="error_retrieving_tileset">요소집합 검색 오류</string><string name="tileset_info_title">요소집합 정보</string><string name="error_connecting_tileset1">연결 오류</string><string name="error_connecting_tileset2">인터넷 상태를 확인한 후 재시도 하세요.</string><string name="tileset_status_downloading">다운로드중..</string><string name="tileset_status_in_database">데이터베이스</string><string name="tileset_status_on_server">서버</string><string name="tileset_started_downloading_msg">다운로드가 시작됨</string><string name="tileset_finished_downloading_msg">다운로드가 끝남</string><string name="not_enough_space">공간이 충분하지 않습니다.</string><string name="not_enough_space_msg1">다운로드 하기에 충분한 공간이 없습니다.</string><string name="not_enough_space_msg2">여유공간을 확보한 후 재시도 하세요.</string><string name="no_available_tileset_title">요소집합 검색 오류</string><string name="no_available_tileset_msg">발견되었지만 어떤 요소집합도 불러오지 못했습니다. 요소집합이 제대로 만들어졌는지 확인해주세요.</string><string name="tileset_download_error_msg">파일이 다운로드 되지 못했습니다. 다운로드 링크가 올바르지 않던가 또는 현재 인터넷 상태가 사용불가 입니다.</string><string name="tileset_zero_filesize">파일 사이즈가 0입니다. 요소집합이 제대로 만들어졌는지 확인해주세요.</string><string name="tileset_new_project_msg_downloaded">현재 다운로드 된 요소집합: </string><string name="tileset_new_project_msg_confirmation">\n\n이 프로젝트는 인터넷 연결이 없는 반면에 배경지도를 갖고 있습니다는 것을 보장하기 위해서,
+        적절한 데이터의 요소집합이 다운로드 되어야 합니다.\n\n만약 배경지도가 "오픈 스트리트 지도"가 선택되었다면, 지도 데이터는 인터넷에서 불러올 것입니다.
+        \n**데이터 요금이 나올 수 있습니다**\n\n요소집합을 다운로드 할까요?</string><string name="tileset_no_connection_msg">아비터는 현재 오프라인이고, 다른 요소집합을 찾을 수 없습니다.\n\n만약 사용자가 배경지도를 오프라인에서 사용할 수 있게 하고 싶다면:
+        아비터를 다시 실행하고, 요소집합을 다운로드 하면 됩니다.\n\n이러한 기능은 이곳에서 가능합니다:\n설정 > 요소집합</string><string name="layer_info_dialog_title">레이어 정보</string><string name="add_layers_dialog_title">레이어 추가</string><string name="layer_filter_hint">필터</string><string name="action_add_server">서버 추가</string><string name="choose_server">서버</string><string name="welcome_dialog_title">환영합니다</string><string name="must_create_project">편집하기 전에 프로젝트를 먼저 만들어야 합니다.</string><string name="create_project_question">지금 프로젝트를 하나 만들까요?</string><string name="project_name_dialog_title">프로젝트 이름</string><string name="choose_project_name">프로젝트 이름을 입력하세요.</string><string name="choose_name_hint">새로운 프로젝트 이름*</string><string name="disconnected_no_projects">이러한 현상은 사용자가 인터넷에 연결이 안되어있다는 것과,어떠한 프로젝트도 만들어져 있지 않다는 것을 말해줍니다.\n
+        \n만약 사용자가 아비터의 모든 기능을 이용하고 싶다면, 네트워크에 연결해주시고 프로젝트를 만들어 주세요.\n
+        \n사용자도 알다시피, 연결이 된다면 빨간색 동기화 버튼이 초록색으로 바뀝니다..</string><string name="server_dialog_title">서버</string><string name="add_server_button">서버 추가</string><string name="delete_server_alert">이 서버와 관련된 모든 프로젝트와 그 안의 모든 레이어가 삭제됩니다.</string><string name="update_server_alert">정말 서버를 업데이트 할까요?  동기화 실패로 인한 원치 않은 결과가 나올 수 있습니다.</string><string name="deleting_server">서버 삭제중</string><string name="deleting_server_msg">서버 삭제 진행중…</string><string name="add_server_dialog_title">서버 추가</string><string name="server_name_hint">이름</string><string name="server_url_hint">예. http://example.com/geoserver</string><string name="server_username_hint">사용자 이름</string><string name="server_password_hint">비밀번호</string><string name="server_show_password">비밀번호 표시</string><string name="validating_server">유효한 서버</string><string name="authentication_failed">인증 실패, 사용자 이름과 비밀번호를 확인해주세요.</string><string name="unable_to_connect">서버에 연결할 수 없습니다, url이 맞는지 확인해주세요.</string><string name="go_offline_dialog_title">오프라인</string><string name="choose_aoi_dialog_title">관심있는 지역 선택</string><string name="title_activity_aoi">관심 지역</string><string name="hello_world">Hello world!</string><string name="failed_to_sync">동기화 불완전</string><string name="failed_vector_upload">벡터 레이어 업로드 실패:</string><string name="failed_vector_download">벡터 레이어 다운로드 실패:</string><string name="failed_media_upload">미디어 항목 업로드 실패:</string><string name="failed_media_download">미디어 항목 다운로드 실패:</string><string name="retry_sync">재시도?</string><string name="vector_upload_errors_label">벡터 레이어 업로드 실패:</string><string name="vector_download_errors_label">벡터 레이어 다운로드 실패:</string><string name="media_upload_errors_label">미디어 항목 업로드 실패:</string><string name="media_download_errors_label">미디어 항목 다운로드 실패:</string><string name="retry">재시도</string><string name="geolocation_error">지리위치 오류</string><string name="layer_order">레이어 순서</string><string name="move_down">아래로</string><string name="move_up">위로</string><string name="settings">설정</string><string name="about">설명</string><string name="version">커밋:</string><string name="commit_date">커밋 날짜:</string><string name="build_date">빌드 날짜:</string><string name="unknown">알려지지 않음</string><string name="point">점</string><string name="line">선</string><string name="polygon">도형</string><string name="multipoint">다중 점</string><string name="multiline">다중 선</string><string name="multipolygon">다중 도형</string><string name="choose_geometry_type">Geometry 타입</string><string name="done">완료</string><string name="add">추가</string><string name="remove">제거</string><string name="inspect">점검</string><string name="finish">완료</string><string name="confirm_part_removal_title">부분 제거</string><string name="confirm_part_removal_msg">정말로 이 부분의 geometry를 지우고 싶으신가요?</string><string name="confirm_geometry_removal_title">geometry 제거</string><string name="confirm_geometry_removal_msg">이 수집품 중에서 geometry를 제거하고 싶으신건가요?</string><string name="notify_user_to_add_geometry_title">geometry가 반드시 필요합니다.</string><string name="notify_user_to_add_geometry_msg">geometry 추가 또는 특성 삭제.</string><string name="finish_editing_title">편집 완료</string><string name="finish_editing_message">편집을 완료해주세요.</string><string name="unsupported_crs">지원되지 않는 CRS</string><string name="loading_unsupported_crs">지원되지 않는 CRS때문에 레이어를 불러올 수 없습니다:</string><string name="overlays">오버레이:</string><string name="baselayer">현재:</string><string name="background_map">배경지도:</string><string name="choose_baselayer">배경지도를 선택하세요</string><string name="change_baselayer_warning">
+        사용자의 배경지도를 바꾸는 것은
+        당신의 이전 관심있는 지역의 다운로드된 타일을 지우는 것입니다.
+        정말 계속 진행할까요?
+    </string><string name="type">타입</string><string name="notifications">공지</string><string name="clear">초기화</string><string name="close">닫기</string><string name="feature_not_in_aoi">특성 이용 불가</string><string name="feature_not_in_aoi_msg">특성이 관심있는 지역에서 지워졌거나 바깥쪽으로 이동되었습니다.</string><string name="layers_already_in_project">프로젝트에 지금 작업중인 레이어를 추가할 수 없습니다. 이미 똑같은 특성을 가진 레이어가 이미 존재합니다:</string><string name="invalid_url">유효하지 않는 url</string><string name="invalid_url_slash_wms">\"WMS\" 서버 url은 반드시 \"/wms\"로 끝나야 합니다.</string><string name="invalid_url_slash_tms">\"TMS\" 서버 url은 반드시 \"/hot/1.0.0/\"로 끝나야 합니다.</string><string name="insert">삽입</string><string name="feature_outside_aoi_warning">사용자가 선택한 관심있는 지역의 바깥쪽에 특성을 삽입했습니다. 이 특성을 동기화하면,
+        그 특성은 더이상 사용자의 디바이스에 있지 않을 것입니다.</string><string name="confirm_delete_project">정말로 프로젝트를 삭제할까요? 동기화하지 않은 모든 데이터는 사라집니다.</string><string name="confirm_delete_layer">정말로 레이어를 삭제할까요?</string><string name="confirm_delete_image">정말로 이미지를 삭제할까요?</string><string name="added">추가됨</string><string name="modified">수정됨</string><string name="removed">제거됨</string><string name="no_valid_geometries">유효한 geometry가 없습니다..</string><string name="no_valid_geometries_delete_or_cancel">유효한 geometry가 없습니다..  특성을 지우거나 또는 취소할까요?</string><string name="valid_point_geometry_description">점 geometry는 최소한 한개의 점이 필요합니다.</string><string name="valid_line_geometry_description">선 geometry는 최소한 두개의 서로 다른 점이 필요합니다.</string><string name="valid_polygon_geometry_description">도형 geometry는 최소한 세개의 서로 다른 점이 필요합니다.</string><string name="valid_multipoint_geometry_description">다중 점 geometry는 최소한 한개의 유효한 점 geometry가 필요합니다.</string><string name="valid_multiline_geometry_description">다중 선 geometry는 최소한 한개의 유효한 선 geometry가 필요합니다.</string><string name="valid_multipolygon_geometry_description">다중 도형 geometry는 최소한 한개의 도형 geometry가 필요합니다.</string><string name="valid_geometry_collection_description">Geometry Collection은 최소한 한개의 유효한 geometry가 필요합니다.</string><string name="delete_media">미디어 삭제</string><string name="sure_delete_media">정말 특성에서 이 항목을 제거할까요?</string><string name="read_only">읽기 전용</string><string name="read_only_msg">이 레이어는 읽기 전용입니다. 서버 관리자에게 허락을 받아야 접근 가능합니다.</string><string name="sync_timed_out">동기화 시간초과</string><string name="sync_timed_out_msg">동기화 시간 초과되었습니다.  계속해서 동기화 할까요 아니면 현재 동기화 작업을 취소할까요?</string><string name="continue_sync">계속</string><string name="loading_getcapabilities">레이어 불러오는중</string><string name="could_not_connect">연결할 수 없음</string><string name="check_server_and_network">서버 세부사항과 네트워크 연결상태 확인하세요. 그리고 나중에 다시 시도하세요.</string><string name="required_field">요구되는 분야</string><string name="download_photos">특성에 대한 사진을 다운로드</string><string name="disable_wms">베이스 레이어가 아니면 WMS 사용 불가</string><string name="no_con_checks">연결상태 무시 (재시작이 필요합니다.)</string><string name="confirm_delete_layers_unsynced_features">이 레이어는 동기화가 되지 않은 특성이 포함되어 있습니다.  만약 이 레이어를 제거한다면, 동기화 되지 않은 특성도 사라집니다!  정말로 이 레이어를 삭제할까요?</string><string name="try_again_later">나중에 다시 시도해주세요.  만약 문제가 계속된다면, 관리자에게 물어보시기 바랍니다.</string><string name="arbiter_error">예상치 못한 오류.</string><string name="unknown_error">예상치 못한 오류.</string><string name="internal_server_error">서버에서 오류가 발생했습니다.</string><string name="timed_out">요청시간 초과.</string><string name="unauthorized">승인되지 않음.</string><string name="resource_not_found">리소스를 찾을 수 없습니다.</string><string name="update_error">특성 업데이트 중 오류가 발생했습니다. 특성을 확인해주시고, 나중에 다시 시도해주세요.</string><string name="must_complete_upload_first">반드시 업로드를 먼저 해야합니다.</string><string name="always_show_location">항상 현재위치를 보여줌 (베터리는 소모됩니다.)</string><string name="geolocation_error_msg">당신의 위치를 찾을 수 없습니다. 아비터가 GPS에 접근할 수 있는지 설정을 확인해주시기 바랍니다. 문제가 계속 발생하면, 디바이스를 다시 시작해주세요.</string><string name="base">베이스</string><string name="action_address">주소 검색</string><string name="action_coordinate">좌표 검색</string><string name="latitude">위도</string><string name="longitude">경도</string><string name="coordinate_input_error_title">입력값 오류</string><string name="coordinate_input_error_message">올바른 좌표값을 넣어주세요.</string><string name="address_search_no_result_title">알림</string><string name="address_search_no_result_message">검색 결과가 없습니다.</string><string name="address_search_title">\n주소를 입력하세요\n</string><string name="image_list">이미지 목록</string><string name="action_image_option">이미지 구축 옵션</string><string name="action_boundary">경계값 설정</string><string name="draw_image">이미지 그리기</string><string name="set_boundary">경계값으로 이미지 넣기</string><string name="add_images_button">이미지 추가</string><string name="remove_image">이미지 삭제</string><string name="imageName">이름</string><string name="imagePath">경로</string><string name="left">왼쪽</string><string name="bottom">아래</string><string name="right">오른쪽</string><string name="top">위</string><string name="boundary_image_input_error_title">입력값 오류</string><string name="boundary_image_input_error_message">올바른 경계값을 입력해주세요.</string><string name="action_capture">캡쳐 완료</string><string name="input_image_AOI">AOI에 삽입</string><string name="action_AOI_image_progress">AOI 이미지 처리중</string><string name="image_option_setting">Option Setting</string><string name="image_option_opacity">Opacity</string><string name="action_validationLayerList">검수 대상 목록</string><string name="validationLayerName">레이어 이름</string><string name="start_validation_button">검수 시작</string><string name="action_validationOption">검수 옵션</string><string name="action_optionSetting">옵션 설정</string><string name="action_detailOptionSetting">세부 옵션</string><string name="error500">내부 시스템 에러</string><string name="report">검수 결과</string><string name="action_report">오류 보고서</string><string name="action_error_navigator">에러 네비게이터</string><string name="none_report_title">보고서가 존재하지 않습니다.</string><string name="none_report_message">레포트를 확인하기 전에 검수를 시행해주십시오.</string><string name="action_validation_progress">검수 진행중...</string><string name="action_report_progress">레포트 생성중...</string><string name="action_errorMarking_progress">에러 데이터 표시중...</string><string name="navigator_left">왼쪽</string><string name="navigator_right">오른쪽</string><string name="report_left">왼쪽</string><string name="report_right">오른쪽</string><string name="cannot_start_navigator">에러 네비게이터를 실행할 수 없습니다.</string><string name="navigator_error_message">에러 네비게이터를 시작하기 전에 검수를 시행해주십시오.</string><string name="action_removeErrorMarking">검수 기록 삭제</string></file><file path="/Users/hansseop/Desktop/Modified/app/src/main/res/values-pt/strings.xml" qualifiers="pt"><string name="action_info">em formação</string><string name="warning">Aviso</string><string name="error">Erro</string><string name="app_name">Arbiter-Android</string><string name="action_findme">Buscar</string><string name="default_project_name">_ARBITER_DEFAULT_PROJECT_</string><string name="delete">Deletar</string><string name="update">Atualizar</string><string name="default_layer_name">OpenStreetMap</string><string name="project_exists_title">Projeto existente</string><string name="project_already_exists">Projeto já existe. Por favor, crie um novo projeto com um nome diferente.</string><string name="project_creation_failed">Erro ao criar o projeto</string><string name="project_creation_failed_message">Could not create project. Check to see if you are out of disk space.</string><string name="create_project_progress">Criando projeto</string><string name="create_project_msg">Projeto a ser criado…</string><string name="error_aoi_create_project">Você deve criar um projeto antes de selecionar uma área de interesse.</string><string name="error_creating_project">Erro</string><string name="error_creating_project_msg">Não foi possível criar o projeto!</string><string name="error_loading_features">Erro</string><string name="error_loading_features_msg">Não foi possível criar o projeto!</string><string name="error_adding_layers">Erro</string><string name="error_adding_layers_msg">Não pode adicionar camadas selecionadas!</string><string name="adding_layers">Adicionar camada</string><string name="adding_layers_msg">Adicionar camada no mapa…</string><string name="feature_dialog_title">Recurso</string><string name="latitude">Latitude</string><string name="longitude">Longitude</string><string name="example_longitude">ex. </string><string name="example_latitude">ex. </string><string name="back">Voltar</string><string name="edit_attributes">Editar</string><string name="done_editing">Salvar</string><string name="delete_feature">Deletar</string><string name="edit_feature">Mapa</string><string name="cancel">Cancelar</string><string name="update_feature_title">Atualizar</string><string name="update_feature_msg">Atualizar recurso?</string><string name="updating">Atualizando</string><string name="updating_msg">Atualização em prograsso…</string><string name="insert_feature_title">Selecione a camada a ser inserida.</string><string name="insert_layer_title">Inseri-los:</string><string name="insert_layer_text">Modo: Inserção</string><string name="feature_saved">Recurso salvo</string><string name="feature_saved_msg">O recurso foi salvo.</string><string name="return_to_map">Retorna ao Mapa</string><string name="picture_source">Selecionar Código</string><string name="select_picture_source">Adicionar uma foto...</string><string name="from_camera">Da Camera</string><string name="from_library">Da Blibliote de Foto</string><string name="review_feature">Revisar Recurso</string><string name="insert_feature_warning">Inserir Recurso</string><string name="insert_feature_warning_msg">Inserir o recurso?</string><string name="delete_feature_warning">Deletar recurso</string><string name="delete_feature_warning_msg">Tem certeza que deseja excluir este recurso?</string><string name="deleting_msg">Exclusão em andamento…</string><string name="sync_in_progress">Sincronizando</string><string name="sync_in_progress_msg">Sincronização em processo…</string><string name="error_syncing">Erro</string><string name="error_syncing_msg">Não é possível sincronizar</string><string name="project_incomplete_msg">Projeto off-line não está disponível. \n\nPor favor selecione uma área de interesse.</string><string name="click_me">( Clique-me )</string><string name="media">mídia</string><string name="take_picture">Tirar foto</string><string name="initializing">Inicializando</string><string name="please_wait">Aguarde…</string><string name="update_aoi_alert">Área de interesse</string><string name="update_aoi_alert_msg">Atualizando a sua área de interesse, também irá sincronizar as alterações que você fez.</string><string name="error_updating_aoi">Erro</string><string name="error_updating_aoi_msg">Não foi possível atualizar a área de interesse!</string><string name="loading_feature_info">Carregando recurso… Por favor aguarde…</string><string name="loading">Carregando</string><string name="no_network">Nenhuma conexão de rede</string><string name="check_network_connection">Por favor, verifique sua conexão de rede.</string><string name="layers_limit">Limite de camada alcançado</string><string name="too_many_layers">Limite máximo de camada por projeto.</string><string name="downloading_schemas">Baixando Esquemas</string><string name="downloading_tiles">Downloading Tiles</string><string name="tile_cache_warning">Tiles to download:</string><string name="syncing_media_title">Sincronizando Mídia</string><string name="syncing_vector_data">Sincronizando Dados do Vetor</string><string name="downloaded">Baixando: </string><string name="uploaded">Carregado: </string><string name="form_error_date">Por favor coloque uma data válida.</string><string name="form_error_integer">Por favor coloque um valor inteiro.</string><string name="form_error_double">Por favor coloque um valor numerico.</string><string name="form_error_long">Por favor coloque um valor numerico.</string><string name="form_error_float">Por favor coloque um valor numerico.</string><string name="form_error_bool">Por favor coloque verdadeiro ou falso.</string><string name="check_errors">Entrada invalida</string><string name="check_errors_msg">Por favor, corrigir erros antes de continuar.</string><string name="loading_layers_please_wait">Carregando camadas para o servidor. Por favor aguarde.</string><string name="map_activity_name">Arbiter</string><string name="action_new_feature">Desenhar</string><string name="action_servers">Servidores</string><string name="action_projects">Projetos</string><string name="action_tilesets">Tilesets</string><string name="action_aoi">Área de interesse</string><string name="action_language">Linguagem</string><string name="layers_button">Camada</string><string name="sync_button">Sincronizar</string><string name="location_button">Buscar</string><string name="aoi_button">Zoom para área</string><string name="projects_activity_name">Projetos</string><string name="delete_project">Deletar Projeto</string><string name="action_new_project">Novo Projeto</string><string name="switch_project_title">Trocar de projeto</string><string name="switch_project">Trocar para este projeto?</string><string name="layers_dialog_title">Camadas</string><string name="add_layers_button">Adicionar Camadas</string><string name="action_add_layers">Adicionar Camadas</string><string name="layer_visibility_off">Desligado</string><string name="layer_visibility_on">Ligado</string><string name="remove_layer">Remover Camada</string><string name="layer_info_dialog_title">Informações de Camada</string><string name="add_layers_dialog_title">Adicionar Camada</string><string name="layer_filter_hint">Filtro</string><string name="action_add_server">Adicionar Servidor</string><string name="choose_server">Servidores</string><string name="welcome_dialog_title">Bem vindo</string><string name="must_create_project">Antes de editar, você deve criar um projeto.</string><string name="create_project_question">Gostaria de criar agora?</string><string name="project_name_dialog_title">Nome do projeto</string><string name="choose_project_name">Coloque o nome do projeto.</string><string name="choose_name_hint">Novo nome do projeto*</string><string name="server_dialog_title">Servidores</string><string name="add_server_button">Adicionar Servidor</string><string name="delete_server_alert">Isto irá apagar todas as camadas em todos os projetos associados a este servidor.</string><string name="update_server_alert">Tem certeza de que deseja atualizar o servidor? Alterações inválidas podem resultar em falhas de sincronização.</string><string name="deleting_server">Deletando Servidor</string><string name="deleting_server_msg">Exclusão do servidor em amdamento…</string><string name="add_server_dialog_title">Adicionar Servidor</string><string name="server_name_hint">Nome</string><string name="server_url_hint">ex. http://example.com/geoserver</string><string name="server_username_hint">Usuário</string><string name="server_password_hint">Senha</string><string name="server_show_password">Monstar a Senha</string><string name="validating_server">Validação de servidor</string><string name="authentication_failed">Falha na autenticação, verifique o nome de usuário e senha.</string><string name="unable_to_connect">Não é possível conectar ao servidor, verifique se o url está correta.</string><string name="go_offline_dialog_title">Offline</string><string name="choose_aoi_dialog_title">Escolher Área</string><string name="title_activity_aoi">AOIActivity</string><string name="hello_world">Olá Mundo!</string><string name="failed_to_sync">Sincronização incompleta</string><string name="failed_vector_upload">As seguintes camadas (vetor) falharam ao carregar:</string><string name="failed_vector_download">As camadas (vetor) a seguinte falharam ao baixar:</string><string name="failed_media_upload">Os seguintes itens de mídia falharam ao carregar:</string><string name="failed_media_download">Os seguintes itens de mídia falharam ao baixar:</string><string name="retry_sync">Tentar agora?</string><string name="vector_upload_errors_label">Camadas (vetor) que falhou no upload:</string><string name="vector_download_errors_label">Camadas (vetor) que falhou ao baixar:</string><string name="media_upload_errors_label">Mídia que falha ao carregar:</string><string name="media_download_errors_label">Mídia que falha ao baixar:</string><string name="retry">Tente novamente</string><string name="geolocation_error">Geolocation Erro</string><string name="layer_order">Ordem de camada</string><string name="move_down">Mover para baixo</string><string name="move_up">Mover para cima</string><string name="settings">Configurações</string><string name="about">Sobre</string><string name="version">Commit:</string><string name="commit_date">Data do commit:</string><string name="build_date">Data do build:</string><string name="unknown">Desconhecido</string><string name="point">Ponto</string><string name="line">Linha</string><string name="polygon">Polígono</string><string name="multipoint">Multi pontos</string><string name="multiline">Multi linhas</string><string name="multipolygon">Multi polígono</string><string name="choose_geometry_type">Tipo Geometrico</string><string name="done">Feito</string><string name="add">Adicionar</string><string name="remove">Remove</string><string name="inspect">Inspecionar</string><string name="finish">Acabamento</string><string name="confirm_part_removal_title">Remover parte</string><string name="confirm_part_removal_msg">Tem certeza que deseja remover esta parte da geometria?</string><string name="confirm_geometry_removal_title">Remove geometria</string><string name="confirm_geometry_removal_msg">Tem certeza que deseja remover esta geometria da coleção?</string><string name="notify_user_to_add_geometry_title">Deve ter uma geometria</string><string name="notify_user_to_add_geometry_msg">Adicionar uma geometria ou excluir o recurso.</string><string name="finish_editing_title">Finalizar a edição</string><string name="finish_editing_message">Por favor, termine a edição.</string><string name="unsupported_crs">Sem suporte a CRS</string><string name="loading_unsupported_crs">Não foi possível carregar as seguintes camadas devido a CRS não suportado:</string><string name="overlays">Sobreposições</string><string name="baselayer">Camada Base</string><string name="base">Base</string><string name="choose_baselayer">Selecione a Camada Base</string><string name="change_baselayer_warning">
+        Mudando a sua camada de base irá remover as tiles
+        baixadas anteriormente e baixar novos tiles para sua
+        área de interesse. Tem certeza que deseja continuar?
+    </string><string name="type">Tipo</string><string name="notifications">Notificações</string><string name="clear">limpar</string><string name="close">fechar</string><string name="feature_not_in_aoi">Recurso não disponível</string><string name="feature_not_in_aoi_msg">O recurso tenha sido excluído ou movido para um local fora da área de interesse.</string><string name="layers_already_in_project">Não pode adicionar as seguintes camadas para o projeto porque camadas com os mesmos tipos de recurso já existem:</string><string name="invalid_url">URL invalida</string><string name="invalid_url_slash_wms">\"WMS\" urls de servidor deve terminar com \"/wms\"</string><string name="invalid_url_slash_tms">\"TMS\" urls de servidor deve terminar com \"/hot/1.0.0/\"</string><string name="insert">inserir</string><string name="feature_outside_aoi_warning">Você colocou um recurso fora de sua área selecionada de interesse. Após sincronizar este recurso, já não será
+         sobre o dispositivo.
+    </string><string name="confirm_delete_project">Tem certeza que deseja excluir o projeto? Quaisquer dados não sincronizados serão perdidos.</string><string name="confirm_delete_layer">Tem certeza que deseja excluir a camada?</string><string name="added">ADICIONANDO</string><string name="modified">MODIFICANDO</string><string name="removed">REMOVIDO</string><string name="no_valid_geometries">Não válidas, geometrias presentes.</string><string name="no_valid_geometries_delete_or_cancel">Não válidas geometrias presentes. Gostaria de excluir o recurso ou cancelar?</string><string name="valid_point_geometry_description">Uma geometria de ponto deve ter pelo menos um ponto.</string><string name="valid_line_geometry_description">Uma geometria de linha deve ter pelo menos dois pontos exclusivo.</string><string name="valid_polygon_geometry_description">Uma geometria polígono deve ter pelo menos três pontos originais.</string><string name="valid_multipoint_geometry_description">Uma geometria MultiPoint deve ter pelo menos uma geometria de ponto válida.</string><string name="valid_multiline_geometry_description">Uma geometria de várias linhas deve ter pelo menos uma geometria de linha válida.</string><string name="valid_multipolygon_geometry_description">Uma MultiPolygon geometria deve ter pelo menos uma geometria de polígono válida.</string><string name="valid_geometry_collection_description">Uma coleção de geometria deve ter pelo menos uma geometria válida.</string><string name="delete_media">Deletar Mídia</string><string name="sure_delete_media">Tem certeza que deseja remover este item a partir do recurso?</string><string name="read_only">Somente leitura</string><string name="read_only_msg">Esta camada é somente leitura. Entre em contato com o administrador do servidor para verificar suas permissões.</string><string name="sync_timed_out">Tempo de sincronização esgotado</string><string name="sync_timed_out_msg">Tempo de sincronização esgotado. Gostaria de continuar a sincronização ou cancelar as restantes operações de sincronização?</string><string name="continue_sync">Continuar</string><string name="loading_getcapabilities">Carregando camadas</string><string name="could_not_connect">Não foi possível conectar</string><string name="check_server_and_network">Por favor, verifique os detalhes do servidor e a conexão de rede e tente novamente mais tarde.</string><string name="required_field">Campo obrigatório</string><string name="download_photos">Baixar fotos para recursos</string><string name="disable_wms">Desabilitar o WMS para camadas não-base</string><string name="no_con_checks">Ignorar o status da conexão (requer reinicialização)</string><string name="confirm_delete_layers_unsynced_features">Esta camada tem características que não foi sincronizadas. Se você excluir a camada, esses recursos serão perdidos! Tem certeza que deseja excluir a camada?</string><string name="try_again_later">Por favor, tente novamente mais tarde. Se o problema persistir, contacte o administrador.</string><string name="arbiter_error">Erro inesperado.</string><string name="unknown_error">Erro inesperado.</string><string name="internal_server_error">Ocorreu um erro no servidor.</string><string name="timed_out">Solicitação expirou.</string><string name="unauthorized">Não autorizado.</string><string name="resource_not_found">Recurso não encontrado.</string><string name="update_error">Erro ao atualizar o recurso. Por favor, reveja suas características e tente novamente mais tarde.</string><string name="must_complete_upload_first">Deve completar o upload primeiro.</string><string name="always_show_location">Sempre mostrar localização atual (consome bateria)</string><string name="geolocation_error_msg">Não foi possível obter sua localização. Por favor, verifique as configurações de dispositivo para certificar-se de que árbitro tem acesso à localização geográfica. Se o problema persistir, tente reiniciar o dispositivo.</string><string name="find_area_title">Digite o endereço do local que você está procurando :</string><string name="find_area_button">pesquisa</string><string name="action_shp">ler um arquivo</string><string name="action_search">Procurar endereço</string><string name="action_coordinate">Coordena pesquisa</string><string name="coordinate_text">Digite a latitude e longitude\n</string><string name="image_overlay">A sobreposição de imagens</string></file></source><source path="/Users/hansseop/Desktop/Modified/app/build/generated/res/rs/release"/><source path="/Users/hansseop/Desktop/Modified/app/build/generated/res/resValues/release"/></dataSet><dataSet config="release$Generated" generated="true"><source path="/Users/hansseop/Desktop/Modified/app/src/release/res"/></dataSet><dataSet config="release" generated-set="release$Generated"><source path="/Users/hansseop/Desktop/Modified/app/src/release/res"/></dataSet><mergedItems/></merger>
