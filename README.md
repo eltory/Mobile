@@ -1,7 +1,7 @@
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Korean](https://img.shields.io/badge/language-Korean-blue.svg)](#korean)  
   
-OpenGDS / Mobile (공간자료 편집도구)
+OpenGDS / Mobile (공간자료 모바일 편집도구)
 =======
 Version 1.0 February 11th, 2019
 ![logo](https://user-images.githubusercontent.com/13480171/52541836-c0127180-2ddc-11e9-88ad-27cf0af977c9.png)
