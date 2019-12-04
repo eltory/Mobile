@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/interceptor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/layout_definition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="30dip"
+                android:stretchColumns="*">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/code_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="1"
+                        android:text="Code"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/code_name_input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="6"
+                        android:ems="10"
+                        android:hint="@string/layer_code_hint"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/type_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="1"
+                        android:text="Type"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/typesSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="6" />
+                </TableRow>
+            </TableLayout>
+
+            <ImageButton
+                android:id="@+id/add_fix_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/layout_definition"
+                android:layout_marginLeft="15dip"
+                android:contentDescription="@string/add_server_button"
+                android:src="@drawable/content_new_black" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/addFixListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dip"
+            android:background="@color/layer_list_item"
+            android:dividerHeight="10dp"
+            android:focusable="false" />
+    </LinearLayout>
+</FrameLayout>

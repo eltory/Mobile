@@ -1,0 +1,806 @@
+[
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_arrow_up.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/arrow_up.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_ic_launcher.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_add_tileset_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_tileset_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_coordinates_search_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/coordinates_search_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_action_gallery.PNG.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_action_gallery.PNG"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_add_server_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_server_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_ic_action_delete.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_action_delete.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_icon_white_back_bk.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/icon_white_back_bk.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/anim_button_rotate.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/anim/button_rotate.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_icon.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/icon.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_downloading_tileset_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/downloading_tileset_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_ic_action_gallery.PNG.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_action_gallery.PNG"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_aoi.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/aoi.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_ic_action_validation.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_action_validation.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_layers_white.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/layers_white.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_remove_geometry.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/remove_geometry.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_project_name_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/project_name_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_add_validate_layers_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_validate_layers_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_icon_white_back_bk.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/icon_white_back_bk.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_zoom_in.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/zoom_in.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_add_part.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/add_part.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_action_capture.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_action_capture.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_layers_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/layers_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/menu_menu_add_layers.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/menu/menu_add_layers.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/menu_menu_modified.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/menu/menu_modified.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_server_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/server_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_activity_notifications.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/activity_notifications.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_report_right.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_report_right.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_content_new_black.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/content_new_black.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_action_gallery.PNG.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_action_gallery.PNG"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_report_left.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_report_left.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_address_search_result_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/address_search_result_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_icon_white.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/icon_white.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_servers_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/servers_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_address_search_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/address_search_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_validation_report_table.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_report_table.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_left_button_event.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/left_button_event.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_tileset_info_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/tileset_info_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_feature_attribute.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/feature_attribute.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_ic_action_edit.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_action_edit.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_ic_action_search.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_action_search.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_layer_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/layer_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_choose_baselayer_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/choose_baselayer_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_option_selector.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/option_selector.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_arrow_down.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/arrow_down.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_action_edit.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_action_edit.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_checkmark.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/checkmark.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_zoom_out.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/zoom_out.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_layer_selection_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/layer_selection_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_action_capture.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_action_capture.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_ic_navigator_right_click.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_navigator_right_click.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_ic_navigator_right.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_navigator_right.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_notifications_count.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/notifications_count.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_aoi_image_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/aoi_image_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_icon.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/icon.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_validation_option_setting_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_option_setting_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_image_opacity_seek_bar.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/image_opacity_seek_bar.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_feature_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/feature_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_aoi_selector.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/aoi_selector.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_ic_action_validation.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_action_validation.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_ic_action_refresh.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_action_refresh.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_ic_action_gallery.PNG.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_action_gallery.PNG"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_ic_navigator_left.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_navigator_left.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_layers_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/layers_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_validation_detail_option_setting_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_detail_option_setting_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_icon_white.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/icon_white.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_camera.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/camera.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/menu_menu_layers.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/menu/menu_layers.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_activity_projects.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/activity_projects.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_icon_white.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/icon_white.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_classification_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/classification_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_ic_report_left.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_report_left.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_ic_navigator_left_click.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_navigator_left_click.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_media_image_view.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/media_image_view.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_sync.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/sync.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_action_search.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_action_search.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_cancel.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/cancel.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_icon_white_back_bk.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/icon_white_back_bk.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_icon_white_back_bk.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/icon_white_back_bk.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_validation_option_layers_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_option_layers_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_add_fix.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_fix.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_navigator_left_click.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_navigator_left_click.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_edit_buttons.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/edit_buttons.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/menu_menu_projects.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/menu/menu_projects.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_action_delete.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_action_delete.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_action_validation.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_action_validation.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_images_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/images_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_navigator_right.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_navigator_right.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_ic_action_delete.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_action_delete.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_settings.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/settings.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_insert_feature_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/insert_feature_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_layers_white.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/layers_white.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_add_tilesets_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_tilesets_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_feature_media.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/feature_media.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_navigator_left.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_navigator_left.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_navigator_left_click.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_navigator_left_click.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_ic_navigator_left_click.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_navigator_left_click.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_about_main.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/about_main.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_sorting.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/sorting.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_images_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/images_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_action_refresh.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_action_refresh.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_layers_white.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/layers_white.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_layers_white.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/layers_white.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_drop_down_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/drop_down_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_choose_geometry_type.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/choose_geometry_type.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_content_new_white.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/content_new_white.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_choose_aoi_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/choose_aoi_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_validation_detail_option_setting_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_detail_option_setting_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_arrow_down.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/arrow_down.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_welcome_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/welcome_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_content_new_black.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/content_new_black.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_arrow_down.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/arrow_down.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_notification_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/notification_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_ic_action_search.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_action_search.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_spinner_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/spinner_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_navigator_left.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_navigator_left.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_shape_notification.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/shape_notification.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_ic_navigator_left.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_navigator_left.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_layer_selection_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/layer_selection_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_activity_map.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/activity_map.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_add_geometry.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/add_geometry.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_content_new_white.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/content_new_white.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_info.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/info.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_ic_report_right.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_report_right.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_add_layers_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_layers_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_remove_part.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/remove_part.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_arrow_up.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/arrow_up.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_ic_action_refresh.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_action_refresh.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_navigator_right_click.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_navigator_right_click.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_zoom_out.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/zoom_out.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_validation_option_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_option_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_navigator_right.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_navigator_right.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_add_layer_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_layer_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_list_selector.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/list_selector.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_action_validation.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_action_validation.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_action_edit.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_action_edit.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_zoom_in.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/zoom_in.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_row.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/row.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_new_validation_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/new_validation_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_report_left.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_report_left.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_arrow_up.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/arrow_up.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_content_new_white.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/content_new_white.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_media_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/media_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_add_validate_layers_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_validate_layers_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_switch_project.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/switch_project.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_navigator_right_click.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_navigator_right_click.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_about_geodt.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/about_geodt.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_validation_navigator_table.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_navigator_table.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_boundary_image_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/boundary_image_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_icon.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/icon.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_action_delete.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/ic_action_delete.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_license_list.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/license_list.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_about.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/about.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_license_detail.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/license_detail.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_license_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/license_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_order_layers_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/order_layers_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_ic_action_capture.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_action_capture.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_geometry_parts_buttons.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/geometry_parts_buttons.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_add_layers_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/add_layers_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_action_search.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_action_search.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_layers.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/layers.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/anim_slide_in_left.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/anim/slide_in_left.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_ic_navigator_right.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_navigator_right.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_ic_report_left.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_report_left.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_tools.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/tools.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_classification_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/classification_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xhdpi_icon.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xhdpi/icon.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_ic_action_edit.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_action_edit.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_failed_sync.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/failed_sync.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_zoom_in.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/zoom_in.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/menu_menu_map.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/menu/menu_map.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_ic_launcher.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_detail_option_2.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/detail_option_2.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_errors_syncing_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/errors_syncing_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_right_button_event.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/right_button_event.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_ic_navigator_right_click.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_navigator_right_click.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_feature_dropdown.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/feature_dropdown.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_zoom_out.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/zoom_out.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/menu_menu_settings.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/menu/menu_settings.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_insert_feature_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/insert_feature_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_textview.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/textview.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_project_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/project_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_base_layer_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/base_layer_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-hdpi_ic_action_capture.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-hdpi/ic_action_capture.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_detail_option_1.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/detail_option_1.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_content_new_black.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/content_new_black.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/xml_config.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/xml/config.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_choose_geometry_type_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/choose_geometry_type_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_warning.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/warning.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_location.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/location.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_report_right.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_report_right.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_validation_option_setting_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/validation_option_setting_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_tileset_list_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/tileset_list_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_icon_white.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/icon_white.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_action_refresh.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-xxhdpi/ic_action_refresh.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/drawable-mdpi_ic_report_right.png.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/drawable-mdpi/ic_report_right.png"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_tilesets_dialog.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/tilesets_dialog.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/layout_child_item.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/layout/child_item.xml"
+    },
+    {
+        "merged": "/Users/hansseop/Desktop/Modified/app/build/intermediates/res/merged/release/menu_aoi.xml.flat",
+        "source": "/Users/hansseop/Desktop/Modified/app/src/main/res/menu/aoi.xml"
+    }
+]

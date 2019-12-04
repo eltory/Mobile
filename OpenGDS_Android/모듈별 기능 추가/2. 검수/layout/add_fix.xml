@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:id="@+id/layout_definition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="30dip"
+            android:stretchColumns="*">
+
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/type_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:text="Type"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/types_spinner"
+                    android:layout_width="253dp"
+                    android:layout_height="wrap_content"
+                    android:layout_span="5" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/fix_name_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="6"
+                    android:ems="10"
+                    android:singleLine="true"
+                    android:hint="고정 값을 가질 속성명 EX)..." />
+
+            </TableRow>
+
+            <TableRow android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/length_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="6"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:hint="길이"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/value_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="6"
+                    android:ems="10"
+                    android:hint="해당 속성이 가질 수 있는 값을을 콤마(,)로 구분하여 입력 EX)주곡선,계곡선,간곡선,조곡선"
+                    android:singleLine="true" />
+            </TableRow>
+            <TableRow android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:text="Nullable"
+                    android:textSize="20sp" />
+                <CheckBox
+                    android:id="@+id/is_null"
+                    android:layout_span="5"/>
+            </TableRow>
+
+        </TableLayout>
+
+        <ImageButton
+            android:id="@+id/delete_fix_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/layout_definition"
+            android:layout_marginLeft="15dip"
+            android:src="@drawable/ic_action_delete" />
+
+    </RelativeLayout>
+
+</LinearLayout>
